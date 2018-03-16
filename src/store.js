@@ -16,10 +16,7 @@ export function reduce(state = initialState, action) {
     case Actions.UPDATE_FILMS:
     case Actions.UPDATE_FILM_DETAILS:
     case Actions.UPDATE_TOAST:
-      return {
-        ...state,
-        ...data,
-      }
+      return { ...state, ...data }
     default:
       return state
   }
