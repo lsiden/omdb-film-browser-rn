@@ -6,7 +6,7 @@ import { Actions } from "actions"
 const initialState = {
   view: Actions.VIEW_FILM_LIST,
 }
-export const store = createStore(reduce, compose(applyMiddleware(thunk)))
+export default createStore(reduce, compose(applyMiddleware(thunk)))
 
 export function reduce(state = initialState, action) {
   const { type, data } = action
