@@ -2,6 +2,12 @@
   "name": "crna",
   "version": "0.1.0",
   "private": true,
+  "author": {
+    "name": "Lawrence Siden",
+    "email": "lsiden@gmail.com",
+    "url": "https://github.com/lsiden"
+  },
+  "license": "NOLICENSE",
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
     "start": "react-native-scripts start",
@@ -9,7 +15,8 @@
     "android": "react-native-scripts android",
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js",
-    "test:watch": "npm run test -- --watch"
+    "test:watch": "npm run test -- --watch",
+    "lint": "eslint src/"
   },
   "dependencies": {
     "babel": "^6.23.0",
@@ -39,6 +46,8 @@
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "css-loader": "^0.28.10",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.18.2",
     "eslint-config-esnext": "^2.0.0",
     "eslint-config-react-app": "^2.1.0",
@@ -51,6 +60,7 @@
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-react-native": "^3.2.1",
     "gulp": "^3.9.1",
+    "isomorphic-fetch": "^2.2.1",
     "jest-expo": "25.0.0",
     "json-loader": "^0.5.7",
     "less": "^3.0.1",
@@ -74,7 +84,7 @@
     "webpack-hot-middleware": "^2.21.2"
   },
   "jest": {
-    "preset": "jest-expo"
+    "preset": "react-native"
   },
   "prettier": {
     "semi": false,
@@ -86,15 +96,25 @@
         "babel-module": {}
       }
     },
+    "plugins": [
+      "jest"
+    ],
     "env": {
-      "jest": true
+      "jest": true,
+      "jest/globals": true
     },
-    "extends": ["react-native"],
+    "extends": [
+      "react-native"
+    ],
     "rules": {
+      "react/no-danger": "allow",
       "no-console": [
         "error",
         {
-          "allow": ["warn", "error"]
+          "allow": [
+            "warn",
+            "error"
+          ]
         }
       ],
       "no-unused-vars": [
@@ -103,7 +123,6 @@
           "varsIgnorePattern": "^debug$"
         }
       ]
-    },
-    "plugins": ["jest"]
+    }
   }
 }

@@ -1,3 +1,5 @@
+import "isomorphic-fetch"
+
 import {
   Actions,
   viewList,
@@ -9,7 +11,7 @@ import {
   fetchFilmDetails,
 } from "../actions"
 
-import filmDetails from "../../__fixture__/film-detail.json"
+import filmDetails from "./__fixture__/film-detail.json"
 
 test("viewList() returns an action", () => {
   expect(viewList()).toEqual({
@@ -66,7 +68,7 @@ test("queryFetch()(dispatch) invokes dispatch() with Actions.VIEW_FILM_LIST", ()
     Search: ["Rocky Horror", "Halloween"],
   }
   response.json = () => Promise.resolve(response)
-  window.fetch = jest.fn().mockImplementation(() => Promise.resolve(response))
+  // fetch = jest.fn().mockImplementation(() => Promise.resolve(response))
   queryFetch("a query")(dispatch).then(() => {
     expect(dispatch).toHaveBeenCalledWith({
       type: Actions.UPDATE_FILMS,
@@ -81,7 +83,7 @@ test("fetchFilmDetails()(dispatch) invokes dispatch() with Actions.UPDATE_FILM_D
   const dispatch = jest.fn()
   const response = { filmDetails }
   response.json = () => Promise.resolve(response)
-  window.fetch = jest.fn().mockImplementation(() => Promise.resolve(response))
+  // fetch = jest.fn().mockImplementation(() => Promise.resolve(response))
   fetchFilmDetails("id")(dispatch).then(() => {
     expect(dispatch).toHaveBeenCalledWith({
       type: Actions.UPDATE_FILM_DETAILS,
