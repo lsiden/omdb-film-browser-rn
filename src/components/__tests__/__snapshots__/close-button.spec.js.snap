@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders() 1`] = `
+<button
+  id="close-button"
+  onPress={[MockFunction]}
+  style={
+    Object {
+      "background": "none",
+      "border": "none",
+      "cursor": "pointer",
+      "fontSize": "20pt",
+      "margin": "8pt",
+      "padding": "0!important",
+    }
+  }
+  title="Close"
+>
+  ✕
+</button>
+`;

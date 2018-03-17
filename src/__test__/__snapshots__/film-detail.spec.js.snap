@@ -1,0 +1,299 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a title 1`] = `
+<View
+  style={
+    Object {
+      "marginLeft": "10pt",
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "display": "flex",
+        "justifyContent": "space-between",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 14,
+          "fontWeight": "bold",
+          "marginBottom": 5,
+        }
+      }
+    >
+      The Hobbit: The Battle of the Five Armies
+    </Text>
+    <button
+      id="close-button"
+      onPress={[MockFunction]}
+      style={
+        Object {
+          "background": "none",
+          "border": "none",
+          "cursor": "pointer",
+          "fontSize": "20pt",
+          "margin": "8pt",
+          "padding": "0!important",
+        }
+      }
+      title="Close"
+    >
+      ✕
+    </button>
+  </View>
+  <Image
+    Source="https://images-na.ssl-images-amazon.com/images/M/MV5BODAzMDgxMDc1MF5BMl5BanBnXkFtZTgwMTI0OTAzMjE@._V1_SX300.jpg"
+  />
+  <RCTScrollView
+    data={
+      Array [
+        Object {
+          "text": "2014",
+        },
+        Object {
+          "text": "Directed by $undefined",
+        },
+        Object {
+          "text": "Written by undefined",
+        },
+        Object {
+          "text": "Cast: undefined",
+        },
+        Object {
+          "text": "Language: undefined",
+        },
+        Object {
+          "cond": undefined,
+          "text": "Awards: {filmDetails.Awards}",
+        },
+        Object {
+          "text": "Run Time: undefined",
+        },
+        Object {
+          "text": "IMDB Rating: undefined/10",
+        },
+        Object {
+          "text": "Box Office: undefined",
+        },
+        Object {
+          "cond": undefined,
+          "text": "Official Website",
+          "url": undefined,
+        },
+        Object {
+          "text": "IMDB page",
+          "url": "https://www.imdb.com/title/undefined",
+        },
+      ]
+    }
+    disableVirtualization={false}
+    getItem={[Function]}
+    getItemCount={[Function]}
+    horizontal={false}
+    initialNumToRender={10}
+    keyExtractor={[Function]}
+    maxToRenderPerBatch={10}
+    numColumns={1}
+    onContentSizeChange={[Function]}
+    onEndReachedThreshold={2}
+    onLayout={[Function]}
+    onMomentumScrollEnd={[Function]}
+    onScroll={[Function]}
+    onScrollBeginDrag={[Function]}
+    onScrollEndDrag={[Function]}
+    renderItem={[Function]}
+    scrollEventThrottle={50}
+    stickyHeaderIndices={Array []}
+    updateCellsBatchingPeriod={50}
+    viewabilityConfigCallbackPairs={Array []}
+    windowSize={21}
+  >
+    <View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#888",
+              "fontSize": 12,
+            }
+          }
+          text={undefined}
+        />
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#888",
+              "fontSize": 12,
+            }
+          }
+          text={undefined}
+        />
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#888",
+              "fontSize": 12,
+            }
+          }
+          text={undefined}
+        />
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#888",
+              "fontSize": 12,
+            }
+          }
+          text={undefined}
+        />
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#888",
+              "fontSize": 12,
+            }
+          }
+          text={undefined}
+        />
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#888",
+              "fontSize": 12,
+            }
+          }
+          text={undefined}
+        />
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#888",
+              "fontSize": 12,
+            }
+          }
+          text={undefined}
+        />
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#888",
+              "fontSize": 12,
+            }
+          }
+          text={undefined}
+        />
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#888",
+              "fontSize": 12,
+            }
+          }
+          text={undefined}
+        />
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          ellipsizeMode="tail"
+          style={
+            Object {
+              "color": "#888",
+              "fontSize": 12,
+            }
+          }
+          text={undefined}
+        />
+      </View>
+      <View
+        style={
+          Object {
+            "height": 0,
+          }
+        }
+      />
+    </View>
+  </RCTScrollView>
+</View>
+`;

@@ -1,33 +1,27 @@
 import React from "react"
-import { shallow } from "enzyme"
+import renderer from "react-native-test-utils"
 
-import "../../test-helpers/setup"
 import { SearchInput } from "components/search-input"
 
-let onInput
+let onChangeText
 
 const defaultProps = () => ({
   id: "element-id",
   placeholder: "x",
   value: "foobar",
-  onInput,
+  onChangeText,
 })
 
 const createWrapper = (props = {}) => {
-  onInput = jest.fn()
-  return shallow(<SearchInput {...{ ...defaultProps(), ...props }} />)
+  onChangeText = jest.fn()
+  return renderer(<SearchInput {...{ ...defaultProps(), ...props }} />)
 }
 
 test("change to input invokes onChange(query)", () => {
   const wrapper = createWrapper()
   const query = "search term"
-  const inputEvent = {
-    target: {
-      value: query,
-    },
-  }
-  wrapper.find("input").simulate("input", inputEvent)
+  wrapper.query("TextInput").simulate("changeText", query)
   setTimeout(() => {
-    expect(onInput).toHaveBeenCalledWith(inputEvent)
+    expect(onChangeText).toHaveBeenCalledWith(query)
   })
 })

@@ -1,27 +1,36 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { StyleSheet, Text, View } from "react-native"
+import { Text, View, FlatList, Linking, Image } from "react-native"
+import cuid from "cuid"
 
 import { viewList } from "./actions"
 import { CloseButton } from "components/close-button"
+import { detailStyles } from "./styles"
 
-const wrapperStyle = {
-  marginLeft: "10pt",
-}
-const headerStyle = {
-  display: "flex",
-  justifyContent: "space-between",
-}
-const titleStyle = {
-  marginBottom: "5pt",
-}
-const detailsStyle = {
-  fontSize: "14pt",
-  color: "#888",
+function renderItem(item) {
+  const { text, cond = true, url } = item
+
+  if (!cond) {
+    return null
+  }
+
+  const props = {
+    text,
+    style: detailStyles.itemStyle,
+  }
+
+  if (url) {
+    props.onPress = () => {
+      Linking.openURL(url)
+    }
+  }
+  return <Text {...props}>{text}</Text>
 }
 
-export class FilmDetail extends React.Component {
+const keyExtractor = item => cuid.slug()
+
+export class filmDetail extends React.Component {
   constructor(props) {
     const { imdbID } = props.filmDetails
     super(props)
@@ -32,60 +41,63 @@ export class FilmDetail extends React.Component {
   renderTitle() {
     const { dispatchViewList, filmSummary } = this.props
     return (
-      <div style={headerStyle}>
-        <h1 style={titleStyle}>{filmSummary.Title}</h1>
-        <CloseButton onClick={dispatchViewList} />
-      </div>
+      <View style={detailStyles.headerStyle}>
+        <Text style={detailStyles.titleStyle}>{filmSummary.Title}</Text>
+        <CloseButton onPress={dispatchViewList} />
+      </View>
     )
   }
 
   renderDetails() {
     const { filmSummary, filmDetails } = this.props
+    const items = [
+      { text: filmSummary.Year },
+      { text: `Directed by $${filmDetails.Director}` },
+      { text: `Written by ${filmDetails.Writer}` },
+      { text: `Cast: ${filmDetails.Actors}` },
+      { text: `Language: ${filmDetails.Language}` },
+      { text: `Awards: {filmDetails.Awards}`, cond: filmDetails.Awards },
+      { text: `Run Time: ${filmDetails.Runtime}` },
+      { text: `IMDB Rating: ${filmDetails.imdbRating}/10` },
+      { text: `Box Office: ${filmDetails.BoxOffice}` },
+      {
+        text: "Official Website",
+        url: filmDetails.Website,
+        cond: filmDetails.Website,
+      },
+      {
+        text: "IMDB page",
+        url: this.imdbUrl,
+      },
+    ]
     return (
-      <ul style={detailsStyle}>
-        <li>{filmSummary.Year}</li>
-        <li>Directed by {filmDetails.Director}</li>
-        <li>Written by {filmDetails.Writer}</li>
-        <li>Cast: {filmDetails.Actors}</li>
-        <li>Language: {filmDetails.Language}</li>
-        {filmDetails.Awards && <li>Awards: {filmDetails.Awards}</li>}
-        <li>Run Time: {filmDetails.Runtime}</li>
-        <li>IMDB Rating: {filmDetails.imdbRating}/10</li>
-        <li>Box Office: {filmDetails.BoxOffice}</li>
-        {filmDetails.Website && (
-          <li>
-            <a href={filmDetails.Website}>Official website</a>
-          </li>
-        )}
-        <li>
-          <a href={this.imdbUrl}>{"IMDB page"}</a>
-        </li>
-      </ul>
+      <FlatList
+        data={items}
+        renderItem={renderItem}
+        keyExtractor={keyExtractor}
+      />
     )
   }
 
   render() {
     const { filmSummary } = this.props
     return (
-      <div style={wrapperStyle}>
-        <a name="top">{this.renderTitle()}</a>
-        <img src={filmSummary.Poster} alt="poster" />
+      <View style={detailStyles.wrapperStyle}>
+        {this.renderTitle()}
+        <Image Source={filmSummary.Poster} />
         {this.renderDetails()}
-        <div>
-          <a href="#top">Top</a>
-        </div>
-      </div>
+      </View>
     )
   }
 }
 
-FilmDetail.propTypes = {
+filmDetail.propTypes = {
   filmSummary: PropTypes.object.isRequired,
   filmDetails: PropTypes.object,
   dispatchViewList: PropTypes.func.isRequired,
 }
 
-FilmDetail.defaultProps = {
+filmDetail.defaultProps = {
   filmDetails: {},
 }
 
@@ -97,4 +109,4 @@ export default connect(
   dispatch => ({
     dispatchViewList: () => dispatch(viewList()),
   })
-)(FilmDetail)
+)(filmDetail)

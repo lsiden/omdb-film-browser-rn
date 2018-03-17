@@ -1,23 +1,21 @@
 import React from "react"
-import { shallow } from "enzyme"
+import renderer from "react-native-test-utils"
 
-import "../../test-helpers/setup"
 import { CloseButton } from "components/close-button"
 
-let onClick
+let onPress
 
 const defaultProps = () => {
-  onClick = jest.fn()
+  onPress = jest.fn()
   return {
-    onClick,
+    onPress,
   }
 }
 
 const createWrapper = (props = {}) =>
-  shallow(<CloseButton {...{ ...defaultProps(), ...props }} />)
+  renderer(<CloseButton {...{ ...defaultProps(), ...props }} />)
 
-test("click on close invokes onClick()", () => {
+test("renders()", () => {
   const wrapper = createWrapper()
-  wrapper.simulate("click")
-  expect(onClick).toHaveBeenCalled()
+  expect(wrapper.toJSON()).toMatchSnapshot()
 })

@@ -11,17 +11,17 @@ const buttonStyle = {
   fontSize: "12pt",
 }
 
-const ButtonLink = ({ children, onClick, addStyle, ...passProps }) => {
+const ButtonLink = ({ children, onPress, addStyle, ...passProps }) => {
   const mergedStyle = { ...buttonStyle, ...addStyle }
   return (
-    <button onClick={onClick} {...passProps} style={mergedStyle}>
+    <button onPress={onPress} {...passProps} style={mergedStyle}>
       {children}
     </button>
   )
 }
 
 ButtonLink.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onPress: PropTypes.func.isRequired,
   addStyle: PropTypes.object,
   children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
     .isRequired,

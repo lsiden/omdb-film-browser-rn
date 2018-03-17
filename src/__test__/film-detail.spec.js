@@ -1,25 +1,25 @@
 import React from "react"
-import { shallow } from "enzyme"
+import renderer from "react-native-test-utils"
 
-import "../test-helpers/setup"
-import { FilmDetail } from "film-detail"
+import { filmDetail as FilmDetail } from "film-detail"
 
 const films = require("./__fixture__/films.json").Search
+const film0 = films[0]
+
 let dispatchViewList
 
 const defaultProps = () => {
   dispatchViewList = jest.fn()
   return {
-    filmSummary: films[0],
+    filmSummary: film0,
     dispatchViewList,
   }
 }
 
 const createWrapper = (props = {}) =>
-  shallow(<FilmDetail {...{ ...defaultProps(), ...props }} />)
+  renderer(<FilmDetail {...{ ...defaultProps(), ...props }} />)
 
 it("renders a title", () => {
   const wrapper = createWrapper()
-  // console.log(wrapper.toTree().rendered.rendered[0].rendered[0].rendered[0])
-  expect(wrapper.text()).toEqual(expect.stringContaining(films[0].Title))
+  expect(wrapper.toJSON()).toMatchSnapshot()
 })

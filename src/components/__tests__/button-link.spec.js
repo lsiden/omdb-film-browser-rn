@@ -1,20 +1,19 @@
 import React from "react"
-import { shallow } from "enzyme"
+import renderer from "react-native-test-utils"
 
-import "../../test-helpers/setup"
 import ButtonLink from "components/button-link"
 
-let onClick
+let onPress
 
 const defaultProps = () => ({
-  onClick,
+  onPress,
 })
 
 const buttonContents = "Push Me"
 
 const createWrapper = (props = {}) => {
-  onClick = jest.fn()
-  return shallow(
+  onPress = jest.fn()
+  return renderer(
     <ButtonLink {...{ ...defaultProps(), ...props }}>
       {buttonContents}
     </ButtonLink>
@@ -23,11 +22,11 @@ const createWrapper = (props = {}) => {
 
 it("renders children", () => {
   const wrapper = createWrapper()
-  expect(wrapper.text()).toEqual(buttonContents)
+  expect(wrapper.toJSON()).toMatchSnapshot()
 })
 
-test("click event invokes onClick()", () => {
+test("click event invokes onPress()", () => {
   const wrapper = createWrapper()
-  wrapper.simulate("click")
-  expect(onClick).toHaveBeenCalled()
+  wrapper.simulate("press")
+  expect(onPress).toHaveBeenCalled()
 })

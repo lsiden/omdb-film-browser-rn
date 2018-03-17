@@ -10,9 +10,9 @@ const closeButtonStyle = {
   fontSize: "20pt",
 }
 
-export const CloseButton = ({ onClick }) => (
+export const CloseButton = ({ onPress }) => (
   <ButtonLink
-    onClick={onClick}
+    onPress={onPress}
     id="close-button"
     title="Close"
     addStyle={closeButtonStyle}
@@ -22,7 +22,7 @@ export const CloseButton = ({ onClick }) => (
 )
 
 CloseButton.propTypes = {
-  onClick: PropTypes.func.isRequired,
+  onPress: PropTypes.func.isRequired,
 }
 
 export default CloseButton
