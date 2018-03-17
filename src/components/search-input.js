@@ -10,7 +10,7 @@ const wrapperStyle = {
 }
 
 const inputStyle = {
-  height: "24pt",
+  height: 24,
   width: "95%",
   marginLeft: 24,
   marginTop: 4,
@@ -19,8 +19,8 @@ const inputStyle = {
 
 const iconStyle = {
   position: "absolute",
-  top: "3pt",
-  left: "6pt",
+  top: 3,
+  left: 6,
   color: "#888",
   fontSize: 20,
   transform: [{ rotate: "-45deg" }],

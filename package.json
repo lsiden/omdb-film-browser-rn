@@ -1,5 +1,5 @@
 {
-  "name": "baseline",
+  "name": "omdb-native-viewer",
   "version": "0.1.0",
   "private": true,
   "devDependencies": {

@@ -4,7 +4,7 @@ exports[`renders a title 1`] = `
 <View
   style={
     Object {
-      "marginLeft": "10pt",
+      "marginLeft": 10,
     }
   }
 >
@@ -38,8 +38,8 @@ exports[`renders a title 1`] = `
           "background": "none",
           "border": "none",
           "cursor": "pointer",
-          "fontSize": "20pt",
-          "margin": "8pt",
+          "fontSize": 20,
+          "margin": 8,
           "padding": "0!important",
         }
       }
@@ -296,4 +296,4 @@ exports[`renders a title 1`] = `
     </View>
   </RCTScrollView>
 </View>
-`;
+`

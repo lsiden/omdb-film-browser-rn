@@ -3,20 +3,19 @@ import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { Text, View, FlatList, Linking, Image } from "react-native"
 import cuid from "cuid"
+import { Button } from "react-native"
 
 import { viewList } from "./actions"
-import { CloseButton } from "components/close-button"
 import { detailStyles } from "./styles"
 
 function renderItem(item) {
-  const { text, cond = true, url } = item
+  const { text, cond = true, url } = item.item
 
   if (!cond) {
     return null
   }
 
   const props = {
-    text,
     style: detailStyles.itemStyle,
   }
 
@@ -43,20 +42,21 @@ export class filmDetail extends React.Component {
     return (
       <View style={detailStyles.headerStyle}>
         <Text style={detailStyles.titleStyle}>{filmSummary.Title}</Text>
-        <CloseButton onPress={dispatchViewList} />
+        <Button onPress={dispatchViewList} title="Close" />
       </View>
     )
   }
 
-  renderDetails() {
+  getDetails() {
     const { filmSummary, filmDetails } = this.props
-    const items = [
+    console.log("filmDetails", filmDetails)
+    return [
       { text: filmSummary.Year },
       { text: `Directed by $${filmDetails.Director}` },
       { text: `Written by ${filmDetails.Writer}` },
       { text: `Cast: ${filmDetails.Actors}` },
       { text: `Language: ${filmDetails.Language}` },
-      { text: `Awards: {filmDetails.Awards}`, cond: filmDetails.Awards },
+      { text: `Awards: ${filmDetails.Awards}`, cond: !!filmDetails.Awards },
       { text: `Run Time: ${filmDetails.Runtime}` },
       { text: `IMDB Rating: ${filmDetails.imdbRating}/10` },
       { text: `Box Office: ${filmDetails.BoxOffice}` },
@@ -70,22 +70,23 @@ export class filmDetail extends React.Component {
         url: this.imdbUrl,
       },
     ]
-    return (
-      <FlatList
-        data={items}
-        renderItem={renderItem}
-        keyExtractor={keyExtractor}
-      />
-    )
   }
 
   render() {
-    const { filmSummary } = this.props
+    const { filmSummary, filmDetails } = this.props
     return (
       <View style={detailStyles.wrapperStyle}>
         {this.renderTitle()}
-        <Image Source={filmSummary.Poster} />
-        {this.renderDetails()}
+        <Image
+          source={{ uri: filmSummary.Poster }}
+          style={detailStyles.posterStyle}
+          resizeMode={"contain"}
+        />
+        <FlatList
+          data={this.getDetails()}
+          renderItem={renderItem}
+          keyExtractor={keyExtractor}
+        />
       </View>
     )
   }

@@ -6,7 +6,7 @@ export const gray2 = "#222"
 
 export const detailStyles = StyleSheet.create({
   wrapperStyle: {
-    marginLeft: "10pt",
+    marginLeft: 10,
   },
   headerStyle: {
     display: "flex",
@@ -20,6 +20,9 @@ export const detailStyles = StyleSheet.create({
   itemStyle: {
     fontSize: 12,
     color: gray8,
+  },
+  posterStyle: {
+    height: 200,
   },
 })
 

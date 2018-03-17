@@ -9,8 +9,8 @@ exports[`renders() 1`] = `
       "background": "none",
       "border": "none",
       "cursor": "pointer",
-      "fontSize": "20pt",
-      "margin": "8pt",
+      "fontSize": 20,
+      "margin": 8,
       "padding": "0!important",
     }
   }

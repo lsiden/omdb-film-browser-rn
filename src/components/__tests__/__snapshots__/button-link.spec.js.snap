@@ -8,7 +8,7 @@ exports[`renders children 1`] = `
       "background": "none",
       "border": "none",
       "cursor": "pointer",
-      "fontSize": "12pt",
+      "fontSize": 12,
       "padding": "0!important",
     }
   }

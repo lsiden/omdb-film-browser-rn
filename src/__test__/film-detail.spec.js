@@ -4,14 +4,16 @@ import renderer from "react-native-test-utils"
 import { filmDetail as FilmDetail } from "film-detail"
 
 const films = require("./__fixture__/films.json").Search
-const film0 = films[0]
+const filmDetails = require("./__fixture__/film-detail.json")
+const filmSummary = films[0]
 
 let dispatchViewList
 
 const defaultProps = () => {
   dispatchViewList = jest.fn()
   return {
-    filmSummary: film0,
+    filmSummary,
+    filmDetails,
     dispatchViewList,
   }
 }

@@ -14,6 +14,7 @@ import Show from "components/show"
 
 // FIXME remove
 const films = require("__test__/__fixture__/films.json").Search
+const filmDetails = require("__test__/__fixture__/film-detail.json")
 const film0 = films[0]
 const dispatchViewList = () => {}
 
@@ -23,9 +24,9 @@ const openUrl = url => Linking.openURL(url)
 const renderBanner = () => (
   <View style={appStyles.headerStyle}>
     <Text style={appStyles.titleStyle}>
-      {"Search"}&nbsp;
-      <Text onPress={openUrl(OMDB_URL)} style={appStyles.linkStyle}>
-        {"(Open Movie Database)"}
+      {"Search Open Movie Database"}&nbsp;
+      <Text onPress={() => openUrl(OMDB_URL)} style={appStyles.linkStyle}>
+        {"(OMDB)"}
       </Text>
     </Text>
     {/*
@@ -35,7 +36,7 @@ const renderBanner = () => (
 )
 
 export const omdbViewer = ({ view, toast }) => (
-  <div className="App">
+  <View className="App">
     <Toaster message={toast} />
     {renderBanner()}
     {/*}
@@ -44,9 +45,13 @@ export const omdbViewer = ({ view, toast }) => (
     </Show>
     */}
     <Show when={view === Actions.VIEW_FILM_DETAIL}>
-      <FilmDetail filmSummary={film0} dispatchViewList={dispatchViewList} />
+      <FilmDetail
+        filmSummary={film0}
+        filmDetails={filmDetails}
+        dispatchViewList={dispatchViewList}
+      />
     </Show>
-  </div>
+  </View>
 )
 
 omdbViewer.propTypes = {
