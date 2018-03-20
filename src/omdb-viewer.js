@@ -5,19 +5,12 @@ import { Text, View, ScrollView, Linking } from "react-native"
 import Toaster from "react-native-toaster"
 
 import { Actions } from "./actions"
-import { filmDetail as FilmDetail } from "film-detail" // FIXME replace with default
-import { filmList as FilmList } from "film-list" // FIXME replace with default
 import { OMDB_URL } from "./constants"
 import { appStyles } from "./styles"
 import SearchBar from "components/search-bar"
 import Show from "components/show"
-// import FilmList from "./film-list"
-
-// FIXME remove
-const films = require("__test__/__fixture__/films.json").Search
-const filmDetails = require("__test__/__fixture__/film-detail.json")
-const film0 = films[4]
-const dispatchViewList = () => {}
+import FilmList from "./film-list"
+import FilmDetail from "film-detail" // FIXME replace with default
 
 const openUrl = url => Linking.openURL(url)
 
@@ -39,15 +32,11 @@ export const omdbViewer = ({ view, toast }) => (
       <View>
         {renderBanner()}
         <SearchBar />
-        <FilmList films={films} />
+        <FilmList />
       </View>
     </Show>
     <Show when={view === Actions.VIEW_FILM_DETAIL}>
-      <FilmDetail
-        filmSummary={film0}
-        filmDetails={filmDetails}
-        dispatchViewList={dispatchViewList}
-      />
+      <FilmDetail />
     </Show>
   </ScrollView>
 )
