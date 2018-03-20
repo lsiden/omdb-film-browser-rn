@@ -1,16 +1,16 @@
 import React from "react"
 import { connect } from "react-redux"
 import PropTypes from "prop-types"
-import { Text, View, ScrollView, Linking } from "react-native"
+import { Text, View, ScrollView, Linking, BackHandler } from "react-native"
 import Toaster from "react-native-toaster"
 
-import { Actions } from "./actions"
+import { Actions, viewList } from "./actions"
 import { OMDB_URL } from "./constants"
 import { appStyles } from "./styles"
 import SearchBar from "components/search-bar"
 import Show from "components/show"
 import FilmList from "./film-list"
-import FilmDetail from "film-detail" // FIXME replace with default
+import FilmDetail from "film-detail"
 
 const openUrl = url => Linking.openURL(url)
 
@@ -25,7 +25,7 @@ const renderBanner = () => (
   </View>
 )
 
-export const omdbViewer = ({ view, toast }) => (
+const renderOmdbViewer = ({ view, toast }) => (
   <ScrollView className="App" style={appStyles.wrapper}>
     <Toaster message={toast} />
     <Show when={view === Actions.VIEW_FILM_LIST}>
@@ -40,6 +40,42 @@ export const omdbViewer = ({ view, toast }) => (
     </Show>
   </ScrollView>
 )
+
+export class omdbViewer extends React.Component {
+  constructor(props) {
+    super(props)
+    this.onBackPress = this.onBackPress.bind(this)
+  }
+
+  onBackPress() {
+    const { view, dispatchViewList } = this.props
+
+    if (view === Actions.VIEW_FILM_DETAIL) {
+      dispatchViewList()
+      return true
+    }
+    return false
+  }
+
+  componentDidMount() {
+    const { view, dispatchViewList } = this.props
+
+    this.backPressListener = BackHandler.addEventListener(
+      "hardwareBackPress",
+      this.onBackPress
+    )
+  }
+
+  componentWillUnmount() {
+    if (this.backPressListener) {
+      BackHandler.removeEventListener("hardwareBackPress", this.onBackPress)
+    }
+  }
+
+  render() {
+    return renderOmdbViewer(this.props)
+  }
+}
 
 omdbViewer.propTypes = {
   view: PropTypes.string.isRequired,
