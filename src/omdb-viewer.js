@@ -21,10 +21,10 @@ const dispatchViewList = () => {}
 const openUrl = url => Linking.openURL(url)
 
 const renderBanner = () => (
-  <View style={appStyles.headerStyle}>
-    <Text style={appStyles.titleStyle}>
+  <View style={appStyles.banner}>
+    <Text style={appStyles.title}>
       {"Search Open Movie Database"}&nbsp;
-      <Text onPress={() => openUrl(OMDB_URL)} style={appStyles.linkStyle}>
+      <Text onPress={() => openUrl(OMDB_URL)} style={appStyles.link}>
         {"(OMDB)"}
       </Text>
     </Text>
@@ -35,11 +35,11 @@ const renderBanner = () => (
 )
 
 export const omdbViewer = ({ view, toast }) => (
-  <View className="App">
+  <View className="App" style={appStyles.wrapper}>
     <Toaster message={toast} />
-    {renderBanner()}
     {/*}
     <Show when={view === Actions.VIEW_FILM_LIST}>
+      {renderBanner()}
       <FilmList />
     </Show>
     */}

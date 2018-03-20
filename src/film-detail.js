@@ -23,7 +23,7 @@ function renderItem(item) {
   }
 
   const props = {
-    style: detailStyles.itemStyle,
+    style: detailStyles.item,
   }
 
   if (url) {
@@ -48,7 +48,7 @@ export class filmDetail extends React.Component {
     const { dispatchViewList } = this.props
     return (
       <TouchableOpacity onPress={dispatchViewList}>
-        <Text style={detailStyles.buttonTextStyle}>{LEFT_TRIANGLE}</Text>
+        <Text style={detailStyles.buttonText}>{LEFT_TRIANGLE}</Text>
       </TouchableOpacity>
     )
   }
@@ -56,9 +56,9 @@ export class filmDetail extends React.Component {
   renderTitle() {
     const { filmSummary } = this.props
     return (
-      <View style={detailStyles.headerStyle}>
+      <View style={detailStyles.header}>
         {this.renderBackButton()}
-        <Text style={detailStyles.titleStyle}>{filmSummary.Title}</Text>
+        <Text style={detailStyles.title}>{filmSummary.Title}</Text>
       </View>
     )
   }
@@ -90,11 +90,11 @@ export class filmDetail extends React.Component {
   render() {
     const { filmSummary, filmDetails } = this.props
     return (
-      <View style={detailStyles.wrapperStyle}>
+      <View>
         {this.renderTitle()}
         <Image
           source={{ uri: filmSummary.Poster }}
-          style={detailStyles.posterStyle}
+          style={detailStyles.poster}
           resizeMode={"contain"}
         />
         <FlatList
