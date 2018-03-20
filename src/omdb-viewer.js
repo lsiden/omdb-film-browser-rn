@@ -8,6 +8,7 @@ import { Actions } from "./actions"
 // import QueryForm from "./query-form"
 // import FilmList from "./film-list"
 import { filmDetail as FilmDetail } from "film-detail" // FIXME replace with default
+import { filmList as FilmList } from "film-list" // FIXME replace with default
 import { OMDB_URL } from "./constants"
 import { appStyles } from "./styles"
 import Show from "components/show"
@@ -37,12 +38,12 @@ const renderBanner = () => (
 export const omdbViewer = ({ view, toast }) => (
   <ScrollView className="App" style={appStyles.wrapper}>
     <Toaster message={toast} />
-    {/*}
     <Show when={view === Actions.VIEW_FILM_LIST}>
-      {renderBanner()}
-      <FilmList />
+      <View>
+        {renderBanner()}
+        <FilmList films={films} />
+      </View>
     </Show>
-    */}
     <Show when={view === Actions.VIEW_FILM_DETAIL}>
       <FilmDetail
         filmSummary={film0}

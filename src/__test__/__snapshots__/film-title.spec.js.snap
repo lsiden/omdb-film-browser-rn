@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<TouchableHighlight
+  activeOpacity={0.85}
+  addStyle={
+    Object {
+      "color": "#210d87",
+    }
+  }
+  delayPressOut={100}
+  onPress={[Function]}
+  underlayColor="black"
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+  >
+    The Hobbit: The Battle of the Five Armies, 2014
+  </Text>
+</TouchableHighlight>
+`;

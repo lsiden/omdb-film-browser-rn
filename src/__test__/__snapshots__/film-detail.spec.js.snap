@@ -1,43 +1,22 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders a title 1`] = `
-<View
-  style={
-    Object {
-      "marginLeft": 10,
-    }
-  }
->
+<View>
   <View
     style={
       Object {
+        "alignContent": "flex-start",
+        "alignItems": "baseline",
         "display": "flex",
-        "justifyContent": "space-between",
+        "flexDirection": "row",
+        "justifyContent": "flex-start",
       }
     }
   >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "fontSize": 14,
-          "fontWeight": "bold",
-          "marginBottom": 5,
-        }
-      }
-    >
-      The Battle of Algiers
-    </Text>
     <View
-      accessibilityComponentType="button"
+      accessibilityComponentType={undefined}
       accessibilityLabel={undefined}
-      accessibilityTraits={
-        Array [
-          "button",
-        ]
-      }
+      accessibilityTraits={undefined}
       accessible={true}
       collapsable={undefined}
       hasTVPreferredFocus={undefined}
@@ -59,33 +38,35 @@ exports[`renders a title 1`] = `
       testID={undefined}
       tvParallaxProperties={undefined}
     >
-      <View
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
         style={
-          Array [
-            Object {},
-          ]
+          Object {
+            "fontSize": 24,
+          }
         }
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          disabled={undefined}
-          ellipsizeMode="tail"
-          style={
-            Array [
-              Object {
-                "color": "#007AFF",
-                "fontSize": 18,
-                "padding": 8,
-                "textAlign": "center",
-              },
-            ]
-          }
-        >
-          Close
-        </Text>
-      </View>
+        ◁
+      </Text>
     </View>
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "flex": 2,
+          "fontSize": 20,
+          "fontWeight": "bold",
+          "marginBottom": 5,
+          "textAlign": "center",
+        }
+      }
+    >
+      The Battle of Algiers
+    </Text>
   </View>
   <Image
     resizeMode="contain"
@@ -96,7 +77,9 @@ exports[`renders a title 1`] = `
     }
     style={
       Object {
-        "height": 200,
+        "height": 300,
+        "marginBottom": 10,
+        "marginTop": 10,
       }
     }
   />
@@ -107,7 +90,7 @@ exports[`renders a title 1`] = `
           "text": "1966",
         },
         Object {
-          "text": "Directed by $Gillo Pontecorvo",
+          "text": "Directed by Gillo Pontecorvo",
         },
         Object {
           "text": "Written by Franco Solinas, Franco Solinas (story), Gillo Pontecorvo (story)",
@@ -175,8 +158,7 @@ exports[`renders a title 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "#888",
-              "fontSize": 12,
+              "fontSize": 16,
             }
           }
         >
@@ -193,12 +175,11 @@ exports[`renders a title 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "#888",
-              "fontSize": 12,
+              "fontSize": 16,
             }
           }
         >
-          Directed by $Gillo Pontecorvo
+          Directed by Gillo Pontecorvo
         </Text>
       </View>
       <View
@@ -211,8 +192,7 @@ exports[`renders a title 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "#888",
-              "fontSize": 12,
+              "fontSize": 16,
             }
           }
         >
@@ -229,8 +209,7 @@ exports[`renders a title 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "#888",
-              "fontSize": 12,
+              "fontSize": 16,
             }
           }
         >
@@ -247,8 +226,7 @@ exports[`renders a title 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "#888",
-              "fontSize": 12,
+              "fontSize": 16,
             }
           }
         >
@@ -265,8 +243,7 @@ exports[`renders a title 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "#888",
-              "fontSize": 12,
+              "fontSize": 16,
             }
           }
         >
@@ -283,8 +260,7 @@ exports[`renders a title 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "#888",
-              "fontSize": 12,
+              "fontSize": 16,
             }
           }
         >
@@ -301,8 +277,7 @@ exports[`renders a title 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "#888",
-              "fontSize": 12,
+              "fontSize": 16,
             }
           }
         >
@@ -319,8 +294,7 @@ exports[`renders a title 1`] = `
           ellipsizeMode="tail"
           style={
             Object {
-              "color": "#888",
-              "fontSize": 12,
+              "fontSize": 16,
             }
           }
         >
@@ -338,8 +312,7 @@ exports[`renders a title 1`] = `
           onPress={[Function]}
           style={
             Object {
-              "color": "#888",
-              "fontSize": 12,
+              "fontSize": 16,
             }
           }
         >

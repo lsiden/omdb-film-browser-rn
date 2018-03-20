@@ -8,7 +8,7 @@ import store from "store"
 
 export const app = () => (
   <Provider store={store}>
-    <OmdbViewer view={Actions.VIEW_FILM_DETAIL} />
+    <OmdbViewer view={Actions.VIEW_FILM_LIST} />
   </Provider>
 )
 
