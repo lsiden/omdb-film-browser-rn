@@ -13,6 +13,7 @@ import cuid from "cuid"
 
 import { viewList } from "./actions"
 import { detailStyles } from "./styles"
+import { LEFT_TRIANGLE } from "./constants"
 
 function renderItem(item) {
   const { text, cond = true, url } = item.item
@@ -43,17 +44,21 @@ export class filmDetail extends React.Component {
     this.dispatchViewList = props.dispatchViewList.bind(this)
   }
 
+  renderBackButton() {
+    const { dispatchViewList } = this.props
+    return (
+      <TouchableOpacity onPress={dispatchViewList}>
+        <Text style={detailStyles.buttonTextStyle}>{LEFT_TRIANGLE}</Text>
+      </TouchableOpacity>
+    )
+  }
+
   renderTitle() {
-    const { dispatchViewList, filmSummary } = this.props
+    const { filmSummary } = this.props
     return (
       <View style={detailStyles.headerStyle}>
+        {this.renderBackButton()}
         <Text style={detailStyles.titleStyle}>{filmSummary.Title}</Text>
-        <TouchableOpacity
-          onPress={dispatchViewList}
-          style={detailStyles.buttonStyle}
-        >
-          <Text>Return</Text>
-        </TouchableOpacity>
       </View>
     )
   }

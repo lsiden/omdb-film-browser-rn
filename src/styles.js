@@ -7,29 +7,32 @@ export const buttonBackground = "#8cb8ff"
 
 export const detailStyles = StyleSheet.create({
   wrapperStyle: {
-    alignContent: "flex-start",
+    marginLeft: 10,
   },
   headerStyle: {
     display: "flex",
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "flex-start",
+    alignContent: "flex-start",
+    alignItems: "baseline",
   },
   titleStyle: {
     marginBottom: 5,
-    fontSize: 14,
+    fontSize: 20,
     fontWeight: "bold",
+    textAlign: "center",
+    flex: 2,
   },
   itemStyle: {
-    fontSize: 12,
-    color: gray8,
+    fontSize: 16,
   },
   posterStyle: {
     height: 300,
+    marginTop: 10,
+    marginBottom: 10,
   },
-  buttonStyle: {
-    backgroundColor: buttonBackground,
-    paddingRight: 5,
-    paddingLeft: 5,
+  buttonTextStyle: {
+    fontSize: 24,
   },
 })
 

@@ -15,10 +15,9 @@ import Show from "components/show"
 // FIXME remove
 const films = require("__test__/__fixture__/films.json").Search
 const filmDetails = require("__test__/__fixture__/film-detail.json")
-const film0 = films[0]
+const film0 = films[4]
 const dispatchViewList = () => {}
 
-// TODO provide routing to enable bookmarking results and details
 const openUrl = url => Linking.openURL(url)
 
 const renderBanner = () => (
