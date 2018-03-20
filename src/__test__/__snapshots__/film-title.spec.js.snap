@@ -3,11 +3,6 @@
 exports[`renders 1`] = `
 <TouchableHighlight
   activeOpacity={0.85}
-  addStyle={
-    Object {
-      "color": "#210d87",
-    }
-  }
   delayPressOut={100}
   onPress={[Function]}
   underlayColor="black"
@@ -16,6 +11,12 @@ exports[`renders 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    style={
+      Object {
+        "fontSize": 18,
+        "lineHeight": 30,
+      }
+    }
   >
     The Hobbit: The Battle of the Five Armies, 2014
   </Text>

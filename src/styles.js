@@ -58,4 +58,11 @@ export const appStyles = {
     fontSize: 18,
     marginBottom: 18,
   },
+  searchWrapper: {
+    backgroundColor: bannerBackground,
+  },
+  search: {
+    paddingTop: 10,
+    paddingBottom: 10,
+  },
 }
