@@ -1,9 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { Text, View, FlatList, Linking, Image } from "react-native"
+import {
+  Text,
+  View,
+  FlatList,
+  Linking,
+  Image,
+  TouchableOpacity,
+} from "react-native"
 import cuid from "cuid"
-import { Button } from "react-native"
 
 import { viewList } from "./actions"
 import { detailStyles } from "./styles"
@@ -42,17 +48,21 @@ export class filmDetail extends React.Component {
     return (
       <View style={detailStyles.headerStyle}>
         <Text style={detailStyles.titleStyle}>{filmSummary.Title}</Text>
-        <Button onPress={dispatchViewList} title="Close" />
+        <TouchableOpacity
+          onPress={dispatchViewList}
+          style={detailStyles.buttonStyle}
+        >
+          <Text>Return</Text>
+        </TouchableOpacity>
       </View>
     )
   }
 
   getDetails() {
     const { filmSummary, filmDetails } = this.props
-    console.log("filmDetails", filmDetails)
     return [
       { text: filmSummary.Year },
-      { text: `Directed by $${filmDetails.Director}` },
+      { text: `Directed by ${filmDetails.Director}` },
       { text: `Written by ${filmDetails.Writer}` },
       { text: `Cast: ${filmDetails.Actors}` },
       { text: `Language: ${filmDetails.Language}` },

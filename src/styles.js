@@ -3,13 +3,15 @@ import { StyleSheet } from "react-native"
 export const white = "#fff"
 export const gray8 = "#888"
 export const gray2 = "#222"
+export const buttonBackground = "#8cb8ff"
 
 export const detailStyles = StyleSheet.create({
   wrapperStyle: {
-    marginLeft: 10,
+    alignContent: "flex-start",
   },
   headerStyle: {
     display: "flex",
+    flexDirection: "row",
     justifyContent: "space-between",
   },
   titleStyle: {
@@ -22,7 +24,12 @@ export const detailStyles = StyleSheet.create({
     color: gray8,
   },
   posterStyle: {
-    height: 200,
+    height: 300,
+  },
+  buttonStyle: {
+    backgroundColor: buttonBackground,
+    paddingRight: 5,
+    paddingLeft: 5,
   },
 })
 
