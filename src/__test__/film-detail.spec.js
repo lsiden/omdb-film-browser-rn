@@ -5,7 +5,7 @@ import { filmDetail as FilmDetail } from "film-detail"
 
 const films = require("./__fixture__/films.json").Search
 const filmDetails = require("./__fixture__/film-detail.json")
-const filmSummary = films[0]
+const filmSummary = films[4]
 
 let dispatchViewList
 

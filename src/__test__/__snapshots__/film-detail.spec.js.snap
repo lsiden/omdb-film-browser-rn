@@ -28,68 +28,117 @@ exports[`renders a title 1`] = `
         }
       }
     >
-      The Hobbit: The Battle of the Five Armies
+      The Battle of Algiers
     </Text>
-    <button
-      id="close-button"
-      onPress={[MockFunction]}
+    <View
+      accessibilityComponentType="button"
+      accessibilityLabel={undefined}
+      accessibilityTraits={
+        Array [
+          "button",
+        ]
+      }
+      accessible={true}
+      collapsable={undefined}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
       style={
         Object {
-          "background": "none",
-          "border": "none",
-          "cursor": "pointer",
-          "fontSize": 20,
-          "margin": 8,
-          "padding": "0!important",
+          "opacity": 1,
         }
       }
-      title="Close"
+      testID={undefined}
+      tvParallaxProperties={undefined}
     >
-      ✕
-    </button>
+      <View
+        style={
+          Array [
+            Object {},
+          ]
+        }
+      >
+        <Text
+          accessible={true}
+          allowFontScaling={true}
+          disabled={undefined}
+          ellipsizeMode="tail"
+          style={
+            Array [
+              Object {
+                "color": "#007AFF",
+                "fontSize": 18,
+                "padding": 8,
+                "textAlign": "center",
+              },
+            ]
+          }
+        >
+          Close
+        </Text>
+      </View>
+    </View>
   </View>
   <Image
-    Source="https://images-na.ssl-images-amazon.com/images/M/MV5BODAzMDgxMDc1MF5BMl5BanBnXkFtZTgwMTI0OTAzMjE@._V1_SX300.jpg"
+    resizeMode="contain"
+    source={
+      Object {
+        "uri": "https://images-na.ssl-images-amazon.com/images/M/MV5BYzliNzI5NzgtNDZmNy00NGU4LTg2OTQtMDEzZTRiNDU3ZTI1XkEyXkFqcGdeQXVyMDUyOTUyNQ@@._V1_SX300.jpg",
+      }
+    }
+    style={
+      Object {
+        "height": 200,
+      }
+    }
   />
   <RCTScrollView
     data={
       Array [
         Object {
-          "text": "2014",
+          "text": "1966",
         },
         Object {
-          "text": "Directed by $undefined",
+          "text": "Directed by $Gillo Pontecorvo",
         },
         Object {
-          "text": "Written by undefined",
+          "text": "Written by Franco Solinas, Franco Solinas (story), Gillo Pontecorvo (story)",
         },
         Object {
-          "text": "Cast: undefined",
+          "text": "Cast: Jean Martin, Yacef Saadi, Brahim Hadjadj, Tommaso Neri",
         },
         Object {
-          "text": "Language: undefined",
+          "text": "Language: French, Arabic, English",
         },
         Object {
-          "cond": undefined,
-          "text": "Awards: {filmDetails.Awards}",
+          "cond": true,
+          "text": "Awards: Nominated for 3 Oscars. Another 9 wins & 5 nominations.",
         },
         Object {
-          "text": "Run Time: undefined",
+          "text": "Run Time: 121 min",
         },
         Object {
-          "text": "IMDB Rating: undefined/10",
+          "text": "IMDB Rating: 8.1/10",
         },
         Object {
-          "text": "Box Office: undefined",
+          "text": "Box Office: $55,908",
         },
         Object {
-          "cond": undefined,
+          "cond": "http://rialtopictures.com/battle.html",
           "text": "Official Website",
-          "url": undefined,
+          "url": "http://rialtopictures.com/battle.html",
         },
         Object {
           "text": "IMDB page",
-          "url": "https://www.imdb.com/title/undefined",
+          "url": "https://www.imdb.com/title/tt0058946",
         },
       ]
     }
@@ -130,8 +179,9 @@ exports[`renders a title 1`] = `
               "fontSize": 12,
             }
           }
-          text={undefined}
-        />
+        >
+          1966
+        </Text>
       </View>
       <View
         onLayout={[Function]}
@@ -147,8 +197,9 @@ exports[`renders a title 1`] = `
               "fontSize": 12,
             }
           }
-          text={undefined}
-        />
+        >
+          Directed by $Gillo Pontecorvo
+        </Text>
       </View>
       <View
         onLayout={[Function]}
@@ -164,8 +215,9 @@ exports[`renders a title 1`] = `
               "fontSize": 12,
             }
           }
-          text={undefined}
-        />
+        >
+          Written by Franco Solinas, Franco Solinas (story), Gillo Pontecorvo (story)
+        </Text>
       </View>
       <View
         onLayout={[Function]}
@@ -181,8 +233,9 @@ exports[`renders a title 1`] = `
               "fontSize": 12,
             }
           }
-          text={undefined}
-        />
+        >
+          Cast: Jean Martin, Yacef Saadi, Brahim Hadjadj, Tommaso Neri
+        </Text>
       </View>
       <View
         onLayout={[Function]}
@@ -198,8 +251,9 @@ exports[`renders a title 1`] = `
               "fontSize": 12,
             }
           }
-          text={undefined}
-        />
+        >
+          Language: French, Arabic, English
+        </Text>
       </View>
       <View
         onLayout={[Function]}
@@ -215,8 +269,9 @@ exports[`renders a title 1`] = `
               "fontSize": 12,
             }
           }
-          text={undefined}
-        />
+        >
+          Awards: Nominated for 3 Oscars. Another 9 wins & 5 nominations.
+        </Text>
       </View>
       <View
         onLayout={[Function]}
@@ -232,8 +287,9 @@ exports[`renders a title 1`] = `
               "fontSize": 12,
             }
           }
-          text={undefined}
-        />
+        >
+          Run Time: 121 min
+        </Text>
       </View>
       <View
         onLayout={[Function]}
@@ -249,8 +305,9 @@ exports[`renders a title 1`] = `
               "fontSize": 12,
             }
           }
-          text={undefined}
-        />
+        >
+          IMDB Rating: 8.1/10
+        </Text>
       </View>
       <View
         onLayout={[Function]}
@@ -266,8 +323,9 @@ exports[`renders a title 1`] = `
               "fontSize": 12,
             }
           }
-          text={undefined}
-        />
+        >
+          Box Office: $55,908
+        </Text>
       </View>
       <View
         onLayout={[Function]}
@@ -277,14 +335,16 @@ exports[`renders a title 1`] = `
           accessible={true}
           allowFontScaling={true}
           ellipsizeMode="tail"
+          onPress={[Function]}
           style={
             Object {
               "color": "#888",
               "fontSize": 12,
             }
           }
-          text={undefined}
-        />
+        >
+          Official Website
+        </Text>
       </View>
       <View
         style={
@@ -296,4 +356,4 @@ exports[`renders a title 1`] = `
     </View>
   </RCTScrollView>
 </View>
-`
+`;
