@@ -17,12 +17,7 @@ export class searchBar extends React.Component {
     this.state = { query: "" }
     this.onChangeText = this.onChangeText.bind(this)
     this.onTimeout = this.onTimeout.bind(this)
-  }
-
-  componentDidMount() {
-    if (this.ref) {
-      this.ref.focus()
-    }
+    this.onCancel = this.onCancel.bind(this)
   }
 
   onTimeout() {
@@ -43,9 +38,21 @@ export class searchBar extends React.Component {
     this.timeoutId = setTimeout(this.onTimeout, this.props.delay)
   }
 
+  onCancel() {
+    this.setState({ query: "" })
+    this.ref.clear()
+  }
+
   render() {
     const { dispatchQuery } = this.props
-    return <SearchBar placeholder="Title..." onChangeText={this.onChangeText} />
+    return (
+      <SearchBar
+        placeholder="Title..."
+        onChangeText={this.onChangeText}
+        onCancel={this.onCancel}
+        clearIcon={{ color: "#86939e", name: "close" }}
+      />
+    )
   }
 }
 
