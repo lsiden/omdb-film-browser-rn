@@ -1,7 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import PropTypes from "prop-types"
-import { Text, View, Linking } from "react-native"
+import { Text, View, ScrollView, Linking } from "react-native"
 import Toaster from "react-native-toaster"
 
 import { Actions } from "./actions"
@@ -35,7 +35,7 @@ const renderBanner = () => (
 )
 
 export const omdbViewer = ({ view, toast }) => (
-  <View className="App" style={appStyles.wrapper}>
+  <ScrollView className="App" style={appStyles.wrapper}>
     <Toaster message={toast} />
     {/*}
     <Show when={view === Actions.VIEW_FILM_LIST}>
@@ -50,7 +50,7 @@ export const omdbViewer = ({ view, toast }) => (
         dispatchViewList={dispatchViewList}
       />
     </Show>
-  </View>
+  </ScrollView>
 )
 
 omdbViewer.propTypes = {
