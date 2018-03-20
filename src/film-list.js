@@ -1,28 +1,27 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { View, FlatList, Text } from "react-native"
-import cuid from "cuid"
+import { Text } from "react-native"
+import { List, ListItem } from "react-native-elements"
 
-import FilmTitle from "./film-title"
 import { filmListStyles } from "./styles"
+import { viewFilmSummary, fetchFilmDetails } from "./actions"
 
 const ulStyle = {}
-const keyExtractor = item => cuid.slug()
+const renderTitle = filmSummary => `${filmSummary.Title} - ${filmSummary.Year}`
 
-renderListItem = ({ item }) => (
-  <FilmTitle key={item.imdbID} filmSummary={item} />
-)
-
-export const filmList = ({ films }) => {
+export const filmList = ({ films, dispatchViewDetail }) => {
   if (films.length > 0) {
     return (
-      <FlatList
-        style={ulStyle}
-        data={films}
-        renderItem={renderListItem}
-        keyExtractor={keyExtractor}
-      />
+      <List>
+        {films.map(filmSummary => (
+          <ListItem
+            key={filmSummary.imdbID}
+            title={renderTitle(filmSummary)}
+            onPress={() => dispatchViewDetail(filmSummary)}
+          />
+        ))}
+      </List>
     )
   } else {
     return (
@@ -35,11 +34,20 @@ export const filmList = ({ films }) => {
 
 filmList.propTypes = {
   films: PropTypes.arrayOf(PropTypes.object),
+  dispatchViewDetail: PropTypes.func.isRequired,
 }
 filmList.defaultProps = {
   films: [],
 }
 
-export default connect(state => ({
-  films: state.films,
-}))(filmList)
+export default connect(
+  state => ({
+    films: state.films,
+  }),
+  dispatch => ({
+    dispatchViewDetail: filmSummary => {
+      dispatch(viewFilmSummary(filmSummary))
+      dispatch(fetchFilmDetails(filmSummary.imdbID))
+    },
+  })
+)(filmList)

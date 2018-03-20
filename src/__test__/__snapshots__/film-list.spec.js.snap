@@ -1,145 +1,1728 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders list of titles 1`] = `
-<RCTScrollView
-  data={
+<View
+  style={
     Array [
       Object {
-        "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BODAzMDgxMDc1MF5BMl5BanBnXkFtZTgwMTI0OTAzMjE@._V1_SX300.jpg",
-        "Title": "The Hobbit: The Battle of the Five Armies",
-        "Type": "movie",
-        "Year": "2014",
-        "imdbID": "tt2310332",
+        "backgroundColor": "#ffffff",
+        "borderColor": "#bbb",
+        "borderTopWidth": 1,
+        "marginTop": 20,
       },
-      Object {
-        "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMDg2NzQwOGMtMGRkNC00YjAwLTg4NjgtZWQwYzljZmM1YzA4XkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg",
-        "Title": "Battle Los Angeles",
-        "Type": "movie",
-        "Year": "2011",
-        "imdbID": "tt1217613",
-      },
-      Object {
-        "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMWI1YmQ0ZTctZWM2YS00YWE3LWE0NWUtNGE5YTFiNDlhOTY4L2ltYWdlXkEyXkFqcGdeQXVyMzM4MjM0Nzg@._V1_SX300.jpg",
-        "Title": "Battle Royale",
-        "Type": "movie",
-        "Year": "2000",
-        "imdbID": "tt0266308",
-      },
-      Object {
-        "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMGZjZDE2NjUtMzVkNy00N2UyLTg5MjYtYzY1ZmM1YWY3ZTZmXkEyXkFqcGdeQXVyNjk1Njg5NTA@._V1_SX300.jpg",
-        "Title": "Night at the Museum: Battle of the Smithsonian",
-        "Type": "movie",
-        "Year": "2009",
-        "imdbID": "tt1078912",
-      },
-      Object {
-        "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BYzliNzI5NzgtNDZmNy00NGU4LTg2OTQtMDEzZTRiNDU3ZTI1XkEyXkFqcGdeQXVyMDUyOTUyNQ@@._V1_SX300.jpg",
-        "Title": "The Battle of Algiers",
-        "Type": "movie",
-        "Year": "1966",
-        "imdbID": "tt0058946",
-      },
-      Object {
-        "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BZTljYmU2NTMtODhhNC00NjlhLWJhZTUtNDllODYyYWM4ZjA5XkEyXkFqcGdeQXVyNjM0ODk5NDY@._V1_SX300.jpg",
-        "Title": "Battle of the Sexes",
-        "Type": "movie",
-        "Year": "2017",
-        "imdbID": "tt4622512",
-      },
-      Object {
-        "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BNWRlYjU3ODYtNzAzZS00YWE5LTkxZTEtYjM1YzIwZTlhMWQ2L2ltYWdlL2ltYWdlXkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
-        "Title": "Battle for the Planet of the Apes",
-        "Type": "movie",
-        "Year": "1973",
-        "imdbID": "tt0069768",
-      },
-      Object {
-        "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BMjE2MzUwODUxMl5BMl5BanBnXkFtZTgwMTI0NDkzMjE@._V1_SX300.jpg",
-        "Title": "Dragon Ball Z: Battle of Gods",
-        "Type": "movie",
-        "Year": "2013",
-        "imdbID": "tt2263944",
-      },
-      Object {
-        "Poster": "http://ia.media-imdb.com/images/M/MV5BMjE2MzUwODUxMl5BMl5BanBnXkFtZTgwMTI0NDkzMjE@._V1_SX300.jpg",
-        "Title": "Dragon Ball Z: Battle of Gods",
-        "Type": "movie",
-        "Year": "2013",
-        "imdbID": "tt2536562",
-      },
-      Object {
-        "Poster": "https://images-na.ssl-images-amazon.com/images/M/MV5BYjY1NmY1MzUtOTgwYy00Mzk0LThkNzgtZGRhNWU4NmFmYzMyL2ltYWdlXkEyXkFqcGdeQXVyNjQzNDI3NzY@._V1_SX300.jpg",
-        "Title": "Battle of Britain",
-        "Type": "movie",
-        "Year": "1969",
-        "imdbID": "tt0064072",
-      },
+      undefined,
     ]
   }
-  disableVirtualization={false}
-  getItem={[Function]}
-  getItemCount={[Function]}
-  horizontal={false}
-  initialNumToRender={10}
-  keyExtractor={[Function]}
-  maxToRenderPerBatch={10}
-  numColumns={1}
-  onContentSizeChange={[Function]}
-  onEndReachedThreshold={2}
-  onLayout={[Function]}
-  onMomentumScrollEnd={[Function]}
-  onScroll={[Function]}
-  onScrollBeginDrag={[Function]}
-  onScrollEndDrag={[Function]}
-  renderItem={[Function]}
-  scrollEventThrottle={50}
-  stickyHeaderIndices={Array []}
-  style={Object {}}
-  updateCellsBatchingPeriod={50}
-  viewabilityConfigCallbackPairs={Array []}
-  windowSize={21}
 >
-  <View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderBottomColor": "#bbb",
+          "borderBottomWidth": 1,
+          "paddingBottom": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+        },
+        undefined,
+        false,
+        false,
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
     <View
-      onLayout={[Function]}
-      style={null}
-    />
-    <View
-      onLayout={[Function]}
-      style={null}
-    />
-    <View
-      onLayout={[Function]}
-      style={null}
-    />
-    <View
-      onLayout={[Function]}
-      style={null}
-    />
-    <View
-      onLayout={[Function]}
-      style={null}
-    />
-    <View
-      onLayout={[Function]}
-      style={null}
-    />
-    <View
-      onLayout={[Function]}
-      style={null}
-    />
-    <View
-      onLayout={[Function]}
-      style={null}
-    />
-    <View
-      onLayout={[Function]}
-      style={null}
-    />
-    <View
-      onLayout={[Function]}
-      style={null}
-    />
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginLeft": 10,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#43484d",
+                    "fontSize": 17.5,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            The Hobbit: The Battle of the Five Armies - 2014
+          </Text>
+        </View>
+        <View
+          style={undefined}
+        >
+          <View />
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          onPress={undefined}
+          style={
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ]
+          }
+          underlayColor="white"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#bdc6cf",
+                  "fontSize": 28,
+                },
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  undefined,
+                ],
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
   </View>
-</RCTScrollView>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderBottomColor": "#bbb",
+          "borderBottomWidth": 1,
+          "paddingBottom": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+        },
+        undefined,
+        false,
+        false,
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginLeft": 10,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#43484d",
+                    "fontSize": 17.5,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Battle Los Angeles - 2011
+          </Text>
+        </View>
+        <View
+          style={undefined}
+        >
+          <View />
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          onPress={undefined}
+          style={
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ]
+          }
+          underlayColor="white"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#bdc6cf",
+                  "fontSize": 28,
+                },
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  undefined,
+                ],
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderBottomColor": "#bbb",
+          "borderBottomWidth": 1,
+          "paddingBottom": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+        },
+        undefined,
+        false,
+        false,
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginLeft": 10,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#43484d",
+                    "fontSize": 17.5,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Battle Royale - 2000
+          </Text>
+        </View>
+        <View
+          style={undefined}
+        >
+          <View />
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          onPress={undefined}
+          style={
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ]
+          }
+          underlayColor="white"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#bdc6cf",
+                  "fontSize": 28,
+                },
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  undefined,
+                ],
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderBottomColor": "#bbb",
+          "borderBottomWidth": 1,
+          "paddingBottom": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+        },
+        undefined,
+        false,
+        false,
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginLeft": 10,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#43484d",
+                    "fontSize": 17.5,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Night at the Museum: Battle of the Smithsonian - 2009
+          </Text>
+        </View>
+        <View
+          style={undefined}
+        >
+          <View />
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          onPress={undefined}
+          style={
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ]
+          }
+          underlayColor="white"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#bdc6cf",
+                  "fontSize": 28,
+                },
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  undefined,
+                ],
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderBottomColor": "#bbb",
+          "borderBottomWidth": 1,
+          "paddingBottom": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+        },
+        undefined,
+        false,
+        false,
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginLeft": 10,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#43484d",
+                    "fontSize": 17.5,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            The Battle of Algiers - 1966
+          </Text>
+        </View>
+        <View
+          style={undefined}
+        >
+          <View />
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          onPress={undefined}
+          style={
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ]
+          }
+          underlayColor="white"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#bdc6cf",
+                  "fontSize": 28,
+                },
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  undefined,
+                ],
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderBottomColor": "#bbb",
+          "borderBottomWidth": 1,
+          "paddingBottom": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+        },
+        undefined,
+        false,
+        false,
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginLeft": 10,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#43484d",
+                    "fontSize": 17.5,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Battle of the Sexes - 2017
+          </Text>
+        </View>
+        <View
+          style={undefined}
+        >
+          <View />
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          onPress={undefined}
+          style={
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ]
+          }
+          underlayColor="white"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#bdc6cf",
+                  "fontSize": 28,
+                },
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  undefined,
+                ],
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderBottomColor": "#bbb",
+          "borderBottomWidth": 1,
+          "paddingBottom": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+        },
+        undefined,
+        false,
+        false,
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginLeft": 10,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#43484d",
+                    "fontSize": 17.5,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Battle for the Planet of the Apes - 1973
+          </Text>
+        </View>
+        <View
+          style={undefined}
+        >
+          <View />
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          onPress={undefined}
+          style={
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ]
+          }
+          underlayColor="white"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#bdc6cf",
+                  "fontSize": 28,
+                },
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  undefined,
+                ],
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderBottomColor": "#bbb",
+          "borderBottomWidth": 1,
+          "paddingBottom": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+        },
+        undefined,
+        false,
+        false,
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginLeft": 10,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#43484d",
+                    "fontSize": 17.5,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Dragon Ball Z: Battle of Gods - 2013
+          </Text>
+        </View>
+        <View
+          style={undefined}
+        >
+          <View />
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          onPress={undefined}
+          style={
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ]
+          }
+          underlayColor="white"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#bdc6cf",
+                  "fontSize": 28,
+                },
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  undefined,
+                ],
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderBottomColor": "#bbb",
+          "borderBottomWidth": 1,
+          "paddingBottom": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+        },
+        undefined,
+        false,
+        false,
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginLeft": 10,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#43484d",
+                    "fontSize": 17.5,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Dragon Ball Z: Battle of Gods - 2013
+          </Text>
+        </View>
+        <View
+          style={undefined}
+        >
+          <View />
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          onPress={undefined}
+          style={
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ]
+          }
+          underlayColor="white"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#bdc6cf",
+                  "fontSize": 28,
+                },
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  undefined,
+                ],
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "transparent",
+          "borderBottomColor": "#bbb",
+          "borderBottomWidth": 1,
+          "paddingBottom": 10,
+          "paddingRight": 10,
+          "paddingTop": 10,
+        },
+        undefined,
+        false,
+        false,
+      ]
+    }
+    testID={undefined}
+    tvParallaxProperties={undefined}
+  >
+    <View
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "flexDirection": "row",
+            "marginLeft": 10,
+          },
+          undefined,
+        ]
+      }
+    >
+      <View
+        style={
+          Object {
+            "flex": 1,
+            "justifyContent": "center",
+          }
+        }
+      >
+        <View
+          style={undefined}
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#43484d",
+                    "fontSize": 17.5,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            Battle of Britain - 1969
+          </Text>
+        </View>
+        <View
+          style={undefined}
+        >
+          <View />
+        </View>
+      </View>
+      <View
+        accessibilityComponentType={undefined}
+        accessibilityLabel={undefined}
+        accessibilityTraits={undefined}
+        accessible={true}
+        collapsable={undefined}
+        hasTVPreferredFocus={undefined}
+        hitSlop={undefined}
+        isTVSelectable={true}
+        nativeID={undefined}
+        onLayout={undefined}
+        onResponderGrant={[Function]}
+        onResponderMove={[Function]}
+        onResponderRelease={[Function]}
+        onResponderTerminate={[Function]}
+        onResponderTerminationRequest={[Function]}
+        onStartShouldSetResponder={[Function]}
+        style={
+          Object {
+            "alignItems": "flex-end",
+            "justifyContent": "center",
+            "opacity": 1,
+          }
+        }
+        testID={undefined}
+        tvParallaxProperties={undefined}
+      >
+        <View
+          onPress={undefined}
+          style={
+            Array [
+              false,
+              false,
+              false,
+              Object {
+                "alignItems": "center",
+                "backgroundColor": "transparent",
+                "justifyContent": "center",
+              },
+              undefined,
+            ]
+          }
+          underlayColor="white"
+        >
+          <Text
+            accessible={true}
+            allowFontScaling={false}
+            ellipsizeMode="tail"
+            style={
+              Array [
+                Object {
+                  "color": "#bdc6cf",
+                  "fontSize": 28,
+                },
+                Array [
+                  Object {
+                    "backgroundColor": "transparent",
+                  },
+                  undefined,
+                ],
+                Object {
+                  "fontFamily": "Material Icons",
+                  "fontStyle": "normal",
+                  "fontWeight": "normal",
+                },
+              ]
+            }
+          >
+            
+          </Text>
+        </View>
+      </View>
+    </View>
+  </View>
+</View>
 `;
