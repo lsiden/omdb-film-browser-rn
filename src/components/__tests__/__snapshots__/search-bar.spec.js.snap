@@ -18,6 +18,7 @@ exports[`renders 1`] = `
 >
   <TextInput
     allowFontScaling={true}
+    onCancel={[Function]}
     onChangeText={[Function]}
     placeholder="Title..."
     placeholderTextColor="#86939e"
@@ -38,8 +39,10 @@ exports[`renders 1`] = `
         false,
         false,
         undefined,
-        undefined,
         false,
+        Object {
+          "paddingRight": 30,
+        },
       ]
     }
     underlineColorAndroid="transparent"
@@ -74,6 +77,38 @@ exports[`renders 1`] = `
     }
   >
     
+  </Text>
+  <Text
+    accessible={true}
+    allowFontScaling={false}
+    ellipsizeMode="tail"
+    onPress={[Function]}
+    style={
+      Array [
+        Object {
+          "color": "#86939e",
+          "fontSize": 16,
+        },
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "position": "absolute",
+            "top": 15.5,
+          },
+          Object {
+            "right": 16,
+          },
+          undefined,
+        ],
+        Object {
+          "fontFamily": "Material Icons",
+          "fontStyle": "normal",
+          "fontWeight": "normal",
+        },
+      ]
+    }
+  >
+    
   </Text>
 </View>
 `;
