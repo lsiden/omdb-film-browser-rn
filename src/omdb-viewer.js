@@ -3,22 +3,21 @@ import { connect } from "react-redux"
 import PropTypes from "prop-types"
 import { Text, View, ScrollView, Linking } from "react-native"
 import Toaster from "react-native-toaster"
-import SearchBar from "react-native-searchbar"
 
-import { Actions, queryFetch } from "./actions"
-// import FilmList from "./film-list"
+import { Actions } from "./actions"
 import { filmDetail as FilmDetail } from "film-detail" // FIXME replace with default
 import { filmList as FilmList } from "film-list" // FIXME replace with default
 import { OMDB_URL } from "./constants"
 import { appStyles } from "./styles"
+import SearchBar from "components/search-bar"
 import Show from "components/show"
+// import FilmList from "./film-list"
 
 // FIXME remove
 const films = require("__test__/__fixture__/films.json").Search
 const filmDetails = require("__test__/__fixture__/film-detail.json")
 const film0 = films[4]
 const dispatchViewList = () => {}
-const dispatchQuery = () => {}
 
 const openUrl = url => Linking.openURL(url)
 
@@ -39,14 +38,7 @@ export const omdbViewer = ({ view, toast }) => (
     <Show when={view === Actions.VIEW_FILM_LIST}>
       <View>
         {renderBanner()}
-        <View>
-          <SearchBar
-            placeholder="Title"
-            handleSearch={dispatchQuery}
-            showOnLoad={true}
-            hideBack={true}
-          />
-        </View>
+        <SearchBar />
         <FilmList films={films} />
       </View>
     </Show>
@@ -72,6 +64,5 @@ export default connect(
   }),
   dispatch => ({
     dispatchViewList: () => dispatch(viewList()),
-    dispatchQuery: query => dispatch(queryFetch(query)),
   })
 )(omdbViewer)
