@@ -5,14 +5,9 @@ import { View, FlatList, Text } from "react-native"
 import cuid from "cuid"
 
 import FilmTitle from "./film-title"
-import { TITLE_COLOR } from "./constants"
+import { filmListStyles } from "./styles"
 
 const ulStyle = {}
-const msgStyle = {
-  fontSize: 14,
-  color: TITLE_COLOR,
-  margin: 10,
-}
 const keyExtractor = item => cuid.slug()
 
 renderListItem = ({ item }) => (
@@ -31,7 +26,7 @@ export const filmList = ({ films }) => {
     )
   } else {
     return (
-      <Text style={msgStyle}>
+      <Text style={filmListStyles.msgStyle}>
         {"There are no films that match your query yet."}
       </Text>
     )

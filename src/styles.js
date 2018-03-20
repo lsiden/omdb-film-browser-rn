@@ -4,6 +4,7 @@ export const white = "#fff"
 export const gray8 = "#888"
 export const gray2 = "#222"
 export const bannerBackground = "#05347f"
+export const TITLE_COLOR = "#210d87"
 
 export const filmsList = StyleSheet.create({
   titleText: {
@@ -40,6 +41,14 @@ export const detailStyles = StyleSheet.create({
   },
 })
 
+export const filmListStyles = StyleSheet.create({
+  msgStyle: {
+    fontSize: 14,
+    color: TITLE_COLOR,
+    margin: 10,
+  },
+})
+
 export const appStyles = {
   wrapper: {
     marginTop: 20,
@@ -56,13 +65,9 @@ export const appStyles = {
   title: {
     color: white,
     fontSize: 18,
-    marginBottom: 18,
+    marginBottom: 3,
   },
   searchWrapper: {
     backgroundColor: bannerBackground,
-  },
-  search: {
-    paddingTop: 10,
-    paddingBottom: 10,
   },
 }

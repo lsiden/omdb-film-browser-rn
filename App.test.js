@@ -1,9 +1,9 @@
 import React from "react"
 import App from "./App"
 
-import renderer from 'react-native-test-utils'
+import renderer from "react-native-test-utils"
 
-test("renders without crashing", () => {
+it("renders", () => {
   const rendered = renderer(<App />).toJSON()
   expect(rendered).toBeTruthy()
 })

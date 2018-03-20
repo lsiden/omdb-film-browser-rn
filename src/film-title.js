@@ -4,7 +4,6 @@ import { connect } from "react-redux"
 import { TouchableHighlight, Text } from "react-native"
 
 import { viewFilmSummary, fetchFilmDetails } from "./actions"
-import { TITLE_COLOR } from "./constants"
 import { filmsList } from "./styles"
 
 export const filmTitle = ({ filmSummary, dispatchViewDetail }) => (
