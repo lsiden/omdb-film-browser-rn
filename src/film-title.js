@@ -5,14 +5,13 @@ import { TouchableHighlight, Text } from "react-native"
 
 import { viewFilmSummary, fetchFilmDetails } from "./actions"
 import { TITLE_COLOR } from "./constants"
+import { filmsList } from "./styles"
 
-const textStyle = {
-  lineHeight: 30,
-  fontSize: 18,
-}
 export const filmTitle = ({ filmSummary, dispatchViewDetail }) => (
   <TouchableHighlight onPress={() => dispatchViewDetail(filmSummary)}>
-    <Text style={textStyle}>{`${filmSummary.Title}, ${filmSummary.Year}`}</Text>
+    <Text style={filmsList.titleText}>{`${filmSummary.Title}, ${
+      filmSummary.Year
+    }`}</Text>
   </TouchableHighlight>
 )
 

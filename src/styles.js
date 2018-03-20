@@ -5,6 +5,13 @@ export const gray8 = "#888"
 export const gray2 = "#222"
 export const bannerBackground = "#05347f"
 
+export const filmsList = StyleSheet.create({
+  titleText: {
+    lineHeight: 30,
+    fontSize: 18,
+  },
+})
+
 export const detailStyles = StyleSheet.create({
   header: {
     display: "flex",
