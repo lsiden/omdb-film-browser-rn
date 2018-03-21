@@ -22,11 +22,13 @@ export const detailStyles = StyleSheet.create({
     alignItems: "baseline",
   },
   title: {
+    marginTop: 20,
     marginBottom: 5,
     fontSize: 20,
     fontWeight: "bold",
     textAlign: "center",
     flex: 2,
+    left: -6,
   },
   item: {
     fontSize: 16,
