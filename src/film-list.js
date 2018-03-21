@@ -10,6 +10,7 @@ import { viewFilmSummary, fetchFilmDetails } from "./actions"
 const ulStyle = {}
 const renderTitle = filmSummary => `${filmSummary.Title} - ${filmSummary.Year}`
 
+// TODO make list pageable
 export const filmList = ({ films, dispatchViewDetail }) => {
   if (films.length > 0) {
     return (

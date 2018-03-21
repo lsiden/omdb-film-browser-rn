@@ -71,6 +71,7 @@ const getDetails = (filmDetails, filmSummary) => [
   },
 ]
 
+// TODO click on poster to make full-screen
 export const filmDetail = props => {
   const { filmSummary, filmDetails } = props
   return (
