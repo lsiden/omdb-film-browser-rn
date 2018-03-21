@@ -1,14 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import {
-  Text,
-  View,
-  FlatList,
-  Linking,
-  Image,
-  TouchableOpacity,
-} from "react-native"
+import { Text, View, Linking, Image, TouchableOpacity } from "react-native"
+import { List, ListItem } from "react-native-elements"
 import cuid from "cuid"
 
 import { viewList } from "./actions"
@@ -16,7 +10,7 @@ import { detailStyles } from "./styles"
 import { LEFT_TRIANGLE } from "./constants"
 
 function renderItem(item) {
-  const { text, cond = true, url } = item.item
+  const { text, cond = true, url } = item
 
   if (!cond) {
     return null
@@ -24,14 +18,18 @@ function renderItem(item) {
 
   const props = {
     style: detailStyles.item,
+    key: cuid.slug(),
+    title: text,
+    hideChevron: true,
   }
 
-  if (url) {
+  if (url && url !== "N/A") {
     props.onPress = () => {
       Linking.openURL(url)
     }
+    props.hideChevron = false
   }
-  return <Text {...props}>{text}</Text>
+  return <ListItem {...props} />
 }
 
 const keyExtractor = item => cuid.slug()
@@ -53,7 +51,7 @@ export class filmDetail extends React.Component {
     )
   }
 
-  renderTitle() {
+  renderHeader() {
     const { filmSummary } = this.props
     return (
       <View style={detailStyles.header}>
@@ -78,11 +76,11 @@ export class filmDetail extends React.Component {
       {
         text: "Official Website",
         url: filmDetails.Website,
-        cond: filmDetails.Website,
+        cond: filmDetails.Website && filmDetails.Website !== "N/A",
       },
       {
         text: "IMDB page",
-        url: this.imdbUrl,
+        url: this.imdbUrl ? this.imdbUrl : null,
       },
     ]
   }
@@ -91,17 +89,13 @@ export class filmDetail extends React.Component {
     const { filmSummary, filmDetails } = this.props
     return (
       <View>
-        {this.renderTitle()}
+        {this.renderHeader()}
         <Image
           source={{ uri: filmSummary.Poster }}
           style={detailStyles.poster}
           resizeMode={"contain"}
         />
-        <FlatList
-          data={this.getDetails()}
-          renderItem={renderItem}
-          keyExtractor={keyExtractor}
-        />
+        <List>{this.getDetails().map((item, i) => renderItem(item))}</List>
       </View>
     )
   }
