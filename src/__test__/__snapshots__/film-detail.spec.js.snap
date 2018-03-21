@@ -60,7 +60,9 @@ exports[`renders a title 1`] = `
           "flex": 2,
           "fontSize": 20,
           "fontWeight": "bold",
+          "left": -6,
           "marginBottom": 5,
+          "marginTop": 20,
           "textAlign": "center",
         }
       }
@@ -83,250 +85,1135 @@ exports[`renders a title 1`] = `
       }
     }
   />
-  <RCTScrollView
-    data={
+  <View
+    style={
       Array [
         Object {
-          "text": "1966",
+          "backgroundColor": "#ffffff",
+          "borderColor": "#bbb",
+          "borderTopWidth": 1,
+          "marginTop": 20,
         },
-        Object {
-          "text": "Directed by Gillo Pontecorvo",
-        },
-        Object {
-          "text": "Written by Franco Solinas, Franco Solinas (story), Gillo Pontecorvo (story)",
-        },
-        Object {
-          "text": "Cast: Jean Martin, Yacef Saadi, Brahim Hadjadj, Tommaso Neri",
-        },
-        Object {
-          "text": "Language: French, Arabic, English",
-        },
-        Object {
-          "cond": true,
-          "text": "Awards: Nominated for 3 Oscars. Another 9 wins & 5 nominations.",
-        },
-        Object {
-          "text": "Run Time: 121 min",
-        },
-        Object {
-          "text": "IMDB Rating: 8.1/10",
-        },
-        Object {
-          "text": "Box Office: $55,908",
-        },
-        Object {
-          "cond": "http://rialtopictures.com/battle.html",
-          "text": "Official Website",
-          "url": "http://rialtopictures.com/battle.html",
-        },
-        Object {
-          "text": "IMDB page",
-          "url": "https://www.imdb.com/title/tt0058946",
-        },
+        undefined,
       ]
     }
-    disableVirtualization={false}
-    getItem={[Function]}
-    getItemCount={[Function]}
-    horizontal={false}
-    initialNumToRender={10}
-    keyExtractor={[Function]}
-    maxToRenderPerBatch={10}
-    numColumns={1}
-    onContentSizeChange={[Function]}
-    onEndReachedThreshold={2}
-    onLayout={[Function]}
-    onMomentumScrollEnd={[Function]}
-    onScroll={[Function]}
-    onScrollBeginDrag={[Function]}
-    onScrollEndDrag={[Function]}
-    renderItem={[Function]}
-    scrollEventThrottle={50}
-    stickyHeaderIndices={Array []}
-    updateCellsBatchingPeriod={50}
-    viewabilityConfigCallbackPairs={Array []}
-    windowSize={21}
   >
-    <View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "fontSize": 16,
-            }
-          }
-        >
-          1966
-        </Text>
-      </View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "fontSize": 16,
-            }
-          }
-        >
-          Directed by Gillo Pontecorvo
-        </Text>
-      </View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "fontSize": 16,
-            }
-          }
-        >
-          Written by Franco Solinas, Franco Solinas (story), Gillo Pontecorvo (story)
-        </Text>
-      </View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "fontSize": 16,
-            }
-          }
-        >
-          Cast: Jean Martin, Yacef Saadi, Brahim Hadjadj, Tommaso Neri
-        </Text>
-      </View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "fontSize": 16,
-            }
-          }
-        >
-          Language: French, Arabic, English
-        </Text>
-      </View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "fontSize": 16,
-            }
-          }
-        >
-          Awards: Nominated for 3 Oscars. Another 9 wins & 5 nominations.
-        </Text>
-      </View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "fontSize": 16,
-            }
-          }
-        >
-          Run Time: 121 min
-        </Text>
-      </View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "fontSize": 16,
-            }
-          }
-        >
-          IMDB Rating: 8.1/10
-        </Text>
-      </View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "fontSize": 16,
-            }
-          }
-        >
-          Box Office: $55,908
-        </Text>
-      </View>
-      <View
-        onLayout={[Function]}
-        style={null}
-      >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          onPress={[Function]}
-          style={
-            Object {
-              "fontSize": 16,
-            }
-          }
-        >
-          Official Website
-        </Text>
-      </View>
+    <View
+      disabled={false}
+      onLongPress={undefined}
+      onPress={undefined}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderBottomColor": "#bbb",
+            "borderBottomWidth": 1,
+            "paddingBottom": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+          undefined,
+          false,
+          false,
+        ]
+      }
+      underlayColor="white"
+    >
       <View
         style={
-          Object {
-            "height": 0,
-          }
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginLeft": 10,
+            },
+            undefined,
+          ]
         }
-      />
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {},
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Object {
+                      "color": "#43484d",
+                      "fontSize": 17.5,
+                    },
+                    Object {
+                      "marginLeft": 10,
+                    },
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              1966
+            </Text>
+          </View>
+          <View
+            style={undefined}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
     </View>
-  </RCTScrollView>
+    <View
+      disabled={false}
+      onLongPress={undefined}
+      onPress={undefined}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderBottomColor": "#bbb",
+            "borderBottomWidth": 1,
+            "paddingBottom": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+          undefined,
+          false,
+          false,
+        ]
+      }
+      underlayColor="white"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginLeft": 10,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {},
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Object {
+                      "color": "#43484d",
+                      "fontSize": 17.5,
+                    },
+                    Object {
+                      "marginLeft": 10,
+                    },
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              Directed by Gillo Pontecorvo
+            </Text>
+          </View>
+          <View
+            style={undefined}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      disabled={false}
+      onLongPress={undefined}
+      onPress={undefined}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderBottomColor": "#bbb",
+            "borderBottomWidth": 1,
+            "paddingBottom": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+          undefined,
+          false,
+          false,
+        ]
+      }
+      underlayColor="white"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginLeft": 10,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {},
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Object {
+                      "color": "#43484d",
+                      "fontSize": 17.5,
+                    },
+                    Object {
+                      "marginLeft": 10,
+                    },
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              Written by Franco Solinas, Franco Solinas (story), Gillo Pontecorvo (story)
+            </Text>
+          </View>
+          <View
+            style={undefined}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      disabled={false}
+      onLongPress={undefined}
+      onPress={undefined}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderBottomColor": "#bbb",
+            "borderBottomWidth": 1,
+            "paddingBottom": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+          undefined,
+          false,
+          false,
+        ]
+      }
+      underlayColor="white"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginLeft": 10,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {},
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Object {
+                      "color": "#43484d",
+                      "fontSize": 17.5,
+                    },
+                    Object {
+                      "marginLeft": 10,
+                    },
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              Cast: Jean Martin, Yacef Saadi, Brahim Hadjadj, Tommaso Neri
+            </Text>
+          </View>
+          <View
+            style={undefined}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      disabled={false}
+      onLongPress={undefined}
+      onPress={undefined}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderBottomColor": "#bbb",
+            "borderBottomWidth": 1,
+            "paddingBottom": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+          undefined,
+          false,
+          false,
+        ]
+      }
+      underlayColor="white"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginLeft": 10,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {},
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Object {
+                      "color": "#43484d",
+                      "fontSize": 17.5,
+                    },
+                    Object {
+                      "marginLeft": 10,
+                    },
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              Language: French, Arabic, English
+            </Text>
+          </View>
+          <View
+            style={undefined}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      disabled={false}
+      onLongPress={undefined}
+      onPress={undefined}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderBottomColor": "#bbb",
+            "borderBottomWidth": 1,
+            "paddingBottom": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+          undefined,
+          false,
+          false,
+        ]
+      }
+      underlayColor="white"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginLeft": 10,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {},
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Object {
+                      "color": "#43484d",
+                      "fontSize": 17.5,
+                    },
+                    Object {
+                      "marginLeft": 10,
+                    },
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              Awards: Nominated for 3 Oscars. Another 9 wins & 5 nominations.
+            </Text>
+          </View>
+          <View
+            style={undefined}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      disabled={false}
+      onLongPress={undefined}
+      onPress={undefined}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderBottomColor": "#bbb",
+            "borderBottomWidth": 1,
+            "paddingBottom": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+          undefined,
+          false,
+          false,
+        ]
+      }
+      underlayColor="white"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginLeft": 10,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {},
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Object {
+                      "color": "#43484d",
+                      "fontSize": 17.5,
+                    },
+                    Object {
+                      "marginLeft": 10,
+                    },
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              Run Time: 121 min
+            </Text>
+          </View>
+          <View
+            style={undefined}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      disabled={false}
+      onLongPress={undefined}
+      onPress={undefined}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderBottomColor": "#bbb",
+            "borderBottomWidth": 1,
+            "paddingBottom": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+          undefined,
+          false,
+          false,
+        ]
+      }
+      underlayColor="white"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginLeft": 10,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {},
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Object {
+                      "color": "#43484d",
+                      "fontSize": 17.5,
+                    },
+                    Object {
+                      "marginLeft": 10,
+                    },
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              IMDB Rating: 8.1/10
+            </Text>
+          </View>
+          <View
+            style={undefined}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      disabled={false}
+      onLongPress={undefined}
+      onPress={undefined}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderBottomColor": "#bbb",
+            "borderBottomWidth": 1,
+            "paddingBottom": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+          undefined,
+          false,
+          false,
+        ]
+      }
+      underlayColor="white"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginLeft": 10,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {},
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Object {
+                      "color": "#43484d",
+                      "fontSize": 17.5,
+                    },
+                    Object {
+                      "marginLeft": 10,
+                    },
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              Box Office: $55,908
+            </Text>
+          </View>
+          <View
+            style={undefined}
+          >
+            <View />
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderBottomColor": "#bbb",
+            "borderBottomWidth": 1,
+            "paddingBottom": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+          undefined,
+          false,
+          false,
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginLeft": 10,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {},
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Object {
+                      "color": "#43484d",
+                      "fontSize": 17.5,
+                    },
+                    Object {
+                      "marginLeft": 10,
+                    },
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              Official Website
+            </Text>
+          </View>
+          <View
+            style={undefined}
+          >
+            <View />
+          </View>
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          collapsable={undefined}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          nativeID={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "justifyContent": "center",
+              "opacity": 1,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <View
+            onPress={undefined}
+            style={
+              Array [
+                false,
+                false,
+                false,
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "justifyContent": "center",
+                },
+                undefined,
+              ]
+            }
+            underlayColor="white"
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={false}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#bdc6cf",
+                    "fontSize": 28,
+                  },
+                  Array [
+                    Object {
+                      "backgroundColor": "transparent",
+                    },
+                    undefined,
+                  ],
+                  Object {
+                    "fontFamily": "Material Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      accessibilityComponentType={undefined}
+      accessibilityLabel={undefined}
+      accessibilityTraits={undefined}
+      accessible={true}
+      hasTVPreferredFocus={undefined}
+      hitSlop={undefined}
+      isTVSelectable={true}
+      nativeID={undefined}
+      onLayout={undefined}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderBottomColor": "#bbb",
+            "borderBottomWidth": 1,
+            "paddingBottom": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+          undefined,
+          false,
+          false,
+        ]
+      }
+      testID={undefined}
+      tvParallaxProperties={undefined}
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginLeft": 10,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {},
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Object {
+                      "color": "#43484d",
+                      "fontSize": 17.5,
+                    },
+                    Object {
+                      "marginLeft": 10,
+                    },
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              IMDB page
+            </Text>
+          </View>
+          <View
+            style={undefined}
+          >
+            <View />
+          </View>
+        </View>
+        <View
+          accessibilityComponentType={undefined}
+          accessibilityLabel={undefined}
+          accessibilityTraits={undefined}
+          accessible={true}
+          collapsable={undefined}
+          hasTVPreferredFocus={undefined}
+          hitSlop={undefined}
+          isTVSelectable={true}
+          nativeID={undefined}
+          onLayout={undefined}
+          onResponderGrant={[Function]}
+          onResponderMove={[Function]}
+          onResponderRelease={[Function]}
+          onResponderTerminate={[Function]}
+          onResponderTerminationRequest={[Function]}
+          onStartShouldSetResponder={[Function]}
+          style={
+            Object {
+              "alignItems": "flex-end",
+              "justifyContent": "center",
+              "opacity": 1,
+            }
+          }
+          testID={undefined}
+          tvParallaxProperties={undefined}
+        >
+          <View
+            onPress={undefined}
+            style={
+              Array [
+                false,
+                false,
+                false,
+                Object {
+                  "alignItems": "center",
+                  "backgroundColor": "transparent",
+                  "justifyContent": "center",
+                },
+                undefined,
+              ]
+            }
+            underlayColor="white"
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={false}
+              ellipsizeMode="tail"
+              style={
+                Array [
+                  Object {
+                    "color": "#bdc6cf",
+                    "fontSize": 28,
+                  },
+                  Array [
+                    Object {
+                      "backgroundColor": "transparent",
+                    },
+                    undefined,
+                  ],
+                  Object {
+                    "fontFamily": "Material Icons",
+                    "fontStyle": "normal",
+                    "fontWeight": "normal",
+                  },
+                ]
+              }
+            >
+              
+            </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+  </View>
 </View>
 `;
