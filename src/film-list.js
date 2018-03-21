@@ -7,9 +7,6 @@ import { List, ListItem } from "react-native-elements"
 import { filmListStyles } from "./styles"
 import { viewFilmSummary, fetchFilmDetails } from "./actions"
 
-const ulStyle = {}
-const renderTitle = filmSummary => `${filmSummary.Title} - ${filmSummary.Year}`
-
 // TODO make list pageable
 export const filmList = ({ films, dispatchViewDetail }) => {
   if (films.length > 0) {
@@ -18,7 +15,8 @@ export const filmList = ({ films, dispatchViewDetail }) => {
         {films.map(filmSummary => (
           <ListItem
             key={filmSummary.imdbID}
-            title={renderTitle(filmSummary)}
+            title={filmSummary.Title}
+            subtitle={filmSummary.Year}
             onPress={() => dispatchViewDetail(filmSummary)}
           />
         ))}

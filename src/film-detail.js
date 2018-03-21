@@ -45,13 +45,15 @@ const renderHeader = props => {
   return (
     <View style={detailStyles.header}>
       {renderBackButton(props)}
-      <Text style={detailStyles.title}>{filmSummary.Title}</Text>
+      <View style={detailStyles.titleWrapper}>
+        <Text style={detailStyles.title}>{filmSummary.Title}</Text>
+        <Text style={detailStyles.year}>{` (${filmSummary.Year})`}</Text>
+      </View>
     </View>
   )
 }
 
 const getDetails = (filmDetails, filmSummary) => [
-  { text: filmSummary.Year },
   { text: `Directed by ${filmDetails.Director}` },
   { text: `Written by ${filmDetails.Writer}` },
   { text: `Cast: ${filmDetails.Actors}` },
@@ -82,6 +84,7 @@ export const filmDetail = props => {
         style={detailStyles.poster}
         resizeMode={"contain"}
       />
+      <Text>{filmDetails.Plot}</Text>
       <List>
         {getDetails(filmDetails, filmSummary).map(detail =>
           renderDetail(detail)

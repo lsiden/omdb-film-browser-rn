@@ -2,6 +2,7 @@ import { StyleSheet } from "react-native"
 
 export const white = "#fff"
 export const gray8 = "#888"
+export const gray10 = "#aaa"
 export const gray2 = "#222"
 export const bannerBackground = "#05347f"
 export const TITLE_COLOR = "#210d87"
@@ -18,17 +19,22 @@ export const detailStyles = StyleSheet.create({
     display: "flex",
     flexDirection: "row",
     justifyContent: "flex-start",
-    alignContent: "flex-start",
+    alignItems: "baseline",
+  },
+  titleWrapper: {
+    marginTop: 20,
+    marginBottom: 5,
+    display: "flex",
+    flexDirection: "row",
     alignItems: "baseline",
   },
   title: {
-    marginTop: 20,
-    marginBottom: 5,
     fontSize: 20,
     fontWeight: "bold",
-    textAlign: "center",
-    flex: 2,
-    left: -6,
+  },
+  year: {
+    fontSize: 16,
+    color: gray10,
   },
   item: {
     fontSize: 16,
@@ -39,7 +45,9 @@ export const detailStyles = StyleSheet.create({
     marginBottom: 10,
   },
   buttonText: {
+    flex: 0,
     fontSize: 24,
+    marginRight: 10,
   },
 })
 
