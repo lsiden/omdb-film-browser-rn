@@ -8,6 +8,7 @@ import { filmListStyles } from "./styles"
 import { viewFilmSummary, fetchFilmDetails } from "./actions"
 
 // TODO make list pageable
+// TODO show loading icon
 export const filmList = ({ films, dispatchViewDetail }) => {
   if (films.length > 0) {
     return (

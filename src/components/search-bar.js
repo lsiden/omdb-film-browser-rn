@@ -1,4 +1,5 @@
 // Debounces react-native-elements.SearchBar
+// TODO - customize for Android and iOS
 
 import React from "react"
 import { connect } from "react-redux"
