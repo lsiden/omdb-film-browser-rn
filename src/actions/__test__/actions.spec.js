@@ -4,12 +4,11 @@ import {
   viewFilmSummary,
   updateFilms,
   updateFilmDetails,
-  updateToast,
   queryFetch,
   fetchFilmDetails,
-} from "../actions"
+} from "../"
 
-import filmDetails from "./__fixture__/film-detail.json"
+import filmDetails from "__test__/__fixture__/film-detail.json"
 
 test("viewList() returns an action", () => {
   expect(viewList()).toEqual({
@@ -41,22 +40,6 @@ test("updateFilms(list) returns an action with list", () => {
   expect(updateFilms(films)).toEqual({
     type: Actions.UPDATE_FILMS,
     data: { films },
-  })
-})
-
-test("updateToast(array) returns an action with array of messages", () => {
-  const toast = [{ text: "Hooray!" }, { text: "Eek" }, { text: "Oh noe!" }]
-  expect(updateToast(toast)).toEqual({
-    type: Actions.UPDATE_TOAST,
-    data: { toast },
-  })
-})
-
-test("updateToast(obj) returns an action with a single object", () => {
-  const toast = { text: "Hooray!" }
-  expect(updateToast(toast)).toEqual({
-    type: Actions.UPDATE_TOAST,
-    data: { toast },
   })
 })
 

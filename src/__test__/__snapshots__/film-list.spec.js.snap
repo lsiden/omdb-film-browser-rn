@@ -102,13 +102,47 @@ exports[`renders list of titles 1`] = `
               ]
             }
           >
-            The Hobbit: The Battle of the Five Armies - 2014
+            The Hobbit: The Battle of the Five Armies
           </Text>
         </View>
         <View
           style={undefined}
         >
-          <View />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#86939e",
+                    "fontSize": 15,
+                    "fontWeight": "600",
+                    "marginTop": 1,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            2014
+          </Text>
         </View>
       </View>
       <View
@@ -273,13 +307,47 @@ exports[`renders list of titles 1`] = `
               ]
             }
           >
-            Battle Los Angeles - 2011
+            Battle Los Angeles
           </Text>
         </View>
         <View
           style={undefined}
         >
-          <View />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#86939e",
+                    "fontSize": 15,
+                    "fontWeight": "600",
+                    "marginTop": 1,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            2011
+          </Text>
         </View>
       </View>
       <View
@@ -444,13 +512,47 @@ exports[`renders list of titles 1`] = `
               ]
             }
           >
-            Battle Royale - 2000
+            Battle Royale
           </Text>
         </View>
         <View
           style={undefined}
         >
-          <View />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#86939e",
+                    "fontSize": 15,
+                    "fontWeight": "600",
+                    "marginTop": 1,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            2000
+          </Text>
         </View>
       </View>
       <View
@@ -615,13 +717,47 @@ exports[`renders list of titles 1`] = `
               ]
             }
           >
-            Night at the Museum: Battle of the Smithsonian - 2009
+            Night at the Museum: Battle of the Smithsonian
           </Text>
         </View>
         <View
           style={undefined}
         >
-          <View />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#86939e",
+                    "fontSize": 15,
+                    "fontWeight": "600",
+                    "marginTop": 1,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            2009
+          </Text>
         </View>
       </View>
       <View
@@ -786,13 +922,47 @@ exports[`renders list of titles 1`] = `
               ]
             }
           >
-            The Battle of Algiers - 1966
+            The Battle of Algiers
           </Text>
         </View>
         <View
           style={undefined}
         >
-          <View />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#86939e",
+                    "fontSize": 15,
+                    "fontWeight": "600",
+                    "marginTop": 1,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            1966
+          </Text>
         </View>
       </View>
       <View
@@ -957,13 +1127,47 @@ exports[`renders list of titles 1`] = `
               ]
             }
           >
-            Battle of the Sexes - 2017
+            Battle of the Sexes
           </Text>
         </View>
         <View
           style={undefined}
         >
-          <View />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#86939e",
+                    "fontSize": 15,
+                    "fontWeight": "600",
+                    "marginTop": 1,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            2017
+          </Text>
         </View>
       </View>
       <View
@@ -1128,13 +1332,47 @@ exports[`renders list of titles 1`] = `
               ]
             }
           >
-            Battle for the Planet of the Apes - 1973
+            Battle for the Planet of the Apes
           </Text>
         </View>
         <View
           style={undefined}
         >
-          <View />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#86939e",
+                    "fontSize": 15,
+                    "fontWeight": "600",
+                    "marginTop": 1,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            1973
+          </Text>
         </View>
       </View>
       <View
@@ -1299,13 +1537,47 @@ exports[`renders list of titles 1`] = `
               ]
             }
           >
-            Dragon Ball Z: Battle of Gods - 2013
+            Dragon Ball Z: Battle of Gods
           </Text>
         </View>
         <View
           style={undefined}
         >
-          <View />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#86939e",
+                    "fontSize": 15,
+                    "fontWeight": "600",
+                    "marginTop": 1,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            2013
+          </Text>
         </View>
       </View>
       <View
@@ -1470,13 +1742,47 @@ exports[`renders list of titles 1`] = `
               ]
             }
           >
-            Dragon Ball Z: Battle of Gods - 2013
+            Dragon Ball Z: Battle of Gods
           </Text>
         </View>
         <View
           style={undefined}
         >
-          <View />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#86939e",
+                    "fontSize": 15,
+                    "fontWeight": "600",
+                    "marginTop": 1,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            2013
+          </Text>
         </View>
       </View>
       <View
@@ -1641,13 +1947,47 @@ exports[`renders list of titles 1`] = `
               ]
             }
           >
-            Battle of Britain - 1969
+            Battle of Britain
           </Text>
         </View>
         <View
           style={undefined}
         >
-          <View />
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            numberOfLines={1}
+            style={
+              Array [
+                Object {},
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                undefined,
+                Array [
+                  Object {
+                    "color": "#86939e",
+                    "fontSize": 15,
+                    "fontWeight": "600",
+                    "marginTop": 1,
+                  },
+                  Object {
+                    "marginLeft": 10,
+                  },
+                  undefined,
+                  undefined,
+                ],
+              ]
+            }
+          >
+            1969
+          </Text>
         </View>
       </View>
       <View

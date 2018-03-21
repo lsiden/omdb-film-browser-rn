@@ -1,2 +1,7 @@
+export const OMDB_API_KEY = "fbfcb8c7"
 export const OMDB_URL = "https://www.omdbapi.com/"
 export const LEFT_TRIANGLE = "\u25c1"
+export const REWIND_TO_BEGINNING_CHAR = "\u9198"
+export const REWIND_TO_END_CHAR = "\u9197"
+export const PAGE_BACK_CHAR = "\u9194"
+export const PAGE_FORWARD_CHAR = "\u9193"

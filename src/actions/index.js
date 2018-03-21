@@ -1,3 +1,8 @@
+import { OMDB_URL, OMDB_API_KEY } from "constants"
+import { updateToast } from "./toast"
+
+const OMDB_URL_PREFIX = `${OMDB_URL}?apikey=${OMDB_API_KEY}`
+
 export const Actions = {
   VIEW_FILM_LIST: "view-film-list",
   VIEW_FILM_DETAIL: "view-film-detail",
@@ -29,25 +34,20 @@ export const updateFilms = films => ({
   data: { films },
 })
 
-export const updateToast = toast => ({
-  type: Actions.UPDATE_TOAST,
-  data: { toast },
-})
-
 export const queryFetch = query => dispatch =>
-  fetch(`https://www.omdbapi.com/?apikey=fbfcb8c7&type=movie&s=${query}`)
+  fetch(`${OMDB_URL_PREFIX}&type=movie&s=${query}`)
     .then(res => res.json())
     .then(res => dispatch(updateFilms(res.Search)))
     .catch(e => {
       console.error(e)
-      // toastr.error(e, "An error occured")
+      dispatch(updateToast(e, "error"))
     })
 
 export const fetchFilmDetails = id => dispatch =>
-  fetch(`https://www.omdbapi.com/?apikey=fbfcb8c7&type=movie&i=${id}`)
+  fetch(`${OMDB_URL_PREFIX}&i=${id}`)
     .then(res => res.json())
     .then(res => dispatch(updateFilmDetails(res)))
     .catch(e => {
       console.error(e)
-      // toastr.error(e, "An error occured")
+      dispatch(updateToast(e, "error"))
     })
