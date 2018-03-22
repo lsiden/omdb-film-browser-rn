@@ -1,13 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { Text, View, Linking, Image, TouchableOpacity } from "react-native"
+import { Text, View, Linking, Image } from "react-native"
 import { List, ListItem } from "react-native-elements"
 
-import { viewList } from "./actions"
-import { detailStyles } from "./styles"
-import { LEFT_TRIANGLE } from "./constants"
-import LoadingIndicator from "./components/loading-indicator"
+import { viewList } from "actions"
+import { detailStyles } from "styles"
+import LoadingIndicator from "components/loading-indicator"
+import BackButton from "./back-button"
 
 const detailExists = detail => detail && detail !== "N/A"
 
@@ -39,20 +39,11 @@ OneDetail.propTypes = {
 
 const imdbUrl = imdbID => `https://www.imdb.com/title/${imdbID}`
 
-const renderBackButton = ({ dispatchViewList }) => (
-  <TouchableOpacity onPress={dispatchViewList}>
-    <Text style={detailStyles.buttonText}>{LEFT_TRIANGLE}</Text>
-  </TouchableOpacity>
-)
-renderBackButton.propTypes = {
-  dispatchViewList: PropTypes.func.isRequired,
-}
-
 const DetailHeader = props => {
   const { filmSummary } = props
   return (
     <View style={detailStyles.header}>
-      {renderBackButton(props)}
+      <BackButton />
       <View style={detailStyles.titleWrapper}>
         <Text style={detailStyles.title}>{filmSummary.Title}</Text>
         <Text style={detailStyles.year}>{`  (${filmSummary.Year})`}</Text>
