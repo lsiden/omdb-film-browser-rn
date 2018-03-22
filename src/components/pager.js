@@ -12,7 +12,6 @@ import {
 } from "constants"
 import { fetchPage } from "actions/fetch"
 import { pagerStyles } from "styles"
-import { RESULTS_PER_PAGE } from "constants"
 
 const icon = (name, disabled) => ({
   name,
@@ -27,8 +26,7 @@ const btnStyle = {
 }
 
 export const pager = props => {
-  const { pageNum, totalResults, dispatchFetchPage } = props
-  const lastPage = Math.floor(totalResults / RESULTS_PER_PAGE) + 1
+  const { pageNum, totalResults, dispatchFetchPage, lastPage } = props
   const isFirstPage = n => n == 1
   const isLastPage = n => n == lastPage
   return (
@@ -66,6 +64,7 @@ export const pager = props => {
 pager.propTypes = {
   pageNum: PropTypes.number.isRequired,
   totalResults: PropTypes.number.isRequired,
+  lastPage: PropTypes.number.isRequired,
   dispatchFetchPage: PropTypes.func.isRequired,
 }
 
@@ -73,6 +72,7 @@ export default connect(
   state => ({
     pageNum: state.pageNum,
     totalResults: state.totalResults,
+    lastPage: state.lastPage,
   }),
   dispatch => ({
     dispatchFetchPage: pageNum => dispatch(fetchPage(pageNum)),

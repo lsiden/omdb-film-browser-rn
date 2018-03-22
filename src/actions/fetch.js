@@ -10,12 +10,15 @@ const fetchResults = (dispatch, query, pageNum) =>
   fetch(`${OMDB_URL_PREFIX}&type=movie&s=${query}&page=${pageNum}`)
     .then(res => res.json())
     .then(res => {
+      const totalResults = Number(res.totalResults)
+      const lastPage = Math.floor(totalResults / RESULTS_PER_PAGE) + 1
       dispatch(
         updateFilms({
           query,
           pageNum,
           films: res.Search,
-          totalResults: Number(res.totalResults),
+          totalResults,
+          lastPage,
         })
       )
       dispatch(updateIsFetching(false))
@@ -29,8 +32,7 @@ const fetchResults = (dispatch, query, pageNum) =>
 export const queryFetch = query => dispatch => fetchResults(dispatch, query, 1)
 
 export const fetchPage = pageNum => dispatch => {
-  const { query, totalResults = 0 } = getState()
-  const lastPage = Math.floor(totalResults / RESULTS_PER_PAGE) + 1
+  const { query, totalResults = 0, lastPage } = getState()
 
   if (0 < pageNum && pageNum <= lastPage) {
     fetchResults(dispatch, query, pageNum)
