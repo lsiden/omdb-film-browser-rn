@@ -10,12 +10,20 @@ import { viewFilmSummary, updateIsFetching } from "./actions"
 import Pager from "components/pager"
 import LoadingIndicator from "./components/loading-indicator"
 
-export const filmList = ({ films, dispatchViewDetail, isFetching }) => {
+const renderMessage = msg => <Text style={filmListStyles.msgStyle}>{msg}</Text>
+
+export const filmList = ({
+  films,
+  dispatchViewDetail,
+  isFetching,
+  totalResults,
+}) => {
   if (isFetching) {
     return <LoadingIndicator />
   } else if (films.length > 0) {
     return (
       <View>
+        {renderMessage(`Found ${totalResults} results.`)}
         <List>
           {films.map(filmSummary => (
             <ListItem
@@ -30,11 +38,7 @@ export const filmList = ({ films, dispatchViewDetail, isFetching }) => {
       </View>
     )
   } else {
-    return (
-      <Text style={filmListStyles.msgStyle}>
-        {"There are no films that match your query yet."}
-      </Text>
-    )
+    return renderMessage("There are no films that match your query yet.")
   }
 }
 
@@ -42,6 +46,7 @@ filmList.propTypes = {
   films: PropTypes.arrayOf(PropTypes.object),
   dispatchViewDetail: PropTypes.func.isRequired,
   isFetching: PropTypes.bool,
+  totalResults: PropTypes.number,
 }
 filmList.defaultProps = {
   films: [],
@@ -52,6 +57,7 @@ export default connect(
   state => ({
     films: state.films,
     isFetching: state.isFetching,
+    totalResults: state.totalResults,
   }),
   dispatch => ({
     dispatchViewDetail: filmSummary => {

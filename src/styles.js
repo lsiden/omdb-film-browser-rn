@@ -58,7 +58,7 @@ export const filmListStyles = StyleSheet.create({
   msgStyle: {
     fontSize: 14,
     color: TITLE_COLOR,
-    margin: 10,
+    marginTop: 5,
   },
 })
 
