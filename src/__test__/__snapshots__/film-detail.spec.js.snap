@@ -90,7 +90,7 @@ exports[`renders a title 1`] = `
           }
         }
       >
-         (1966)
+          (1966)
       </Text>
     </View>
   </View>
@@ -113,8 +113,14 @@ exports[`renders a title 1`] = `
     accessible={true}
     allowFontScaling={true}
     ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "gray",
+        "textAlign": "center",
+      }
+    }
   >
-    In the 1950s, fear and violence escalate as the people of Algiers fight for independence from the French government.
+    Plot unavailable
   </Text>
   <View
     style={
