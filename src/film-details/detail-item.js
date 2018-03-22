@@ -6,7 +6,7 @@ import { ListItem } from "react-native-elements"
 import { detailStyles } from "styles"
 import { detailExists } from "./detail-items"
 
-export default function DetailItem({ detail }) {
+const DetailItem = ({ detail }) => {
   const { text, cond = true, url = null } = detail
 
   if (!cond) {
@@ -31,3 +31,5 @@ export default function DetailItem({ detail }) {
 DetailItem.propTypes = {
   detail: PropTypes.object.isRequired,
 }
+
+export default DetailItem
