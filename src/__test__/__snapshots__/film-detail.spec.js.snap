@@ -8,6 +8,7 @@ exports[`renders a title 1`] = `
         "alignItems": "baseline",
         "display": "flex",
         "flexDirection": "row",
+        "flexWrap": "wrap",
         "justifyContent": "flex-start",
       }
     }
@@ -58,6 +59,7 @@ exports[`renders a title 1`] = `
           "alignItems": "baseline",
           "display": "flex",
           "flexDirection": "row",
+          "flexWrap": "wrap",
           "marginBottom": 5,
           "marginTop": 20,
         }
@@ -69,6 +71,7 @@ exports[`renders a title 1`] = `
         ellipsizeMode="tail"
         style={
           Object {
+            "flexWrap": "wrap",
             "fontSize": 20,
             "fontWeight": "bold",
           }

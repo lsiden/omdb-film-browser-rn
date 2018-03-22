@@ -8,6 +8,7 @@ import cuid from "cuid"
 import { viewList } from "./actions"
 import { detailStyles } from "./styles"
 import { LEFT_TRIANGLE } from "./constants"
+import LoadingIndicator from "./components/loading-indicator"
 
 function renderDetail(detail) {
   const { text, cond = true, url } = detail
@@ -53,6 +54,26 @@ const renderHeader = props => {
   )
 }
 
+const renderPoster = ({ filmSummary }) =>
+  filmSummary.Poster &&
+  filmSummary.Poster !== "N/A" && (
+    <Image
+      source={{ uri: filmSummary.Poster }}
+      style={detailStyles.poster}
+      resizeMode={"contain"}
+    />
+  )
+
+const renderPlot = ({ filmDetails }) => {
+  const { plot } = filmDetails
+
+  if (!plot || plot === "N/A") {
+    return <Text style={{ color: "gray" }}>Plot unavailable</Text>
+  } else {
+    return <Text>{filmDetails.Plot}</Text>
+  }
+}
+
 const getDetails = (filmDetails, filmSummary) => [
   { text: `Directed by ${filmDetails.Director}` },
   { text: `Written by ${filmDetails.Writer}` },
@@ -75,36 +96,35 @@ const getDetails = (filmDetails, filmSummary) => [
 
 // TODO click on poster to make full-screen
 export const filmDetail = props => {
-  const { filmSummary, filmDetails } = props
-  return (
-    <View>
-      {renderHeader(props)}
-      {filmSummary.Poster &&
-        filmSummary.Poster !== "N/A" && (
-          <Image
-            source={{ uri: filmSummary.Poster }}
-            style={detailStyles.poster}
-            resizeMode={"contain"}
-          />
-        )}
-      <Text>{filmDetails.Plot}</Text>
-      <List>
-        {getDetails(filmDetails, filmSummary).map(detail =>
-          renderDetail(detail)
-        )}
-      </List>
-    </View>
-  )
+  const { filmSummary, filmDetails, isFetching } = props
+  if (isFetching) {
+    return <LoadingIndicator />
+  } else {
+    return (
+      <View>
+        {renderHeader(props)}
+        {renderPoster(props)}
+        {renderPlot(props)}
+        <List>
+          {getDetails(filmDetails, filmSummary).map(detail =>
+            renderDetail(detail)
+          )}
+        </List>
+      </View>
+    )
+  }
 }
 
 filmDetail.propTypes = {
   filmSummary: PropTypes.object.isRequired,
   filmDetails: PropTypes.object,
   dispatchViewList: PropTypes.func.isRequired,
+  isFetching: PropTypes.bool,
 }
 
 filmDetail.defaultProps = {
   filmDetails: {},
+  isFetching: false,
 }
 
 export default connect(

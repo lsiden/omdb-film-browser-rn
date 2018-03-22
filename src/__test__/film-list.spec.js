@@ -3,6 +3,8 @@ import renderer from "react-native-test-utils"
 
 import { filmList as FilmList } from "film-list"
 
+jest.mock("components/pager")
+
 const films = require("./__fixture__/films.json").Search
 
 let dispatchViewDetail

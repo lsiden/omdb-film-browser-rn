@@ -1,11 +1,11 @@
 import { StyleSheet } from "react-native"
 
-export const white = "#fff"
-export const gray8 = "#888"
-export const gray10 = "#aaa"
-export const gray2 = "#222"
-export const bannerBackground = "#05347f"
-export const TITLE_COLOR = "#210d87"
+const white = "#fff"
+const gray8 = "#888"
+const gray10 = "#aaa"
+const gray2 = "#222"
+const bannerBackground = "#05347f"
+const TITLE_COLOR = "#210d87"
 
 export const filmsList = StyleSheet.create({
   titleText: {
@@ -62,7 +62,7 @@ export const filmListStyles = StyleSheet.create({
   },
 })
 
-export const appStyles = {
+export const appStyles = StyleSheet.create({
   wrapper: {
     marginTop: 20,
     marginLeft: 10,
@@ -83,13 +83,20 @@ export const appStyles = {
   searchWrapper: {
     backgroundColor: bannerBackground,
   },
-}
+})
 
-export const pagerStyles = {
+export const pagerStyles = StyleSheet.create({
   wrapper: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "baseline",
   },
+})
+
+export const loadingIndicatorStyle = {
+  height: 150,
+  display: "flex",
+  justifyContent: "center",
+  alignItems: "center",
 }

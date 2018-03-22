@@ -1,29 +1,33 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { Text } from "react-native"
+import { Text, View, ActivityIndicator, StyleSheet } from "react-native"
 import { List, ListItem } from "react-native-elements"
 
 import { filmListStyles } from "./styles"
-import { viewFilmSummary, fetchFilmDetails } from "./actions"
 import { fetchFilmDetails } from "./actions/fetch"
-import { viewFilmSummary } from "./actions"
+import { viewFilmSummary, updateIsFetching } from "./actions"
+import Pager from "components/pager"
+import LoadingIndicator from "./components/loading-indicator"
 
-// TODO make list pageable
-// TODO show loading icon
-export const filmList = ({ films, dispatchViewDetail }) => {
-  if (films.length > 0) {
+export const filmList = ({ films, dispatchViewDetail, isFetching }) => {
+  if (isFetching) {
+    return <LoadingIndicator />
+  } else if (films.length > 0) {
     return (
-      <List>
-        {films.map(filmSummary => (
-          <ListItem
-            key={filmSummary.imdbID}
-            title={filmSummary.Title}
-            subtitle={filmSummary.Year}
-            onPress={() => dispatchViewDetail(filmSummary)}
-          />
-        ))}
-      </List>
+      <View>
+        <List>
+          {films.map(filmSummary => (
+            <ListItem
+              key={filmSummary.imdbID}
+              title={filmSummary.Title}
+              subtitle={filmSummary.Year}
+              onPress={() => dispatchViewDetail(filmSummary)}
+            />
+          ))}
+        </List>
+        <Pager />
+      </View>
     )
   } else {
     return (
@@ -37,17 +41,21 @@ export const filmList = ({ films, dispatchViewDetail }) => {
 filmList.propTypes = {
   films: PropTypes.arrayOf(PropTypes.object),
   dispatchViewDetail: PropTypes.func.isRequired,
+  isFetching: PropTypes.bool,
 }
 filmList.defaultProps = {
   films: [],
+  isFetching: false,
 }
 
 export default connect(
   state => ({
     films: state.films,
+    isFetching: state.isFetching,
   }),
   dispatch => ({
     dispatchViewDetail: filmSummary => {
+      dispatch(updateIsFetching(true))
       dispatch(viewFilmSummary(filmSummary))
       dispatch(fetchFilmDetails(filmSummary.imdbID))
     },

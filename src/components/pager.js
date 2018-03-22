@@ -10,7 +10,7 @@ import {
   PREV_PAGE_CHAR,
   FAST_FWD_PAGES_CHAR,
 } from "constants"
-import { fetchPage } from "actions"
+import { fetchPage } from "actions/fetch"
 import { pagerStyles } from "styles"
 import { RESULTS_PER_PAGE } from "constants"
 

@@ -10,7 +10,6 @@ import { OMDB_URL } from "./constants"
 import { appStyles } from "./styles"
 import SearchBar from "components/search-bar"
 import Show from "components/show"
-import Pager from "components/pager"
 import FilmList from "./film-list"
 import FilmDetail from "film-detail"
 const openUrl = url => Linking.openURL(url)
@@ -34,9 +33,6 @@ const renderOmdbViewer = ({ view, toast, pageNum }) => (
         {renderBanner()}
         <SearchBar />
         <FilmList />
-        <Show when={!!pageNum}>
-          <Pager />
-        </Show>
       </View>
     </Show>
     <Show when={view === ActionTypes.VIEW_FILM_DETAIL}>

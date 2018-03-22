@@ -1,5 +1,11 @@
 import ActionTypes from "../types"
-import { viewList, viewFilmSummary, updateFilms, updateFilmDetails } from "../"
+import {
+  viewList,
+  viewFilmSummary,
+  updateFilms,
+  updateFilmDetails,
+  updateIsFetching,
+} from "../"
 
 import filmDetails from "__test__/__fixture__/film-detail.json"
 
@@ -33,5 +39,12 @@ test("updateFilms(list) returns an action with list", () => {
   expect(updateFilms({ films })).toEqual({
     type: ActionTypes.UPDATE_FILMS,
     data: { films },
+  })
+})
+
+test("updateIsFetching(bool) returns an action with boolean value", () => {
+  expect(updateIsFetching(true)).toEqual({
+    type: ActionTypes.UPDATE_IS_FETCHING,
+    data: { isFetching: true },
   })
 })
