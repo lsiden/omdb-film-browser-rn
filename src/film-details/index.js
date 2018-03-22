@@ -1,13 +1,15 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { Text, View, Linking, Image } from "react-native"
+import { Text, View, Linking } from "react-native"
 import { List, ListItem } from "react-native-elements"
 
-import { viewList } from "actions"
 import { detailStyles } from "styles"
 import LoadingIndicator from "components/loading-indicator"
-import BackButton from "./back-button"
+import DetailHeader from "./detail-header"
+import Poster from "./poster"
+import detailItems from "./detail-items"
+import FilmPlot from "./film-plot"
 
 const detailExists = detail => detail && detail !== "N/A"
 
@@ -37,73 +39,9 @@ OneDetail.propTypes = {
   detail: PropTypes.object.isRequired,
 }
 
-const imdbUrl = imdbID => `https://www.imdb.com/title/${imdbID}`
-
-const DetailHeader = props => {
-  const { filmSummary } = props
-  return (
-    <View style={detailStyles.header}>
-      <BackButton />
-      <View style={detailStyles.titleWrapper}>
-        <Text style={detailStyles.title}>{filmSummary.Title}</Text>
-        <Text style={detailStyles.year}>{`  (${filmSummary.Year})`}</Text>
-      </View>
-    </View>
-  )
-}
-DetailHeader.propTypes = {
-  filmSummary: PropTypes.object.isRequired,
-}
-
-const Poster = ({ filmSummary }) =>
-  filmSummary.Poster &&
-  filmSummary.Poster !== "N/A" && (
-    <Image
-      source={{ uri: filmSummary.Poster }}
-      style={detailStyles.poster}
-      resizeMode={Image.resizeMode.contain}
-    />
-  )
-Poster.propTypes = {
-  filmSummary: PropTypes.object.isRequired,
-}
-
-const FilmPlot = ({ filmDetails }) => {
-  const { plot } = filmDetails
-
-  if (!detailExists(plot)) {
-    return <Text style={detailStyles.plot}>Plot unavailable</Text>
-  }
-  return <Text>{filmDetails.Plot}</Text>
-}
-FilmPlot.propTypes = {
-  filmDetails: PropTypes.object.isRequired,
-}
-
-const getDetails = filmDetails => [
-  { text: `Directed by ${filmDetails.Director}` },
-  { text: `Written by ${filmDetails.Writer}` },
-  { text: `Cast: ${filmDetails.Actors}` },
-  { text: `Language: ${filmDetails.Language}` },
-  { text: `Awards: ${filmDetails.Awards}` },
-  { text: `Run Time: ${filmDetails.Runtime}` },
-  { text: `IMDB Rating: ${filmDetails.imdbRating}/10` },
-  { text: `Box Office: ${filmDetails.BoxOffice}` },
-  {
-    text: "Official Website",
-    url: filmDetails.Website,
-    cond: detailExists(filmDetails.Website),
-  },
-  {
-    text: "IMDB page",
-    url: filmDetails.imdbID ? imdbUrl(filmDetails.imdbID) : null,
-  },
-]
-
 // TODO click on poster to make full-screen
 export const filmDetail = props => {
-  const { filmSummary, filmDetails, isFetching } = props
-  const details = getDetails(filmDetails, filmSummary)
+  const { filmDetails, isFetching } = props
   let i = 1
 
   if (isFetching) {
@@ -117,7 +55,7 @@ export const filmDetail = props => {
         <Poster {...props} />
         <FilmPlot {...props} />
         <List>
-          {details.map(detail => (
+          {detailItems(filmDetails).map(detail => (
             <OneDetail key={`item=${i++}`} detail={detail} />
           ))}
         </List>
@@ -129,7 +67,6 @@ export const filmDetail = props => {
 filmDetail.propTypes = {
   filmSummary: PropTypes.object.isRequired,
   filmDetails: PropTypes.object,
-  dispatchViewList: PropTypes.func.isRequired,
   isFetching: PropTypes.bool,
 }
 
@@ -138,12 +75,7 @@ filmDetail.defaultProps = {
   isFetching: false,
 }
 
-export default connect(
-  state => ({
-    filmSummary: state.filmSummary,
-    filmDetails: state.filmDetails,
-  }),
-  dispatch => ({
-    dispatchViewList: () => dispatch(viewList()),
-  })
-)(filmDetail)
+export default connect(state => ({
+  filmSummary: state.filmSummary,
+  filmDetails: state.filmDetails,
+}))(filmDetail)
