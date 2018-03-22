@@ -66,6 +66,7 @@ export const appStyles = StyleSheet.create({
   wrapper: {
     marginTop: 20,
     marginLeft: 10,
+    marginRight: 10,
   },
   link: {
     color: white,

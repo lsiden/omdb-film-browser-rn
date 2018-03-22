@@ -48,7 +48,7 @@ const renderHeader = props => {
       {renderBackButton(props)}
       <View style={detailStyles.titleWrapper}>
         <Text style={detailStyles.title}>{filmSummary.Title}</Text>
-        <Text style={detailStyles.year}>{` (${filmSummary.Year})`}</Text>
+        <Text style={detailStyles.year}>{`  (${filmSummary.Year})`}</Text>
       </View>
     </View>
   )
@@ -60,7 +60,7 @@ const renderPoster = ({ filmSummary }) =>
     <Image
       source={{ uri: filmSummary.Poster }}
       style={detailStyles.poster}
-      resizeMode={"contain"}
+      resizeMode={Image.resizeMode.contain}
     />
   )
 
