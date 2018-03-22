@@ -6,7 +6,7 @@ import { connect } from "react-redux"
 import PropTypes from "prop-types"
 import { SearchBar } from "react-native-elements"
 
-import { queryFetch } from "actions"
+import { queryFetch } from "actions/fetch"
 
 export class searchBar extends React.Component {
   static propTypes = {

@@ -6,6 +6,8 @@ import { List, ListItem } from "react-native-elements"
 
 import { filmListStyles } from "./styles"
 import { viewFilmSummary, fetchFilmDetails } from "./actions"
+import { fetchFilmDetails } from "./actions/fetch"
+import { viewFilmSummary } from "./actions"
 
 // TODO make list pageable
 // TODO show loading icon
