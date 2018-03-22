@@ -28,36 +28,38 @@ const btnStyle = {
 
 export const pager = props => {
   const { pageNum, totalResults, dispatchFetchPage } = props
-  const lastPage = Math.floor(totalResults / 10) + 1
+  const lastPage = Math.floor(totalResults / RESULTS_PER_PAGE) + 1
   const isFirstPage = n => n == 1
   const isLastPage = n => n == lastPage
   return (
-    <View style={pagerStyles.wrapper}>
-      <Button
-        icon={icon("skip-backward", isFirstPage(pageNum))}
-        onPress={() => dispatchFetchPage(1)}
-        disabled={isFirstPage(pageNum)}
-        buttonStyle={btnStyle}
-      />
-      <Button
-        icon={icon("step-backward", isFirstPage(pageNum))}
-        onPress={() => dispatchFetchPage(pageNum - 1)}
-        disabled={isFirstPage(pageNum)}
-        buttonStyle={btnStyle}
-      />
-      <Button
-        icon={icon("step-forward", isLastPage(pageNum))}
-        onPress={() => dispatchFetchPage(pageNum + 1)}
-        disabled={isLastPage(pageNum)}
-        buttonStyle={btnStyle}
-      />
-      <Button
-        icon={icon("skip-forward", isLastPage(pageNum))}
-        onPress={() => dispatchFetchPage(lastPage)}
-        disabled={isLastPage(pageNum)}
-        buttonStyle={btnStyle}
-      />
-    </View>
+    lastPage > 1 && (
+      <View style={pagerStyles.wrapper}>
+        <Button
+          icon={icon("skip-backward", isFirstPage(pageNum))}
+          onPress={() => dispatchFetchPage(1)}
+          disabled={isFirstPage(pageNum)}
+          buttonStyle={btnStyle}
+        />
+        <Button
+          icon={icon("step-backward", isFirstPage(pageNum))}
+          onPress={() => dispatchFetchPage(pageNum - 1)}
+          disabled={isFirstPage(pageNum)}
+          buttonStyle={btnStyle}
+        />
+        <Button
+          icon={icon("step-forward", isLastPage(pageNum))}
+          onPress={() => dispatchFetchPage(pageNum + 1)}
+          disabled={isLastPage(pageNum)}
+          buttonStyle={btnStyle}
+        />
+        <Button
+          icon={icon("skip-forward", isLastPage(pageNum))}
+          onPress={() => dispatchFetchPage(lastPage)}
+          disabled={isLastPage(pageNum)}
+          buttonStyle={btnStyle}
+        />
+      </View>
+    )
   )
 }
 

@@ -10,8 +10,10 @@ import { detailStyles } from "./styles"
 import { LEFT_TRIANGLE } from "./constants"
 import LoadingIndicator from "./components/loading-indicator"
 
+const detailExists = detail => detail && detail !== "N/A"
+
 function renderDetail(detail) {
-  const { text, cond = true, url } = detail
+  const { text, cond = true, url = null } = detail
 
   if (!cond) {
     return null
@@ -24,7 +26,7 @@ function renderDetail(detail) {
     hideChevron: true,
   }
 
-  if (url && url !== "N/A") {
+  if (detailExists(url)) {
     props.onPress = () => {
       Linking.openURL(url)
     }
@@ -67,15 +69,14 @@ const renderPoster = ({ filmSummary }) =>
 const renderPlot = ({ filmDetails }) => {
   const { plot } = filmDetails
 
-  if (!plot || plot === "N/A") {
+  if (!detailExists(plot)) {
     return (
       <Text style={{ color: "gray", textAlign: "center" }}>
         Plot unavailable
       </Text>
     )
-  } else {
-    return <Text>{filmDetails.Plot}</Text>
   }
+  return <Text>{filmDetails.Plot}</Text>
 }
 
 const getDetails = (filmDetails, filmSummary) => [
@@ -83,14 +84,14 @@ const getDetails = (filmDetails, filmSummary) => [
   { text: `Written by ${filmDetails.Writer}` },
   { text: `Cast: ${filmDetails.Actors}` },
   { text: `Language: ${filmDetails.Language}` },
-  { text: `Awards: ${filmDetails.Awards}`, cond: !!filmDetails.Awards },
+  { text: `Awards: ${filmDetails.Awards}` },
   { text: `Run Time: ${filmDetails.Runtime}` },
   { text: `IMDB Rating: ${filmDetails.imdbRating}/10` },
   { text: `Box Office: ${filmDetails.BoxOffice}` },
   {
     text: "Official Website",
     url: filmDetails.Website,
-    cond: filmDetails.Website && filmDetails.Website !== "N/A",
+    cond: detailExists(filmDetails.Website),
   },
   {
     text: "IMDB page",
@@ -103,6 +104,8 @@ export const filmDetail = props => {
   const { filmSummary, filmDetails, isFetching } = props
   if (isFetching) {
     return <LoadingIndicator />
+  } else if (!filmDetails) {
+    return null
   } else {
     return (
       <View>

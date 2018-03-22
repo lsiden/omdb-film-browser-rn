@@ -92,6 +92,8 @@ export const pagerStyles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "baseline",
+    marginTop: 5,
+    marginBottom: 5,
   },
 })
 

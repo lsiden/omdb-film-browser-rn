@@ -2,6 +2,7 @@ import { OMDB_URL, OMDB_API_KEY } from "constants"
 import { updateToast } from "./toast"
 import { getState } from "store"
 import { updateFilms, updateFilmDetails, updateIsFetching } from "./"
+import { RESULTS_PER_PAGE } from "constants"
 
 const OMDB_URL_PREFIX = `${OMDB_URL}?apikey=${OMDB_API_KEY}`
 
@@ -29,7 +30,7 @@ export const queryFetch = query => dispatch => fetchResults(dispatch, query, 1)
 
 export const fetchPage = pageNum => dispatch => {
   const { query, totalResults = 0 } = getState()
-  const lastPage = Math.floor(totalResults / 10) + 1
+  const lastPage = Math.floor(totalResults / RESULTS_PER_PAGE) + 1
 
   if (0 < pageNum && pageNum <= lastPage) {
     fetchResults(dispatch, query, pageNum)
