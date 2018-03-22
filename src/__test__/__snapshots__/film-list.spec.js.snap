@@ -2,6 +2,14 @@
 
 exports[`renders list of titles 1`] = `
 <View>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={undefined}
+  >
+    Found undefined results.
+  </Text>
   <View
     style={
       Array [

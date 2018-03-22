@@ -7,13 +7,6 @@ const gray2 = "#222"
 const bannerBackground = "#05347f"
 const TITLE_COLOR = "#210d87"
 
-export const filmsList = StyleSheet.create({
-  titleText: {
-    lineHeight: 30,
-    fontSize: 18,
-  },
-})
-
 export const detailStyles = StyleSheet.create({
   header: {
     display: "flex",
@@ -54,15 +47,12 @@ export const detailStyles = StyleSheet.create({
   },
 })
 
-export const filmListStyles = StyleSheet.create({
-  msgStyle: {
+export const appStyles = StyleSheet.create({
+  message: {
     fontSize: 14,
     color: TITLE_COLOR,
     marginTop: 5,
   },
-})
-
-export const appStyles = StyleSheet.create({
   wrapper: {
     marginTop: 20,
     marginLeft: 10,
@@ -88,12 +78,14 @@ export const appStyles = StyleSheet.create({
 
 export const pagerStyles = StyleSheet.create({
   wrapper: {
+    marginTop: 5,
+    marginBottom: 5,
+  },
+  buttons: {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "baseline",
-    marginTop: 5,
-    marginBottom: 5,
   },
 })
 

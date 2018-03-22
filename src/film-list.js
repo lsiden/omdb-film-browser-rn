@@ -4,13 +4,13 @@ import { connect } from "react-redux"
 import { Text, View, ActivityIndicator, StyleSheet } from "react-native"
 import { List, ListItem } from "react-native-elements"
 
-import { filmListStyles } from "./styles"
+import { appStyles } from "./styles"
 import { fetchFilmDetails } from "./actions/fetch"
 import { viewFilmSummary, updateIsFetching } from "./actions"
 import Pager from "components/pager"
 import LoadingIndicator from "./components/loading-indicator"
 
-const renderMessage = msg => <Text style={filmListStyles.msgStyle}>{msg}</Text>
+const renderMessage = msg => <Text style={appStyles.msgStyle}>{msg}</Text>
 
 export const filmList = ({
   films,
