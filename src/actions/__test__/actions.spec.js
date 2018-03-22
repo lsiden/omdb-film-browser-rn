@@ -1,7 +1,8 @@
 import ActionTypes from "../types"
 import {
   viewList,
-  viewFilmSummary,
+  viewFilmDetails,
+  viewPoster,
   updateFilms,
   updateFilmDetails,
   updateIsFetching,
@@ -16,13 +17,23 @@ test("viewList() returns an action", () => {
   })
 })
 
-test("viewFilmSummary(filmSummary) returns an action with filmSummary", () => {
+test("viewFilmDetails(filmSummary) returns an action with filmSummary", () => {
   const filmSummary = { Title: "A Title" }
-  expect(viewFilmSummary(filmSummary)).toEqual({
+  expect(viewFilmDetails(filmSummary)).toEqual({
     type: ActionTypes.VIEW_FILM_DETAILS,
     data: {
       view: ActionTypes.VIEW_FILM_DETAILS,
-      filmSummary,
+    },
+  })
+})
+
+test("viewPoster(uri) returns an action with a uri", () => {
+  const uri = "http://my.poster.url"
+  expect(viewPoster(uri)).toEqual({
+    type: ActionTypes.VIEW_POSTER,
+    data: {
+      view: ActionTypes.VIEW_POSTER,
+      poster: { uri },
     },
   })
 })

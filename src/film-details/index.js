@@ -1,10 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { View, Linking } from "react-native"
-import { List, ListItem } from "react-native-elements"
+import { View } from "react-native"
+import { List } from "react-native-elements"
 
-import { detailStyles } from "styles"
 import LoadingIndicator from "components/loading-indicator"
 import DetailHeader from "./detail-header"
 import Poster from "./poster"
@@ -12,38 +11,11 @@ import detailItems from "./detail-items"
 import FilmPlot from "./film-plot"
 import DetailItem from "./detail-item"
 
-const detailExists = detail => detail && detail !== "N/A"
-
-function OneDetail({ detail }) {
-  const { text, cond = true, url = null } = detail
-
-  if (!cond) {
-    return null
-  }
-
-  const props = {
-    style: detailStyles.item,
-    title: text,
-    hideChevron: true,
-  }
-
-  if (detailExists(url)) {
-    props.onPress = () => {
-      Linking.openURL(url)
-    }
-    props.hideChevron = false
-  }
-  return <ListItem {...props} />
-}
-
-OneDetail.propTypes = {
-  detail: PropTypes.object.isRequired,
-}
-
 // TODO click on poster to make full-screen
 export const filmDetail = props => {
   const { filmDetails, isFetching } = props
   let i = 1
+  const genKey = () => `item-${i++}`
 
   if (isFetching) {
     return <LoadingIndicator />
@@ -52,12 +24,12 @@ export const filmDetail = props => {
   } else {
     return (
       <View>
-        <DetailHeader {...props} />
-        <Poster {...props} />
+        <DetailHeader />
+        <Poster />
         <FilmPlot {...props} />
         <List>
           {detailItems(filmDetails).map(detail => (
-            <DetailItem key={`item=${i++}`} detail={detail} />
+            <DetailItem key={genKey()} detail={detail} />
           ))}
         </List>
       </View>
@@ -66,17 +38,15 @@ export const filmDetail = props => {
 }
 
 filmDetail.propTypes = {
-  filmSummary: PropTypes.object.isRequired,
   filmDetails: PropTypes.object,
   isFetching: PropTypes.bool,
 }
 
 filmDetail.defaultProps = {
-  filmDetails: {},
   isFetching: false,
 }
 
 export default connect(state => ({
-  filmSummary: state.filmSummary,
   filmDetails: state.filmDetails,
+  isFetching: state.isFetching,
 }))(filmDetail)

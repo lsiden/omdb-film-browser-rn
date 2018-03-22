@@ -11,7 +11,7 @@ import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { ListItem } from "react-native-elements"
 
-import { viewFilmSummary, updateIsFetching } from "actions"
+import { viewFilmDetails, updateIsFetching } from "actions"
 import { fetchFilmDetails } from "actions/fetch"
 
 export const filmListItem = ({ filmSummary, dispatchViewDetails }) => (
@@ -30,8 +30,7 @@ filmListItem.propTypes = {
 // Export this to enable mocking.
 export default connect(null, dispatch => ({
   dispatchViewDetails: filmSummary => {
-    dispatch(updateIsFetching(true))
-    dispatch(viewFilmSummary(filmSummary))
+    dispatch(viewFilmDetails())
     dispatch(fetchFilmDetails(filmSummary.imdbID))
   },
 }))(filmListItem)

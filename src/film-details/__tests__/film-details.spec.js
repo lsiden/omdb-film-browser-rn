@@ -8,6 +8,8 @@ const filmDetails = require("__test__/__fixture__/film-details.json")
 const filmSummary = films[4]
 
 jest.mock("film-details/back-button", () => "BackButton")
+jest.mock("film-details/detail-header", () => "DetailHeader")
+jest.mock("film-details/poster", () => "Poster")
 
 let dispatchViewList
 

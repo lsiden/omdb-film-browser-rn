@@ -5,11 +5,18 @@ export const viewList = () => ({
   data: { view: ActionTypes.VIEW_FILM_LIST },
 })
 
-export const viewFilmSummary = filmSummary => ({
+export const viewFilmDetails = () => ({
   type: ActionTypes.VIEW_FILM_DETAILS,
   data: {
     view: ActionTypes.VIEW_FILM_DETAILS,
-    filmSummary,
+  },
+})
+
+export const viewPoster = uri => ({
+  type: ActionTypes.VIEW_POSTER,
+  data: {
+    view: ActionTypes.VIEW_POSTER,
+    poster: { uri },
   },
 })
 

@@ -68,7 +68,6 @@ searchBar.defaultProps = {
 
 export default connect(null, dispatch => ({
   dispatchQuery: query => {
-    dispatch(updateIsFetching(true))
     dispatch(queryFetch(query))
   },
 }))(searchBar)

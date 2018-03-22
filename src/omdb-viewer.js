@@ -5,13 +5,15 @@ import { Text, View, ScrollView, Linking, BackHandler } from "react-native"
 import Toaster from "react-native-toaster"
 
 import ActionTypes from "./actions/types"
-import { viewList } from "./actions"
+import { viewFilmDetails, viewList, updateIsFetching } from "./actions"
 import { OMDB_URL } from "./constants"
 import { appStyles } from "./styles"
 import SearchBar from "components/search-bar"
 import Show from "components/show"
 import FilmList from "./film-list"
 import FilmDetails from "film-details"
+import FullScreenPoster from "full-screen-poster"
+
 const openUrl = url => Linking.openURL(url)
 
 const renderBanner = () => (
@@ -38,6 +40,9 @@ const renderOmdbViewer = ({ view, toast }) => (
     <Show when={view === ActionTypes.VIEW_FILM_DETAILS}>
       <FilmDetails />
     </Show>
+    <Show when={view === ActionTypes.VIEW_POSTER}>
+      <FullScreenPoster />
+    </Show>
   </ScrollView>
 )
 renderOmdbViewer.propTypes = {
@@ -52,10 +57,15 @@ export class omdbViewer extends React.Component {
   }
 
   onBackPress() {
-    const { view, dispatchViewList } = this.props
+    const { view, dispatchViewList, dispatchViewFilmDetails } = this.props
 
     if (view === ActionTypes.VIEW_FILM_DETAILS) {
       dispatchViewList()
+      return true
+    }
+
+    if (view === ActionTypes.VIEW_POSTER) {
+      dispatchViewFilmDetails()
       return true
     }
     return false
@@ -84,6 +94,7 @@ omdbViewer.propTypes = {
   toast: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
   pageNum: PropTypes.number,
   dispatchViewList: PropTypes.func.isRequired,
+  dispatchViewFilmDetails: PropTypes.func.isRequired,
 }
 
 export default connect(
@@ -93,6 +104,10 @@ export default connect(
     pageNum: state.pageNum,
   }),
   dispatch => ({
-    dispatchViewList: () => dispatch(viewList()),
+    dispatchViewList: () => {
+      dispatch(updateIsFetching(false))
+      dispatch(viewList())
+    },
+    dispatchViewFilmDetails: () => dispatch(viewFilmDetails()),
   })
 )(omdbViewer)

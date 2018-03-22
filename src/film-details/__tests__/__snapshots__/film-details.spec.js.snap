@@ -2,74 +2,8 @@
 
 exports[`renders a title 1`] = `
 <View>
-  <View
-    style={
-      Object {
-        "alignItems": "baseline",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "justifyContent": "flex-start",
-      }
-    }
-  >
-    <BackButton />
-    <View
-      style={
-        Object {
-          "alignItems": "baseline",
-          "display": "flex",
-          "flexDirection": "row",
-          "flexWrap": "wrap",
-          "marginBottom": 5,
-          "marginTop": 20,
-        }
-      }
-    >
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "flexWrap": "wrap",
-            "fontSize": 20,
-            "fontWeight": "bold",
-          }
-        }
-      >
-        The Battle of Algiers
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "color": "#aaa",
-            "fontSize": 16,
-          }
-        }
-      >
-          (1966)
-      </Text>
-    </View>
-  </View>
-  <Image
-    resizeMode="contain"
-    source={
-      Object {
-        "uri": "https://images-na.ssl-images-amazon.com/images/M/MV5BYzliNzI5NzgtNDZmNy00NGU4LTg2OTQtMDEzZTRiNDU3ZTI1XkEyXkFqcGdeQXVyMDUyOTUyNQ@@._V1_SX300.jpg",
-      }
-    }
-    style={
-      Object {
-        "height": 300,
-        "marginBottom": 10,
-        "marginTop": 10,
-      }
-    }
-  />
+  <DetailHeader />
+  <Poster />
   <Text
     accessible={true}
     allowFontScaling={true}

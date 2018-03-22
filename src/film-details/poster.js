@@ -1,21 +1,24 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Image } from "react-native"
+import { connect } from "react-redux"
 
 import { detailStyles } from "styles"
+import { detailExists } from "./detail-items"
 
-const Poster = ({ filmSummary }) =>
-  filmSummary.Poster &&
-  filmSummary.Poster !== "N/A" && (
+export const poster = ({ uri }) =>
+  detailExists(uri) && (
     <Image
-      source={{ uri: filmSummary.Poster }}
+      source={{ uri }}
       style={detailStyles.poster}
       resizeMode={Image.resizeMode.contain}
     />
   )
 
-Poster.propTypes = {
-  filmSummary: PropTypes.object.isRequired,
+poster.propTypes = {
+  uri: PropTypes.string,
 }
 
-export default Poster
+export default connect(state => ({
+  uri: (state.filmDetails || {}).Poster,
+}))(poster)
