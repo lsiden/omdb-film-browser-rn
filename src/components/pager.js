@@ -2,14 +2,8 @@ import React from "react"
 import { connect } from "react-redux"
 import PropTypes from "prop-types"
 import { View, Text } from "react-native"
-import { Button, Icon } from "react-native-elements"
+import { Button } from "react-native-elements"
 
-import {
-  REWIND_PAGES_CHAR,
-  PAGER_FAST_FWD_CHAR,
-  PREV_PAGE_CHAR,
-  FAST_FWD_PAGES_CHAR,
-} from "constants"
 import { fetchPage } from "actions/fetch"
 import { pagerStyles, appStyles } from "styles"
 
@@ -25,10 +19,8 @@ const btnStyle = {
   height: 40,
 }
 
-const formatNumber = num => Number.toLocaleString(num)
-
 export const pager = props => {
-  const { pageNum, totalResults, lastPage, dispatchFetchPage } = props
+  const { pageNum, lastPage, dispatchFetchPage } = props
   const isFirstPage = n => n == 1
   const isLastPage = n => n == lastPage
   return (
@@ -60,7 +52,7 @@ export const pager = props => {
             buttonStyle={btnStyle}
           />
         </View>
-        <Text style={[appStyles.message, { textAlign: "center" }]}>
+        <Text style={[appStyles.message, pagerStyles.message]}>
           {`On page ${pageNum.toLocaleString()} of ${lastPage.toLocaleString()}`}
         </Text>
       </View>

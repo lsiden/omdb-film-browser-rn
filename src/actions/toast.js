@@ -1,5 +1,5 @@
 import ActionTypes from "./types"
-import Toaster, { ToastStyles } from "react-native-toaster"
+import { ToastStyles } from "react-native-toaster"
 
 // Severity must be one of 'error', 'warning', 'success', or 'info'
 export const updateToast = (text, severity = "info") => ({

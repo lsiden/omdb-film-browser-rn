@@ -46,7 +46,6 @@ export class searchBar extends React.Component {
   }
 
   render() {
-    const { dispatchQuery } = this.props
     return (
       <SearchBar
         placeholder="Title..."

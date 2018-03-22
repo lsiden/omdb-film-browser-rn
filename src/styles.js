@@ -1,11 +1,40 @@
 import { StyleSheet } from "react-native"
 
+/* eslint-disable react-native/no-color-literals */
+
 const white = "#fff"
-const gray8 = "#888"
 const gray10 = "#aaa"
-const gray2 = "#222"
 const bannerBackground = "#05347f"
 const TITLE_COLOR = "#210d87"
+
+export const appStyles = StyleSheet.create({
+  message: {
+    fontSize: 14,
+    color: TITLE_COLOR,
+    marginTop: 5,
+  },
+  wrapper: {
+    marginTop: 20,
+    marginLeft: 10,
+    marginRight: 10,
+  },
+  link: {
+    color: white,
+    fontSize: 12,
+  },
+  banner: {
+    backgroundColor: bannerBackground,
+    padding: 10,
+  },
+  title: {
+    color: white,
+    fontSize: 18,
+    marginBottom: 3,
+  },
+  searchWrapper: {
+    backgroundColor: bannerBackground,
+  },
+})
 
 export const detailStyles = StyleSheet.create({
   header: {
@@ -45,34 +74,9 @@ export const detailStyles = StyleSheet.create({
     fontSize: 24,
     marginRight: 10,
   },
-})
-
-export const appStyles = StyleSheet.create({
-  message: {
-    fontSize: 14,
-    color: TITLE_COLOR,
-    marginTop: 5,
-  },
-  wrapper: {
-    marginTop: 20,
-    marginLeft: 10,
-    marginRight: 10,
-  },
-  link: {
-    color: white,
-    fontSize: 12,
-  },
-  banner: {
-    backgroundColor: bannerBackground,
-    padding: 10,
-  },
-  title: {
-    color: white,
-    fontSize: 18,
-    marginBottom: 3,
-  },
-  searchWrapper: {
-    backgroundColor: bannerBackground,
+  plot: {
+    color: "gray",
+    textAlign: "center",
   },
 })
 
@@ -86,6 +90,9 @@ export const pagerStyles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "space-around",
     alignItems: "baseline",
+  },
+  message: {
+    textAlign: "center",
   },
 })
 

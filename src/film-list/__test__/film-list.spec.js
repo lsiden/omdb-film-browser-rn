@@ -1,13 +1,13 @@
 import React from "react"
 import renderer from "react-native-test-utils"
 
-import { filmList as FilmList } from "film-list"
+import { filmList as FilmList } from "../"
 
 jest.mock("components/pager")
 
-const films = require("./__fixture__/films.json").Search
+const films = require("__test__/__fixture__/films.json").Search
 
-let dispatchViewDetail
+jest.mock("film-list/film-list-item", () => "FilmListItem")
 
 const defaultProps = () => {
   const dispatchViewDetail = jest.fn()
@@ -23,10 +23,4 @@ const createWrapper = (props = {}) =>
 it("renders list of titles", () => {
   const wrapper = createWrapper()
   expect(wrapper.toJSON()).toMatchSnapshot()
-})
-
-test.skip("press on list item invokes dispatchViewDetail", () => {
-  const wrapper = createWrapper()
-  wrapper.query("[key]").simulate("press")
-  expect(dispatchViewDetail).toHaveBeenCalledTimes(1)
 })

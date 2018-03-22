@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { Text, View, Linking, Image, TouchableOpacity } from "react-native"
 import { List, ListItem } from "react-native-elements"
-import cuid from "cuid"
 
 import { viewList } from "./actions"
 import { detailStyles } from "./styles"
@@ -12,7 +11,7 @@ import LoadingIndicator from "./components/loading-indicator"
 
 const detailExists = detail => detail && detail !== "N/A"
 
-function renderDetail(detail) {
+function OneDetail({ detail }) {
   const { text, cond = true, url = null } = detail
 
   if (!cond) {
@@ -21,7 +20,6 @@ function renderDetail(detail) {
 
   const props = {
     style: detailStyles.item,
-    key: cuid.slug(),
     title: text,
     hideChevron: true,
   }
@@ -35,6 +33,10 @@ function renderDetail(detail) {
   return <ListItem {...props} />
 }
 
+OneDetail.propTypes = {
+  detail: PropTypes.object.isRequired,
+}
+
 const imdbUrl = imdbID => `https://www.imdb.com/title/${imdbID}`
 
 const renderBackButton = ({ dispatchViewList }) => (
@@ -42,8 +44,11 @@ const renderBackButton = ({ dispatchViewList }) => (
     <Text style={detailStyles.buttonText}>{LEFT_TRIANGLE}</Text>
   </TouchableOpacity>
 )
+renderBackButton.propTypes = {
+  dispatchViewList: PropTypes.func.isRequired,
+}
 
-const renderHeader = props => {
+const DetailHeader = props => {
   const { filmSummary } = props
   return (
     <View style={detailStyles.header}>
@@ -55,8 +60,11 @@ const renderHeader = props => {
     </View>
   )
 }
+DetailHeader.propTypes = {
+  filmSummary: PropTypes.object.isRequired,
+}
 
-const renderPoster = ({ filmSummary }) =>
+const Poster = ({ filmSummary }) =>
   filmSummary.Poster &&
   filmSummary.Poster !== "N/A" && (
     <Image
@@ -65,21 +73,23 @@ const renderPoster = ({ filmSummary }) =>
       resizeMode={Image.resizeMode.contain}
     />
   )
+Poster.propTypes = {
+  filmSummary: PropTypes.object.isRequired,
+}
 
-const renderPlot = ({ filmDetails }) => {
+const FilmPlot = ({ filmDetails }) => {
   const { plot } = filmDetails
 
   if (!detailExists(plot)) {
-    return (
-      <Text style={{ color: "gray", textAlign: "center" }}>
-        Plot unavailable
-      </Text>
-    )
+    return <Text style={detailStyles.plot}>Plot unavailable</Text>
   }
   return <Text>{filmDetails.Plot}</Text>
 }
+FilmPlot.propTypes = {
+  filmDetails: PropTypes.object.isRequired,
+}
 
-const getDetails = (filmDetails, filmSummary) => [
+const getDetails = filmDetails => [
   { text: `Directed by ${filmDetails.Director}` },
   { text: `Written by ${filmDetails.Writer}` },
   { text: `Cast: ${filmDetails.Actors}` },
@@ -102,6 +112,9 @@ const getDetails = (filmDetails, filmSummary) => [
 // TODO click on poster to make full-screen
 export const filmDetail = props => {
   const { filmSummary, filmDetails, isFetching } = props
+  const details = getDetails(filmDetails, filmSummary)
+  let i = 1
+
   if (isFetching) {
     return <LoadingIndicator />
   } else if (!filmDetails) {
@@ -109,13 +122,13 @@ export const filmDetail = props => {
   } else {
     return (
       <View>
-        {renderHeader(props)}
-        {renderPoster(props)}
-        {renderPlot(props)}
+        <DetailHeader {...props} />
+        <Poster {...props} />
+        <FilmPlot {...props} />
         <List>
-          {getDetails(filmDetails, filmSummary).map(detail =>
-            renderDetail(detail)
-          )}
+          {details.map(detail => (
+            <OneDetail key={`item=${i++}`} detail={detail} />
+          ))}
         </List>
       </View>
     )

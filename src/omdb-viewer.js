@@ -25,7 +25,7 @@ const renderBanner = () => (
   </View>
 )
 
-const renderOmdbViewer = ({ view, toast, pageNum }) => (
+const renderOmdbViewer = ({ view, toast }) => (
   <ScrollView className="App" style={appStyles.wrapper}>
     <Toaster message={toast} />
     <Show when={view === ActionTypes.VIEW_FILM_LIST}>
@@ -40,6 +40,10 @@ const renderOmdbViewer = ({ view, toast, pageNum }) => (
     </Show>
   </ScrollView>
 )
+renderOmdbViewer.propTypes = {
+  view: PropTypes.bool,
+  toast: PropTypes.func,
+}
 
 export class omdbViewer extends React.Component {
   constructor(props) {
@@ -58,8 +62,6 @@ export class omdbViewer extends React.Component {
   }
 
   componentDidMount() {
-    const { view, dispatchViewList } = this.props
-
     this.backPressListener = BackHandler.addEventListener(
       "hardwareBackPress",
       this.onBackPress
@@ -81,6 +83,7 @@ omdbViewer.propTypes = {
   view: PropTypes.string.isRequired,
   toast: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
   pageNum: PropTypes.number,
+  dispatchViewList: PropTypes.func.isRequired,
 }
 
 export default connect(

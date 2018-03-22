@@ -2,7 +2,7 @@ import { OMDB_URL, OMDB_API_KEY } from "constants"
 import { updateToast } from "./toast"
 import { getState } from "store"
 import { updateFilms, updateFilmDetails, updateIsFetching } from "./"
-import { RESULTS_PER_PAGE } from "constants"
+import getLastPagenum from "util/get-last-pagenum"
 
 const OMDB_URL_PREFIX = `${OMDB_URL}?apikey=${OMDB_API_KEY}`
 
@@ -11,14 +11,13 @@ const fetchResults = (dispatch, query, pageNum) =>
     .then(res => res.json())
     .then(res => {
       const totalResults = Number(res.totalResults)
-      const lastPage = Math.floor(totalResults / RESULTS_PER_PAGE) + 1
       dispatch(
         updateFilms({
           query,
           pageNum,
-          films: res.Search,
           totalResults,
-          lastPage,
+          lastPage: getLastPagenum(totalResults),
+          films: res.Search,
         })
       )
       dispatch(updateIsFetching(false))
@@ -32,7 +31,7 @@ const fetchResults = (dispatch, query, pageNum) =>
 export const queryFetch = query => dispatch => fetchResults(dispatch, query, 1)
 
 export const fetchPage = pageNum => dispatch => {
-  const { query, totalResults = 0, lastPage } = getState()
+  const { query, lastPage } = getState()
 
   if (0 < pageNum && pageNum <= lastPage) {
     fetchResults(dispatch, query, pageNum)
