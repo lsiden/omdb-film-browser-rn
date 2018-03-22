@@ -1,9 +1,9 @@
-import { Actions } from "./"
+import ActionTypes from "./types"
 import Toaster, { ToastStyles } from "react-native-toaster"
 
 // Severity must be one of 'error', 'warning', 'success', or 'info'
 export const updateToast = (text, severity = "info") => ({
-  type: Actions.UPDATE_TOAST,
+  type: ActionTypes.UPDATE_TOAST,
   data: {
     toast: {
       text,

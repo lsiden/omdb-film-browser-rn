@@ -1,13 +1,11 @@
 import React from "react"
 import { Provider } from "react-redux"
 
-import { Actions } from "actions"
-
 import OmdbViewer from "omdb-viewer"
-import store from "store"
+import { getStore } from "store"
 
 export const app = () => (
-  <Provider store={store}>
+  <Provider store={getStore()}>
     <OmdbViewer />
   </Provider>
 )

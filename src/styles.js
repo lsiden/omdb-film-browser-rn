@@ -17,11 +17,13 @@ export const filmsList = StyleSheet.create({
 export const detailStyles = StyleSheet.create({
   header: {
     display: "flex",
+    flexWrap: "wrap",
     flexDirection: "row",
     justifyContent: "flex-start",
     alignItems: "baseline",
   },
   titleWrapper: {
+    flexWrap: "wrap",
     marginTop: 20,
     marginBottom: 5,
     display: "flex",
@@ -30,6 +32,7 @@ export const detailStyles = StyleSheet.create({
   },
   title: {
     fontSize: 20,
+    flexWrap: "wrap",
     fontWeight: "bold",
   },
   year: {
@@ -79,5 +82,14 @@ export const appStyles = {
   },
   searchWrapper: {
     backgroundColor: bannerBackground,
+  },
+}
+
+export const pagerStyles = {
+  wrapper: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-around",
+    alignItems: "baseline",
   },
 }

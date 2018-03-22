@@ -79,11 +79,14 @@ export const filmDetail = props => {
   return (
     <View>
       {renderHeader(props)}
-      <Image
-        source={{ uri: filmSummary.Poster }}
-        style={detailStyles.poster}
-        resizeMode={"contain"}
-      />
+      {filmSummary.Poster &&
+        filmSummary.Poster !== "N/A" && (
+          <Image
+            source={{ uri: filmSummary.Poster }}
+            style={detailStyles.poster}
+            resizeMode={"contain"}
+          />
+        )}
       <Text>{filmDetails.Plot}</Text>
       <List>
         {getDetails(filmDetails, filmSummary).map(detail =>
