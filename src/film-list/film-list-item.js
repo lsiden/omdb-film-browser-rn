@@ -1,3 +1,11 @@
+/* NOTE
+ * This is a lot of boilerplate for such a small copmonent.
+ * I broke FilmListItem out of FilmList in the hope of being able to test that
+ * dispatchViewDetails() property gets called when a ListItem is pressed.
+ * Unfortunately, react-native-elements renders ListItem in a way
+ * that does not allow me to simulate a press in my test
+ * or to find and invokes the onPress() property directly.
+ */
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
