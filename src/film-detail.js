@@ -68,7 +68,11 @@ const renderPlot = ({ filmDetails }) => {
   const { plot } = filmDetails
 
   if (!plot || plot === "N/A") {
-    return <Text style={{ color: "gray" }}>Plot unavailable</Text>
+    return (
+      <Text style={{ color: "gray", textAlign: "center" }}>
+        Plot unavailable
+      </Text>
+    )
   } else {
     return <Text>{filmDetails.Plot}</Text>
   }
