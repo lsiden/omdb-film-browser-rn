@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { Text, View, Linking } from "react-native"
+import { View, Linking } from "react-native"
 import { List, ListItem } from "react-native-elements"
 
 import { detailStyles } from "styles"
@@ -10,6 +10,7 @@ import DetailHeader from "./detail-header"
 import Poster from "./poster"
 import detailItems from "./detail-items"
 import FilmPlot from "./film-plot"
+import DetailItem from "./detail-item"
 
 const detailExists = detail => detail && detail !== "N/A"
 
@@ -56,7 +57,7 @@ export const filmDetail = props => {
         <FilmPlot {...props} />
         <List>
           {detailItems(filmDetails).map(detail => (
-            <OneDetail key={`item=${i++}`} detail={detail} />
+            <DetailItem key={`item=${i++}`} detail={detail} />
           ))}
         </List>
       </View>
