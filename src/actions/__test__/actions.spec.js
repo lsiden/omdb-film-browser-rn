@@ -7,7 +7,7 @@ import {
   updateIsFetching,
 } from "../"
 
-import filmDetails from "__test__/__fixture__/film-detail.json"
+const filmDetails = require("__test__/__fixture__/film-details.json")
 
 test("viewList() returns an action", () => {
   expect(viewList()).toEqual({
@@ -19,9 +19,9 @@ test("viewList() returns an action", () => {
 test("viewFilmSummary(filmSummary) returns an action with filmSummary", () => {
   const filmSummary = { Title: "A Title" }
   expect(viewFilmSummary(filmSummary)).toEqual({
-    type: ActionTypes.VIEW_FILM_DETAIL,
+    type: ActionTypes.VIEW_FILM_DETAILS,
     data: {
-      view: ActionTypes.VIEW_FILM_DETAIL,
+      view: ActionTypes.VIEW_FILM_DETAILS,
       filmSummary,
     },
   })

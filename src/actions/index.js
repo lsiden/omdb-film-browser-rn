@@ -6,9 +6,9 @@ export const viewList = () => ({
 })
 
 export const viewFilmSummary = filmSummary => ({
-  type: ActionTypes.VIEW_FILM_DETAIL,
+  type: ActionTypes.VIEW_FILM_DETAILS,
   data: {
-    view: ActionTypes.VIEW_FILM_DETAIL,
+    view: ActionTypes.VIEW_FILM_DETAILS,
     filmSummary,
   },
 })

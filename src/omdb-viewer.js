@@ -11,7 +11,7 @@ import { appStyles } from "./styles"
 import SearchBar from "components/search-bar"
 import Show from "components/show"
 import FilmList from "./film-list"
-import FilmDetail from "film-detail"
+import FilmDetails from "film-details"
 const openUrl = url => Linking.openURL(url)
 
 const renderBanner = () => (
@@ -35,8 +35,8 @@ const renderOmdbViewer = ({ view, toast }) => (
         <FilmList />
       </View>
     </Show>
-    <Show when={view === ActionTypes.VIEW_FILM_DETAIL}>
-      <FilmDetail />
+    <Show when={view === ActionTypes.VIEW_FILM_DETAILS}>
+      <FilmDetails />
     </Show>
   </ScrollView>
 )
@@ -54,7 +54,7 @@ export class omdbViewer extends React.Component {
   onBackPress() {
     const { view, dispatchViewList } = this.props
 
-    if (view === ActionTypes.VIEW_FILM_DETAIL) {
+    if (view === ActionTypes.VIEW_FILM_DETAILS) {
       dispatchViewList()
       return true
     }

@@ -1,7 +1,7 @@
 import ActionTypes from "../types"
 import { queryFetch, fetchFilmDetails } from "../fetch"
 
-import filmDetails from "__test__/__fixture__/film-detail.json"
+const filmDetails = require("__test__/__fixture__/film-details.json")
 
 test("queryFetch()(dispatch) invokes dispatch() with ActionTypes.VIEW_FILM_LIST", () => {
   const dispatch = jest.fn()
