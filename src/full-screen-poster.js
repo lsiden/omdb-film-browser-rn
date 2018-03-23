@@ -3,13 +3,26 @@ import PropTypes from "prop-types"
 import { Image, View } from "react-native"
 import { connect } from "react-redux"
 
-import { fullSceenPosterStyles as styles } from "./styles"
+export const posterStyle = {
+  flex: 1,
+  height: undefined,
+  width: undefined,
+}
+
+const wrapperStyle = {
+  height: "100%",
+  width: "100%",
+  marginTop: 5,
+  marginBottom: 5,
+}
 
 export const fullScreenPoster = ({ uri }) => {
   return (
-    <View style={styles.wrapper}>
-      <Image style={styles.image} source={{ uri }} />
-    </View>
+    uri && (
+      <View style={wrapperStyle}>
+        <Image source={{ uri }} style={posterStyle} resizeMode={"contain"} />
+      </View>
+    )
   )
 }
 

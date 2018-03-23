@@ -4,16 +4,23 @@ import { connect } from "react-redux"
 import { Text, View } from "react-native"
 import { List } from "react-native-elements"
 
-import { appStyles } from "styles"
+import { appStyles, loadingIndicatorStyle } from "styles"
 import Pager from "components/pager"
 import LoadingIndicator from "components/loading-indicator"
 import FilmListItem from "./film-list-item"
 
 const renderMessage = msg => <Text style={appStyles.msgStyle}>{msg}</Text>
-
+const loadingWrapperStyle = {
+  height: "100%",
+  justifyContent: "center",
+}
 export const filmList = ({ films, isFetching, totalResults }) => {
   if (isFetching) {
-    return <LoadingIndicator />
+    return (
+      <View style={loadingWrapperStyle}>
+        <LoadingIndicator style={loadingIndicatorStyle} />
+      </View>
+    )
   } else if (films.length > 0) {
     return (
       <View>

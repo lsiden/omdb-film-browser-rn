@@ -28,23 +28,28 @@ const renderBanner = () => (
 )
 
 const renderOmdbViewer = ({ view, toast }) => (
-  <ScrollView className="App" style={appStyles.wrapper}>
+  <View>
     <Toaster message={toast} />
     <Show when={view === ActionTypes.VIEW_FILM_LIST}>
-      <View>
-        {renderBanner()}
-        <SearchBar />
-        <FilmList />
-      </View>
+      <ScrollView className="App" style={appStyles.wrapper}>
+        <View>
+          {renderBanner()}
+          <SearchBar />
+          <FilmList />
+        </View>
+      </ScrollView>
     </Show>
     <Show when={view === ActionTypes.VIEW_FILM_DETAILS}>
-      <FilmDetails />
+      <ScrollView className="App" style={appStyles.wrapper}>
+        <FilmDetails />
+      </ScrollView>
     </Show>
     <Show when={view === ActionTypes.VIEW_POSTER}>
       <FullScreenPoster />
     </Show>
-  </ScrollView>
+  </View>
 )
+
 renderOmdbViewer.propTypes = {
   view: PropTypes.bool,
   toast: PropTypes.func,

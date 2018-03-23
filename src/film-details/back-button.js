@@ -19,6 +19,6 @@ backButton.propTypes = {
 export default connect(null, dispatch => ({
   dispatchViewList: () => {
     dispatch(updateIsFetching(false))
-    dispatch(viewList)
+    dispatch(viewList())
   },
 }))(backButton)

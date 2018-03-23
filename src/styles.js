@@ -99,20 +99,3 @@ export const pagerStyles = StyleSheet.create({
     textAlign: "center",
   },
 })
-
-export const fullSceenPosterStyles = StyleSheet.create({
-  wrapper: {
-    flex: 1,
-    alignItems: "stretch",
-  },
-  image: {
-    flex: 1,
-  },
-})
-
-export const loadingIndicatorStyle = {
-  height: 150,
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-}
