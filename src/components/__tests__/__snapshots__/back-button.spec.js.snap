@@ -34,7 +34,6 @@ exports[`renders 1`] = `
       Object {
         "flex": 0,
         "fontSize": 24,
-        "marginRight": 10,
       }
     }
   >
