@@ -12,7 +12,6 @@ const DetailItem = ({ detail }) => {
   if (!cond) {
     return null
   }
-
   const props = {
     style: detailStyles.item,
     title: text,

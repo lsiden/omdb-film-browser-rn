@@ -7,13 +7,11 @@ jest.mock("components/pager")
 
 const films = require("__test__/__fixture__/films.json").Search
 
-jest.mock("film-list/film-list-item", () => "FilmListItem")
-
 const defaultProps = () => {
-  const dispatchViewDetail = jest.fn()
+  const dispatchViewDetails = jest.fn()
   return {
     films,
-    dispatchViewDetail,
+    dispatchViewDetails,
   }
 }
 

@@ -13,7 +13,10 @@ export const appStyles = StyleSheet.create({
     color: TITLE_COLOR,
     marginTop: 5,
   },
-  scrollWrapper: {},
+  scrollWrapper: {
+    flex: 1,
+    height: "100%",
+  },
   link: {
     color: white,
     fontSize: 12,
@@ -30,6 +33,13 @@ export const appStyles = StyleSheet.create({
   searchWrapper: {
     backgroundColor: bannerBackground,
   },
+  backButtonStyle: {
+    marginLeft: 20,
+  },
+  buttonText: {
+    flex: 0,
+    fontSize: 24,
+  },
 })
 
 export const detailStyles = StyleSheet.create({
@@ -42,7 +52,6 @@ export const detailStyles = StyleSheet.create({
   },
   titleWrapper: {
     flexWrap: "wrap",
-    marginTop: 20,
     marginBottom: 5,
     display: "flex",
     flexDirection: "row",
@@ -66,10 +75,6 @@ export const detailStyles = StyleSheet.create({
     marginTop: 10,
     marginBottom: 10,
   },
-  buttonText: {
-    flex: 0,
-    fontSize: 24,
-  },
   plotUnavailable: {
     color: "gray",
     textAlign: "center",
@@ -82,6 +87,7 @@ export const detailStyles = StyleSheet.create({
 
 export const pagerStyles = StyleSheet.create({
   wrapper: {
+    flex: 0,
     marginTop: 5,
     marginBottom: 5,
   },
@@ -107,9 +113,6 @@ export const fullScreenPosterStyles = StyleSheet.create({
     width: "100%",
     marginTop: 5,
     marginBottom: 5,
-  },
-  backButtonStyle: {
-    marginLeft: 20,
   },
 })
 

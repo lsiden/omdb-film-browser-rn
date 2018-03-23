@@ -4,6 +4,7 @@ exports[`first page 1`] = `
 <View
   style={
     Object {
+      "flex": 0,
       "marginBottom": 5,
       "marginTop": 5,
     }
@@ -570,6 +571,7 @@ exports[`internal page 1`] = `
 <View
   style={
     Object {
+      "flex": 0,
       "marginBottom": 5,
       "marginTop": 5,
     }
@@ -1132,6 +1134,7 @@ exports[`last page 1`] = `
 <View
   style={
     Object {
+      "flex": 0,
       "marginBottom": 5,
       "marginTop": 5,
     }

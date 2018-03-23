@@ -1,45 +1,61 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { Text, View, ScrollView } from "react-native"
-import { List } from "react-native-elements"
+import { TouchableOpacity, Text } from "react-native"
+import { List, ListItem } from "react-native-elements"
 
 import { appStyles } from "styles"
 import Pager from "components/pager"
-import FilmListItem from "./film-list-item"
 import LoadingIndicator from "components/loading-indicator"
+import { viewFilmDetails } from "actions"
+import { fetchFilmDetails } from "actions/fetch"
 
-const renderMessage = msg => <Text style={appStyles.msgStyle}>{msg}</Text>
-
-export const filmList = ({ films, totalResults, isFetching }) =>
+export const filmList = ({
+  films,
+  totalResults,
+  isFetching,
+  dispatchViewDetails,
+}) =>
   isFetching ? (
     <LoadingIndicator />
   ) : (
-    <View>
-      <ScrollView className="App" style={appStyles.scrollWrapper}>
-        {renderMessage(`Found ${totalResults} results.`)}
-        <List>
-          {films.map(filmSummary => (
-            <FilmListItem key={filmSummary.imdbID} filmSummary={filmSummary} />
-          ))}
-        </List>
-      </ScrollView>
+    <React.Fragment>
+      <Text style={appStyles.msgStyle}>{`Found ${totalResults} results.`}</Text>
+      <List>
+        {films.map(film => (
+          <TouchableOpacity
+            key={film.imdbID}
+            onPress={() => dispatchViewDetails(film)}
+          >
+            <ListItem title={film.Title} subtitle={film.Year} />
+          </TouchableOpacity>
+        ))}
+      </List>
       <Pager />
-    </View>
+    </React.Fragment>
   )
 
 filmList.propTypes = {
   films: PropTypes.arrayOf(PropTypes.object),
   totalResults: PropTypes.number,
   isFetching: PropTypes.bool,
+  dispatchViewDetails: PropTypes.func.isRequired,
 }
 filmList.defaultProps = {
   films: [],
   isFetching: false,
 }
 
-export default connect(state => ({
-  films: state.films || [],
-  totalResults: state.totalResults || 0,
-  isFetching: state.isFetching,
-}))(filmList)
+export default connect(
+  state => ({
+    films: state.films || [],
+    totalResults: state.totalResults || 0,
+    isFetching: state.isFetching,
+  }),
+  dispatch => ({
+    dispatchViewDetails: filmSummary => {
+      dispatch(viewFilmDetails())
+      dispatch(fetchFilmDetails(filmSummary.imdbID))
+    },
+  })
+)(filmList)

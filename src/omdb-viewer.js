@@ -1,7 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import PropTypes from "prop-types"
-import { Text, View, Linking, BackHandler } from "react-native"
+import { Text, View, ScrollView, Linking, BackHandler } from "react-native"
 import Toaster from "react-native-toaster"
 
 import ActionTypes from "./actions/types"
@@ -27,11 +27,11 @@ const renderBanner = () => (
 )
 
 const renderFilmList = () => (
-  <View>
+  <ScrollView>
     {renderBanner()}
     <SearchBar />
     <FilmList />
-  </View>
+  </ScrollView>
 )
 
 const renderActiveView = view => {
@@ -48,9 +48,11 @@ const renderActiveView = view => {
 }
 
 const appStyle = {
+  flex: 0,
   marginTop: 20,
   marginLeft: 10,
   marginRight: 10,
+  marginBottom: 5,
 }
 
 const renderOmdbViewer = ({ view, toast }) => (

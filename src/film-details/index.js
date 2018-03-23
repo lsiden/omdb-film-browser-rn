@@ -10,7 +10,6 @@ import Poster from "./poster"
 import detailItems from "./detail-items"
 import FilmPlot from "./film-plot"
 import DetailItem from "./detail-item"
-import { appStyles } from "styles"
 
 // TODO click on poster to make full-screen
 export const filmDetail = ({ filmDetails, isFetching }) => {
@@ -22,8 +21,9 @@ export const filmDetail = ({ filmDetails, isFetching }) => {
   } else if (!filmDetails) {
     return null
   } else {
+    // TODO use FlatList instead of List
     return (
-      <ScrollView className="App" style={appStyles.scrollWrapper}>
+      <ScrollView>
         <DetailHeader />
         <Poster />
         <FilmPlot />
