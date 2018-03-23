@@ -20,6 +20,9 @@ const detailItems = filmDetails => [
     text: "IMDB page",
     url: filmDetails.imdbID ? imdbUrl(filmDetails.imdbID) : null,
   },
+  {
+    text: `IMDB ID: ${filmDetails.imdbID}`,
+  },
 ]
 
 export default detailItems

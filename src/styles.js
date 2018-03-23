@@ -74,9 +74,13 @@ export const detailStyles = StyleSheet.create({
     fontSize: 24,
     marginRight: 10,
   },
-  plot: {
+  plotUnavailable: {
     color: "gray",
     textAlign: "center",
+  },
+  plot: {
+    color: "gray",
+    marginLeft: 30,
   },
 })
 

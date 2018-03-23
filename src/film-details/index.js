@@ -26,7 +26,7 @@ export const filmDetail = props => {
       <View>
         <DetailHeader />
         <Poster />
-        <FilmPlot {...props} />
+        <FilmPlot plot={filmDetails.Plot} />
         <List>
           {detailItems(filmDetails).map(detail => (
             <DetailItem key={genKey()} detail={detail} />
