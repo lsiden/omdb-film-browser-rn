@@ -1,14 +1,12 @@
 import React from "react"
 import { ActivityIndicator, View } from "react-native"
 
+import { loadingIndicatorStyles as style } from "styles"
+
 const blue = "#00f"
 
-const wrapperStyle = {
-  justifyContent: "center",
-  height: "100%",
-}
 const LoadingIndicator = () => (
-  <View style={wrapperStyle}>
+  <View style={style.wrapper}>
     <ActivityIndicator size="large" color={blue} />
   </View>
 )

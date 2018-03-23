@@ -7,20 +7,18 @@ import BackButton from "./back-button"
 import { fullScreenPosterStyles as style } from "styles"
 
 export const fullScreenPoster = ({ uri }) => {
-  return (
-    uri && (
-      <View style={style.wrapperStyle}>
-        <View style={style.backButtonWrapperStyle}>
-          <BackButton style={style.backButtonStyle} />
-        </View>
-        <Image
-          source={{ uri }}
-          style={style.posterStyle}
-          resizeMode={"contain"}
-        />
+  return uri ? (
+    <View style={style.wrapperStyle}>
+      <View style={style.backButtonWrapperStyle}>
+        <BackButton style={style.backButtonStyle} />
       </View>
-    )
-  )
+      <Image
+        source={{ uri }}
+        style={style.posterStyle}
+        resizeMode={"contain"}
+      />
+    </View>
+  ) : null
 }
 
 fullScreenPoster.propTypes = {

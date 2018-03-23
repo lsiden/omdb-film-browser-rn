@@ -13,7 +13,7 @@ export const appStyles = StyleSheet.create({
     color: TITLE_COLOR,
     marginTop: 5,
   },
-  wrapper: {
+  scrollWrapper: {
     marginTop: 20,
     marginLeft: 10,
     marginRight: 10,
@@ -117,5 +117,13 @@ export const fullScreenPosterStyles = StyleSheet.create({
   },
   backButtonWrapperStyle: {
     marginLeft: 20,
+  },
+})
+
+export const loadingIndicatorStyles = StyleSheet.create({
+  wrapper: {
+    height: 300,
+    justifyContent: "center",
+    alignItems: "center",
   },
 })

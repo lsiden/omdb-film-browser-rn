@@ -69,9 +69,9 @@ pager.propTypes = {
 
 export default connect(
   state => ({
-    pageNum: state.pageNum,
-    totalResults: state.totalResults,
-    lastPage: state.lastPage,
+    pageNum: state.pageNum || 1,
+    totalResults: state.totalResults || 1,
+    lastPage: state.lastPage || 1,
   }),
   dispatch => ({
     dispatchFetchPage: pageNum => dispatch(fetchPage(pageNum)),

@@ -1,7 +1,7 @@
 import React from "react"
 import { connect } from "react-redux"
 import PropTypes from "prop-types"
-import { Text, View, ScrollView, Linking, BackHandler } from "react-native"
+import { Text, View, Linking, BackHandler } from "react-native"
 import Toaster from "react-native-toaster"
 
 import ActionTypes from "./actions/types"
@@ -9,7 +9,6 @@ import { viewFilmDetails, viewList, updateIsFetching } from "./actions"
 import { OMDB_URL } from "./constants"
 import { appStyles } from "./styles"
 import SearchBar from "components/search-bar"
-import Show from "components/show"
 import FilmList from "./film-list"
 import FilmDetails from "film-details"
 import FullScreenPoster from "full-screen-poster"
@@ -27,26 +26,31 @@ const renderBanner = () => (
   </View>
 )
 
+const renderFilmList = () => (
+  <View>
+    {renderBanner()}
+    <SearchBar />
+    <FilmList />
+  </View>
+)
+
+const renderActiveView = view => {
+  switch (view) {
+    case ActionTypes.VIEW_FILM_LIST:
+      return renderFilmList()
+    case ActionTypes.VIEW_FILM_DETAILS:
+      return <FilmDetails />
+    case ActionTypes.VIEW_POSTER:
+      return <FullScreenPoster />
+    default:
+      return null
+  }
+}
+
 const renderOmdbViewer = ({ view, toast }) => (
   <View>
     <Toaster message={toast} />
-    <Show when={view === ActionTypes.VIEW_FILM_LIST}>
-      <ScrollView className="App" style={appStyles.wrapper}>
-        <View>
-          {renderBanner()}
-          <SearchBar />
-          <FilmList />
-        </View>
-      </ScrollView>
-    </Show>
-    <Show when={view === ActionTypes.VIEW_FILM_DETAILS}>
-      <ScrollView className="App" style={appStyles.wrapper}>
-        <FilmDetails />
-      </ScrollView>
-    </Show>
-    <Show when={view === ActionTypes.VIEW_POSTER}>
-      <FullScreenPoster />
-    </Show>
+    {renderActiveView(view)}
   </View>
 )
 
@@ -96,8 +100,7 @@ export class omdbViewer extends React.Component {
 
 omdbViewer.propTypes = {
   view: PropTypes.string.isRequired,
-  toast: PropTypes.oneOfType([PropTypes.array, PropTypes.string]),
-  pageNum: PropTypes.number,
+  toast: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   dispatchViewList: PropTypes.func.isRequired,
   dispatchViewFilmDetails: PropTypes.func.isRequired,
 }
@@ -106,7 +109,6 @@ export default connect(
   state => ({
     view: state.view,
     toast: state.toast,
-    pageNum: state.pageNum,
   }),
   dispatch => ({
     dispatchViewList: () => {

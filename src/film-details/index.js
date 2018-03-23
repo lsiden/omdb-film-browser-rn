@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { View } from "react-native"
+import { ScrollView } from "react-native"
 import { List } from "react-native-elements"
 
 import LoadingIndicator from "components/loading-indicator"
@@ -10,6 +10,7 @@ import Poster from "./poster"
 import detailItems from "./detail-items"
 import FilmPlot from "./film-plot"
 import DetailItem from "./detail-item"
+import { appStyles } from "styles"
 
 // TODO click on poster to make full-screen
 export const filmDetail = ({ filmDetails, isFetching }) => {
@@ -22,7 +23,7 @@ export const filmDetail = ({ filmDetails, isFetching }) => {
     return null
   } else {
     return (
-      <View>
+      <ScrollView className="App" style={appStyles.scrollWrapper}>
         <DetailHeader />
         <Poster />
         <FilmPlot />
@@ -31,7 +32,7 @@ export const filmDetail = ({ filmDetails, isFetching }) => {
             <DetailItem key={genKey()} detail={detail} />
           ))}
         </List>
-      </View>
+      </ScrollView>
     )
   }
 }
@@ -46,6 +47,6 @@ filmDetail.defaultProps = {
 }
 
 export default connect(state => ({
-  filmDetails: state.filmDetails,
+  filmDetails: state.filmDetails || {},
   isFetching: state.isFetching,
 }))(filmDetail)
