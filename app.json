@@ -1,5 +1,11 @@
 {
   "expo": {
     "sdkVersion": "25.0.0"
-  }
+  },
+  "name": "Open Movie Database Viewer",
+  "slug": "omdb-viewer",
+  "version": "1.0.0",
+  "description": "Allows you to browse the Open Movie Database.",
+  "privacy": "unlisted",
+  "githubUrl": "https://github.com/lsiden/react-native-omdb-viewer"
 }
