@@ -4,32 +4,20 @@ import { Image, View } from "react-native"
 import { connect } from "react-redux"
 
 import BackButton from "./back-button"
-
-export const posterStyle = {
-  flex: 1,
-  height: undefined,
-  width: undefined,
-}
-
-const wrapperStyle = {
-  height: "98%",
-  width: "100%",
-  marginTop: 5,
-  marginBottom: 5,
-}
-
-const backButtonStyle = {
-  marginLeft: 20,
-}
+import { fullScreenPosterStyles as style } from "styles"
 
 export const fullScreenPoster = ({ uri }) => {
   return (
     uri && (
-      <View style={wrapperStyle}>
-        <View style={{ marginLeft: 20 }}>
-          <BackButton style={backButtonStyle} />
+      <View style={style.wrapperStyle}>
+        <View style={style.backButtonWrapperStyle}>
+          <BackButton style={style.backButtonStyle} />
         </View>
-        <Image source={{ uri }} style={posterStyle} resizeMode={"contain"} />
+        <Image
+          source={{ uri }}
+          style={style.posterStyle}
+          resizeMode={"contain"}
+        />
       </View>
     )
   )

@@ -99,3 +99,23 @@ export const pagerStyles = StyleSheet.create({
     textAlign: "center",
   },
 })
+
+export const fullScreenPosterStyles = StyleSheet.create({
+  posterStyle: {
+    flex: 1,
+    height: undefined,
+    width: undefined,
+  },
+  wrapperStyle: {
+    height: "98%",
+    width: "100%",
+    marginTop: 5,
+    marginBottom: 5,
+  },
+  backButtonStyle: {
+    marginLeft: 20,
+  },
+  backButtonWrapperStyle: {
+    marginLeft: 20,
+  },
+})

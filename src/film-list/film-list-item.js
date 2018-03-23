@@ -11,7 +11,7 @@ import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { ListItem } from "react-native-elements"
 
-import { viewFilmDetails, updateIsFetching } from "actions"
+import { viewFilmDetails } from "actions"
 import { fetchFilmDetails } from "actions/fetch"
 
 export const filmListItem = ({ filmSummary, dispatchViewDetails }) => (

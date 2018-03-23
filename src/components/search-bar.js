@@ -7,7 +7,6 @@ import PropTypes from "prop-types"
 import { SearchBar } from "react-native-elements"
 
 import { queryFetch } from "actions/fetch"
-import { updateIsFetching } from "actions"
 
 export class searchBar extends React.Component {
   static propTypes = {
