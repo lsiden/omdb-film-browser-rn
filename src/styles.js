@@ -34,7 +34,7 @@ export const appStyles = StyleSheet.create({
     backgroundColor: bannerBackground,
   },
   backButtonStyle: {
-    marginLeft: 20,
+    marginTop: 5,
   },
   buttonText: {
     flex: 0,
@@ -107,12 +107,12 @@ export const fullScreenPosterStyles = StyleSheet.create({
     flex: 1,
     height: undefined,
     width: undefined,
+    marginTop: 5,
+    marginBottom: 5,
   },
   wrapperStyle: {
     height: "98%",
     width: "100%",
-    marginTop: 5,
-    marginBottom: 5,
   },
 })
 
