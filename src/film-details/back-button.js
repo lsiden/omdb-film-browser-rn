@@ -5,7 +5,7 @@ import { connect } from "react-redux"
 
 import { detailStyles } from "styles"
 import { LEFT_TRIANGLE } from "constants"
-import { viewList } from "actions"
+import { viewList, updateIsFetching } from "actions"
 
 export const backButton = ({ dispatchViewList }) => (
   <TouchableOpacity onPress={dispatchViewList}>
@@ -17,5 +17,8 @@ backButton.propTypes = {
 }
 
 export default connect(null, dispatch => ({
-  dispatchViewList: () => dispatch(viewList),
+  dispatchViewList: () => {
+    dispatch(updateIsFetching(false))
+    dispatch(viewList)
+  },
 }))(backButton)

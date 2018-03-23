@@ -12,8 +12,7 @@ import FilmPlot from "./film-plot"
 import DetailItem from "./detail-item"
 
 // TODO click on poster to make full-screen
-export const filmDetail = props => {
-  const { filmDetails, isFetching } = props
+export const filmDetail = ({ filmDetails, isFetching }) => {
   let i = 1
   const genKey = () => `item-${i++}`
 
@@ -26,7 +25,7 @@ export const filmDetail = props => {
       <View>
         <DetailHeader />
         <Poster />
-        <FilmPlot plot={filmDetails.Plot} />
+        <FilmPlot />
         <List>
           {detailItems(filmDetails).map(detail => (
             <DetailItem key={genKey()} detail={detail} />

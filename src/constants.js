@@ -1,3 +1,4 @@
+export const APP_NAME = "omdb-native-viewer"
 export const OMDB_API_KEY = "fbfcb8c7"
 export const OMDB_URL = "https://www.omdbapi.com/"
 export const LEFT_TRIANGLE = "\u25c1"

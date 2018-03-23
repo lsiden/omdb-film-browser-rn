@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a title 1`] = `
+<Text
+  accessible={true}
+  allowFontScaling={true}
+  ellipsizeMode="tail"
+  style={
+    Object {
+      "color": "gray",
+      "marginLeft": 30,
+    }
+  }
+>
+  In the 1950s, fear and violence escalate as the people of Algiers fight for independence from the French government.
+</Text>
+`;

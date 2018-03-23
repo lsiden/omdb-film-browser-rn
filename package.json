@@ -5,6 +5,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
+    "debug": "^3.1.0",
     "eslint": "^4.19.0",
     "eslint-plugin-jest": "^21.15.0",
     "eslint-plugin-react": "^7.7.0",
@@ -38,7 +39,11 @@
       "react-native/react-native": true,
       "jest/globals": true
     },
-    "plugins": ["react", "react-native", "jest"],
+    "plugins": [
+      "react",
+      "react-native",
+      "jest"
+    ],
     "extends": [
       "eslint:recommended",
       "plugin:react/recommended",
@@ -52,12 +57,17 @@
       "no-console": [
         "warn",
         {
-          "allow": ["warn", "error"]
+          "allow": [
+            "warn",
+            "error"
+          ]
         }
       ]
     },
     "overrides": {
-      "files": ["*.spec.js"],
+      "files": [
+        "*.spec.js"
+      ],
       "rules": {
         "no-global-assign": 0
       }

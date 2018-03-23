@@ -4,19 +4,7 @@ exports[`renders a title 1`] = `
 <View>
   <DetailHeader />
   <Poster />
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
-      Object {
-        "color": "gray",
-        "textAlign": "center",
-      }
-    }
-  >
-    Plot unavailable
-  </Text>
+  <FilmPlot />
   <View
     style={
       Array [
@@ -1056,6 +1044,92 @@ exports[`renders a title 1`] = `
             >
               
             </Text>
+          </View>
+        </View>
+      </View>
+    </View>
+    <View
+      disabled={false}
+      onLongPress={undefined}
+      onPress={undefined}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "transparent",
+            "borderBottomColor": "#bbb",
+            "borderBottomWidth": 1,
+            "paddingBottom": 10,
+            "paddingRight": 10,
+            "paddingTop": 10,
+          },
+          undefined,
+          false,
+          false,
+        ]
+      }
+      underlayColor="white"
+    >
+      <View
+        style={
+          Array [
+            Object {
+              "alignItems": "center",
+              "flexDirection": "row",
+              "marginLeft": 10,
+            },
+            undefined,
+          ]
+        }
+      >
+        <View
+          style={
+            Object {
+              "flex": 1,
+              "justifyContent": "center",
+            }
+          }
+        >
+          <View
+            style={undefined}
+          >
+            <Text
+              accessible={true}
+              allowFontScaling={true}
+              ellipsizeMode="tail"
+              numberOfLines={1}
+              style={
+                Array [
+                  Object {},
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  undefined,
+                  Array [
+                    Object {
+                      "color": "#43484d",
+                      "fontSize": 17.5,
+                    },
+                    Object {
+                      "marginLeft": 10,
+                    },
+                    undefined,
+                    undefined,
+                  ],
+                ]
+              }
+            >
+              IMDB ID: tt0058946
+            </Text>
+          </View>
+          <View
+            style={undefined}
+          >
+            <View />
           </View>
         </View>
       </View>

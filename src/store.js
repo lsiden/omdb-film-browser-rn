@@ -2,6 +2,9 @@ import { createStore, applyMiddleware, compose } from "redux"
 import thunk from "redux-thunk"
 
 import ActionTypes from "actions/types"
+import makeDebug from "util/debug"
+
+const debug = makeDebug("store")
 
 const initialState = {
   view: ActionTypes.VIEW_FILM_LIST,
@@ -12,6 +15,7 @@ export const getStore = () => store
 export const getState = store.getState
 
 export function reduce(state = initialState, action) {
+  debug("action", action)
   const { type, data } = action
   switch (type) {
     case ActionTypes.VIEW_FILM_LIST:
