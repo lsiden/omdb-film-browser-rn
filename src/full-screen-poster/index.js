@@ -9,9 +9,7 @@ import { fullScreenPosterStyles as style } from "styles"
 export const fullScreenPoster = ({ uri }) => {
   return uri ? (
     <View style={style.wrapperStyle}>
-      <View style={style.backButtonWrapperStyle}>
-        <BackButton style={style.backButtonStyle} />
-      </View>
+      <BackButton style={style.backButtonStyle} />
       <Image
         source={{ uri }}
         style={style.posterStyle}

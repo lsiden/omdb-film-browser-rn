@@ -47,8 +47,14 @@ const renderActiveView = view => {
   }
 }
 
+const appStyle = {
+  marginTop: 20,
+  marginLeft: 10,
+  marginRight: 10,
+}
+
 const renderOmdbViewer = ({ view, toast }) => (
-  <View>
+  <View style={appStyle}>
     <Toaster message={toast} />
     {renderActiveView(view)}
   </View>
