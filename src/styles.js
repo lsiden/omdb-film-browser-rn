@@ -56,6 +56,7 @@ export const detailStyles = StyleSheet.create({
     fontSize: 20,
     flexWrap: "wrap",
     fontWeight: "bold",
+    marginLeft: 10,
   },
   year: {
     fontSize: 16,
@@ -72,7 +73,6 @@ export const detailStyles = StyleSheet.create({
   buttonText: {
     flex: 0,
     fontSize: 24,
-    marginRight: 10,
   },
   plotUnavailable: {
     color: "gray",

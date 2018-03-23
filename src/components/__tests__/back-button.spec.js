@@ -1,14 +1,14 @@
 import React from "react"
 import renderer from "react-native-test-utils"
 
-import { backButton as BackButton } from "../back-button"
+import BackButton from "../back-button"
 
-let dispatchViewList
+let dispatchToPrev
 
 const defaultProps = () => {
-  dispatchViewList = jest.fn()
+  dispatchToPrev = jest.fn()
   return {
-    dispatchViewList,
+    dispatchToPrev,
   }
 }
 
@@ -21,8 +21,8 @@ it("renders", () => {
 })
 
 // Can't simulate press
-it.skip("invokes dispatchViewList when pressed", () => {
+it.skip("invokes dispatchToPrev when pressed", () => {
   const wrapper = createWrapper()
   wrapper.simulate("press")
-  expect(dispatchViewList).toHaveBeenCalledTimes(1)
+  expect(dispatchToPrev).toHaveBeenCalledTimes(1)
 })

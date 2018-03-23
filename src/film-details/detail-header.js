@@ -3,8 +3,8 @@ import PropTypes from "prop-types"
 import { Text, View } from "react-native"
 import { connect } from "react-redux"
 
-import BackButton from "./back-button"
 import { detailStyles } from "styles"
+import BackButton from "./back-button"
 
 export const detailHeader = props => {
   const { filmDetails } = props
