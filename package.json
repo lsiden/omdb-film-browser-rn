@@ -5,6 +5,7 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
+    "cloc": "^2.3.3",
     "debug": "^3.1.0",
     "eslint": "^4.19.0",
     "eslint-plugin-jest": "^21.15.0",
@@ -25,7 +26,8 @@
     "ios": "react-native-scripts ios",
     "test": "node node_modules/jest/bin/jest.js",
     "prettier": "prettier --write src/*.js src/**/*.js",
-    "lint": "eslint src/"
+    "lint": "eslint src/",
+		"cloc": "cloc src/"
   },
   "jest": {
     "preset": "jest-expo"
