@@ -14,6 +14,7 @@ export const poster = ({ uri, dispatchViewPoster }) =>
         source={{ uri }}
         style={detailStyles.poster}
         resizeMode={Image.resizeMode.contain}
+        loadingIndicatorSource={require("assets/spinningwheel-300x216.gif")}
       />
     </TouchableOpacity>
   )

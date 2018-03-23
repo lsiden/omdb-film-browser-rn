@@ -14,6 +14,7 @@ export const fullScreenPoster = ({ uri }) => {
         source={{ uri }}
         style={style.posterStyle}
         resizeMode={"contain"}
+        loadingIndicatorSource={require("assets/spinningwheel-300x216.gif")}
       />
     </View>
   ) : null
