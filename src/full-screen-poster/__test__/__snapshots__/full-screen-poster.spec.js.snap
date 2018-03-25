@@ -5,14 +5,30 @@ exports[`renders 1`] = `
   style={
     Object {
       "height": "98%",
-      "marginBottom": 5,
-      "marginTop": 5,
       "width": "100%",
     }
   }
 >
-  <BackButton />
+  <View
+    style={
+      Object {
+        "alignItems": "baseline",
+        "display": "flex",
+        "flexDirection": "row",
+        "flexWrap": "wrap",
+        "justifyContent": "flex-start",
+        "marginTop": 8,
+      }
+    }
+  >
+    <BackButton />
+  </View>
   <Image
+    loadingIndicatorSource={
+      Object {
+        "testUri": "../../../src/assets/spinningwheel-300x216.gif",
+      }
+    }
     resizeMode="contain"
     source={
       Object {
@@ -23,6 +39,8 @@ exports[`renders 1`] = `
       Object {
         "flex": 1,
         "height": undefined,
+        "marginBottom": 5,
+        "marginTop": 5,
         "width": undefined,
       }
     }

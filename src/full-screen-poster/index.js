@@ -4,12 +4,14 @@ import { Image, View } from "react-native"
 import { connect } from "react-redux"
 
 import BackButton from "./back-button"
-import { fullScreenPosterStyles as style } from "styles"
+import { fullScreenPosterStyles as style, detailStyles } from "styles"
 
 export const fullScreenPoster = ({ uri }) => {
   return uri ? (
     <View style={style.wrapperStyle}>
-      <BackButton />
+      <View style={detailStyles.header}>
+        <BackButton />
+      </View>
       <Image
         source={{ uri }}
         style={style.posterStyle}

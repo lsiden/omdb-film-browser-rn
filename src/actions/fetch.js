@@ -26,7 +26,7 @@ const fetchQueryResults = (dispatch, query, pageNum) => {
     })
     .catch(e => {
       console.error(e)
-      dispatch(updateToast(e, "error"))
+      dispatch(updateToast(e.toString(), "error"))
       dispatch(updateIsFetching(false))
     })
 }
@@ -53,7 +53,7 @@ export const fetchFilmDetails = id => dispatch => {
     })
     .catch(e => {
       console.error(e)
-      dispatch(updateToast(e, "error"))
+      dispatch(updateToast(e.toString(), "error"))
       dispatch(updateIsFetching(false))
       dispatch(viewList())
     })

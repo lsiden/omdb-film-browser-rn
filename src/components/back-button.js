@@ -1,14 +1,22 @@
 import React from "react"
-import { Text, TouchableOpacity } from "react-native"
 import PropTypes from "prop-types"
+import { Button } from "react-native-elements"
 
-import { appStyles as style } from "styles"
-import { LEFT_TRIANGLE } from "constants"
+const icon = name => ({
+  name,
+  type: "material",
+  size: 25,
+  color: "black",
+})
+
+const style = { backgroundColor: "transparent", margin: 0, padding: 0 }
 
 const BackButton = ({ dispatchToPrev }) => (
-  <TouchableOpacity onPress={dispatchToPrev} style={style.backButtonStyle}>
-    <Text style={style.buttonText}>{LEFT_TRIANGLE}</Text>
-  </TouchableOpacity>
+  <Button
+    icon={icon("arrow-back")}
+    onPress={dispatchToPrev}
+    buttonStyle={style}
+  />
 )
 
 BackButton.propTypes = {

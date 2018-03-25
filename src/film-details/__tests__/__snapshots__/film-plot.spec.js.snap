@@ -8,7 +8,7 @@ exports[`renders a title 1`] = `
   style={
     Object {
       "color": "gray",
-      "marginLeft": 30,
+      "marginLeft": 20,
     }
   }
 >

@@ -2,43 +2,134 @@
 
 exports[`renders 1`] = `
 <View
-  accessibilityComponentType={undefined}
-  accessibilityLabel={undefined}
-  accessibilityTraits={undefined}
-  accessible={true}
-  collapsable={undefined}
-  hasTVPreferredFocus={undefined}
-  hitSlop={undefined}
-  isTVSelectable={true}
-  nativeID={undefined}
-  onLayout={undefined}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderRelease={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
   style={
-    Object {
-      "marginLeft": 20,
-      "opacity": 1,
-    }
-  }
-  testID={undefined}
-  tvParallaxProperties={undefined}
->
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={
+    Array [
       Object {
-        "flex": 0,
-        "fontSize": 24,
-      }
-    }
+        "marginLeft": 15,
+        "marginRight": 15,
+      },
+      undefined,
+      undefined,
+      undefined,
+    ]
+  }
+>
+  <View
+    accessibilityComponentType={undefined}
+    accessibilityLabel={undefined}
+    accessibilityTraits={undefined}
+    accessible={true}
+    hasTVPreferredFocus={undefined}
+    hitSlop={undefined}
+    isTVSelectable={true}
+    nativeID={undefined}
+    onLayout={undefined}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={null}
+    testID={undefined}
+    tvParallaxProperties={undefined}
   >
-    ◁
-  </Text>
+    <View
+      pointerEvents="box-only"
+      style={
+        Array [
+          Object {
+            "alignItems": "center",
+            "backgroundColor": "#9E9E9E",
+            "flexDirection": "row",
+            "justifyContent": "center",
+            "padding": 19,
+          },
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          Object {
+            "padding": 12,
+          },
+          undefined,
+          undefined,
+          undefined,
+          Object {
+            "backgroundColor": "transparent",
+            "margin": 0,
+            "padding": 0,
+          },
+          undefined,
+          undefined,
+        ]
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={false}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {
+              "color": "black",
+              "fontSize": 25,
+            },
+            Array [
+              Object {
+                "marginRight": 10,
+              },
+              undefined,
+            ],
+            Object {
+              "fontFamily": "Material Icons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+          ]
+        }
+        type="material"
+      >
+        
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Array [
+            Object {},
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            undefined,
+            Array [
+              Object {
+                "color": "white",
+                "fontSize": 20,
+              },
+              undefined,
+              Object {
+                "fontSize": 17.5,
+              },
+              undefined,
+              undefined,
+              undefined,
+              undefined,
+              undefined,
+            ],
+          ]
+        }
+      />
+    </View>
+  </View>
 </View>
 `;

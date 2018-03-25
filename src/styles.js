@@ -33,13 +33,6 @@ export const appStyles = StyleSheet.create({
   searchWrapper: {
     backgroundColor: bannerBackground,
   },
-  backButtonStyle: {
-    marginTop: 5,
-  },
-  buttonText: {
-    flex: 0,
-    fontSize: 24,
-  },
 })
 
 export const detailStyles = StyleSheet.create({
@@ -49,10 +42,10 @@ export const detailStyles = StyleSheet.create({
     flexDirection: "row",
     justifyContent: "flex-start",
     alignItems: "baseline",
+    marginTop: 8,
   },
   titleWrapper: {
     flexWrap: "wrap",
-    marginBottom: 5,
     display: "flex",
     flexDirection: "row",
     alignItems: "baseline",
@@ -61,7 +54,6 @@ export const detailStyles = StyleSheet.create({
     fontSize: 20,
     flexWrap: "wrap",
     fontWeight: "bold",
-    marginLeft: 10,
   },
   year: {
     fontSize: 16,
@@ -81,7 +73,7 @@ export const detailStyles = StyleSheet.create({
   },
   plot: {
     color: "gray",
-    marginLeft: 30,
+    marginLeft: 20,
   },
 })
 
