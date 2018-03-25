@@ -11,7 +11,6 @@ import detailItems from "./detail-items"
 import FilmPlot from "./film-plot"
 import DetailItem from "./detail-item"
 
-// TODO click on poster to make full-screen
 export const filmDetail = ({ filmDetails, isFetching }) => {
   let i = 1
   const genKey = () => `item-${i++}`
@@ -21,7 +20,6 @@ export const filmDetail = ({ filmDetails, isFetching }) => {
   } else if (!filmDetails) {
     return null
   } else {
-    // TODO use FlatList instead of List
     return (
       <ScrollView>
         <DetailHeader />
