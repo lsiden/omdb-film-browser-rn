@@ -1,10 +1,10 @@
 // Debounces react-native-elements.SearchBar
-// TODO - customize for Android and iOS
 
 import React from "react"
 import { connect } from "react-redux"
 import PropTypes from "prop-types"
 import { SearchBar } from "react-native-elements"
+import { Platform } from "react-native"
 
 import { queryFetch } from "actions/fetch"
 
@@ -51,6 +51,7 @@ export class searchBar extends React.Component {
         onChangeText={this.onChangeText}
         onCancel={this.onCancel}
         clearIcon={{ color: "#86939e", name: "close" }}
+        platform={Platform.OS}
       />
     )
   }
