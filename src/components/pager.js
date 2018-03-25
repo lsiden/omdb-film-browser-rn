@@ -11,12 +11,16 @@ const icon = (name, disabled) => ({
   name,
   type: "material-community",
   size: 25,
-  color: disabled ? "gray" : "black",
+  color: disabled ? "white" : "black",
 })
 
 const btnStyle = {
   backgroundColor: "transparent",
-  height: 40,
+  padding: 0,
+}
+
+const disabledStyle = {
+  backgroundColor: "transparent",
 }
 
 export const pager = props => {
@@ -32,24 +36,28 @@ export const pager = props => {
             onPress={() => dispatchFetchPage(1)}
             disabled={isFirstPage(pageNum)}
             buttonStyle={btnStyle}
+            disabledStyle={disabledStyle}
           />
           <Button
             icon={icon("step-backward", isFirstPage(pageNum))}
             onPress={() => dispatchFetchPage(pageNum - 1)}
             disabled={isFirstPage(pageNum)}
             buttonStyle={btnStyle}
+            disabledStyle={disabledStyle}
           />
           <Button
             icon={icon("step-forward", isLastPage(pageNum))}
             onPress={() => dispatchFetchPage(pageNum + 1)}
             disabled={isLastPage(pageNum)}
             buttonStyle={btnStyle}
+            disabledStyle={disabledStyle}
           />
           <Button
             icon={icon("skip-forward", isLastPage(pageNum))}
             onPress={() => dispatchFetchPage(lastPage)}
             disabled={isLastPage(pageNum)}
             buttonStyle={btnStyle}
+            disabledStyle={disabledStyle}
           />
         </View>
         <Text style={[appStyles.message, pagerStyles.message]}>
