@@ -34,8 +34,8 @@ const renderFilmList = () => (
   </ScrollView>
 )
 
-const renderActiveView = view => {
-  switch (view) {
+const renderActiveView = screen => {
+  switch (screen) {
     case ActionTypes.VIEW_FILM_LIST:
       return renderFilmList()
     case ActionTypes.VIEW_FILM_DETAILS:
@@ -55,15 +55,15 @@ const appStyle = {
   marginBottom: 5,
 }
 
-const renderOmdbViewer = ({ view, toast }) => (
+const renderOmdbViewer = ({ screen, toast }) => (
   <View style={appStyle}>
     <Toaster message={toast} />
-    {renderActiveView(view)}
+    {renderActiveView(screen)}
   </View>
 )
 
 renderOmdbViewer.propTypes = {
-  view: PropTypes.bool,
+  screen: PropTypes.bool,
   toast: PropTypes.func,
 }
 
@@ -74,14 +74,14 @@ export class omdbViewer extends React.Component {
   }
 
   onBackPress() {
-    const { view, dispatchViewList, dispatchViewFilmDetails } = this.props
+    const { screen, dispatchViewList, dispatchViewFilmDetails } = this.props
 
-    if (view === ActionTypes.VIEW_FILM_DETAILS) {
+    if (screen === ActionTypes.VIEW_FILM_DETAILS) {
       dispatchViewList()
       return true
     }
 
-    if (view === ActionTypes.VIEW_POSTER) {
+    if (screen === ActionTypes.VIEW_POSTER) {
       dispatchViewFilmDetails()
       return true
     }
@@ -107,7 +107,7 @@ export class omdbViewer extends React.Component {
 }
 
 omdbViewer.propTypes = {
-  view: PropTypes.string.isRequired,
+  screen: PropTypes.string.isRequired,
   toast: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   dispatchViewList: PropTypes.func.isRequired,
   dispatchViewFilmDetails: PropTypes.func.isRequired,
@@ -115,7 +115,7 @@ omdbViewer.propTypes = {
 
 export default connect(
   state => ({
-    view: state.view,
+    screen: state.screen,
     toast: state.toast,
   }),
   dispatch => ({

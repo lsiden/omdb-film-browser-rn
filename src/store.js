@@ -7,7 +7,7 @@ import makeDebug from "util/debug"
 const debug = makeDebug("store")
 
 const initialState = {
-  view: ActionTypes.VIEW_FILM_LIST,
+  screen: ActionTypes.VIEW_FILM_LIST,
 }
 const store = createStore(reduce, compose(applyMiddleware(thunk)))
 

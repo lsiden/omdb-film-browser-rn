@@ -1,7 +1,7 @@
 export default {
-  VIEW_FILM_LIST: "view-film-list",
-  VIEW_FILM_DETAILS: "view-film-details",
-  VIEW_POSTER: "view-poster",
+  VIEW_FILM_LIST: "film-list-screen",
+  VIEW_FILM_DETAILS: "film-details-screen",
+  VIEW_POSTER: "poster-screen",
   UPDATE_FILMS: "update-films",
   UPDATE_FILM_DETAILS: "update-film-details",
   UPDATE_TOAST: "update-toast",

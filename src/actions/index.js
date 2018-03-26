@@ -2,20 +2,20 @@ import ActionTypes from "./types"
 
 export const viewList = () => ({
   type: ActionTypes.VIEW_FILM_LIST,
-  data: { view: ActionTypes.VIEW_FILM_LIST },
+  data: { screen: ActionTypes.VIEW_FILM_LIST },
 })
 
 export const viewFilmDetails = () => ({
   type: ActionTypes.VIEW_FILM_DETAILS,
   data: {
-    view: ActionTypes.VIEW_FILM_DETAILS,
+    screen: ActionTypes.VIEW_FILM_DETAILS,
   },
 })
 
 export const viewPoster = uri => ({
   type: ActionTypes.VIEW_POSTER,
   data: {
-    view: ActionTypes.VIEW_POSTER,
+    screen: ActionTypes.VIEW_POSTER,
     poster: { uri },
   },
 })

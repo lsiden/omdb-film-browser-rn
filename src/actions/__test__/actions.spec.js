@@ -13,7 +13,7 @@ const filmDetails = require("__test__/__fixture__/film-details.json")
 test("viewList() returns an action", () => {
   expect(viewList()).toEqual({
     type: ActionTypes.VIEW_FILM_LIST,
-    data: { view: ActionTypes.VIEW_FILM_LIST },
+    data: { screen: ActionTypes.VIEW_FILM_LIST },
   })
 })
 
@@ -22,7 +22,7 @@ test("viewFilmDetails(filmSummary) returns an action with filmSummary", () => {
   expect(viewFilmDetails(filmSummary)).toEqual({
     type: ActionTypes.VIEW_FILM_DETAILS,
     data: {
-      view: ActionTypes.VIEW_FILM_DETAILS,
+      screen: ActionTypes.VIEW_FILM_DETAILS,
     },
   })
 })
@@ -32,7 +32,7 @@ test("viewPoster(uri) returns an action with a uri", () => {
   expect(viewPoster(uri)).toEqual({
     type: ActionTypes.VIEW_POSTER,
     data: {
-      view: ActionTypes.VIEW_POSTER,
+      screen: ActionTypes.VIEW_POSTER,
       poster: { uri },
     },
   })
