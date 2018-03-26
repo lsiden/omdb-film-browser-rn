@@ -79,12 +79,14 @@ exports[`first page 1`] = `
               undefined,
               Object {
                 "backgroundColor": "transparent",
-                "height": 40,
+                "padding": 0,
               },
               Object {
                 "backgroundColor": "#dadee0",
               },
-              undefined,
+              Object {
+                "backgroundColor": "transparent",
+              },
             ]
           }
         >
@@ -95,7 +97,7 @@ exports[`first page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "gray",
+                  "color": "white",
                   "fontSize": 25,
                 },
                 Array [
@@ -211,12 +213,14 @@ exports[`first page 1`] = `
               undefined,
               Object {
                 "backgroundColor": "transparent",
-                "height": 40,
+                "padding": 0,
               },
               Object {
                 "backgroundColor": "#dadee0",
               },
-              undefined,
+              Object {
+                "backgroundColor": "transparent",
+              },
             ]
           }
         >
@@ -227,7 +231,7 @@ exports[`first page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "gray",
+                  "color": "white",
                   "fontSize": 25,
                 },
                 Array [
@@ -343,7 +347,7 @@ exports[`first page 1`] = `
               undefined,
               Object {
                 "backgroundColor": "transparent",
-                "height": 40,
+                "padding": 0,
               },
               false,
               false,
@@ -473,7 +477,7 @@ exports[`first page 1`] = `
               undefined,
               Object {
                 "backgroundColor": "transparent",
-                "height": 40,
+                "padding": 0,
               },
               false,
               false,
@@ -646,7 +650,7 @@ exports[`internal page 1`] = `
               undefined,
               Object {
                 "backgroundColor": "transparent",
-                "height": 40,
+                "padding": 0,
               },
               false,
               false,
@@ -776,7 +780,7 @@ exports[`internal page 1`] = `
               undefined,
               Object {
                 "backgroundColor": "transparent",
-                "height": 40,
+                "padding": 0,
               },
               false,
               false,
@@ -906,7 +910,7 @@ exports[`internal page 1`] = `
               undefined,
               Object {
                 "backgroundColor": "transparent",
-                "height": 40,
+                "padding": 0,
               },
               false,
               false,
@@ -1036,7 +1040,7 @@ exports[`internal page 1`] = `
               undefined,
               Object {
                 "backgroundColor": "transparent",
-                "height": 40,
+                "padding": 0,
               },
               false,
               false,
@@ -1209,7 +1213,7 @@ exports[`last page 1`] = `
               undefined,
               Object {
                 "backgroundColor": "transparent",
-                "height": 40,
+                "padding": 0,
               },
               false,
               false,
@@ -1339,7 +1343,7 @@ exports[`last page 1`] = `
               undefined,
               Object {
                 "backgroundColor": "transparent",
-                "height": 40,
+                "padding": 0,
               },
               false,
               false,
@@ -1469,12 +1473,14 @@ exports[`last page 1`] = `
               undefined,
               Object {
                 "backgroundColor": "transparent",
-                "height": 40,
+                "padding": 0,
               },
               Object {
                 "backgroundColor": "#dadee0",
               },
-              undefined,
+              Object {
+                "backgroundColor": "transparent",
+              },
             ]
           }
         >
@@ -1485,7 +1491,7 @@ exports[`last page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "gray",
+                  "color": "white",
                   "fontSize": 25,
                 },
                 Array [
@@ -1601,12 +1607,14 @@ exports[`last page 1`] = `
               undefined,
               Object {
                 "backgroundColor": "transparent",
-                "height": 40,
+                "padding": 0,
               },
               Object {
                 "backgroundColor": "#dadee0",
               },
-              undefined,
+              Object {
+                "backgroundColor": "transparent",
+              },
             ]
           }
         >
@@ -1617,7 +1625,7 @@ exports[`last page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "gray",
+                  "color": "white",
                   "fontSize": 25,
                 },
                 Array [
