@@ -5,7 +5,7 @@ import { Text, View, ScrollView, Linking, BackHandler } from "react-native"
 import Toaster from "react-native-toaster"
 
 import ActionTypes from "./actions/types"
-import { viewFilmDetails, viewList, updateIsFetching } from "./actions"
+import { viewFilmDetails, viewFilmList, updateIsFetching } from "./actions"
 import { OMDB_URL } from "./constants"
 import { appStyles } from "./styles"
 import SearchBar from "components/search-bar"
@@ -121,7 +121,7 @@ export default connect(
   dispatch => ({
     dispatchViewList: () => {
       dispatch(updateIsFetching(false))
-      dispatch(viewList())
+      dispatch(viewFilmList())
     },
     dispatchViewFilmDetails: () => dispatch(viewFilmDetails()),
   })

@@ -1,6 +1,6 @@
 import ActionTypes from "../types"
 import {
-  viewList,
+  viewFilmList,
   viewFilmDetails,
   viewPoster,
   updateFilms,
@@ -10,8 +10,8 @@ import {
 
 const filmDetails = require("__test__/__fixture__/film-details.json")
 
-test("viewList() returns an action", () => {
-  expect(viewList()).toEqual({
+test("viewFilmList() returns an action", () => {
+  expect(viewFilmList()).toEqual({
     type: ActionTypes.VIEW_FILM_LIST,
     data: { screen: ActionTypes.VIEW_FILM_LIST },
   })

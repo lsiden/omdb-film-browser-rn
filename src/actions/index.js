@@ -1,6 +1,6 @@
 import ActionTypes from "./types"
 
-export const viewList = () => ({
+export const viewFilmList = () => ({
   type: ActionTypes.VIEW_FILM_LIST,
   data: { screen: ActionTypes.VIEW_FILM_LIST },
 })
