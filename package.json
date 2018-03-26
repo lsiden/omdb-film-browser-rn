@@ -14,6 +14,7 @@
     "jest-expo": "25.0.0",
     "jest-react-native": "^18.0.0",
     "prettier": "^1.11.1",
+    "react-devtools": "^3.2.1",
     "react-native-scripts": "1.11.1",
     "react-native-test-utils": "^1.2.0",
     "react-test-renderer": "^16.2.0"
@@ -27,7 +28,8 @@
     "test": "node node_modules/jest/bin/jest.js",
     "prettier": "prettier --write src/*.js src/**/*.js",
     "lint": "eslint src/",
-		"cloc": "cloc src/"
+    "cloc": "cloc src/",
+    "devtools": "react-devtools"
   },
   "jest": {
     "preset": "jest-expo"
@@ -41,11 +43,7 @@
       "react-native/react-native": true,
       "jest/globals": true
     },
-    "plugins": [
-      "react",
-      "react-native",
-      "jest"
-    ],
+    "plugins": ["react", "react-native", "jest"],
     "extends": [
       "eslint:recommended",
       "plugin:react/recommended",
@@ -59,17 +57,12 @@
       "no-console": [
         "warn",
         {
-          "allow": [
-            "warn",
-            "error"
-          ]
+          "allow": ["warn", "error"]
         }
       ]
     },
     "overrides": {
-      "files": [
-        "*.spec.js"
-      ],
+      "files": ["*.spec.js"],
       "rules": {
         "no-global-assign": 0
       }
