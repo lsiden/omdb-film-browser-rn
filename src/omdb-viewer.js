@@ -120,8 +120,8 @@ export default connect(
   }),
   dispatch => ({
     dispatchViewList: () => {
-      dispatch(updateIsFetching(false))
       dispatch(viewFilmList())
+      dispatch(updateIsFetching(false))
     },
     dispatchViewFilmDetails: () => dispatch(viewFilmDetails()),
   })
