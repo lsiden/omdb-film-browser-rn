@@ -5915,6 +5915,10 @@ react-native-scripts@1.11.1:
     color "^2.0.1"
     lodash "^4.16.6"
 
+react-native-swipe-gestures@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-swipe-gestures/-/react-native-swipe-gestures-1.0.2.tgz#914e1a72a94bc55b322b4622a01103ab879296dd"
+
 react-native-test-utils@^1.2.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/react-native-test-utils/-/react-native-test-utils-1.2.0.tgz#772fb34d7d02463383a443895da569ed03cc6b89"

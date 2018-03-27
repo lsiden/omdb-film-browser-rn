@@ -8,6 +8,7 @@ jest.mock("full-screen-poster/back-button", () => "BackButton")
 const defaultProps = () => {
   return {
     uri: "https://my.url.org",
+    dispatchToDetails: jest.fn(),
   }
 }
 
