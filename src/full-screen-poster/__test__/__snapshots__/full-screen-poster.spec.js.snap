@@ -14,8 +14,7 @@ exports[`renders 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   onStartShouldSetResponderCapture={[Function]}
-  onSwipeLeft={[MockFunction]}
-  onSwipeRight={[MockFunction]}
+  onSwipe={[MockFunction]}
   style={
     Object {
       "height": "98%",
@@ -23,20 +22,6 @@ exports[`renders 1`] = `
     }
   }
 >
-  <View
-    style={
-      Object {
-        "alignItems": "baseline",
-        "display": "flex",
-        "flexDirection": "row",
-        "flexWrap": "wrap",
-        "justifyContent": "flex-start",
-        "marginTop": 8,
-      }
-    }
-  >
-    <BackButton />
-  </View>
   <Image
     loadingIndicatorSource={
       Object {
@@ -53,11 +38,30 @@ exports[`renders 1`] = `
       Object {
         "flex": 1,
         "height": undefined,
-        "marginBottom": 5,
-        "marginTop": 5,
         "width": undefined,
       }
     }
   />
+  <View
+    hintWrapperStyle={
+      Object {
+        "justifyContent": "center",
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "gray",
+          "marginTop": 5,
+        }
+      }
+    >
+      Dismiss by swiping.
+    </Text>
+  </View>
 </View>
 `;

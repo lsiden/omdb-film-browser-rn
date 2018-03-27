@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Image, TouchableOpacity } from "react-native"
 import { connect } from "react-redux"
 
-import { detailStyles } from "styles"
+import { detailStyles as style } from "styles"
 import { viewPoster } from "actions"
 import { detailExists } from "./detail-items"
 
@@ -12,7 +12,7 @@ export const poster = ({ uri, dispatchViewPoster }) =>
     <TouchableOpacity onPress={() => dispatchViewPoster(uri)}>
       <Image
         source={{ uri }}
-        style={detailStyles.poster}
+        style={style.poster}
         resizeMode={Image.resizeMode.contain}
         loadingIndicatorSource={require("assets/spinningwheel-300x216.gif")}
       />

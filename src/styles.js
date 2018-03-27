@@ -13,10 +13,6 @@ export const appStyles = StyleSheet.create({
     color: TITLE_COLOR,
     marginTop: 5,
   },
-  scrollWrapper: {
-    flex: 1,
-    height: "100%",
-  },
   link: {
     color: white,
     fontSize: 12,
@@ -29,9 +25,6 @@ export const appStyles = StyleSheet.create({
     color: white,
     fontSize: 18,
     marginBottom: 3,
-  },
-  searchWrapper: {
-    backgroundColor: bannerBackground,
   },
 })
 
@@ -54,20 +47,17 @@ export const detailStyles = StyleSheet.create({
     fontSize: 16,
     color: gray10,
   },
-  item: {
-    fontSize: 16,
-  },
   poster: {
     height: 300,
     marginBottom: 10,
   },
-  plotUnavailable: {
-    color: "gray",
-    textAlign: "center",
-  },
   plot: {
     color: "gray",
     marginLeft: 20,
+  },
+  plotUnavailable: {
+    color: "gray",
+    textAlign: "center",
   },
 })
 
@@ -89,14 +79,14 @@ export const pagerStyles = StyleSheet.create({
 })
 
 export const fullScreenPosterStyles = StyleSheet.create({
-  posterStyle: {
+  wrapper: {
+    height: "98%",
+    width: "100%",
+  },
+  poster: {
     flex: 1,
     height: undefined,
     width: undefined,
-  },
-  wrapperStyle: {
-    height: "98%",
-    width: "100%",
   },
 })
 

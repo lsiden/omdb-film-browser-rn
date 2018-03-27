@@ -2,134 +2,68 @@
 
 exports[`renders 1`] = `
 <View
-  style={
-    Array [
-      Object {
-        "marginLeft": 15,
-        "marginRight": 15,
-      },
-      undefined,
-      undefined,
-      undefined,
-    ]
-  }
+  accessibilityComponentType={undefined}
+  accessibilityLabel={undefined}
+  accessibilityTraits={undefined}
+  accessible={true}
+  hasTVPreferredFocus={undefined}
+  hitSlop={undefined}
+  isTVSelectable={true}
+  nativeID={undefined}
+  onLayout={undefined}
+  onResponderGrant={[Function]}
+  onResponderMove={[Function]}
+  onResponderRelease={[Function]}
+  onResponderTerminate={[Function]}
+  onResponderTerminationRequest={[Function]}
+  onStartShouldSetResponder={[Function]}
+  style={null}
+  testID={undefined}
+  tvParallaxProperties={undefined}
 >
   <View
-    accessibilityComponentType={undefined}
-    accessibilityLabel={undefined}
-    accessibilityTraits={undefined}
-    accessible={true}
-    hasTVPreferredFocus={undefined}
-    hitSlop={undefined}
-    isTVSelectable={true}
-    nativeID={undefined}
-    onLayout={undefined}
-    onResponderGrant={[Function]}
-    onResponderMove={[Function]}
-    onResponderRelease={[Function]}
-    onResponderTerminate={[Function]}
-    onResponderTerminationRequest={[Function]}
-    onStartShouldSetResponder={[Function]}
-    style={null}
-    testID={undefined}
-    tvParallaxProperties={undefined}
+    onPress={undefined}
+    style={
+      Array [
+        false,
+        false,
+        false,
+        Object {
+          "alignItems": "center",
+          "backgroundColor": "transparent",
+          "justifyContent": "center",
+        },
+        undefined,
+      ]
+    }
+    underlayColor="white"
   >
-    <View
-      pointerEvents="box-only"
+    <Text
+      accessible={true}
+      allowFontScaling={false}
+      ellipsizeMode="tail"
       style={
         Array [
           Object {
-            "alignItems": "center",
-            "backgroundColor": "#9E9E9E",
-            "flexDirection": "row",
-            "justifyContent": "center",
-            "padding": 19,
+            "color": "black",
+            "fontSize": 24,
           },
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
-          undefined,
+          Array [
+            Object {
+              "backgroundColor": "transparent",
+            },
+            undefined,
+          ],
           Object {
-            "padding": 12,
+            "fontFamily": "Material Icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
           },
-          undefined,
-          undefined,
-          undefined,
-          Object {
-            "backgroundColor": "transparent",
-            "margin": 0,
-            "padding": 0,
-          },
-          undefined,
-          undefined,
         ]
       }
     >
-      <Text
-        accessible={true}
-        allowFontScaling={false}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {
-              "color": "black",
-              "fontSize": 25,
-            },
-            Array [
-              Object {
-                "marginRight": 10,
-              },
-              undefined,
-            ],
-            Object {
-              "fontFamily": "Material Icons",
-              "fontStyle": "normal",
-              "fontWeight": "normal",
-            },
-          ]
-        }
-        type="material"
-      >
-        
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Array [
-            Object {},
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            Array [
-              Object {
-                "color": "white",
-                "fontSize": 20,
-              },
-              undefined,
-              Object {
-                "fontSize": 17.5,
-              },
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-            ],
-          ]
-        }
-      />
-    </View>
+      
+    </Text>
   </View>
 </View>
 `;

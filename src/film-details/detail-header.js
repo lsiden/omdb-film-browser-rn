@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Text, View } from "react-native"
 import { connect } from "react-redux"
 
-import { detailStyles } from "styles"
+import { detailStyles as style } from "styles"
 import BackButton from "components/back-button"
 import { viewFilmList, updateIsFetching } from "actions"
 
@@ -19,11 +19,11 @@ const Filler = () => (
 
 export const detailHeader = ({ filmDetails, dispatchToPrev }) => {
   return (
-    <View style={detailStyles.titleWrapper}>
+    <View style={style.titleWrapper}>
       <BackButton dispatchToPrev={dispatchToPrev} />
       <View style={titleWrapperStyle}>
-        <Text style={detailStyles.title}>{filmDetails.Title}</Text>
-        <Text style={detailStyles.year}>{`  (${filmDetails.Year})`}</Text>
+        <Text style={style.title}>{filmDetails.Title}</Text>
+        <Text style={style.year}>{`  (${filmDetails.Year})`}</Text>
       </View>
       <Filler />
     </View>

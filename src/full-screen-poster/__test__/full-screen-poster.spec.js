@@ -3,8 +3,6 @@ import renderer from "react-native-test-utils"
 
 import { fullScreenPoster as FullScreenPoster } from "full-screen-poster"
 
-jest.mock("full-screen-poster/back-button", () => "BackButton")
-
 const defaultProps = () => {
   return {
     uri: "https://my.url.org",

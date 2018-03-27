@@ -12,10 +12,10 @@ const hintWrapperStyle = { justifyContent: "center" }
 
 export const fullScreenPoster = ({ uri, dispatchToDetails }) => {
   return uri ? (
-    <GestureRecognizer style={style.wrapperStyle} onSwipe={dispatchToDetails}>
+    <GestureRecognizer style={style.wrapper} onSwipe={dispatchToDetails}>
       <Image
         source={{ uri }}
-        style={style.posterStyle}
+        style={style.poster}
         resizeMode={"contain"}
         loadingIndicatorSource={require("assets/spinningwheel-300x216.gif")}
       />
