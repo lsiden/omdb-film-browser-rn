@@ -23,7 +23,7 @@ const defaultProps = () => {
 const createWrapper = (props = {}) =>
   renderer(<FilmDetails {...{ ...defaultProps(), ...props }} />)
 
-it("renders a title", () => {
+it("renders", () => {
   const wrapper = createWrapper()
   expect(wrapper.toJSON()).toMatchSnapshot()
 })

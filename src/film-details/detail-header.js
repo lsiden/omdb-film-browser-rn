@@ -4,16 +4,9 @@ import { Text, View } from "react-native"
 import { connect } from "react-redux"
 
 import { detailStyles } from "styles"
-import backButton from "components/back-button"
+import BackButton from "components/back-button"
 import { viewFilmList, updateIsFetching } from "actions"
 
-const mapDispatchToButtonProps = dispatch => ({
-  dispatchToPrev: () => {
-    dispatch(updateIsFetching(false))
-    dispatch(viewFilmList())
-  },
-})
-const BackButton = connect(null, mapDispatchToButtonProps)(backButton)
 const fillerStyle = { width: 24 }
 const fillerTextStyle = { color: "transparent" }
 const titleWrapperStyle = { flexDirection: "row", flexWrap: "wrap" }
@@ -24,11 +17,10 @@ const Filler = () => (
   </View>
 )
 
-export const detailHeader = props => {
-  const { filmDetails } = props
+export const detailHeader = ({ filmDetails, dispatchToPrev }) => {
   return (
     <View style={detailStyles.titleWrapper}>
-      <BackButton />
+      <BackButton dispatchToPrev={dispatchToPrev} />
       <View style={titleWrapperStyle}>
         <Text style={detailStyles.title}>{filmDetails.Title}</Text>
         <Text style={detailStyles.year}>{`  (${filmDetails.Year})`}</Text>
@@ -40,8 +32,17 @@ export const detailHeader = props => {
 
 detailHeader.propTypes = {
   filmDetails: PropTypes.object.isRequired,
+  dispatchToPrev: PropTypes.func.isRequired,
 }
 
-export default connect(state => ({
-  filmDetails: state.filmDetails,
-}))(detailHeader)
+export default connect(
+  state => ({
+    filmDetails: state.filmDetails,
+  }),
+  dispatch => ({
+    dispatchToPrev: () => {
+      dispatch(updateIsFetching(false))
+      dispatch(viewFilmList())
+    },
+  })
+)(detailHeader)
