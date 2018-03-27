@@ -14,7 +14,7 @@
     },
     "splash": {
       "backgroundColor": "#05347f",
-      "image": "src/assets/film-reel-1024-white-on-primary.png"
+      "image": "src/assets/film-reel-1024-white-on-primary-splash.png"
     },
     "ios": {
       "bundleIdentifier": "com.westsideconsultingllc.omdbViewer"
