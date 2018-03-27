@@ -57,14 +57,15 @@ export class omdbViewer extends React.Component {
 
   onBackPress() {
     const { screen, dispatchViewList, dispatchViewFilmDetails } = this.props
-
-    if (screen === ActionTypes.VIEW_FILM_DETAILS) {
-      dispatchViewList()
-      return true
+    const backActionDict = {
+      [ActionTypes.VIEW_POSTER]: dispatchViewFilmDetails,
+      [ActionTypes.VIEW_FILM_DETAILS]: dispatchViewList,
+      [ActionTypes.VIEW_ABOUT]: dispatchViewList,
     }
+    const backAction = screen && backActionDict[screen]
 
-    if (screen === ActionTypes.VIEW_POSTER) {
-      dispatchViewFilmDetails()
+    if (backAction) {
+      backAction.call(null)
       return true
     }
     return false
