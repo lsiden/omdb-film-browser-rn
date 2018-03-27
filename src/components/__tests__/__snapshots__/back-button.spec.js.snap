@@ -17,7 +17,11 @@ exports[`renders 1`] = `
   onResponderTerminate={[Function]}
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
-  style={null}
+  style={
+    Object {
+      "marginLeft": 5,
+    }
+  }
   testID={undefined}
   tvParallaxProperties={undefined}
 >

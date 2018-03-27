@@ -557,7 +557,6 @@ exports[`first page 1`] = `
         Object {
           "color": "#210d87",
           "fontSize": 14,
-          "marginTop": 5,
         },
         Object {
           "textAlign": "center",
@@ -1119,7 +1118,6 @@ exports[`internal page 1`] = `
         Object {
           "color": "#210d87",
           "fontSize": 14,
-          "marginTop": 5,
         },
         Object {
           "textAlign": "center",
@@ -1689,7 +1687,6 @@ exports[`last page 1`] = `
         Object {
           "color": "#210d87",
           "fontSize": 14,
-          "marginTop": 5,
         },
         Object {
           "textAlign": "center",

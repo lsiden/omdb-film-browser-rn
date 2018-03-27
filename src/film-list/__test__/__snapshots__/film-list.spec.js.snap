@@ -2,14 +2,28 @@
 
 exports[`renders list of titles 1`] = `
 Array [
-  <Text
-    accessible={true}
-    allowFontScaling={true}
-    ellipsizeMode="tail"
-    style={undefined}
+  <View
+    style={
+      Object {
+        "marginLeft": 10,
+        "marginTop": 5,
+      }
+    }
   >
-    Found undefined results.
-  </Text>,
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "color": "#210d87",
+          "fontSize": 14,
+        }
+      }
+    >
+      Found undefined results.
+    </Text>
+  </View>,
   <View
     style={
       Array [

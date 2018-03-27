@@ -17,7 +17,7 @@ exports[`renders list of titles 1`] = `
         Object {
           "flexDirection": "row",
           "justifyContent": "space-between",
-          "marginTop": 10,
+          "marginTop": 20,
         }
       }
     >
@@ -37,7 +37,11 @@ exports[`renders list of titles 1`] = `
         onResponderTerminate={[Function]}
         onResponderTerminationRequest={[Function]}
         onStartShouldSetResponder={[Function]}
-        style={null}
+        style={
+          Object {
+            "marginLeft": 5,
+          }
+        }
         testID={undefined}
         tvParallaxProperties={undefined}
       >
@@ -156,7 +160,7 @@ exports[`renders list of titles 1`] = `
           }
         }
       >
-        Lawrence Siden,
+        Lawrence Siden
       </Text>
       <Text
         accessible={true}
@@ -189,22 +193,6 @@ exports[`renders list of titles 1`] = `
         }
       >
         westsideconsultingllc@gmail.com
-      </Text>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        onPress={[Function]}
-        style={
-          Object {
-            "color": "white",
-            "fontSize": 16,
-            "marginBottom": 10,
-            "textDecorationLine": "underline",
-          }
-        }
-      >
-        Source code
       </Text>
     </View>
     <View
@@ -261,6 +249,32 @@ exports[`renders list of titles 1`] = `
         }
       >
         Open Movie Database
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "marginBottom": 15,
+          "marginTop": 15,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "marginBottom": 10,
+            "textDecorationLine": "underline",
+          }
+        }
+      >
+        Source code
       </Text>
     </View>
   </View>

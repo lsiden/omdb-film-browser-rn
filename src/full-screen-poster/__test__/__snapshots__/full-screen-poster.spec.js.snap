@@ -17,7 +17,7 @@ exports[`renders 1`] = `
   onSwipe={[MockFunction]}
   style={
     Object {
-      "height": "98%",
+      "height": "100%",
       "width": "100%",
     }
   }
@@ -45,7 +45,7 @@ exports[`renders 1`] = `
   <View
     hintWrapperStyle={
       Object {
-        "justifyContent": "center",
+        "alignContent": "center",
       }
     }
   >
@@ -56,7 +56,9 @@ exports[`renders 1`] = `
       style={
         Object {
           "color": "gray",
+          "marginBottom": 5,
           "marginTop": 5,
+          "textAlign": "center",
         }
       }
     >
