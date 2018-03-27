@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { ScrollView, View, Text } from "react-native"
+import { ScrollView, View, Text, Image } from "react-native"
 
 import { connect } from "react-redux"
 import { viewFilmList } from "actions"
@@ -42,6 +42,9 @@ export const about = ({ dispatchToPrev }) => (
     <View style={style.section}>
       <AboutLabel>{"Source code:"}</AboutLabel>
       <AboutLink url={SOURCE_CODE_URL}>{"react-native-omdb-viewer"}</AboutLink>
+    </View>
+    <View style={style.section}>
+      <Image source={require("assets/film-reel-48-white-on-primary.png")} />
     </View>
   </ScrollView>
 )
