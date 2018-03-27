@@ -40,7 +40,7 @@ export const detailStyles = StyleSheet.create({
     flexWrap: "wrap",
     flexDirection: "row",
     alignItems: "baseline",
-    justifyContent: "flex-start",
+    justifyContent: "space-between",
     marginTop: 10,
     marginBottom: 8,
   },
@@ -48,6 +48,7 @@ export const detailStyles = StyleSheet.create({
     fontSize: 20,
     flexWrap: "wrap",
     fontWeight: "bold",
+    marginLeft: 10,
   },
   year: {
     fontSize: 16,

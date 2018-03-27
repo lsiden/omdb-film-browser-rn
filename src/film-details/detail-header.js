@@ -15,13 +15,22 @@ const mapDispatchToButtonProps = dispatch => ({
 })
 const BackButton = connect(null, mapDispatchToButtonProps)(backButton)
 
+const Filler = () => (
+  <View style={{ width: 24 }}>
+    <Text style={{ color: "transparent" }}>x</Text>
+  </View>
+)
+
 export const detailHeader = props => {
   const { filmDetails } = props
   return (
     <View style={detailStyles.titleWrapper}>
       <BackButton />
-      <Text style={detailStyles.title}>{filmDetails.Title}</Text>
-      <Text style={detailStyles.year}>{`  (${filmDetails.Year})`}</Text>
+      <View style={{ flexDirection: "row" }}>
+        <Text style={detailStyles.title}>{filmDetails.Title}</Text>
+        <Text style={detailStyles.year}>{`  (${filmDetails.Year})`}</Text>
+      </View>
+      <Filler />
     </View>
   )
 }
