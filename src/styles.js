@@ -124,7 +124,7 @@ export const aboutStyles = StyleSheet.create({
   titleWrapper: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: 10,
+    marginTop: 20,
   },
   section: {
     alignItems: "center",

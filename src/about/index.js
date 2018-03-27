@@ -24,19 +24,21 @@ export const about = ({ dispatchToPrev }) => (
     </View>
     <View style={style.section}>
       <AboutLabel>{"Written By:"}</AboutLabel>
-      <AboutText>{"Lawrence Siden,"}</AboutText>
+      <AboutText>{"Lawrence Siden"}</AboutText>
       <AboutLink url={WESTSIDE_CONSULTING_URL}>
         {"Westside Consulting LLC"}
       </AboutLink>
       <AboutLink url={"mailto:westsideconsultingllc@gmail.com"}>
         {"westsideconsultingllc@gmail.com"}
       </AboutLink>
-      <AboutLink url={SOURCE_CODE_URL}>{"Source code"}</AboutLink>
     </View>
     <View style={style.section}>
       <AboutLabel>{"Credits:"}</AboutLabel>
       <AboutLink url={CRNA_URL}>{"Create React Native App"}</AboutLink>
       <AboutLink url={OMDB_API_URL}>{"Open Movie Database"}</AboutLink>
+    </View>
+    <View style={style.section}>
+      <AboutLink url={SOURCE_CODE_URL}>{"Source code"}</AboutLink>
     </View>
   </ScrollView>
 )
