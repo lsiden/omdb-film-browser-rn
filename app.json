@@ -1,12 +1,12 @@
 {
   "expo": {
     "sdkVersion": "25.0.0",
-    "name": "Open Movie Database Viewer",
-    "slug": "omdb-viewer",
+    "name": "Open Movie Database Film Browser",
+    "slug": "omdb-film-browser",
     "version": "1.0.0",
     "description": "Allows you to browse the Open Movie Database.",
     "privacy": "unlisted",
-    "githubUrl": "https://github.com/lsiden/react-native-omdb-viewer",
+    "githubUrl": "https://github.com/lsiden/omdb-film-browser-rnr",
     "primaryColor": "#05347f",
     "icon": "src/assets/film-reel-1024-white-on-primary.png",
     "notification": {
@@ -23,7 +23,7 @@
       "package": "com.westsideconsultingllc.omdbViewer",
       "versionCode": 1,
       "playStoreUrl":
-        "https://play.google.com/westsideconsultingllc/omdb-viewer",
+        "https://play.google.com/westsideconsultingllc/omdb-film-browser-rn",
       "permissions": []
     }
   }
