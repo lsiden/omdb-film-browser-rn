@@ -2,17 +2,18 @@
 
 import { StyleSheet } from "react-native"
 
-const messageColor = "#210d87"
 const primaryColor = "#05347f"
 
 export const appStyles = StyleSheet.create({
   wrapper: {
     flex: 0,
-    marginTop: 20
+    marginTop: 20,
+    backgroundColor: primaryColor,
+    height: "100%"
   },
   message: {
     fontSize: 14,
-    color: messageColor
+    color: "lightgray"
   },
   messageWrapper: {
     marginTop: 5,
@@ -49,11 +50,12 @@ export const detailStyles = StyleSheet.create({
     fontSize: 20,
     flexWrap: "wrap",
     fontWeight: "bold",
-    marginLeft: 10
+    marginLeft: 10,
+    color: "white"
   },
   year: {
     fontSize: 16,
-    color: "darkgray"
+    color: "lightgray"
   },
   poster: {
     height: 300,

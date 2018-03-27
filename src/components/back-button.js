@@ -22,7 +22,7 @@ BackButton.propTypes = {
 }
 
 BackButton.defaultProps = {
-  color: "black"
+  color: "white"
 }
 
 export default BackButton

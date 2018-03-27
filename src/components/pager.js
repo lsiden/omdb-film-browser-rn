@@ -11,7 +11,7 @@ const icon = (name, disabled) => ({
   name,
   type: "material-community",
   size: 25,
-  color: disabled ? "white" : "black"
+  color: disabled ? "#fff8" : "white"
 })
 
 const btnStyle = {
