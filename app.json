@@ -17,10 +17,10 @@
       "image": "src/assets/film-reel-1024-white-on-primary.png"
     },
     "ios": {
-      "bundleIdentifier": "com.westsideconsultingllc.omdb-viewer"
+      "bundleIdentifier": "com.westsideconsultingllc.omdbViewer"
     },
     "android": {
-      "package": "com.westsideconsultingllc.omdb-viewer",
+      "package": "com.westsideconsultingllc.omdbViewer",
       "versionCode": 1,
       "playStoreUrl":
         "https://play.google.com/westsideconsultingllc/omdb-viewer",
