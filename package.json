@@ -13,7 +13,7 @@
     "lint": "eslint src/",
     "cloc": "cloc src/",
     "devtools": "react-devtools",
-    "publish": "exp publish",
+    "publish:exp": "exp publish",
     "build:android": "exp build:android",
     "build:ios": "exp build:ios"
   },
