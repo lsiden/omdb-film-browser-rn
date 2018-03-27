@@ -5,7 +5,7 @@
     "slug": "omdb-film-browser",
     "version": "1.0.0",
     "description": "Allows you to browse the Open Movie Database.",
-    "privacy": "unlisted",
+    "privacy": "public",
     "githubUrl": "https://github.com/lsiden/omdb-film-browser-rnr",
     "primaryColor": "#05347f",
     "icon": "src/assets/film-reel-1024-white-on-primary.png",
