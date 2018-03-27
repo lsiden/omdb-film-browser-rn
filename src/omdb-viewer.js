@@ -12,6 +12,7 @@ import FilmDetails from "film-details"
 import FullScreenPoster from "full-screen-poster"
 import Banner from "components/banner"
 import About from "./about"
+import { appStyles as style } from "./styles"
 
 const FilmListScreen = () => (
   <ScrollView>
@@ -36,16 +37,8 @@ const renderActiveView = screen => {
   }
 }
 
-const appStyle = {
-  flex: 0,
-  marginTop: 20,
-  marginLeft: 10,
-  marginRight: 10,
-  marginBottom: 5,
-}
-
 const renderOmdbViewer = ({ screen, toast }) => (
-  <View style={appStyle}>
+  <View style={style.wrapper}>
     <Toaster message={toast} />
     {renderActiveView(screen)}
   </View>

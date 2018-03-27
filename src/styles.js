@@ -9,10 +9,17 @@ const messageColor = "#210d87"
 export const PRIMARY_COLOR = "#05347f"
 
 export const appStyles = StyleSheet.create({
+  wrapper: {
+    flex: 0,
+    marginTop: 20,
+  },
   message: {
     fontSize: 14,
     color: messageColor,
+  },
+  messageWrapper: {
     marginTop: 5,
+    marginLeft: 10,
   },
   banner: {
     backgroundColor: PRIMARY_COLOR,
@@ -83,7 +90,7 @@ export const pagerStyles = StyleSheet.create({
 
 export const fullScreenPosterStyles = StyleSheet.create({
   wrapper: {
-    height: "98%",
+    height: "100%",
     width: "100%",
   },
   poster: {

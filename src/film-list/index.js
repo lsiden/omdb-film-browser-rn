@@ -1,10 +1,10 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { TouchableOpacity, Text } from "react-native"
+import { TouchableOpacity, Text, View } from "react-native"
 import { List, ListItem } from "react-native-elements"
 
-import { appStyles } from "styles"
+import { appStyles as style } from "styles"
 import Pager from "components/pager"
 import LoadingIndicator from "components/loading-indicator"
 import { viewFilmDetails } from "actions"
@@ -20,7 +20,9 @@ export const filmList = ({
     <LoadingIndicator />
   ) : (
     <React.Fragment>
-      <Text style={appStyles.msgStyle}>{`Found ${totalResults} results.`}</Text>
+      <View style={style.messageWrapper}>
+        <Text style={style.message}>{`Found ${totalResults} results.`}</Text>
+      </View>
       <List>
         {films.map(film => (
           <TouchableOpacity

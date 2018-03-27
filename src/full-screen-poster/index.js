@@ -7,8 +7,15 @@ import GestureRecognizer from "react-native-swipe-gestures"
 import { fullScreenPosterStyles as style } from "styles"
 import { viewFilmDetails, updateIsFetching } from "actions"
 
-const hintStyle = { color: "gray", marginTop: 5 }
-const hintWrapperStyle = { justifyContent: "center" }
+const hintWrapperStyle = {
+  alignContent: "center",
+}
+const hintStyle = {
+  color: "gray",
+  marginTop: 5,
+  marginBottom: 5,
+  textAlign: "center",
+}
 
 export const fullScreenPoster = ({ uri, dispatchToDetails }) => {
   return uri ? (
