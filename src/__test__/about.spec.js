@@ -4,7 +4,7 @@ import renderer from "react-native-test-utils"
 import { about as About } from "../about"
 
 const defaultProps = () => ({
-  dispatchToPrev: jest.fn(),
+  dispatchToPrev: jest.fn()
 })
 
 const createWrapper = () => renderer(<About {...{ ...defaultProps() }} />)

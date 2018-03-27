@@ -8,13 +8,13 @@ import { fullScreenPosterStyles as style } from "styles"
 import { viewFilmDetails, updateIsFetching } from "actions"
 
 const hintWrapperStyle = {
-  alignContent: "center",
+  alignContent: "center"
 }
 const hintStyle = {
   color: "darkgray",
   marginTop: 5,
   marginBottom: 5,
-  textAlign: "center",
+  textAlign: "center"
 }
 
 export const fullScreenPoster = ({ uri, dispatchToDetails }) => {
@@ -35,17 +35,17 @@ export const fullScreenPoster = ({ uri, dispatchToDetails }) => {
 
 fullScreenPoster.propTypes = {
   uri: PropTypes.string.isRequired,
-  dispatchToDetails: PropTypes.func.isRequired,
+  dispatchToDetails: PropTypes.func.isRequired
 }
 
 export default connect(
   state => ({
-    uri: (state.poster || {}).uri,
+    uri: (state.poster || {}).uri
   }),
   dispatch => ({
     dispatchToDetails: () => {
       dispatch(updateIsFetching(false))
       dispatch(viewFilmDetails())
-    },
+    }
   })
 )(fullScreenPoster)

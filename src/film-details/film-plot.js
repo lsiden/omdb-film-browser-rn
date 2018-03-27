@@ -14,9 +14,9 @@ export const filmPlot = ({ plot }) => {
 }
 
 filmPlot.propTypes = {
-  plot: PropTypes.string,
+  plot: PropTypes.string
 }
 
 export default connect(state => ({
-  plot: (state.filmDetails || {}).Plot,
+  plot: (state.filmDetails || {}).Plot
 }))(filmPlot)

@@ -37,14 +37,14 @@ export const filmDetail = ({ filmDetails, isFetching }) => {
 
 filmDetail.propTypes = {
   filmDetails: PropTypes.object,
-  isFetching: PropTypes.bool,
+  isFetching: PropTypes.bool
 }
 
 filmDetail.defaultProps = {
-  isFetching: false,
+  isFetching: false
 }
 
 export default connect(state => ({
   filmDetails: state.filmDetails || {},
-  isFetching: state.isFetching,
+  isFetching: state.isFetching
 }))(filmDetail)

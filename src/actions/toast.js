@@ -7,7 +7,7 @@ export const updateToast = (text, severity = "info") => ({
   data: {
     toast: {
       text,
-      styles: ToastStyles[severity] || ToastStyles.info,
-    },
-  },
+      styles: ToastStyles[severity] || ToastStyles.info
+    }
+  }
 })

@@ -14,7 +14,7 @@ export const filmList = ({
   films,
   totalResults,
   isFetching,
-  dispatchViewDetails,
+  dispatchViewDetails
 }) =>
   isFetching ? (
     <LoadingIndicator />
@@ -41,23 +41,23 @@ filmList.propTypes = {
   films: PropTypes.arrayOf(PropTypes.object),
   totalResults: PropTypes.number,
   isFetching: PropTypes.bool,
-  dispatchViewDetails: PropTypes.func.isRequired,
+  dispatchViewDetails: PropTypes.func.isRequired
 }
 filmList.defaultProps = {
   films: [],
-  isFetching: false,
+  isFetching: false
 }
 
 export default connect(
   state => ({
     films: state.films || [],
     totalResults: state.totalResults || 0,
-    isFetching: state.isFetching,
+    isFetching: state.isFetching
   }),
   dispatch => ({
     dispatchViewDetails: filmSummary => {
       dispatch(viewFilmDetails())
       dispatch(fetchFilmDetails(filmSummary.imdbID))
-    },
+    }
   })
 )(filmList)

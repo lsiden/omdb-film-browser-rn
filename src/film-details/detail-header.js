@@ -25,17 +25,17 @@ export const detailHeader = ({ filmDetails, dispatchToPrev }) => {
 
 detailHeader.propTypes = {
   filmDetails: PropTypes.object.isRequired,
-  dispatchToPrev: PropTypes.func.isRequired,
+  dispatchToPrev: PropTypes.func.isRequired
 }
 
 export default connect(
   state => ({
-    filmDetails: state.filmDetails,
+    filmDetails: state.filmDetails
   }),
   dispatch => ({
     dispatchToPrev: () => {
       dispatch(updateIsFetching(false))
       dispatch(viewFilmList())
-    },
+    }
   })
 )(detailHeader)

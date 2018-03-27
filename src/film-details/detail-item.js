@@ -15,7 +15,7 @@ const DetailItem = ({ detail }) => {
   const props = {
     style: detailStyles.item,
     title: text,
-    hideChevron: true,
+    hideChevron: true
   }
 
   if (detailExists(url)) {
@@ -28,7 +28,7 @@ const DetailItem = ({ detail }) => {
 }
 
 DetailItem.propTypes = {
-  detail: PropTypes.object.isRequired,
+  detail: PropTypes.object.isRequired
 }
 
 export default DetailItem

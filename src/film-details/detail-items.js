@@ -14,15 +14,15 @@ const detailItems = filmDetails => [
   {
     text: "Official Website",
     url: filmDetails.Website,
-    cond: detailExists(filmDetails.Website),
+    cond: detailExists(filmDetails.Website)
   },
   {
     text: "IMDB page",
-    url: filmDetails.imdbID ? imdbUrl(filmDetails.imdbID) : null,
+    url: filmDetails.imdbID ? imdbUrl(filmDetails.imdbID) : null
   },
   {
-    text: `IMDB ID: ${filmDetails.imdbID}`,
-  },
+    text: `IMDB ID: ${filmDetails.imdbID}`
+  }
 ]
 
 export default detailItems

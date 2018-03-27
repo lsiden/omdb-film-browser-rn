@@ -14,7 +14,7 @@ export const AboutLink = ({ url, children }) => (
 
 AboutLink.propTypes = {
   url: PropTypes.string.isRequired,
-  children: childType,
+  children: childType
 }
 
 export const AboutText = ({ children }) => (
@@ -22,12 +22,12 @@ export const AboutText = ({ children }) => (
 )
 
 AboutText.propTypes = {
-  children: childType,
+  children: childType
 }
 
 export const AboutLabel = ({ children }) => (
   <Text style={style.label}>{children}</Text>
 )
 AboutLabel.propTypes = {
-  children: childType,
+  children: childType
 }

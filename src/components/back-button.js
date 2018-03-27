@@ -4,7 +4,7 @@ import { Icon } from "react-native-elements"
 import { TouchableHighlight } from "react-native"
 
 const style = {
-  marginLeft: 5,
+  marginLeft: 5
 }
 const BackButton = ({ dispatchToPrev, color }) => (
   <TouchableHighlight
@@ -18,11 +18,11 @@ const BackButton = ({ dispatchToPrev, color }) => (
 
 BackButton.propTypes = {
   color: PropTypes.string,
-  dispatchToPrev: PropTypes.func.isRequired,
+  dispatchToPrev: PropTypes.func.isRequired
 }
 
 BackButton.defaultProps = {
-  color: "black",
+  color: "black"
 }
 
 export default BackButton

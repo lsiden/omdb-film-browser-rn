@@ -21,14 +21,14 @@ export const poster = ({ uri, dispatchViewPoster }) =>
 
 poster.propTypes = {
   uri: PropTypes.string,
-  dispatchViewPoster: PropTypes.func.isRequired,
+  dispatchViewPoster: PropTypes.func.isRequired
 }
 
 export default connect(
   state => ({
-    uri: (state.filmDetails || {}).Poster,
+    uri: (state.filmDetails || {}).Poster
   }),
   dispatch => ({
-    dispatchViewPoster: uri => dispatch(viewPoster(uri)),
+    dispatchViewPoster: uri => dispatch(viewPoster(uri))
   })
 )(poster)

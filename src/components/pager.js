@@ -11,16 +11,16 @@ const icon = (name, disabled) => ({
   name,
   type: "material-community",
   size: 25,
-  color: disabled ? "white" : "black",
+  color: disabled ? "white" : "black"
 })
 
 const btnStyle = {
   backgroundColor: "transparent",
-  padding: 0,
+  padding: 0
 }
 
 const disabledStyle = {
-  backgroundColor: "transparent",
+  backgroundColor: "transparent"
 }
 
 export const pager = props => {
@@ -72,16 +72,16 @@ pager.propTypes = {
   pageNum: PropTypes.number.isRequired,
   totalResults: PropTypes.number.isRequired,
   lastPage: PropTypes.number.isRequired,
-  dispatchFetchPage: PropTypes.func.isRequired,
+  dispatchFetchPage: PropTypes.func.isRequired
 }
 
 export default connect(
   state => ({
     pageNum: state.pageNum || 1,
     totalResults: state.totalResults || 1,
-    lastPage: state.lastPage || 1,
+    lastPage: state.lastPage || 1
   }),
   dispatch => ({
-    dispatchFetchPage: pageNum => dispatch(fetchPage(pageNum)),
+    dispatchFetchPage: pageNum => dispatch(fetchPage(pageNum))
   })
 )(pager)

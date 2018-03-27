@@ -46,7 +46,7 @@ const renderOmdbViewer = ({ screen, toast }) => (
 
 renderOmdbViewer.propTypes = {
   screen: PropTypes.bool,
-  toast: PropTypes.func,
+  toast: PropTypes.func
 }
 
 export class omdbViewer extends React.Component {
@@ -60,7 +60,7 @@ export class omdbViewer extends React.Component {
     const backActionDict = {
       [ActionTypes.VIEW_POSTER]: dispatchViewFilmDetails,
       [ActionTypes.VIEW_FILM_DETAILS]: dispatchViewList,
-      [ActionTypes.VIEW_ABOUT]: dispatchViewList,
+      [ActionTypes.VIEW_ABOUT]: dispatchViewList
     }
     const backAction = screen && backActionDict[screen]
 
@@ -93,19 +93,19 @@ omdbViewer.propTypes = {
   screen: PropTypes.string.isRequired,
   toast: PropTypes.oneOfType([PropTypes.array, PropTypes.object]),
   dispatchViewList: PropTypes.func.isRequired,
-  dispatchViewFilmDetails: PropTypes.func.isRequired,
+  dispatchViewFilmDetails: PropTypes.func.isRequired
 }
 
 export default connect(
   state => ({
     screen: state.screen,
-    toast: state.toast,
+    toast: state.toast
   }),
   dispatch => ({
     dispatchViewList: () => {
       dispatch(viewFilmList())
       dispatch(updateIsFetching(false))
     },
-    dispatchViewFilmDetails: () => dispatch(viewFilmDetails()),
+    dispatchViewFilmDetails: () => dispatch(viewFilmDetails())
   })
 )(omdbViewer)

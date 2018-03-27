@@ -11,7 +11,7 @@ import {
   SOURCE_CODE_URL,
   OMDB_API_URL,
   CRNA_URL,
-  ICONS8_URL,
+  ICONS8_URL
 } from "constants"
 import { AboutLink, AboutText, AboutLabel } from "./components"
 import { aboutStyles as style } from "styles"
@@ -47,16 +47,16 @@ export const about = ({ dispatchToPrev }) => (
 )
 
 about.propTypes = {
-  dispatchToPrev: PropTypes.func.isRequired,
+  dispatchToPrev: PropTypes.func.isRequired
 }
 
 export default connect(
   state => ({
-    filmDetails: state.filmDetails,
+    filmDetails: state.filmDetails
   }),
   dispatch => ({
     dispatchToPrev: () => {
       dispatch(viewFilmList())
-    },
+    }
   })
 )(about)

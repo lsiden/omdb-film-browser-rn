@@ -20,13 +20,13 @@ export const banner = ({ displayInfoIcon, dispatchViewAbout }) => (
 
 banner.propTypes = {
   displayInfoIcon: PropTypes.bool,
-  dispatchViewAbout: PropTypes.func.isRequired,
+  dispatchViewAbout: PropTypes.func.isRequired
 }
 
 banner.defaultProps = {
-  displayInfoIcon: false,
+  displayInfoIcon: false
 }
 
 export default connect(null, dispatch => ({
-  dispatchViewAbout: () => dispatch(viewAbout()),
+  dispatchViewAbout: () => dispatch(viewAbout())
 }))(banner)

@@ -10,7 +10,7 @@ import { queryFetch } from "actions/fetch"
 
 export class searchBar extends React.Component {
   static propTypes = {
-    dispatchQuery: PropTypes.func.isRequired,
+    dispatchQuery: PropTypes.func.isRequired
   }
 
   constructor(props) {
@@ -59,15 +59,15 @@ export class searchBar extends React.Component {
 
 searchBar.propTypes = {
   dispatchQuery: PropTypes.func.isRequired,
-  delay: PropTypes.number,
+  delay: PropTypes.number
 }
 
 searchBar.defaultProps = {
-  delay: 300,
+  delay: 300
 }
 
 export default connect(null, dispatch => ({
   dispatchQuery: query => {
     dispatch(queryFetch(query))
-  },
+  }
 }))(searchBar)

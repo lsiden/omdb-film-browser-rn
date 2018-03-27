@@ -8,32 +8,32 @@ const primaryColor = "#05347f"
 export const appStyles = StyleSheet.create({
   wrapper: {
     flex: 0,
-    marginTop: 20,
+    marginTop: 20
   },
   message: {
     fontSize: 14,
-    color: messageColor,
+    color: messageColor
   },
   messageWrapper: {
     marginTop: 5,
-    marginLeft: 10,
+    marginLeft: 10
   },
   banner: {
     backgroundColor: primaryColor,
     marginTop: 5,
     padding: 10,
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "space-between"
   },
   title: {
     color: "white",
     fontSize: 16,
-    marginBottom: 3,
+    marginBottom: 3
   },
   link: {
     color: "white",
-    fontSize: 12,
-  },
+    fontSize: 12
+  }
 })
 
 export const detailStyles = StyleSheet.create({
@@ -43,78 +43,78 @@ export const detailStyles = StyleSheet.create({
     alignItems: "baseline",
     justifyContent: "space-between",
     marginTop: 10,
-    marginBottom: 8,
+    marginBottom: 8
   },
   title: {
     fontSize: 20,
     flexWrap: "wrap",
     fontWeight: "bold",
-    marginLeft: 10,
+    marginLeft: 10
   },
   year: {
     fontSize: 16,
-    color: "darkgray",
+    color: "darkgray"
   },
   poster: {
     height: 300,
-    marginBottom: 10,
+    marginBottom: 10
   },
   plot: {
     color: "darkgray",
-    marginLeft: 20,
+    marginLeft: 20
   },
   plotUnavailable: {
     color: "darkgray",
-    textAlign: "center",
-  },
+    textAlign: "center"
+  }
 })
 
 export const pagerStyles = StyleSheet.create({
   wrapper: {
     flex: 0,
     marginTop: 5,
-    marginBottom: 5,
+    marginBottom: 5
   },
   buttons: {
     flexDirection: "row",
     justifyContent: "space-around",
-    alignItems: "baseline",
+    alignItems: "baseline"
   },
   message: {
-    textAlign: "center",
-  },
+    textAlign: "center"
+  }
 })
 
 export const fullScreenPosterStyles = StyleSheet.create({
   wrapper: {
     height: "100%",
-    width: "100%",
+    width: "100%"
   },
   poster: {
     flex: 1,
     height: undefined,
-    width: undefined,
-  },
+    width: undefined
+  }
 })
 
 export const loadingIndicatorStyles = StyleSheet.create({
   wrapper: {
     height: 300,
     justifyContent: "center",
-    alignItems: "center",
-  },
+    alignItems: "center"
+  }
 })
 
 const itemStyle = {
   color: "white",
-  marginBottom: 10,
+  marginBottom: 10
 }
 
 const aboutTextStyle = [
   itemStyle,
   {
-    fontSize: 16,
-  },
+    fontSize: 16
+  }
 ]
 
 export const aboutStyles = StyleSheet.create({
@@ -123,32 +123,32 @@ export const aboutStyles = StyleSheet.create({
     height: "99%",
     alignContent: "flex-start",
     backgroundColor: primaryColor,
-    marginTop: 5,
+    marginTop: 5
   },
   titleWrapper: {
     flexDirection: "row",
     justifyContent: "space-between",
-    marginTop: 20,
+    marginTop: 20
   },
   section: {
     alignItems: "center",
     marginTop: 15,
-    marginBottom: 15,
+    marginBottom: 15
   },
   title: StyleSheet.flatten([
     itemStyle,
     {
-      fontSize: 18,
-    },
+      fontSize: 18
+    }
   ]),
   label: StyleSheet.flatten([
     itemStyle,
     {
-      fontSize: 14,
-    },
+      fontSize: 14
+    }
   ]),
   link: StyleSheet.flatten([
     aboutTextStyle,
-    { textDecorationLine: "underline" },
-  ]),
+    { textDecorationLine: "underline" }
+  ])
 })
