@@ -1,10 +1,10 @@
-import { OMDB_URL, OMDB_API_KEY } from "constants"
+import { OMDB_API_URL, OMDB_API_KEY } from "constants"
 import { updateToast } from "./toast"
 import { getState } from "store"
 import { viewFilmList, updateFilms, updateFilmDetails, updateIsFetching } from "./"
 import getLastPagenum from "util/get-last-pagenum"
 
-const OMDB_URL_PREFIX = `${OMDB_URL}?apikey=${OMDB_API_KEY}`
+const OMDB_URL_PREFIX = `${OMDB_API_URL}?apikey=${OMDB_API_KEY}`
 
 const fetchQueryResults = (dispatch, query, pageNum) => {
   dispatch(updateIsFetching(true))

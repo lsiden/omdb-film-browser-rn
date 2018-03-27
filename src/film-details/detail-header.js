@@ -1,21 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Text, View } from "react-native"
 import { connect } from "react-redux"
+import { Text, View } from "react-native"
 
 import { detailStyles as style } from "styles"
 import BackButton from "components/back-button"
+import Filler from "components/filler"
 import { viewFilmList, updateIsFetching } from "actions"
 
-const fillerStyle = { width: 24 }
-const fillerTextStyle = { color: "transparent" }
 const titleWrapperStyle = { flexDirection: "row", flexWrap: "wrap" }
-
-const Filler = () => (
-  <View style={fillerStyle}>
-    <Text style={fillerTextStyle}>x</Text>
-  </View>
-)
 
 export const detailHeader = ({ filmDetails, dispatchToPrev }) => {
   return (

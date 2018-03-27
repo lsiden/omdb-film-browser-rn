@@ -1,34 +1,21 @@
 import React from "react"
-import { connect } from "react-redux"
 import PropTypes from "prop-types"
-import { Text, View, ScrollView, Linking, BackHandler } from "react-native"
+import { connect } from "react-redux"
+import { View, ScrollView, BackHandler } from "react-native"
 import Toaster from "react-native-toaster"
 
 import ActionTypes from "./actions/types"
 import { viewFilmDetails, viewFilmList, updateIsFetching } from "./actions"
-import { OMDB_URL } from "./constants"
-import { appStyles } from "./styles"
 import SearchBar from "components/search-bar"
 import FilmList from "./film-list"
 import FilmDetails from "film-details"
 import FullScreenPoster from "full-screen-poster"
+import Banner from "components/banner"
+import About from "./about"
 
-const openUrl = url => Linking.openURL(url)
-
-const renderBanner = () => (
-  <View style={appStyles.banner}>
-    <Text style={appStyles.title}>
-      {"Search Open Movie Database"}&nbsp;
-      <Text onPress={() => openUrl(OMDB_URL)} style={appStyles.link}>
-        {"(OMDB)"}
-      </Text>
-    </Text>
-  </View>
-)
-
-const renderFilmList = () => (
+const FilmListScreen = () => (
   <ScrollView>
-    {renderBanner()}
+    <Banner displayInfoIcon={true} />
     <SearchBar />
     <FilmList />
   </ScrollView>
@@ -37,11 +24,13 @@ const renderFilmList = () => (
 const renderActiveView = screen => {
   switch (screen) {
     case ActionTypes.VIEW_FILM_LIST:
-      return renderFilmList()
+      return <FilmListScreen />
     case ActionTypes.VIEW_FILM_DETAILS:
       return <FilmDetails />
     case ActionTypes.VIEW_POSTER:
       return <FullScreenPoster />
+    case ActionTypes.VIEW_ABOUT:
+      return <About />
     default:
       return null
   }

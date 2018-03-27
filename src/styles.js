@@ -4,27 +4,31 @@ import { StyleSheet } from "react-native"
 
 const white = "#fff"
 const gray10 = "#aaa"
-const bannerBackground = "#05347f"
-const TITLE_COLOR = "#210d87"
+const messageColor = "#210d87"
+
+export const PRIMARY_COLOR = "#05347f"
 
 export const appStyles = StyleSheet.create({
   message: {
     fontSize: 14,
-    color: TITLE_COLOR,
+    color: messageColor,
     marginTop: 5,
+  },
+  banner: {
+    backgroundColor: PRIMARY_COLOR,
+    marginTop: 5,
+    padding: 10,
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+  title: {
+    color: white,
+    fontSize: 16,
+    marginBottom: 3,
   },
   link: {
     color: white,
     fontSize: 12,
-  },
-  banner: {
-    backgroundColor: bannerBackground,
-    padding: 10,
-  },
-  title: {
-    color: white,
-    fontSize: 18,
-    marginBottom: 3,
   },
 })
 

@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<View
+  style={
+    Object {
+      "backgroundColor": "#05347f",
+      "flexDirection": "row",
+      "justifyContent": "space-between",
+      "marginTop": 10,
+      "padding": 10,
+    }
+  }
+>
+  <Text
+    accessible={true}
+    allowFontScaling={true}
+    ellipsizeMode="tail"
+    style={
+      Object {
+        "color": "#fff",
+        "fontSize": 16,
+        "marginBottom": 3,
+      }
+    }
+  >
+    Search Open Movie Database
+     
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      onPress={[Function]}
+      style={
+        Object {
+          "color": "#fff",
+          "fontSize": 12,
+        }
+      }
+    >
+      (OMDB)
+    </Text>
+  </Text>
+</View>
+`;
