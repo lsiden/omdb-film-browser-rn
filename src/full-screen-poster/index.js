@@ -1,11 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Image } from "react-native"
+import { Image, Text, View } from "react-native"
 import { connect } from "react-redux"
 import GestureRecognizer from "react-native-swipe-gestures"
 
 import { fullScreenPosterStyles as style } from "styles"
 import { viewFilmDetails, updateIsFetching } from "actions"
+
+const hintStyle = { color: "gray", marginTop: 5 }
+const hintWrapperStyle = { justifyContent: "center" }
 
 export const fullScreenPoster = ({ uri, dispatchToDetails }) => {
   return uri ? (
@@ -16,6 +19,9 @@ export const fullScreenPoster = ({ uri, dispatchToDetails }) => {
         resizeMode={"contain"}
         loadingIndicatorSource={require("assets/spinningwheel-300x216.gif")}
       />
+      <View hintWrapperStyle={hintWrapperStyle}>
+        <Text style={hintStyle}>{"Dismiss by swiping."}</Text>
+      </View>
     </GestureRecognizer>
   ) : null
 }

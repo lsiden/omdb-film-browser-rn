@@ -99,8 +99,6 @@ export const fullScreenPosterStyles = StyleSheet.create({
     flex: 1,
     height: undefined,
     width: undefined,
-    marginTop: 5,
-    marginBottom: 5,
   },
   wrapperStyle: {
     height: "98%",
