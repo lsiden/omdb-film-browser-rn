@@ -7,5 +7,6 @@
   "version": "1.0.0",
   "description": "Allows you to browse the Open Movie Database.",
   "privacy": "unlisted",
-  "githubUrl": "https://github.com/lsiden/react-native-omdb-viewer"
+  "githubUrl": "https://github.com/lsiden/react-native-omdb-viewer",
+  "primaryColor": "#05347f"
 }

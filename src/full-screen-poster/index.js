@@ -11,7 +11,7 @@ const hintWrapperStyle = {
   alignContent: "center",
 }
 const hintStyle = {
-  color: "gray",
+  color: "darkgray",
   marginTop: 5,
   marginBottom: 5,
   textAlign: "center",

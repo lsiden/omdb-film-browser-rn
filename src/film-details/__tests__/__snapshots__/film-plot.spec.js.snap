@@ -7,7 +7,7 @@ exports[`renders a title 1`] = `
   ellipsizeMode="tail"
   style={
     Object {
-      "color": "gray",
+      "color": "darkgray",
       "marginLeft": 20,
     }
   }

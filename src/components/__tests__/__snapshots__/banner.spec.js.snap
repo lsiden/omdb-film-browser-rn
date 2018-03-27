@@ -18,7 +18,7 @@ exports[`renders 1`] = `
     ellipsizeMode="tail"
     style={
       Object {
-        "color": "#fff",
+        "color": "white",
         "fontSize": 16,
         "marginBottom": 3,
       }
@@ -33,7 +33,7 @@ exports[`renders 1`] = `
       onPress={[Function]}
       style={
         Object {
-          "color": "#fff",
+          "color": "white",
           "fontSize": 12,
         }
       }

@@ -1,12 +1,9 @@
-import { StyleSheet } from "react-native"
-
 /* eslint-disable react-native/no-color-literals */
 
-const white = "#fff"
-const gray10 = "#aaa"
-const messageColor = "#210d87"
+import { StyleSheet } from "react-native"
 
-export const PRIMARY_COLOR = "#05347f"
+const messageColor = "#210d87"
+const primaryColor = "#05347f"
 
 export const appStyles = StyleSheet.create({
   wrapper: {
@@ -22,19 +19,19 @@ export const appStyles = StyleSheet.create({
     marginLeft: 10,
   },
   banner: {
-    backgroundColor: PRIMARY_COLOR,
+    backgroundColor: primaryColor,
     marginTop: 5,
     padding: 10,
     flexDirection: "row",
     justifyContent: "space-between",
   },
   title: {
-    color: white,
+    color: "white",
     fontSize: 16,
     marginBottom: 3,
   },
   link: {
-    color: white,
+    color: "white",
     fontSize: 12,
   },
 })
@@ -56,18 +53,18 @@ export const detailStyles = StyleSheet.create({
   },
   year: {
     fontSize: 16,
-    color: gray10,
+    color: "darkgray",
   },
   poster: {
     height: 300,
     marginBottom: 10,
   },
   plot: {
-    color: "gray",
+    color: "darkgray",
     marginLeft: 20,
   },
   plotUnavailable: {
-    color: "gray",
+    color: "darkgray",
     textAlign: "center",
   },
 })
@@ -125,7 +122,7 @@ export const aboutStyles = StyleSheet.create({
   wrapper: {
     height: "99%",
     alignContent: "flex-start",
-    backgroundColor: PRIMARY_COLOR,
+    backgroundColor: primaryColor,
     marginTop: 5,
   },
   titleWrapper: {

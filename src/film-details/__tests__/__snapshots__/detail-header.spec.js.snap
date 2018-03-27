@@ -111,7 +111,7 @@ exports[`renders 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "#aaa",
+          "color": "darkgray",
           "fontSize": 16,
         }
       }
