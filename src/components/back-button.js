@@ -1,6 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Button } from "react-native-elements"
+import { Icon } from "react-native-elements"
+import { TouchableHighlight } from "react-native"
 
 const icon = name => ({
   name,
@@ -11,15 +12,12 @@ const icon = name => ({
 
 const style = {
   backgroundColor: "transparent",
-  padding: 0,
 }
 
 const BackButton = ({ dispatchToPrev }) => (
-  <Button
-    icon={icon("arrow-back")}
-    onPress={dispatchToPrev}
-    buttonStyle={style}
-  />
+  <TouchableHighlight onPress={dispatchToPrev} buttonStyle={style}>
+    <Icon name="arrow-back" />
+  </TouchableHighlight>
 )
 
 BackButton.propTypes = {
