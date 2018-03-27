@@ -4,17 +4,24 @@ import { Text, View } from "react-native"
 import { connect } from "react-redux"
 
 import { detailStyles } from "styles"
-import BackButton from "./back-button"
+import backButton from "components/back-button"
+import { viewFilmList, updateIsFetching } from "actions"
+
+const mapDispatchToButtonProps = dispatch => ({
+  dispatchToPrev: () => {
+    dispatch(updateIsFetching(false))
+    dispatch(viewFilmList())
+  },
+})
+const BackButton = connect(null, mapDispatchToButtonProps)(backButton)
 
 export const detailHeader = props => {
   const { filmDetails } = props
   return (
-    <View style={detailStyles.header}>
+    <View style={detailStyles.titleWrapper}>
       <BackButton />
-      <View style={detailStyles.titleWrapper}>
-        <Text style={detailStyles.title}>{filmDetails.Title}</Text>
-        <Text style={detailStyles.year}>{`  (${filmDetails.Year})`}</Text>
-      </View>
+      <Text style={detailStyles.title}>{filmDetails.Title}</Text>
+      <Text style={detailStyles.year}>{`  (${filmDetails.Year})`}</Text>
     </View>
   )
 }

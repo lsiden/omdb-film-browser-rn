@@ -36,19 +36,13 @@ export const appStyles = StyleSheet.create({
 })
 
 export const detailStyles = StyleSheet.create({
-  header: {
-    display: "flex",
-    flexWrap: "wrap",
-    flexDirection: "row",
-    justifyContent: "flex-start",
-    alignItems: "baseline",
-    marginTop: 8,
-  },
   titleWrapper: {
     flexWrap: "wrap",
-    display: "flex",
     flexDirection: "row",
     alignItems: "baseline",
+    justifyContent: "flex-start",
+    marginTop: 10,
+    marginBottom: 8,
   },
   title: {
     fontSize: 20,
@@ -64,7 +58,6 @@ export const detailStyles = StyleSheet.create({
   },
   poster: {
     height: 300,
-    marginTop: 10,
     marginBottom: 10,
   },
   plotUnavailable: {

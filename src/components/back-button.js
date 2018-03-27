@@ -9,7 +9,10 @@ const icon = name => ({
   color: "black",
 })
 
-const style = { backgroundColor: "transparent", margin: 0, padding: 0 }
+const style = {
+  backgroundColor: "transparent",
+  padding: 0,
+}
 
 const BackButton = ({ dispatchToPrev }) => (
   <Button
