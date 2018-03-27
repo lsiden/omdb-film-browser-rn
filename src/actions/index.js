@@ -12,6 +12,13 @@ export const viewFilmDetails = () => ({
   },
 })
 
+export const viewAbout = () => ({
+  type: ActionTypes.VIEW_ABOUT,
+  data: {
+    screen: ActionTypes.VIEW_ABOUT,
+  },
+})
+
 export const viewPoster = uri => ({
   type: ActionTypes.VIEW_POSTER,
   data: {

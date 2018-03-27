@@ -22,6 +22,7 @@ export function reduce(state = initialState, action) {
     case ActionTypes.VIEW_FILM_DETAILS:
     case ActionTypes.UPDATE_FILMS:
     case ActionTypes.VIEW_POSTER:
+    case ActionTypes.VIEW_ABOUT:
     case ActionTypes.UPDATE_FILM_DETAILS:
     case ActionTypes.UPDATE_TOAST:
     case ActionTypes.UPDATE_IS_FETCHING:
