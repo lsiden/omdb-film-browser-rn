@@ -14,7 +14,6 @@ exports[`first page 1`] = `
     style={
       Object {
         "alignItems": "baseline",
-        "display": "flex",
         "flexDirection": "row",
         "justifyContent": "space-around",
       }
@@ -585,7 +584,6 @@ exports[`internal page 1`] = `
     style={
       Object {
         "alignItems": "baseline",
-        "display": "flex",
         "flexDirection": "row",
         "justifyContent": "space-around",
       }
@@ -1148,7 +1146,6 @@ exports[`last page 1`] = `
     style={
       Object {
         "alignItems": "baseline",
-        "display": "flex",
         "flexDirection": "row",
         "justifyContent": "space-around",
       }

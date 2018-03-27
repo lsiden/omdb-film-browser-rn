@@ -100,3 +100,51 @@ export const loadingIndicatorStyles = StyleSheet.create({
     alignItems: "center",
   },
 })
+
+const itemStyle = {
+  color: "white",
+  marginBottom: 10,
+}
+
+const aboutTextStyle = [
+  itemStyle,
+  {
+    fontSize: 16,
+  },
+]
+
+export const aboutStyles = StyleSheet.create({
+  text: StyleSheet.flatten(aboutTextStyle),
+  wrapper: {
+    height: "99%",
+    alignContent: "flex-start",
+    backgroundColor: PRIMARY_COLOR,
+    marginTop: 5,
+  },
+  titleWrapper: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    marginTop: 10,
+  },
+  section: {
+    alignItems: "center",
+    marginTop: 15,
+    marginBottom: 15,
+  },
+  title: StyleSheet.flatten([
+    itemStyle,
+    {
+      fontSize: 18,
+    },
+  ]),
+  label: StyleSheet.flatten([
+    itemStyle,
+    {
+      fontSize: 14,
+    },
+  ]),
+  link: StyleSheet.flatten([
+    aboutTextStyle,
+    { textDecorationLine: "underline" },
+  ]),
+})
