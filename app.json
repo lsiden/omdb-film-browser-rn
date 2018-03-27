@@ -1,12 +1,30 @@
 {
   "expo": {
-    "sdkVersion": "25.0.0"
-  },
-  "name": "Open Movie Database Viewer",
-  "slug": "omdb-viewer",
-  "version": "1.0.0",
-  "description": "Allows you to browse the Open Movie Database.",
-  "privacy": "unlisted",
-  "githubUrl": "https://github.com/lsiden/react-native-omdb-viewer",
-  "primaryColor": "#05347f"
+    "sdkVersion": "25.0.0",
+    "name": "Open Movie Database Viewer",
+    "slug": "omdb-viewer",
+    "version": "1.0.0",
+    "description": "Allows you to browse the Open Movie Database.",
+    "privacy": "unlisted",
+    "githubUrl": "https://github.com/lsiden/react-native-omdb-viewer",
+    "primaryColor": "#05347f",
+    "icon": "src/assets/film-reel-1024-white-on-primary.png",
+    "notification": {
+      "icon": "src/assets/film-reel-48-white-on-primary.png"
+    },
+    "splash": {
+      "backgroundColor": "#05347f",
+      "image": "src/assets/film-reel-1024-white-on-primary.png"
+    },
+    "ios": {
+      "bundleIdentifier": "com.westsideconsultingllc.omdb-viewer"
+    },
+    "android": {
+      "package": "com.westsideconsultingllc.omdb-viewer",
+      "versionCode": 1,
+      "playStoreUrl":
+        "https://play.google.com/westsideconsultingllc/omdb-viewer",
+      "permissions": []
+    }
+  }
 }

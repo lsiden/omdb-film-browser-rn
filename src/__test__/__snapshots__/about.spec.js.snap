@@ -250,16 +250,6 @@ exports[`renders list of titles 1`] = `
       >
         Open Movie Database
       </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "marginBottom": 15,
-          "marginTop": 15,
-        }
-      }
-    >
       <Text
         accessible={true}
         allowFontScaling={true}
@@ -274,7 +264,47 @@ exports[`renders list of titles 1`] = `
           }
         }
       >
-        Source code
+        Icons8
+      </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "marginBottom": 15,
+          "marginTop": 15,
+        }
+      }
+    >
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 14,
+            "marginBottom": 10,
+          }
+        }
+      >
+        Source code:
+      </Text>
+      <Text
+        accessible={true}
+        allowFontScaling={true}
+        ellipsizeMode="tail"
+        onPress={[Function]}
+        style={
+          Object {
+            "color": "white",
+            "fontSize": 16,
+            "marginBottom": 10,
+            "textDecorationLine": "underline",
+          }
+        }
+      >
+        react-native-omdb-viewer
       </Text>
     </View>
   </View>

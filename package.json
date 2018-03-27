@@ -2,6 +2,19 @@
   "name": "omdb-native-viewer",
   "version": "0.1.0",
   "private": true,
+  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
+  "scripts": {
+    "start": "react-native-scripts start",
+    "eject": "react-native-scripts eject",
+    "android": "react-native-scripts android",
+    "ios": "react-native-scripts ios",
+    "test": "node node_modules/jest/bin/jest.js",
+    "prettier": "prettier --write src/*.js src/**/*.js",
+    "lint": "eslint src/",
+    "cloc": "cloc src/",
+    "devtools": "react-devtools",
+    "publish": "exp publish"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
@@ -18,64 +31,6 @@
     "react-native-scripts": "1.11.1",
     "react-native-test-utils": "^1.2.0",
     "react-test-renderer": "^16.2.0"
-  },
-  "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
-  "scripts": {
-    "start": "react-native-scripts start",
-    "eject": "react-native-scripts eject",
-    "android": "react-native-scripts android",
-    "ios": "react-native-scripts ios",
-    "test": "node node_modules/jest/bin/jest.js",
-    "prettier": "prettier --write src/*.js src/**/*.js",
-    "lint": "eslint src/",
-    "cloc": "cloc src/",
-    "devtools": "react-devtools"
-  },
-  "jest": {
-    "preset": "jest-expo"
-  },
-  "prettier": {
-    "semi": false,
-    "trailingComma": "es5"
-  },
-  "eslintConfig": {
-    "env": {
-      "react-native/react-native": true,
-      "jest/globals": true
-    },
-    "plugins": [
-      "react",
-      "react-native",
-      "jest"
-    ],
-    "extends": [
-      "eslint:recommended",
-      "plugin:react/recommended",
-      "plugin:react-native/all",
-      "plugin:jest/recommended"
-    ],
-    "parser": "babel-eslint",
-    "rules": {
-      "react-native/no-unused-styles": "warn",
-      "react-native/split-platform-components": "warn",
-      "no-console": [
-        "warn",
-        {
-          "allow": [
-            "warn",
-            "error"
-          ]
-        }
-      ]
-    },
-    "overrides": {
-      "files": [
-        "*.spec.js"
-      ],
-      "rules": {
-        "no-global-assign": 0
-      }
-    }
   },
   "dependencies": {
     "cuid": "^2.1.0",

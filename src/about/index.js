@@ -11,6 +11,7 @@ import {
   SOURCE_CODE_URL,
   OMDB_API_URL,
   CRNA_URL,
+  ICONS8_URL,
 } from "constants"
 import { AboutLink, AboutText, AboutLabel } from "./components"
 import { aboutStyles as style } from "styles"
@@ -36,9 +37,11 @@ export const about = ({ dispatchToPrev }) => (
       <AboutLabel>{"Credits:"}</AboutLabel>
       <AboutLink url={CRNA_URL}>{"Create React Native App"}</AboutLink>
       <AboutLink url={OMDB_API_URL}>{"Open Movie Database"}</AboutLink>
+      <AboutLink url={ICONS8_URL}>{"Icons8"}</AboutLink>
     </View>
     <View style={style.section}>
-      <AboutLink url={SOURCE_CODE_URL}>{"Source code"}</AboutLink>
+      <AboutLabel>{"Source code:"}</AboutLabel>
+      <AboutLink url={SOURCE_CODE_URL}>{"react-native-omdb-viewer"}</AboutLink>
     </View>
   </ScrollView>
 )

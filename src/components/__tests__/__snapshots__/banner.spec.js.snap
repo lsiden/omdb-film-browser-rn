@@ -26,20 +26,6 @@ exports[`renders 1`] = `
   >
     Search Open Movie Database
      
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      onPress={[Function]}
-      style={
-        Object {
-          "color": "white",
-          "fontSize": 12,
-        }
-      }
-    >
-      (OMDB)
-    </Text>
   </Text>
 </View>
 `;

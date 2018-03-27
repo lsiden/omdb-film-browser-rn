@@ -19,10 +19,3 @@ it("renders", () => {
   const wrapper = createWrapper()
   expect(wrapper.toJSON()).toMatchSnapshot()
 })
-
-// Can't simulate press
-it.skip("invokes dispatchToPrev when pressed", () => {
-  const wrapper = createWrapper()
-  wrapper.simulate("press")
-  expect(dispatchToPrev).toHaveBeenCalledTimes(1)
-})
