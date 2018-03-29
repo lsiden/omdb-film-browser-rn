@@ -1,19 +1,21 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { View } from "react-native"
 import Toaster from "react-native-toaster"
 import { StackNavigator } from "react-navigation"
+import { View } from "react-native"
 
 import FilmListScreen from "film-list-screen"
 import FilmDetails from "film-details-screen"
 import PosterScreen from "poster-screen"
 import AboutScreen from "about-screen"
 import { appStyles as style } from "./styles"
+import navOpts from "navigation-options"
 
-const navOptions = {
-  initialRouteName: "FilmList"
-}
+const navigatorOptions = ({ navigation }) => ({
+  initialRouteName: "FilmList",
+  navigationOptions: navOpts(navigation)
+})
 
 const Navigator = StackNavigator(
   {
@@ -22,7 +24,7 @@ const Navigator = StackNavigator(
     Poster: PosterScreen,
     About: AboutScreen
   },
-  navOptions
+  navigatorOptions
 )
 
 const omdbViewer = ({ toast }) => (

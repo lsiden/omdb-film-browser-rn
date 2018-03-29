@@ -1,6 +1,8 @@
 import React from "react"
 import { ScrollView, View, Image } from "react-native"
 
+import navOpts from "navigation-options"
+
 import {
   WESTSIDE_CONSULTING_URL,
   SOURCE_CODE_URL,
@@ -33,10 +35,13 @@ const AboutScreen = () => (
       <AboutLabel>{"Source code:"}</AboutLabel>
       <AboutLink url={SOURCE_CODE_URL}>{"react-native-omdb-viewer"}</AboutLink>
     </View>
-    <View style={style.section}>
-      <Image source={require("assets/film-reel-48-white-on-primary.png")} />
-    </View>
   </ScrollView>
 )
+
+AboutScreen.navigationOptions = ({ navigation }) => ({
+  ...navOpts(navigation),
+  title: "About Open Movie Database Browser",
+  headerRight: null
+})
 
 export default AboutScreen
