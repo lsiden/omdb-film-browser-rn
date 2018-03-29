@@ -16,7 +16,7 @@ Array [
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "#210d87",
+          "color": "lightgray",
           "fontSize": 14,
         }
       }

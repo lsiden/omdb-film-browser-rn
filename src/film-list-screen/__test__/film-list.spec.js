@@ -1,17 +1,18 @@
 import React from "react"
 import renderer from "react-native-test-utils"
 
-import { filmList as FilmList } from "../"
+import { filmList as FilmList } from "../film-list"
 
 jest.mock("components/pager")
 
 const films = require("__test__/__fixture__/films.json").Search
 
 const defaultProps = () => {
-  const dispatchViewDetails = jest.fn()
   return {
     films,
-    dispatchViewDetails,
+    navigation: {
+      navigate: () => {}
+    }
   }
 }
 

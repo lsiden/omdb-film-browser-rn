@@ -49,7 +49,7 @@ exports[`renders 1`] = `
       style={
         Array [
           Object {
-            "color": "black",
+            "color": "white",
             "fontSize": 24,
           },
           Array [

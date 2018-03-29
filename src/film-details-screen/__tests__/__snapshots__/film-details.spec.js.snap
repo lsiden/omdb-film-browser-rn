@@ -1,0 +1,105 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders 1`] = `
+<RCTScrollView>
+  <View>
+    <DetailHeader />
+    <Poster />
+    <FilmPlot />
+    <View
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#ffffff",
+            "borderColor": "#bbb",
+            "borderTopWidth": 1,
+            "marginTop": 20,
+          },
+          undefined,
+        ]
+      }
+    >
+      <DetailItem
+        detail={
+          Object {
+            "text": "Directed by Gillo Pontecorvo",
+          }
+        }
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Written by Franco Solinas, Franco Solinas (story), Gillo Pontecorvo (story)",
+          }
+        }
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Cast: Jean Martin, Yacef Saadi, Brahim Hadjadj, Tommaso Neri",
+          }
+        }
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Language: French, Arabic, English",
+          }
+        }
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Awards: Nominated for 3 Oscars. Another 9 wins & 5 nominations.",
+          }
+        }
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Run Time: 121 min",
+          }
+        }
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "IMDB Rating: 8.1/10",
+          }
+        }
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Box Office: $55,908",
+          }
+        }
+      />
+      <DetailItem
+        detail={
+          Object {
+            "cond": true,
+            "text": "Official Website",
+            "url": "http://rialtopictures.com/battle.html",
+          }
+        }
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "IMDB page",
+            "url": "https://www.imdb.com/title/tt0058946",
+          }
+        }
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "IMDB ID: tt0058946",
+          }
+        }
+      />
+    </View>
+  </View>
+</RCTScrollView>
+`;

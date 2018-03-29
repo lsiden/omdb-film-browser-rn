@@ -5,7 +5,6 @@ import { connect } from "react-redux"
 import GestureRecognizer from "react-native-swipe-gestures"
 
 import { fullScreenPosterStyles as style } from "styles"
-import { viewFilmDetails, updateIsFetching } from "actions"
 
 const hintWrapperStyle = {
   alignContent: "center"
@@ -17,9 +16,13 @@ const hintStyle = {
   textAlign: "center"
 }
 
-export const fullScreenPoster = ({ uri, dispatchToDetails }) => {
+export const posterScreen = ({ navigation }) => {
+  const { uri } = navigation.state
   return uri ? (
-    <GestureRecognizer style={style.wrapper} onSwipe={dispatchToDetails}>
+    <GestureRecognizer
+      style={style.wrapper}
+      onSwipe={navigation.navigate("Details")}
+    >
       <Image
         source={{ uri }}
         style={style.poster}
@@ -33,19 +36,10 @@ export const fullScreenPoster = ({ uri, dispatchToDetails }) => {
   ) : null
 }
 
-fullScreenPoster.propTypes = {
-  uri: PropTypes.string.isRequired,
-  dispatchToDetails: PropTypes.func.isRequired
+posterScreen.propTypes = {
+  navigation: PropTypes.object.isRequired
 }
 
-export default connect(
-  state => ({
-    uri: (state.poster || {}).uri
-  }),
-  dispatch => ({
-    dispatchToDetails: () => {
-      dispatch(updateIsFetching(false))
-      dispatch(viewFilmDetails())
-    }
-  })
-)(fullScreenPoster)
+export default connect(state => ({
+  uri: (state.poster || {}).uri
+}))(posterScreen)

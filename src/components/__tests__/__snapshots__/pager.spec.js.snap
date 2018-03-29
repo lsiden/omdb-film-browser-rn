@@ -96,7 +96,7 @@ exports[`first page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "white",
+                  "color": "#fff8",
                   "fontSize": 25,
                 },
                 Array [
@@ -230,7 +230,7 @@ exports[`first page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "white",
+                  "color": "#fff8",
                   "fontSize": 25,
                 },
                 Array [
@@ -360,7 +360,7 @@ exports[`first page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "black",
+                  "color": "white",
                   "fontSize": 25,
                 },
                 Array [
@@ -490,7 +490,7 @@ exports[`first page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "black",
+                  "color": "white",
                   "fontSize": 25,
                 },
                 Array [
@@ -555,7 +555,7 @@ exports[`first page 1`] = `
     style={
       Array [
         Object {
-          "color": "#210d87",
+          "color": "lightgray",
           "fontSize": 14,
         },
         Object {
@@ -661,7 +661,7 @@ exports[`internal page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "black",
+                  "color": "white",
                   "fontSize": 25,
                 },
                 Array [
@@ -791,7 +791,7 @@ exports[`internal page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "black",
+                  "color": "white",
                   "fontSize": 25,
                 },
                 Array [
@@ -921,7 +921,7 @@ exports[`internal page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "black",
+                  "color": "white",
                   "fontSize": 25,
                 },
                 Array [
@@ -1051,7 +1051,7 @@ exports[`internal page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "black",
+                  "color": "white",
                   "fontSize": 25,
                 },
                 Array [
@@ -1116,7 +1116,7 @@ exports[`internal page 1`] = `
     style={
       Array [
         Object {
-          "color": "#210d87",
+          "color": "lightgray",
           "fontSize": 14,
         },
         Object {
@@ -1222,7 +1222,7 @@ exports[`last page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "black",
+                  "color": "white",
                   "fontSize": 25,
                 },
                 Array [
@@ -1352,7 +1352,7 @@ exports[`last page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "black",
+                  "color": "white",
                   "fontSize": 25,
                 },
                 Array [
@@ -1486,7 +1486,7 @@ exports[`last page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "white",
+                  "color": "#fff8",
                   "fontSize": 25,
                 },
                 Array [
@@ -1620,7 +1620,7 @@ exports[`last page 1`] = `
             style={
               Array [
                 Object {
-                  "color": "white",
+                  "color": "#fff8",
                   "fontSize": 25,
                 },
                 Array [
@@ -1685,7 +1685,7 @@ exports[`last page 1`] = `
     style={
       Array [
         Object {
-          "color": "#210d87",
+          "color": "lightgray",
           "fontSize": 14,
         },
         Object {

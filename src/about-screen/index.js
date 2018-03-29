@@ -1,11 +1,6 @@
 import React from "react"
-import PropTypes from "prop-types"
-import { ScrollView, View, Text, Image } from "react-native"
+import { ScrollView, View, Image } from "react-native"
 
-import { connect } from "react-redux"
-import { viewFilmList } from "actions"
-import BackButton from "components/back-button"
-import Filler from "components/filler"
 import {
   WESTSIDE_CONSULTING_URL,
   SOURCE_CODE_URL,
@@ -16,13 +11,8 @@ import {
 import { AboutLink, AboutText, AboutLabel } from "./components"
 import { aboutStyles as style } from "styles"
 
-export const about = ({ dispatchToPrev }) => (
+const AboutScreen = () => (
   <ScrollView style={style.wrapper}>
-    <View style={style.titleWrapper}>
-      <BackButton dispatchToPrev={dispatchToPrev} color={"white"} />
-      <Text style={style.title}>{"About"}</Text>
-      <Filler />
-    </View>
     <View style={style.section}>
       <AboutLabel>{"Written By:"}</AboutLabel>
       <AboutText>{"Lawrence Siden"}</AboutText>
@@ -49,17 +39,4 @@ export const about = ({ dispatchToPrev }) => (
   </ScrollView>
 )
 
-about.propTypes = {
-  dispatchToPrev: PropTypes.func.isRequired
-}
-
-export default connect(
-  state => ({
-    filmDetails: state.filmDetails
-  }),
-  dispatch => ({
-    dispatchToPrev: () => {
-      dispatch(viewFilmList())
-    }
-  })
-)(about)
+export default AboutScreen

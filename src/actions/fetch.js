@@ -54,7 +54,6 @@ export const fetchFilmDetails = id => dispatch => {
     .then(res => res.json())
     .then(res => {
       dispatch(updateFilmDetails(res))
-      dispatch(updateIsFetching(false))
     })
     .catch(e => {
       console.error(e)

@@ -14,7 +14,7 @@ exports[`renders 1`] = `
   onResponderTerminationRequest={[Function]}
   onStartShouldSetResponder={[Function]}
   onStartShouldSetResponderCapture={[Function]}
-  onSwipe={[MockFunction]}
+  onSwipe={undefined}
   style={
     Object {
       "height": "100%",

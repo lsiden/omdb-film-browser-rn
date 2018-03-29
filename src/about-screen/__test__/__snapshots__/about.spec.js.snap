@@ -15,119 +15,6 @@ exports[`renders list of titles 1`] = `
     <View
       style={
         Object {
-          "flexDirection": "row",
-          "justifyContent": "space-between",
-          "marginTop": 20,
-        }
-      }
-    >
-      <View
-        accessibilityComponentType={undefined}
-        accessibilityLabel={undefined}
-        accessibilityTraits={undefined}
-        accessible={true}
-        hasTVPreferredFocus={undefined}
-        hitSlop={undefined}
-        isTVSelectable={true}
-        nativeID={undefined}
-        onLayout={undefined}
-        onResponderGrant={[Function]}
-        onResponderMove={[Function]}
-        onResponderRelease={[Function]}
-        onResponderTerminate={[Function]}
-        onResponderTerminationRequest={[Function]}
-        onStartShouldSetResponder={[Function]}
-        style={
-          Object {
-            "marginLeft": 5,
-          }
-        }
-        testID={undefined}
-        tvParallaxProperties={undefined}
-      >
-        <View
-          onPress={undefined}
-          style={
-            Array [
-              false,
-              false,
-              false,
-              Object {
-                "alignItems": "center",
-                "backgroundColor": "transparent",
-                "justifyContent": "center",
-              },
-              undefined,
-            ]
-          }
-          underlayColor="white"
-        >
-          <Text
-            accessible={true}
-            allowFontScaling={false}
-            ellipsizeMode="tail"
-            style={
-              Array [
-                Object {
-                  "color": "white",
-                  "fontSize": 24,
-                },
-                Array [
-                  Object {
-                    "backgroundColor": "transparent",
-                  },
-                  undefined,
-                ],
-                Object {
-                  "fontFamily": "Material Icons",
-                  "fontStyle": "normal",
-                  "fontWeight": "normal",
-                },
-              ]
-            }
-          >
-            
-          </Text>
-        </View>
-      </View>
-      <Text
-        accessible={true}
-        allowFontScaling={true}
-        ellipsizeMode="tail"
-        style={
-          Object {
-            "color": "white",
-            "fontSize": 18,
-            "marginBottom": 10,
-          }
-        }
-      >
-        About
-      </Text>
-      <View
-        style={
-          Object {
-            "width": 24,
-          }
-        }
-      >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          style={
-            Object {
-              "color": "transparent",
-            }
-          }
-        >
-          x
-        </Text>
-      </View>
-    </View>
-    <View
-      style={
-        Object {
           "alignItems": "center",
           "marginBottom": 15,
           "marginTop": 15,
@@ -306,6 +193,23 @@ exports[`renders list of titles 1`] = `
       >
         react-native-omdb-viewer
       </Text>
+    </View>
+    <View
+      style={
+        Object {
+          "alignItems": "center",
+          "marginBottom": 15,
+          "marginTop": 15,
+        }
+      }
+    >
+      <Image
+        source={
+          Object {
+            "testUri": "../../../src/assets/film-reel-48-white-on-primary.png",
+          }
+        }
+      />
     </View>
   </View>
 </RCTScrollView>

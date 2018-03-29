@@ -3,12 +3,11 @@ import renderer from "react-native-test-utils"
 
 import BackButton from "../back-button"
 
-let dispatchToPrev
-
 const defaultProps = () => {
-  dispatchToPrev = jest.fn()
   return {
-    dispatchToPrev,
+    navigation: {
+      goBack: () => {}
+    }
   }
 }
 

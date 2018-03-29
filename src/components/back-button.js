@@ -6,9 +6,9 @@ import { TouchableHighlight } from "react-native"
 const style = {
   marginLeft: 5
 }
-const BackButton = ({ dispatchToPrev, color }) => (
+const BackButton = ({ navigation, color }) => (
   <TouchableHighlight
-    onPress={dispatchToPrev}
+    onPress={navigation.goBack()}
     activeOpacity={0.5}
     style={style}
   >
@@ -17,8 +17,8 @@ const BackButton = ({ dispatchToPrev, color }) => (
 )
 
 BackButton.propTypes = {
-  color: PropTypes.string,
-  dispatchToPrev: PropTypes.func.isRequired
+  navigation: PropTypes.object.isRequired,
+  color: PropTypes.string
 }
 
 BackButton.defaultProps = {
