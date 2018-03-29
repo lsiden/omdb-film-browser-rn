@@ -1,5 +1,5 @@
 import React from "react"
-import { ScrollView, View, Image } from "react-native"
+import { ScrollView, View } from "react-native"
 
 import navOpts from "navigation-options"
 

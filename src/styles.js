@@ -122,10 +122,13 @@ const aboutTextStyle = [
 export const aboutStyles = StyleSheet.create({
   text: StyleSheet.flatten(aboutTextStyle),
   wrapper: {
-    height: "99%",
+    height: "100%",
     alignContent: "flex-start",
     backgroundColor: primaryColor,
-    marginTop: 5
+    borderTopColor: "white",
+    borderStyle: "solid",
+    borderTopWidth: 2,
+    paddingTop: 30
   },
   titleWrapper: {
     flexDirection: "row",
