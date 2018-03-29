@@ -1,12 +1,11 @@
 import React from "react"
 import renderer from "react-native-test-utils"
 
-import { banner as Banner } from "../banner"
+import Banner from "../banner"
 
 const defaultProps = () => {
   return {
-    displayInfoIcon: false,
-    dispatchViewAbout: jest.fn(),
+    onPressAbout: () => {}
   }
 }
 

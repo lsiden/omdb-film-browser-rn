@@ -8,7 +8,7 @@ import Pager from "components/pager"
 import { appStyles as style } from "styles"
 
 export const filmList = ({ films, totalResults, navigation }) => (
-  <React.Fragment>
+  <View>
     <View style={style.messageWrapper}>
       <Text style={style.message}>{`Found ${totalResults} results.`}</Text>
     </View>
@@ -23,18 +23,16 @@ export const filmList = ({ films, totalResults, navigation }) => (
       ))}
     </List>
     <Pager />
-  </React.Fragment>
+  </View>
 )
 
 filmList.propTypes = {
   films: PropTypes.arrayOf(PropTypes.object),
   totalResults: PropTypes.number,
-  isFetching: PropTypes.bool,
   navigation: PropTypes.object.isRequired
 }
 filmList.defaultProps = {
-  films: [],
-  isFetching: false
+  films: []
 }
 
 export default connect(state => ({

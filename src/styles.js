@@ -2,7 +2,7 @@
 
 import { StyleSheet } from "react-native"
 
-const primaryColor = "#05347f"
+export const primaryColor = "#05347f"
 
 export const appStyles = StyleSheet.create({
   wrapper: {
