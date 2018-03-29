@@ -6,8 +6,11 @@ exports[`renders list of titles 1`] = `
     Object {
       "alignContent": "flex-start",
       "backgroundColor": "#05347f",
-      "height": "99%",
-      "marginTop": 5,
+      "borderStyle": "solid",
+      "borderTopColor": "white",
+      "borderTopWidth": 2,
+      "height": "100%",
+      "paddingTop": 30,
     }
   }
 >
@@ -193,23 +196,6 @@ exports[`renders list of titles 1`] = `
       >
         react-native-omdb-viewer
       </Text>
-    </View>
-    <View
-      style={
-        Object {
-          "alignItems": "center",
-          "marginBottom": 15,
-          "marginTop": 15,
-        }
-      }
-    >
-      <Image
-        source={
-          Object {
-            "testUri": "../../../src/assets/film-reel-48-white-on-primary.png",
-          }
-        }
-      />
     </View>
   </View>
 </RCTScrollView>

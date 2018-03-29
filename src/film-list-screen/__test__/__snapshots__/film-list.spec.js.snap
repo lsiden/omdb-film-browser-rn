@@ -1,7 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders list of titles 1`] = `
-Array [
+<View>
   <View
     style={
       Object {
@@ -23,7 +23,7 @@ Array [
     >
       Found undefined results.
     </Text>
-  </View>,
+  </View>
   <View
     style={
       Array [
@@ -2217,6 +2217,6 @@ Array [
         </View>
       </View>
     </View>
-  </View>,
-]
+  </View>
+</View>
 `;
