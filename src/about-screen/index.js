@@ -40,7 +40,7 @@ const AboutScreen = () => (
 
 AboutScreen.navigationOptions = ({ navigation }) => ({
   ...navOpts(navigation),
-  title: "About Open Movie Database Browser",
+  title: "About OMDB Browser",
   headerRight: null
 })
 
