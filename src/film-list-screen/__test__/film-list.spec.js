@@ -10,6 +10,8 @@ jest.mock("../search-bar-with-count", () => "SeearchBarWithCount")
 const defaultProps = () => {
   return {
     films,
+    pageNum: 1,
+    dispatchFetchPage: () => {},
     navigation: {
       navigate: () => {}
     }
