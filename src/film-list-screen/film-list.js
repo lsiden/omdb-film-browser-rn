@@ -1,21 +1,14 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { TouchableOpacity, FlatList } from "react-native"
-import { List, ListItem } from "react-native-elements"
+import { FlatList } from "react-native"
+import { List } from "react-native-elements"
 import cuid from "cuid"
 
 import { fetchPage } from "actions/fetch"
+import FilmListItem from "./film-list-item"
 import Header from "./header"
 import Footer from "./footer"
-
-const renderFilmSummary = (navigation, { item: filmSummary }) => (
-  <TouchableOpacity
-    onPress={() => navigation.navigate("FilmDetails", { filmSummary })}
-  >
-    <ListItem title={filmSummary.Title} subtitle={filmSummary.Year} />
-  </TouchableOpacity>
-)
 
 export const filmList = ({
   navigation,
@@ -27,12 +20,18 @@ export const filmList = ({
   <List>
     <FlatList
       data={films}
-      renderItem={renderFilmSummary.bind(null, navigation)}
+      renderItem={({ item }) => (
+        <FilmListItem
+          filmSummary={item}
+          onPress={() => navigation.navigate("FilmDetails", { item })}
+        />
+      )}
       keyExtractor={() => cuid.slug()}
       ListHeaderComponent={<Header totalResults={totalResults} />}
       ListFooterComponent={<Footer />}
       onEndReached={() => dispatchFetchPage(pageNum + 1)}
       onEndReachedThreshold={20}
+      initialNumToRender={30}
     />
   </List>
 )

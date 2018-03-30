@@ -5,7 +5,7 @@ import Toaster from "react-native-toaster"
 import { StackNavigator } from "react-navigation"
 
 import FilmListScreen from "film-list-screen"
-import FilmDetails from "film-details-screen"
+import FilmDetailsScreen from "film-details-screen"
 import PosterScreen from "poster-screen"
 import AboutScreen from "about-screen"
 import navOpts from "navigation-options"
@@ -18,7 +18,7 @@ const navigatorOptions = ({ navigation }) => ({
 const Navigator = StackNavigator(
   {
     FilmList: FilmListScreen,
-    FilmDetails: FilmDetails,
+    FilmDetails: FilmDetailsScreen,
     Poster: PosterScreen,
     About: AboutScreen
   },

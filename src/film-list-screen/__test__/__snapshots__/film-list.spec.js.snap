@@ -15,6 +15,7 @@ exports[`renders list of titles 1`] = `
   }
 >
   <RCTScrollView
+    ListFooterComponent={<Footer />}
     ListHeaderComponent={
       <Header
         totalResults={undefined}
@@ -98,13 +99,13 @@ exports[`renders list of titles 1`] = `
     getItem={[Function]}
     getItemCount={[Function]}
     horizontal={false}
-    initialNumToRender={10}
+    initialNumToRender={30}
     keyExtractor={[Function]}
     maxToRenderPerBatch={10}
     numColumns={1}
     onContentSizeChange={[Function]}
     onEndReached={[Function]}
-    onEndReachedThreshold={10}
+    onEndReachedThreshold={20}
     onLayout={[Function]}
     onMomentumScrollEnd={[Function]}
     onScroll={[Function]}
@@ -2355,6 +2356,12 @@ exports[`renders list of titles 1`] = `
             </View>
           </View>
         </View>
+      </View>
+      <View
+        onLayout={[Function]}
+        style={null}
+      >
+        <Footer />
       </View>
     </View>
   </RCTScrollView>
