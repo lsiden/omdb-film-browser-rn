@@ -7,6 +7,8 @@ test("queryFetch()(dispatch) invokes dispatch() with ActionTypes.VIEW_FILM_LIST"
   const dispatch = jest.fn()
   const response = {
     Search: ["Rocky Horror", "Halloween"],
+    pageNum: 1,
+    numPages: 99
   }
   response.json = () => Promise.resolve(response)
   fetch = jest.fn().mockImplementation(() => Promise.resolve(response))
@@ -15,7 +17,9 @@ test("queryFetch()(dispatch) invokes dispatch() with ActionTypes.VIEW_FILM_LIST"
       type: ActionTypes.UPDATE_FILMS,
       data: {
         films: response.Search,
-      },
+        pageNum: 1,
+        numPages: 99
+      }
     })
   })
 })
@@ -29,8 +33,8 @@ test("fetchFilmDetails()(dispatch) invokes dispatch() with ActionTypes.UPDATE_FI
     expect(dispatch).toHaveBeenCalledWith({
       type: ActionTypes.UPDATE_FILM_DETAILS,
       data: {
-        filmDetails: response,
-      },
+        filmDetails: response
+      }
     })
   })
 })

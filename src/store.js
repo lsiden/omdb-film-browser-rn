@@ -14,19 +14,27 @@ const store = createStore(reduce, compose(applyMiddleware(thunk)))
 export const getStore = () => store
 export const getState = store.getState
 
+function updateFilms(state, data) {
+  if (!state.films || !state.films.length || data.pageNum === 1) {
+    return { ...state, ...data }
+  } else {
+    return {
+      ...state,
+      films: state.films.concat(data.films),
+      pageNum: data.pageNum
+    }
+  }
+}
+
 export function reduce(state = initialState, action) {
   debug("action", action)
   const { type, data } = action
   switch (type) {
-    case ActionTypes.VIEW_FILM_LIST:
-    case ActionTypes.VIEW_FILM_DETAILS:
-    case ActionTypes.UPDATE_FILMS:
-    case ActionTypes.VIEW_POSTER:
-    case ActionTypes.VIEW_ABOUT:
     case ActionTypes.UPDATE_FILM_DETAILS:
     case ActionTypes.UPDATE_TOAST:
-    case ActionTypes.UPDATE_IS_FETCHING:
       return { ...state, ...data }
+    case ActionTypes.UPDATE_FILMS:
+      return updateFilms(state, data)
     default:
       return state
   }
