@@ -5,15 +5,8 @@ import { StyleSheet } from "react-native"
 export const primaryColor = "#05347f"
 
 export const appStyles = StyleSheet.create({
-  wrapper: {
-    flex: 0,
-    marginTop: 20,
-    backgroundColor: primaryColor,
-    height: "100%"
-  },
   message: {
-    fontSize: 14,
-    color: "lightgray"
+    fontSize: 14
   },
   messageWrapper: {
     marginTop: 5,
@@ -53,6 +46,10 @@ export const detailStyles = StyleSheet.create({
     marginLeft: 10,
     color: "white"
   },
+  wrapper: {
+    backgroundColor: primaryColor,
+    padding: 10
+  },
   year: {
     fontSize: 16,
     color: "lightgray"
@@ -68,6 +65,9 @@ export const detailStyles = StyleSheet.create({
   plotUnavailable: {
     color: "darkgray",
     textAlign: "center"
+  },
+  item: {
+    backgroundColor: "lightblue"
   }
 })
 
@@ -88,14 +88,11 @@ export const pagerStyles = StyleSheet.create({
 })
 
 export const fullScreenPosterStyles = StyleSheet.create({
-  wrapper: {
-    height: "100%",
-    width: "100%"
-  },
   poster: {
     flex: 1,
     height: undefined,
-    width: undefined
+    width: undefined,
+    alignItems: "flex-start"
   }
 })
 

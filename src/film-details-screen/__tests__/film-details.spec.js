@@ -1,7 +1,7 @@
 import React from "react"
 import renderer from "react-native-test-utils"
 
-import FilmDetails from "../film-details"
+import { filmDetails as FilmDetails } from "../film-details"
 
 const details = require("__test__/__fixture__/film-details.json")
 

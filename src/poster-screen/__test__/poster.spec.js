@@ -1,7 +1,7 @@
 import React from "react"
 import renderer from "react-native-test-utils"
 
-import { posterScreen as PosterScreen } from "../"
+import PosterScreen from "../"
 
 const defaultProps = () => {
   return {

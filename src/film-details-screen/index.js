@@ -4,58 +4,63 @@ import { connect } from "react-redux"
 
 import LoadingIndicator from "components/loading-indicator"
 import { fetchFilmDetails } from "actions/fetch"
+import { updateFilmDetails } from "actions"
 import FilmDetails from "./film-details"
+import getTitle from "util/get-title"
+
+import navOpts from "navigation-options"
 
 export class filmDetailsScreen extends React.Component {
   constructor(props) {
     super(props)
-    this.setState({
-      isFetching: false
-    })
-  }
-
-  componentWillMount() {
-    const { filmDetails, navigation } = this.props
-    const { filmSummary } = navigation.state
-
-    if (!filmDetails) {
-      fetchFilmDetails(filmSummary.imdbID)
-      this.setState({ isFetching: true })
-    }
-  }
-
-  componentWillReceiveProps(nextProps) {
-    if (!this.props.filmDetails && nextProps.filmDetails) {
-      this.setState({ isFetching: false })
-    }
+    const {
+      navigation,
+      dispatchFetchFilmDetails,
+      dispatchResetFilmDetails
+    } = props
+    const filmSummary = navigation.getParam("filmSummary", {})
+    const { imdbID } = filmSummary
+    dispatchResetFilmDetails()
+    imdbID && dispatchFetchFilmDetails(filmSummary.imdbID)
   }
 
   render() {
-    const { isFetching } = this.state
-
-    if (isFetching) {
-      return <LoadingIndicator />
-    } else {
-      return <FilmDetails />
-    }
+    const { filmDetails, navigation } = this.props
+    return filmDetails ? (
+      <FilmDetails
+        details={filmDetails}
+        onPressPoster={() =>
+          navigation.navigate("Poster", {
+            uri: filmDetails.Poster,
+            title: getTitle(filmDetails)
+          })
+        }
+      />
+    ) : (
+      <LoadingIndicator />
+    )
   }
 }
 
+filmDetailsScreen.navigationOptions = ({ navigation }) => ({
+  ...navOpts(navigation),
+  title: getTitle(navigation.getParam("filmSummary", {})),
+  headerRight: null
+})
+
 filmDetailsScreen.propTypes = {
   filmDetails: PropTypes.object,
-  navigation: PropTypes.object.isRequired
-}
-
-filmDetailsScreen.defaultProps = {
-  isFetching: false
+  navigation: PropTypes.object.isRequired,
+  dispatchFetchFilmDetails: PropTypes.func.isRequired,
+  dispatchResetFilmDetails: PropTypes.func.isRequired
 }
 
 export default connect(
   state => ({
-    filmDetails: state.filmDetails || {},
-    isFetching: state.isFetching
+    filmDetails: state.filmDetails
   }),
   dispatch => ({
+    dispatchResetFilmDetails: () => dispatch(updateFilmDetails(null)),
     dispatchFetchFilmDetails: imdbID => dispatch(fetchFilmDetails(imdbID))
   })
 )(filmDetailsScreen)

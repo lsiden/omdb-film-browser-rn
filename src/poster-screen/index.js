@@ -1,45 +1,29 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Image, Text, View } from "react-native"
-import { connect } from "react-redux"
-import GestureRecognizer from "react-native-swipe-gestures"
+import { Image } from "react-native"
 
 import { fullScreenPosterStyles as style } from "styles"
+import navOpts from "navigation-options"
 
-const hintWrapperStyle = {
-  alignContent: "center"
-}
-const hintStyle = {
-  color: "darkgray",
-  marginTop: 5,
-  marginBottom: 5,
-  textAlign: "center"
-}
-
-export const posterScreen = ({ navigation }) => {
-  const { uri } = navigation.state
-  return uri ? (
-    <GestureRecognizer
-      style={style.wrapper}
-      onSwipe={navigation.navigate("Details")}
-    >
-      <Image
-        source={{ uri }}
-        style={style.poster}
-        resizeMode={"contain"}
-        loadingIndicatorSource={require("assets/spinningwheel-300x216.gif")}
-      />
-      <View hintWrapperStyle={hintWrapperStyle}>
-        <Text style={hintStyle}>{"Dismiss by swiping."}</Text>
-      </View>
-    </GestureRecognizer>
+const PosterScreen = ({ navigation }) => {
+  const uri = navigation.getParam("uri")
+  return uri && uri !== "N/A" ? (
+    <Image
+      source={{ uri }}
+      style={style.poster}
+      resizeMode={"contain"}
+      loadingIndicatorSource={require("assets/spinningwheel-300x216.gif")}
+    />
   ) : null
 }
 
-posterScreen.propTypes = {
+PosterScreen.propTypes = {
   navigation: PropTypes.object.isRequired
 }
 
-export default connect(state => ({
-  uri: (state.poster || {}).uri
-}))(posterScreen)
+PosterScreen.navigationOptions = ({ navigation }) => ({
+  ...navOpts(navigation),
+  title: navigation.getParam("title")
+})
+
+export default PosterScreen

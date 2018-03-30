@@ -1,15 +1,13 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Image, TouchableOpacity } from "react-native"
-import { connect } from "react-redux"
 
 import { detailStyles as style } from "styles"
-import { viewPoster } from "actions"
 import { detailExists } from "./detail-items"
 
-export const poster = ({ uri, dispatchViewPoster }) =>
+const Poster = ({ uri, onPress }) =>
   detailExists(uri) && (
-    <TouchableOpacity onPress={() => dispatchViewPoster(uri)}>
+    <TouchableOpacity onPress={onPress}>
       <Image
         source={{ uri }}
         style={style.poster}
@@ -19,16 +17,9 @@ export const poster = ({ uri, dispatchViewPoster }) =>
     </TouchableOpacity>
   )
 
-poster.propTypes = {
+Poster.propTypes = {
   uri: PropTypes.string,
-  dispatchViewPoster: PropTypes.func.isRequired
+  onPress: PropTypes.func.isRequired
 }
 
-export default connect(
-  state => ({
-    uri: (state.filmDetails || {}).Poster
-  }),
-  dispatch => ({
-    dispatchViewPoster: uri => dispatch(viewPoster(uri))
-  })
-)(poster)
+export default Poster

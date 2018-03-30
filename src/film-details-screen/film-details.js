@@ -3,19 +3,18 @@ import PropTypes from "prop-types"
 import { ScrollView } from "react-native"
 import { List } from "react-native-elements"
 
-import DetailHeader from "./detail-header"
 import Poster from "./poster"
 import FilmPlot from "./film-plot"
 import DetailItem from "./detail-item"
 import detailItems from "./detail-items"
+import { detailStyles as style } from "styles"
 
 let i = 1
 const genKey = () => `item-${i++}`
 
-const FilmDetails = ({ details }) => (
-  <ScrollView>
-    <DetailHeader />
-    <Poster />
+const FilmDetails = ({ details, onPressPoster }) => (
+  <ScrollView style={style.wrapper}>
+    <Poster uri={details.Poster} onPress={onPressPoster} />
     <FilmPlot />
     <List>
       {detailItems(details).map(detail => (
@@ -26,7 +25,8 @@ const FilmDetails = ({ details }) => (
 )
 
 FilmDetails.propTypes = {
-  details: PropTypes.object.isRequired
+  details: PropTypes.object.isRequired,
+  onPressPoster: PropTypes.func.isRequired
 }
 
 export default FilmDetails

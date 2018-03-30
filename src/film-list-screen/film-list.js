@@ -16,7 +16,7 @@ export const filmList = ({ films, totalResults, navigation }) => (
       {films.map(filmSummary => (
         <TouchableOpacity
           key={filmSummary.imdbID}
-          onPress={() => navigation.navigate("Details", { filmSummary })}
+          onPress={() => navigation.navigate("FilmDetails", { filmSummary })}
         >
           <ListItem title={filmSummary.Title} subtitle={filmSummary.Year} />
         </TouchableOpacity>
