@@ -1,7 +1,7 @@
 import React from "react"
 import renderer from "react-native-test-utils"
 
-import SeearchBarWithCount from "../search-bar-with-count"
+import { header as Header } from "../header"
 
 jest.mock("components/search-bar", () => "SearchBar")
 
@@ -12,9 +12,9 @@ const defaultProps = () => {
 }
 
 const createWrapper = (props = {}) =>
-  renderer(<SeearchBarWithCount {...{ ...defaultProps(), ...props }} />)
+  renderer(<Header {...{ ...defaultProps(), ...props }} />)
 
-it("renders list of titles", () => {
+it("renders", () => {
   const wrapper = createWrapper()
   expect(wrapper.toJSON()).toMatchSnapshot()
 })

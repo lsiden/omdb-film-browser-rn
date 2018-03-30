@@ -16,7 +16,7 @@ exports[`renders list of titles 1`] = `
 >
   <RCTScrollView
     ListHeaderComponent={
-      <SeearchBarWithCount
+      <Header
         totalResults={undefined}
       />
     }
@@ -104,7 +104,7 @@ exports[`renders list of titles 1`] = `
     numColumns={1}
     onContentSizeChange={[Function]}
     onEndReached={[Function]}
-    onEndReachedThreshold={2}
+    onEndReachedThreshold={10}
     onLayout={[Function]}
     onMomentumScrollEnd={[Function]}
     onScroll={[Function]}
@@ -122,7 +122,7 @@ exports[`renders list of titles 1`] = `
         onLayout={[Function]}
         style={null}
       >
-        <SeearchBarWithCount
+        <Header
           totalResults={undefined}
         />
       </View>

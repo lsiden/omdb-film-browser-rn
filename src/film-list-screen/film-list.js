@@ -3,9 +3,11 @@ import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { TouchableOpacity, FlatList } from "react-native"
 import { List, ListItem } from "react-native-elements"
+import cuid from "cuid"
 
 import { fetchPage } from "actions/fetch"
-import SeearchBarWithCount from "./search-bar-with-count"
+import Header from "./header"
+import Footer from "./footer"
 
 const renderFilmSummary = (navigation, { item: filmSummary }) => (
   <TouchableOpacity
@@ -26,10 +28,11 @@ export const filmList = ({
     <FlatList
       data={films}
       renderItem={renderFilmSummary.bind(null, navigation)}
-      keyExtractor={film => film.imdbID}
-      ListHeaderComponent={<SeearchBarWithCount totalResults={totalResults} />}
+      keyExtractor={() => cuid.slug()}
+      ListHeaderComponent={<Header totalResults={totalResults} />}
+      ListFooterComponent={<Footer />}
       onEndReached={() => dispatchFetchPage(pageNum + 1)}
-      onEndReachedThreshold={10}
+      onEndReachedThreshold={20}
     />
   </List>
 )

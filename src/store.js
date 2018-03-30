@@ -31,6 +31,7 @@ export function reduce(state = initialState, action) {
   const { type, data } = action
   switch (type) {
     case ActionTypes.UPDATE_FILM_DETAILS:
+    case ActionTypes.UPDATE_FETCHING:
     case ActionTypes.UPDATE_TOAST:
       return { ...state, ...data }
     case ActionTypes.UPDATE_FILMS:

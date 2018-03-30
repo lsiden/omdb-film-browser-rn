@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`renders list of titles 1`] = `
+exports[`renders 1`] = `
 <View
   style={
     Object {
@@ -30,7 +30,7 @@ exports[`renders list of titles 1`] = `
         }
       }
     >
-      Found 99 results.
+      Type part of a title.
     </Text>
   </View>
 </View>
