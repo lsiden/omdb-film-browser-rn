@@ -65,25 +65,6 @@ export const detailStyles = StyleSheet.create({
   plotUnavailable: {
     color: "darkgray",
     textAlign: "center"
-  },
-  item: {
-    backgroundColor: "lightblue"
-  }
-})
-
-export const pagerStyles = StyleSheet.create({
-  wrapper: {
-    flex: 0,
-    marginTop: 5,
-    marginBottom: 5
-  },
-  buttons: {
-    flexDirection: "row",
-    justifyContent: "space-around",
-    alignItems: "baseline"
-  },
-  message: {
-    textAlign: "center"
   }
 })
 

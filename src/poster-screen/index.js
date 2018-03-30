@@ -23,7 +23,8 @@ PosterScreen.propTypes = {
 
 PosterScreen.navigationOptions = ({ navigation }) => ({
   ...navOpts(navigation),
-  title: navigation.getParam("title")
+  title: navigation.getParam("title"),
+  headerRight: null
 })
 
 export default PosterScreen

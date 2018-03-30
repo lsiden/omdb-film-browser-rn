@@ -4,7 +4,6 @@ import { connect } from "react-redux"
 import { TouchableOpacity, Text, View } from "react-native"
 import { List, ListItem } from "react-native-elements"
 
-import Pager from "components/pager"
 import { appStyles as style } from "styles"
 
 export const filmList = ({ films, totalResults, navigation }) => (
@@ -22,7 +21,6 @@ export const filmList = ({ films, totalResults, navigation }) => (
         </TouchableOpacity>
       ))}
     </List>
-    <Pager />
   </View>
 )
 
