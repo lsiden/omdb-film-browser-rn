@@ -6,9 +6,7 @@ import PosterScreen from "../"
 const defaultProps = () => {
   return {
     navigation: {
-      state: {
-        uri: "https://my.url.org"
-      },
+      getParam: () => "uri.to.image",
       navigate: () => {}
     }
   }

@@ -16,7 +16,6 @@ exports[`renders list of titles 1`] = `
       ellipsizeMode="tail"
       style={
         Object {
-          "color": "lightgray",
           "fontSize": 14,
         }
       }

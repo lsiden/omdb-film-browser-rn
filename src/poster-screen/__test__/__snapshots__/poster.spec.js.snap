@@ -1,69 +1,25 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders 1`] = `
-<View
-  onMoveShouldSetResponder={[Function]}
-  onMoveShouldSetResponderCapture={[Function]}
-  onResponderEnd={[Function]}
-  onResponderGrant={[Function]}
-  onResponderMove={[Function]}
-  onResponderReject={[Function]}
-  onResponderRelease={[Function]}
-  onResponderStart={[Function]}
-  onResponderTerminate={[Function]}
-  onResponderTerminationRequest={[Function]}
-  onStartShouldSetResponder={[Function]}
-  onStartShouldSetResponderCapture={[Function]}
-  onSwipe={undefined}
-  style={
+<Image
+  loadingIndicatorSource={
     Object {
-      "height": "100%",
-      "width": "100%",
+      "testUri": "../../../src/assets/spinningwheel-300x216.gif",
     }
   }
->
-  <Image
-    loadingIndicatorSource={
-      Object {
-        "testUri": "../../../src/assets/spinningwheel-300x216.gif",
-      }
+  resizeMode="contain"
+  source={
+    Object {
+      "uri": "uri.to.image",
     }
-    resizeMode="contain"
-    source={
-      Object {
-        "uri": "https://my.url.org",
-      }
+  }
+  style={
+    Object {
+      "alignItems": "flex-start",
+      "flex": 1,
+      "height": undefined,
+      "width": undefined,
     }
-    style={
-      Object {
-        "flex": 1,
-        "height": undefined,
-        "width": undefined,
-      }
-    }
-  />
-  <View
-    hintWrapperStyle={
-      Object {
-        "alignContent": "center",
-      }
-    }
-  >
-    <Text
-      accessible={true}
-      allowFontScaling={true}
-      ellipsizeMode="tail"
-      style={
-        Object {
-          "color": "darkgray",
-          "marginBottom": 5,
-          "marginTop": 5,
-          "textAlign": "center",
-        }
-      }
-    >
-      Dismiss by swiping.
-    </Text>
-  </View>
-</View>
+  }
+/>
 `;

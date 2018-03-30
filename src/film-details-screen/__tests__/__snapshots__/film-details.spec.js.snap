@@ -1,10 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders 1`] = `
-<RCTScrollView>
+<RCTScrollView
+  style={
+    Object {
+      "backgroundColor": "#05347f",
+      "padding": 10,
+    }
+  }
+>
   <View>
-    <DetailHeader />
-    <Poster />
+    <Poster
+      onPress={[Function]}
+      uri="https://images-na.ssl-images-amazon.com/images/M/MV5BYzliNzI5NzgtNDZmNy00NGU4LTg2OTQtMDEzZTRiNDU3ZTI1XkEyXkFqcGdeQXVyMDUyOTUyNQ@@._V1_SX300.jpg"
+    />
     <FilmPlot />
     <View
       style={

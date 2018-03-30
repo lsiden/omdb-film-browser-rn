@@ -1,7 +1,7 @@
 import React from "react"
 import renderer from "react-native-test-utils"
 
-import { filmDetails as FilmDetails } from "../film-details"
+import FilmDetails from "../film-details"
 
 const details = require("__test__/__fixture__/film-details.json")
 
@@ -12,7 +12,7 @@ jest.mock("film-details-screen/detail-item", () => "DetailItem")
 const defaultProps = () => {
   return {
     details,
-    dispatchViewList: jest.fn()
+    onPressPoster: () => {}
   }
 }
 
