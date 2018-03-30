@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders list of titles 1`] = `
+<View
+  style={
+    Object {
+      "borderBottomColor": "black",
+      "borderBottomWidth": 1,
+      "borderStyle": "solid",
+    }
+  }
+>
+  <SearchBar />
+  <View
+    style={
+      Object {
+        "paddingBottom": 2,
+        "paddingLeft": 20,
+        "paddingTop": 2,
+      }
+    }
+  >
+    <Text
+      accessible={true}
+      allowFontScaling={true}
+      ellipsizeMode="tail"
+      style={
+        Object {
+          "fontSize": 14,
+        }
+      }
+    >
+      Found 99 results.
+    </Text>
+  </View>
+</View>
+`;

@@ -5,6 +5,8 @@ import { filmList as FilmList } from "../film-list"
 
 const films = require("__test__/__fixture__/films.json").Search
 
+jest.mock("../search-bar-with-count", () => "SeearchBarWithCount")
+
 const defaultProps = () => {
   return {
     films,

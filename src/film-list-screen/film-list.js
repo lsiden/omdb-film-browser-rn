@@ -1,27 +1,28 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { TouchableOpacity, Text, View } from "react-native"
+import { TouchableOpacity, FlatList } from "react-native"
 import { List, ListItem } from "react-native-elements"
 
-import { appStyles as style } from "styles"
+import SeearchBarWithCount from "./search-bar-with-count"
+
+const renderFilmSummary = (navigation, { item: filmSummary }) => (
+  <TouchableOpacity
+    onPress={() => navigation.navigate("FilmDetails", { filmSummary })}
+  >
+    <ListItem title={filmSummary.Title} subtitle={filmSummary.Year} />
+  </TouchableOpacity>
+)
 
 export const filmList = ({ films, totalResults, navigation }) => (
-  <View>
-    <View style={style.messageWrapper}>
-      <Text style={style.message}>{`Found ${totalResults} results.`}</Text>
-    </View>
-    <List>
-      {films.map(filmSummary => (
-        <TouchableOpacity
-          key={filmSummary.imdbID}
-          onPress={() => navigation.navigate("FilmDetails", { filmSummary })}
-        >
-          <ListItem title={filmSummary.Title} subtitle={filmSummary.Year} />
-        </TouchableOpacity>
-      ))}
-    </List>
-  </View>
+  <List>
+    <FlatList
+      data={films}
+      renderItem={renderFilmSummary.bind(null, navigation)}
+      keyExtractor={film => film.imdbID}
+      ListHeaderComponent={<SeearchBarWithCount totalResults={totalResults} />}
+    />
+  </List>
 )
 
 filmList.propTypes = {

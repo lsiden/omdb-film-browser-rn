@@ -9,8 +9,9 @@ export const appStyles = StyleSheet.create({
     fontSize: 14
   },
   messageWrapper: {
-    marginTop: 5,
-    marginLeft: 10
+    paddingTop: 2,
+    paddingBottom: 2,
+    paddingLeft: 20
   },
   banner: {
     backgroundColor: primaryColor,
