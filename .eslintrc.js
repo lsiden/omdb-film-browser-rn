@@ -1,30 +1,31 @@
 module.exports = {
   env: {
     "react-native/react-native": true,
-    "jest/globals": true,
+    "jest/globals": true
   },
   plugins: ["react", "react-native", "jest"],
   extends: [
     "eslint:recommended",
     "plugin:react/recommended",
     "plugin:react-native/all",
-    "plugin:jest/recommended",
+    "plugin:jest/recommended"
   ],
   parser: "babel-eslint",
   rules: {
+    "react-native/no-color-literals": "off",
     "react-native/no-unused-styles": "warn",
     "react-native/split-platform-components": "warn",
     "no-console": [
       "warn",
       {
-        allow: ["warn", "error"],
-      },
-    ],
+        allow: ["warn", "error"]
+      }
+    ]
   },
   overrides: {
     files: ["*.spec.js"],
     rules: {
-      "no-global-assign": 0,
-    },
-  },
+      "no-global-assign": 0
+    }
+  }
 }

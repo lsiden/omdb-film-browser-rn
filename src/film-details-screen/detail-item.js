@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Linking } from "react-native"
 import { ListItem } from "react-native-elements"
 
-import { detailStyles as style } from "styles"
+import style from './style'
 import { detailExists } from "./detail-items"
 
 const DetailItem = ({ detail }) => {

@@ -4,13 +4,13 @@ import { Text } from "react-native"
 import { connect } from "react-redux"
 
 import { detailExists } from "./detail-items"
-import { detailStyles as styles } from "styles"
+import style from "./style"
 
 export const filmPlot = ({ plot }) => {
   if (!detailExists(plot)) {
-    return <Text style={styles.plotUnavailable}>Plot unavailable</Text>
+    return <Text style={style.plotUnavailable}>Plot unavailable</Text>
   }
-  return <Text style={styles.plot}>{plot}</Text>
+  return <Text style={style.plot}>{plot}</Text>
 }
 
 filmPlot.propTypes = {

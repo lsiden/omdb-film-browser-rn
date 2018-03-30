@@ -1,7 +1,8 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Text, Linking } from "react-native"
-import { aboutStyles as style } from "styles"
+
+import style from "./style"
 
 const childType = PropTypes.oneOfType([PropTypes.element, PropTypes.string])
   .isRequired

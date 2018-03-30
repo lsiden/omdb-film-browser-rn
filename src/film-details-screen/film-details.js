@@ -7,7 +7,7 @@ import Poster from "./poster"
 import FilmPlot from "./film-plot"
 import DetailItem from "./detail-item"
 import detailItems from "./detail-items"
-import { detailStyles as style } from "styles"
+import style from './style'
 
 let i = 1
 const genKey = () => `item-${i++}`

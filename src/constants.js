@@ -11,3 +11,5 @@ export const CRNA_URL =
   "https://github.com/react-community/create-react-native-app"
 export const ICONS8_URL = "https://icons8.com/"
 export const WESTSIDE_CONSULTING_URL = "http://westsideconsultingllc.com"
+
+export const primaryColor = "#05347f"

@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Image } from "react-native"
 
-import { fullScreenPosterStyles as style } from "styles"
+import style from "./style"
 import navOpts from "navigation-options"
 
 const PosterScreen = ({ navigation }) => {

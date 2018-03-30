@@ -3,7 +3,7 @@ import React from "react"
 import { TouchableHighlight } from "react-native"
 import { Icon } from "react-native-elements"
 
-import { primaryColor } from "./styles"
+import { primaryColor } from "./constants"
 
 const navOptions = navigation => ({
   title: "Open Movie Database Browser",

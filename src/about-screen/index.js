@@ -1,8 +1,9 @@
 import React from "react"
 import { ScrollView, View } from "react-native"
 
+import style from "./style"
 import navOpts from "navigation-options"
-
+import { AboutLink, AboutText, AboutLabel } from "./components"
 import {
   WESTSIDE_CONSULTING_URL,
   SOURCE_CODE_URL,
@@ -10,8 +11,6 @@ import {
   CRNA_URL,
   ICONS8_URL
 } from "constants"
-import { AboutLink, AboutText, AboutLabel } from "./components"
-import { aboutStyles as style } from "styles"
 
 const AboutScreen = () => (
   <ScrollView style={style.wrapper}>

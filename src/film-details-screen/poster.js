@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Image, TouchableOpacity } from "react-native"
 
-import { detailStyles as style } from "styles"
+import style from './style'
 import { detailExists } from "./detail-items"
 
 const Poster = ({ uri, onPress }) =>
