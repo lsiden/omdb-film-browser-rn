@@ -36,7 +36,7 @@ const fetchQueryResults = (dispatch, query, pageNum) => {
     })
 }
 
-export const queryFetch = query => dispatch =>
+export const fetchQuery = query => dispatch =>
   fetchQueryResults(dispatch, query, 1)
 
 export const fetchPage = pageNum => dispatch => {
