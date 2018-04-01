@@ -5,52 +5,81 @@ import { FlatList } from "react-native"
 import { List } from "react-native-elements"
 import cuid from "cuid"
 
-import { fetchPage } from "actions/fetch"
+import { fetchPage, fetchFilmDetails } from "actions/fetch"
 import FilmListItem from "./film-list-item"
 import Header from "./header"
 import Footer from "./footer"
+import { updateFilmDetails } from "actions"
+
+/*
+TODO - Seeing console message:
+13:07:56: VirtualizedList: You have a large list that is slow to update - make sure your renderItem function renders components that follow React performance best practices like PureComponent, shouldComponentUpdate, etc. Object {
+13:07:56:   "contentLength": 2946,
+13:07:56:   "dt": 2493,
+13:07:56:   "prevDt": 7814,
+13:07:56: }
+*/
 
 export const filmList = ({
   navigation,
   films,
   totalResults,
-  pageNum,
-  dispatchFetchPage
-}) => (
-  <List>
-    <FlatList
-      data={films}
-      renderItem={({ item }) => (
-        <FilmListItem
-          filmSummary={item}
-          onPress={() => navigation.navigate("FilmDetails", { item })}
+  dispatchFetchPage,
+  dispatchFetchFilmDetails,
+  dispatchResetFilmDetails
+}) => {
+  const renderFilmListItem = props => {
+    const filmSummary = props.item
+    return (
+      <FilmListItem
+        filmSummary={filmSummary}
+        onPress={() => {
+          dispatchResetFilmDetails()
+          dispatchFetchFilmDetails(filmSummary.imdbID)
+          navigation.navigate("FilmDetails", { filmSummary })
+        }}
+      />
+    )
+  }
+  renderFilmListItem.propTypes = {
+    item: PropTypes.object.isRequired
+  }
+  return (
+    films && (
+      <List>
+        <FlatList
+          data={films}
+          renderItem={props => renderFilmListItem(props)}
+          keyExtractor={() => cuid.slug()}
+          ListHeaderComponent={<Header totalResults={totalResults} />}
+          ListFooterComponent={<Footer />}
+          onEndReached={() => dispatchFetchPage()}
         />
-      )}
-      keyExtractor={() => cuid.slug()}
-      ListHeaderComponent={<Header totalResults={totalResults} />}
-      ListFooterComponent={<Footer />}
-      onEndReached={() => dispatchFetchPage(pageNum + 1)}
-      onEndReachedThreshold={20}
-      initialNumToRender={30}
-    />
-  </List>
-)
+      </List>
+    )
+  )
+}
 
 filmList.propTypes = {
   navigation: PropTypes.object.isRequired,
   films: PropTypes.arrayOf(PropTypes.object),
   totalResults: PropTypes.number,
-  pageNum: PropTypes.number,
-  dispatchFetchPage: PropTypes.func.isRequired
+  dispatchFetchPage: PropTypes.func.isRequired,
+  dispatchFetchFilmDetails: PropTypes.func.isRequired,
+  dispatchResetFilmDetails: PropTypes.func.isRequired
+}
+filmList.defaultProps = {
+  isFetching: false
 }
 
 export default connect(
   state => ({
     films: state.films || [],
-    totalResults: state.totalResults || 0,
-    pageNum: state.pageNum || 0
+    totalResults: state.totalResults || 0
   }),
   dispatch => ({
-    dispatchFetchPage: pageNum => dispatch(fetchPage(pageNum))
+    dispatchFetchPage: () => dispatch(fetchPage()),
+    dispatchFetchFilmDetails: imdbID => dispatch(fetchFilmDetails(imdbID)),
+    dispatchResetFilmDetails: () => dispatch(updateFilmDetails(null))
   })
 )(filmList)

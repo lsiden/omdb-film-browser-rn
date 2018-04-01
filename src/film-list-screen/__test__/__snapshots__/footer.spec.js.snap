@@ -5,6 +5,8 @@ exports[`renders ActivityIndicator if isFetching is true 1`] = `
   style={
     Object {
       "alignItems": "center",
+      "borderTopWidth": 1,
+      "paddingVertical": 20,
     }
   }
 >

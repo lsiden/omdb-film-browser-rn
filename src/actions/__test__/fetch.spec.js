@@ -3,7 +3,7 @@ import { fetchQuery, fetchFilmDetails } from "../fetch"
 
 const filmDetails = require("__test__/__fixture__/film-details.json")
 
-test("fetchQuery()(dispatch) invokes dispatch() with ActionTypes.VIEW_FILM_LIST", () => {
+test("fetchQuery()(dispatch) invokes dispatch() with ActionTypes.UPDATE_FILMS", () => {
   const dispatch = jest.fn()
   const response = {
     Search: ["Rocky Horror", "Halloween"],

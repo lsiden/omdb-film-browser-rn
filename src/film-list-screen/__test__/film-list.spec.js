@@ -12,7 +12,10 @@ const defaultProps = () => {
   return {
     films,
     pageNum: 1,
+    isFetching: false,
     dispatchFetchPage: () => {},
+    dispatchFetchFilmDetails: () => {},
+    dispatchResetFilmDetails: () => {},
     navigation: {
       navigate: () => {}
     }

@@ -13,7 +13,7 @@ const style = StyleSheet.create({
   }
 })
 
-const footer = ({ isFetching }) =>
+export const footer = ({ isFetching }) =>
   isFetching && (
     <View style={style.wrapper}>
       <ActivityIndicator size="large" color={primaryColor} />
