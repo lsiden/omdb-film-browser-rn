@@ -5,7 +5,7 @@ import { FlatList } from "react-native"
 import { List } from "react-native-elements"
 import cuid from "cuid"
 
-import { fetchPage, fetchFilmDetails } from "actions/fetch"
+import { fetchQueryResultPage, fetchFilmDetails } from "actions/fetch"
 import FilmListItem from "./film-list-item"
 import Header from "./header"
 import Footer from "./footer"
@@ -78,7 +78,7 @@ export default connect(
     totalResults: state.totalResults || 0
   }),
   dispatch => ({
-    dispatchFetchPage: () => dispatch(fetchPage()),
+    dispatchFetchPage: () => dispatch(fetchQueryResultPage()),
     dispatchFetchFilmDetails: imdbID => dispatch(fetchFilmDetails(imdbID)),
     dispatchResetFilmDetails: () => dispatch(updateFilmDetails(null))
   })

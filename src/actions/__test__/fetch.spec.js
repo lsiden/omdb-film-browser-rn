@@ -1,9 +1,9 @@
 import ActionTypes from "../types"
-import { fetchQuery, fetchFilmDetails } from "../fetch"
+import { fetchNewQuery, fetchFilmDetails } from "../fetch"
 
 const filmDetails = require("__test__/__fixture__/film-details.json")
 
-test("fetchQuery()(dispatch) invokes dispatch() with ActionTypes.UPDATE_FILMS", () => {
+test("fetchNewQuery()(dispatch) invokes dispatch() with ActionTypes.UPDATE_FILMS", () => {
   const dispatch = jest.fn()
   const response = {
     Search: ["Rocky Horror", "Halloween"],
@@ -12,7 +12,7 @@ test("fetchQuery()(dispatch) invokes dispatch() with ActionTypes.UPDATE_FILMS", 
   }
   response.json = () => Promise.resolve(response)
   fetch = jest.fn().mockImplementation(() => Promise.resolve(response))
-  fetchQuery("a query")(dispatch).then(() => {
+  fetchNewQuery("a query")(dispatch).then(() => {
     expect(dispatch).toHaveBeenCalledWith({
       type: ActionTypes.UPDATE_FILMS,
       data: {

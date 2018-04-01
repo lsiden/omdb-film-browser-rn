@@ -6,7 +6,7 @@ import PropTypes from "prop-types"
 import { SearchBar } from "react-native-elements"
 import { Platform } from "react-native"
 
-import { fetchQuery } from "actions/fetch"
+import { fetchNewQuery } from "actions/fetch"
 
 export class searchBar extends React.Component {
   static propTypes = {
@@ -68,6 +68,6 @@ searchBar.defaultProps = {
 
 export default connect(null, dispatch => ({
   dispatchQuery: query => {
-    dispatch(fetchQuery(query))
+    dispatch(fetchNewQuery(query))
   }
 }))(searchBar)

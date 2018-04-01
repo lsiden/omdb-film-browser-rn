@@ -47,13 +47,13 @@ const fetchQueryResults = (dispatch, query, pageNum) => {
     })
 }
 
-export const fetchQuery = query => dispatch => {
-  console.log("fetchQuery()")
+export const fetchNewQuery = query => dispatch => {
+  console.log("fetchNewQuery()")
   return fetchQueryResults(dispatch, query, 1)
 }
 
-export const fetchPage = () => dispatch => {
-  console.log("fetchPage()")
+export const fetchQueryResultPage = () => dispatch => {
+  console.log("fetchQueryResultPage()")
   const { query, lastPageNumFetched, lastPage } = getState()
 
   if (0 < lastPageNumFetched && lastPageNumFetched <= lastPage) {
