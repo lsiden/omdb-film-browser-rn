@@ -13,7 +13,7 @@ function appendFilms(state, data) {
 }
 
 export function reduce(state = {}, action) {
-  console.log("action", action.type)
+  console.log("reduce(), action=", action.type)
   const { type, data } = action
   switch (type) {
     case ActionTypes.UPDATE_FILM_DETAILS:

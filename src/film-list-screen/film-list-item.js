@@ -4,16 +4,18 @@ import { connect } from "react-redux"
 import { TouchableOpacity } from "react-native"
 import { ListItem } from "react-native-elements"
 
-import { updateFilmDetails } from "actions"
 import { fetchFilmDetails } from "actions/fetch"
 
 export class filmListItem extends React.PureComponent {
   constructor(props) {
     super(props)
     this.onPress = this.onPress.bind(this)
+    this.onPressDebounced = this.onPressDebounced.bind(this)
+    this.onPressTimeout = null
   }
 
   onPress() {
+    console.debug("onPress()")
     const {
       filmSummary,
       dispatchFetchFilmDetails,
@@ -23,10 +25,21 @@ export class filmListItem extends React.PureComponent {
     navigateToDetailsScreen({ filmSummary })
   }
 
+  onPressDebounced() {
+    console.debug("onPressDebounced()")
+    if (this.timeoutId) {
+      return
+    }
+    this.onPress()
+    this.timeoutId = setTimeout(() => {
+      this.timeoutId = null
+    }, 1000)
+  }
+
   render() {
     const { filmSummary } = this.props
     return (
-      <TouchableOpacity onPress={this.onPress}>
+      <TouchableOpacity onPress={this.onPressDebounced}>
         <ListItem title={filmSummary.Title} subtitle={filmSummary.Year} />
       </TouchableOpacity>
     )
@@ -41,7 +54,6 @@ filmListItem.propTypes = {
 
 export default connect(null, dispatch => ({
   dispatchFetchFilmDetails: imdbID => {
-    dispatch(updateFilmDetails(null))
     dispatch(fetchFilmDetails(imdbID))
   }
 }))(filmListItem)

@@ -3,6 +3,11 @@
   "env": {
     "development": {
       "plugins": ["transform-react-jsx-source"]
+    },
+    "production": {
+      "plugins": [
+        ["transform-remove-console", { "exclude": ["error", "warn"] }]
+      ]
     }
   },
   "plugins": [
@@ -11,7 +16,6 @@
       {
         "root": ["./src"]
       }
-    ],
-    ["transform-remove-console", { "exclude": ["error", "warn"] }]
+    ]
   ]
 }

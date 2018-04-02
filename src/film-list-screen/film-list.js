@@ -38,7 +38,7 @@ export const filmList = ({
         ListHeaderComponent={<Header totalResults={totalResults} />}
         ListFooterComponent={<Footer />}
         onEndReached={() => dispatchFetchPage()}
-        initialNumToRender={1}
+        initialNumToRender={8}
         onEndReachedThreshold={1}
       />
     </List>
