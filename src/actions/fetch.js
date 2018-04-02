@@ -57,6 +57,15 @@ const fetchQueryResults = (dispatch, query, pageNum) => {
 }
 
 export const fetchNewQuery = query => dispatch => {
+  dispatch(
+    updateFilms({
+      query,
+      pageNum: 0,
+      totalResults: 0,
+      lastPage: 0,
+      films: []
+    })
+  )
   return fetchQueryResults(dispatch, query, 1)
 }
 
