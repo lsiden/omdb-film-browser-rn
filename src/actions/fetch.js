@@ -33,7 +33,6 @@ const fetchQueryResults = (dispatch, query, pageNum) => {
     })
     .then(res => {
       const totalResults = Number(res.totalResults)
-      dispatch(updateIsFetching(false))
       if (pageNum === 1) {
         dispatch(
           updateFilms({
@@ -44,25 +43,24 @@ const fetchQueryResults = (dispatch, query, pageNum) => {
             films: res.Search
           })
         )
+        dispatch(updateIsFetching(false))
       } else {
         dispatch(appendFilms(res.Search))
       }
-      console.log(`got ${totalResults} results`)
+      console.log(`found ${totalResults} results`)
     })
     .catch(e => {
-      dispatch(updateToast(e.toString(), ToastStyles.warning))
       dispatch(updateIsFetching(false))
-      console.error(e)
+      dispatch(updateToast(e.toString(), ToastStyles.warning))
+      console.warn(e)
     })
 }
 
 export const fetchNewQuery = query => dispatch => {
-  console.log(`fetchNewQuery(${query})`)
   return fetchQueryResults(dispatch, query, 1)
 }
 
 export const fetchQueryResultPage = () => dispatch => {
-  console.log("fetchQueryResultPage()")
   const { query, lastPageNumFetched, lastPage } = getState()
 
   if (0 < lastPageNumFetched && lastPageNumFetched <= lastPage) {
@@ -86,7 +84,7 @@ export const fetchFilmDetails = id => dispatch => {
       dispatch(updateFilmDetails(res))
     })
     .catch(e => {
-      console.error(e)
       dispatch(updateToast(e.toString(), ToastStyles.warning))
+      console.warn(e)
     })
 }

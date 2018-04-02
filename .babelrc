@@ -11,6 +11,7 @@
       {
         "root": ["./src"]
       }
-    ]
+    ],
+    ["transform-remove-console", { "exclude": ["error", "warn"] }]
   ]
 }

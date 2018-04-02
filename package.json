@@ -36,6 +36,7 @@
     "react-test-renderer": "^16.2.0"
   },
   "dependencies": {
+    "babel-plugin-transform-remove-console": "^6.9.0",
     "cuid": "^2.1.0",
     "expo": "^25.0.0",
     "react": "16.2.0",
