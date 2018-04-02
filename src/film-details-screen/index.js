@@ -6,13 +6,14 @@ import LoadingIndicator from "components/loading-indicator"
 import FilmDetails from "./film-details"
 import getTitle from "util/get-title"
 import navOpts from "navigation-options"
+import { Screens } from "constants"
 
 export const filmDetailsScreen = ({ filmDetails, navigation }) =>
   filmDetails ? (
     <FilmDetails
       details={filmDetails}
       onPressPoster={() =>
-        navigation.navigate("Poster", {
+        navigation.navigate(Screens.Poster, {
           uri: filmDetails.Poster,
           title: getTitle(filmDetails)
         })

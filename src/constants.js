@@ -1,4 +1,4 @@
-export const APP_NAME = "omdb-native-viewer"
+export const APP_NAME = "omdb-film-browser"
 
 export const OMDB_API_KEY = "fbfcb8c7"
 export const OMDB_API_URL = "https://www.omdbapi.com/"
@@ -16,7 +16,7 @@ export const primaryColor = "#05347f"
 
 export const Screens = ["FilmList", "FilmDetails", "Poster", "About"].reduce(
   (res, item) => {
-    res.item = item
+    res[item] = item
     return res
   },
   {}

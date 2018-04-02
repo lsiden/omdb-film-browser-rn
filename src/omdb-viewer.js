@@ -12,10 +12,9 @@ import navOpts from "navigation-options"
 import { Screens } from "constants"
 
 const navigatorOptions = ({ navigation }) => ({
-  initialRouteName: "FilmList",
+  initialRouteName: Screens.FilmList,
   navigationOptions: navOpts(navigation)
 })
-
 const Navigator = StackNavigator(
   {
     [Screens.FilmList]: FilmListScreen,

@@ -3,7 +3,12 @@ import { ToastStyles } from "react-native-toaster"
 import { OMDB_API_URL, OMDB_API_KEY } from "constants"
 import { updateToast } from "./toast"
 import { getState } from "store"
-import { updateFilms, updateFilmDetails, updateLastPageNumFetched } from "./"
+import {
+  updateFilms,
+  appendFilms,
+  updateFilmDetails,
+  updateLastPageNumFetched
+} from "./"
 import getLastPagenum from "util/get-last-pagenum"
 import ActionTypes from "./types"
 
@@ -23,32 +28,36 @@ const fetchQueryResults = (dispatch, query, pageNum) => {
       try {
         return res.json()
       } catch (e) {
-        dispatch(updateToast(e.toString(), ToastStyles.warning))
         return Promise.reject(e)
       }
     })
     .then(res => {
       const totalResults = Number(res.totalResults)
-      dispatch(
-        updateFilms({
-          query,
-          pageNum,
-          totalResults,
-          lastPage: getLastPagenum(totalResults),
-          films: res.Search
-        })
-      )
-      console.log("got results")
       dispatch(updateIsFetching(false))
+      if (pageNum === 1) {
+        dispatch(
+          updateFilms({
+            query,
+            pageNum,
+            totalResults,
+            lastPage: getLastPagenum(totalResults),
+            films: res.Search
+          })
+        )
+      } else {
+        dispatch(appendFilms(res.Search))
+      }
+      console.log(`got ${totalResults} results`)
     })
     .catch(e => {
+      dispatch(updateToast(e.toString(), ToastStyles.warning))
       dispatch(updateIsFetching(false))
       console.error(e)
     })
 }
 
 export const fetchNewQuery = query => dispatch => {
-  console.log("fetchNewQuery()")
+  console.log(`fetchNewQuery(${query})`)
   return fetchQueryResults(dispatch, query, 1)
 }
 
@@ -70,7 +79,6 @@ export const fetchFilmDetails = id => dispatch => {
       try {
         return res.json()
       } catch (e) {
-        dispatch(updateToast(e.toString(), ToastStyles.warning))
         return Promise.reject(e)
       }
     })
@@ -79,6 +87,6 @@ export const fetchFilmDetails = id => dispatch => {
     })
     .catch(e => {
       console.error(e)
-      dispatch(updateToast(e.toString(), ToastStyles.error))
+      dispatch(updateToast(e.toString(), ToastStyles.warning))
     })
 }

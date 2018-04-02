@@ -5,6 +5,7 @@ import { filmList as FilmList } from "../film-list"
 
 const films = require("__test__/__fixture__/films.json").Search
 
+jest.mock("../film-list-item", () => "FilmListItem")
 jest.mock("../header", () => "Header")
 jest.mock("../footer", () => "Footer")
 

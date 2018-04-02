@@ -1,13 +1,14 @@
 import React from "react"
 import renderer from "react-native-test-utils"
 
-import FilmListItem from "../film-list-item"
+import { filmListItem as FilmListItem } from "../film-list-item"
 
 const films = require("__test__/__fixture__/films.json").Search
 
 const defaultProps = () => ({
   filmSummary: films[0],
-  onPress: () => {}
+  dispatchFetchFilmDetails: () => {},
+  navigateToDetailsScreen: () => {}
 })
 
 const createWrapper = () => renderer(<FilmListItem {...defaultProps()} />)

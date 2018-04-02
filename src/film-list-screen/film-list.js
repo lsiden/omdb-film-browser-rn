@@ -1,51 +1,47 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
-import { FlatList, TouchableOpacity } from "react-native"
-import { List, ListItem } from "react-native-elements"
+import { FlatList } from "react-native"
+import { List } from "react-native-elements"
 import cuid from "cuid"
 
-import { updateFilmDetails } from "actions"
-import { fetchQueryResultPage, fetchFilmDetails } from "actions/fetch"
+import { fetchQueryResultPage } from "actions/fetch"
 import Header from "./header"
 import Footer from "./footer"
 import { Screens } from "constants"
+import FilmListItem from "./film-list-item"
 
 export const filmList = ({
   navigation,
   films,
   totalResults,
-  dispatchFetchPage,
-  dispatchFetchFilmDetails
+  dispatchFetchPage
 }) => {
-  const renderFilmListItem = props => {
-    const filmSummary = props.item
-    const onPress = () => {
-      dispatchFetchFilmDetails(filmSummary.imdbID)
-      navigation.navigate(Screens.FilmDetails, { filmSummary })
-    }
-    return (
-      <TouchableOpacity onPress={onPress}>
-        <ListItem title={filmSummary.Title} subtitle={filmSummary.Year} />
-      </TouchableOpacity>
-    )
-  }
-  renderFilmListItem.propTypes = {
-    item: PropTypes.object.isRequired
-  }
+  const navigateToDetailsScreen = navigation.navigate.bind(
+    null,
+    Screens.FilmDetails
+  )
+
+  // eslint-disable-next-line react/prop-types
+  const renderItem = ({ item }) => (
+    <FilmListItem
+      filmSummary={item}
+      navigateToDetailsScreen={navigateToDetailsScreen}
+    />
+  )
   return (
-    films && (
-      <List>
-        <FlatList
-          data={films}
-          renderItem={props => renderFilmListItem(props)}
-          keyExtractor={() => cuid.slug()}
-          ListHeaderComponent={<Header totalResults={totalResults} />}
-          ListFooterComponent={<Footer />}
-          onEndReached={() => dispatchFetchPage()}
-        />
-      </List>
-    )
+    <List>
+      <FlatList
+        data={films}
+        renderItem={renderItem}
+        keyExtractor={item => item.imdbID}
+        ListHeaderComponent={<Header totalResults={totalResults} />}
+        ListFooterComponent={<Footer />}
+        onEndReached={() => dispatchFetchPage()}
+        initialNumToRender={1}
+        onEndReachedThreshold={1}
+      />
+    </List>
   )
 }
 
@@ -53,8 +49,7 @@ filmList.propTypes = {
   navigation: PropTypes.object.isRequired,
   films: PropTypes.arrayOf(PropTypes.object),
   totalResults: PropTypes.number,
-  dispatchFetchPage: PropTypes.func.isRequired,
-  dispatchFetchFilmDetails: PropTypes.func.isRequired
+  dispatchFetchPage: PropTypes.func.isRequired
 }
 filmList.defaultProps = {
   isFetching: false
@@ -66,10 +61,6 @@ export default connect(
     totalResults: state.totalResults || 0
   }),
   dispatch => ({
-    dispatchFetchPage: () => dispatch(fetchQueryResultPage()),
-    dispatchFetchFilmDetails: imdbID => {
-      dispatch(updateFilmDetails(null))
-      dispatch(fetchFilmDetails(imdbID))
-    }
+    dispatchFetchPage: () => dispatch(fetchQueryResultPage())
   })
 )(filmList)
