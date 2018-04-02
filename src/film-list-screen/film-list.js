@@ -3,7 +3,6 @@ import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { FlatList } from "react-native"
 import { List } from "react-native-elements"
-import cuid from "cuid"
 
 import { fetchQueryResultPage } from "actions/fetch"
 import Header from "./header"
