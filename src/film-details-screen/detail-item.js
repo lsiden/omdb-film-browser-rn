@@ -1,9 +1,9 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { Linking } from "react-native"
+import { Linking, Text } from "react-native"
 import { ListItem } from "react-native-elements"
 
-import style from './style'
+import style from "./style"
 import { detailExists } from "./detail-items"
 
 const DetailItem = ({ detail }) => {
@@ -13,7 +13,7 @@ const DetailItem = ({ detail }) => {
     return null
   }
   const props = {
-    title: text,
+    title: <Text style={style.listItem}>{text}</Text>,
     hideChevron: true
   }
 
@@ -23,7 +23,7 @@ const DetailItem = ({ detail }) => {
     }
     props.hideChevron = false
   }
-  return <ListItem {...props} style={style.item} />
+  return <ListItem {...props} />
 }
 
 DetailItem.propTypes = {

@@ -36,5 +36,8 @@ export default StyleSheet.create({
   plotUnavailable: {
     color: "darkgray",
     textAlign: "center"
+  },
+  listItem: {
+    color: "white"
   }
 })

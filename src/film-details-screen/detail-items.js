@@ -3,6 +3,7 @@ export const detailExists = detail => detail && detail !== "N/A"
 const imdbUrl = imdbID => `https://www.imdb.com/title/${imdbID}`
 
 const detailItems = filmDetails => [
+  { text: `Year: ${filmDetails.Year}` },
   { text: `Directed by ${filmDetails.Director}` },
   { text: `Written by ${filmDetails.Writer}` },
   { text: `Cast: ${filmDetails.Actors}` },

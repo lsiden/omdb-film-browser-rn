@@ -45,39 +45,20 @@ exports[`Renders 1`] = `
       <View
         style={undefined}
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          numberOfLines={1}
-          style={
-            Array [
-              Object {},
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              Array [
-                Object {
-                  "color": "#43484d",
-                  "fontSize": 17.5,
-                },
-                Object {
-                  "marginLeft": 10,
-                },
-                undefined,
-                undefined,
-              ],
-            ]
-          }
-        >
-          a detail
-        </Text>
+        <View>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          >
+            a detail
+          </Text>
+        </View>
       </View>
       <View
         style={undefined}
@@ -149,39 +130,20 @@ exports[`Renders with url 1`] = `
       <View
         style={undefined}
       >
-        <Text
-          accessible={true}
-          allowFontScaling={true}
-          ellipsizeMode="tail"
-          numberOfLines={1}
-          style={
-            Array [
-              Object {},
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              undefined,
-              Array [
-                Object {
-                  "color": "#43484d",
-                  "fontSize": 17.5,
-                },
-                Object {
-                  "marginLeft": 10,
-                },
-                undefined,
-                undefined,
-              ],
-            ]
-          }
-        >
-          a detail
-        </Text>
+        <View>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          >
+            a detail
+          </Text>
+        </View>
       </View>
       <View
         style={undefined}
