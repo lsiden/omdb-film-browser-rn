@@ -2,7 +2,6 @@ import React from "react"
 import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import { FlatList } from "react-native"
-import { List } from "react-native-elements"
 
 import { fetchQueryResultPage } from "actions/fetch"
 import Header from "./header"
@@ -29,18 +28,16 @@ export const filmList = ({
     />
   )
   return (
-    <List>
-      <FlatList
-        data={films}
-        renderItem={renderItem}
-        keyExtractor={item => item.imdbID}
-        ListHeaderComponent={<Header totalResults={totalResults} />}
-        ListFooterComponent={<Footer />}
-        onEndReached={() => dispatchFetchPage()}
-        initialNumToRender={8}
-        onEndReachedThreshold={1}
-      />
-    </List>
+    <FlatList
+      data={films}
+      renderItem={renderItem}
+      keyExtractor={item => item.imdbID}
+      ListHeaderComponent={<Header totalResults={totalResults} />}
+      ListFooterComponent={<Footer />}
+      onEndReached={() => dispatchFetchPage()}
+      initialNumToRender={8}
+      onEndReachedThreshold={1}
+    />
   )
 }
 
