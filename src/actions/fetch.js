@@ -14,7 +14,7 @@ import ActionTypes from "./types"
 
 const OMDB_URL_PREFIX = `${OMDB_API_URL}?apikey=${OMDB_API_KEY}`
 
-const updateIsFetching = isFetching => ({
+const updateIsFetching = (isFetching = false) => ({
   type: ActionTypes.UPDATE_FETCHING,
   data: { isFetching }
 })
@@ -43,10 +43,10 @@ const fetchQueryResults = (dispatch, query, pageNum) => {
             films: res.Search
           })
         )
-        dispatch(updateIsFetching(false))
       } else {
         dispatch(appendFilms(res.Search))
       }
+      dispatch(updateIsFetching(false))
       console.log(`found ${totalResults} results`)
     })
     .catch(e => {
