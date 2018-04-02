@@ -13,3 +13,11 @@ export const ICONS8_URL = "https://icons8.com/"
 export const WESTSIDE_CONSULTING_URL = "http://westsideconsultingllc.com"
 
 export const primaryColor = "#05347f"
+
+export const Screens = ["FilmList", "FilmDetails", "Poster", "About"].reduce(
+  (res, item) => {
+    res.item = item
+    return res
+  },
+  {}
+)

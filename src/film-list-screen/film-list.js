@@ -9,6 +9,7 @@ import { updateFilmDetails } from "actions"
 import { fetchQueryResultPage, fetchFilmDetails } from "actions/fetch"
 import Header from "./header"
 import Footer from "./footer"
+import { Screens } from "constants"
 
 export const filmList = ({
   navigation,
@@ -21,7 +22,7 @@ export const filmList = ({
     const filmSummary = props.item
     const onPress = () => {
       dispatchFetchFilmDetails(filmSummary.imdbID)
-      navigation.navigate("FilmDetails", { filmSummary })
+      navigation.navigate(Screens.FilmDetails, { filmSummary })
     }
     return (
       <TouchableOpacity onPress={onPress}>
