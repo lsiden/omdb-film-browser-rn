@@ -7,8 +7,7 @@ export default StyleSheet.create({
     flexDirection: "row",
     alignItems: "baseline",
     justifyContent: "space-between",
-    marginTop: 10,
-    marginBottom: 8
+    marginTop: 10
   },
   title: {
     fontSize: 20,
@@ -19,7 +18,8 @@ export default StyleSheet.create({
   },
   wrapper: {
     backgroundColor: primaryColor,
-    padding: 10
+    padding: 10,
+    paddingBottom: 10
   },
   year: {
     fontSize: 16,

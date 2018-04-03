@@ -7,11 +7,8 @@ import style from "./style"
 import { detailExists } from "./detail-items"
 
 const DetailItem = ({ detail }) => {
-  const { text, cond = true, url = null } = detail
+  const { text, url = null } = detail
 
-  if (!cond) {
-    return null
-  }
   const props = {
     title: <Text style={style.listItem}>{text}</Text>,
     hideChevron: true
