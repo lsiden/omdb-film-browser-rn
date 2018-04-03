@@ -1,7 +1,12 @@
 {
   "name": "omdb-native-viewer",
   "version": "0.1.0",
-  "private": true,
+  "author": {
+    "name": "Lawrence Siden",
+    "email": "westsideconsultingllc@gmail.com",
+    "url": "https://westsideconsultingllc.com"
+  },
+  "license": "AGPL-1.0",
   "main": "./node_modules/react-native-scripts/build/bin/crna-entry.js",
   "scripts": {
     "start": "react-native-scripts start",
@@ -26,8 +31,8 @@
     "eslint-plugin-jest": "^21.15.0",
     "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-react-native": "^3.2.1",
-    "exp": "^50.0.5",
-    "jest-expo": "25.0.0",
+    "exp": "^51.4.0",
+    "jest-expo": "26.0.0",
     "jest-react-native": "^18.0.0",
     "prettier": "^1.11.1",
     "react-devtools": "^3.2.1",
@@ -38,9 +43,9 @@
   "dependencies": {
     "babel-plugin-transform-remove-console": "^6.9.0",
     "cuid": "^2.1.0",
-    "expo": "^25.0.0",
-    "react": "16.2.0",
-    "react-native": "0.52.0",
+    "expo": "^26.0.0",
+    "react": "16.3.0-alpha.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-26.0.0.tar.gz",
     "react-native-elements": "^0.19.0",
     "react-native-swipe-gestures": "^1.0.2",
     "react-native-toaster": "^1.2.0",
