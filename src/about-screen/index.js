@@ -2,7 +2,7 @@ import React from "react"
 import { ScrollView, View } from "react-native"
 
 import style from "./style"
-import navOpts from "navigation-options"
+import navOpts, { insertRightSpacer } from "navigation-options"
 import { AboutLink, AboutText, AboutLabel } from "./components"
 import {
   WESTSIDE_CONSULTING_URL,
@@ -37,17 +37,10 @@ const AboutScreen = () => (
   </ScrollView>
 )
 
-AboutScreen.navigationOptions = ({ navigation }) => {
-  const baseOpts = navOpts(navigation)
-  return {
-    ...baseOpts,
-    title: "About OMDB Browser",
-    headerTitleStyle: {
-      ...baseOpts.headerTitleStyle,
-      marginRight: 40
-    },
-    headerRight: null
-  }
-}
+AboutScreen.navigationOptions = ({ navigation }) =>
+  insertRightSpacer({
+    ...navOpts(navigation),
+    title: "About OMDB Browser"
+  })
 
 export default AboutScreen

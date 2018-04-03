@@ -30,6 +30,17 @@ const headerRightStyle = {
   margin: 16
 }
 
+// Insert empty right spacer whose width is equal to width of back button on left,
+// in order to allow text of header to appear centered.
+export const insertRightSpacer = navOpts => ({
+  ...navOpts,
+  headerRight: null,
+  headerTitleStyle: {
+    ...(navOpts.headerTitleStyle || {}),
+    marginRight: 40
+  }
+})
+
 const navOptions = navigation => ({
   title: "Open Movie Database Browser",
   headerTitle: HeaderTitle,

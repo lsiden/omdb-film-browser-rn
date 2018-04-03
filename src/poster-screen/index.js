@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Image } from "react-native"
 
 import style from "./style"
-import navOpts from "navigation-options"
+import navOpts, { insertRightSpacer } from "navigation-options"
 
 const PosterScreen = ({ navigation }) => {
   const uri = navigation.getParam("uri")
@@ -21,17 +21,10 @@ PosterScreen.propTypes = {
   navigation: PropTypes.object.isRequired
 }
 
-PosterScreen.navigationOptions = ({ navigation }) => {
-  const baseOpts = navOpts(navigation)
-  return {
-    ...baseOpts,
-    title: navigation.getParam("title"),
-    headerTitleStyle: {
-      ...baseOpts.headerTitleStyle,
-      marginRight: 40
-    },
-    headerRight: null
-  }
-}
+PosterScreen.navigationOptions = ({ navigation }) =>
+  insertRightSpacer({
+    ...navOpts(navigation),
+    title: navigation.getParam("title")
+  })
 
 export default PosterScreen
