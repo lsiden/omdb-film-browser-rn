@@ -37,10 +37,17 @@ const AboutScreen = () => (
   </ScrollView>
 )
 
-AboutScreen.navigationOptions = ({ navigation }) => ({
-  ...navOpts(navigation),
-  title: "About OMDB Browser",
-  headerRight: null
-})
+AboutScreen.navigationOptions = ({ navigation }) => {
+  const baseOpts = navOpts(navigation)
+  return {
+    ...baseOpts,
+    title: "About OMDB Browser",
+    headerTitleStyle: {
+      ...baseOpts.headerTitleStyle,
+      marginRight: 40
+    },
+    headerRight: null
+  }
+}
 
 export default AboutScreen

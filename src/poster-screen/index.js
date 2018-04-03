@@ -21,10 +21,17 @@ PosterScreen.propTypes = {
   navigation: PropTypes.object.isRequired
 }
 
-PosterScreen.navigationOptions = ({ navigation }) => ({
-  ...navOpts(navigation),
-  title: navigation.getParam("title"),
-  headerRight: null
-})
+PosterScreen.navigationOptions = ({ navigation }) => {
+  const baseOpts = navOpts(navigation)
+  return {
+    ...baseOpts,
+    title: navigation.getParam("title"),
+    headerTitleStyle: {
+      ...baseOpts.headerTitleStyle,
+      marginRight: 40
+    },
+    headerRight: null
+  }
+}
 
 export default PosterScreen

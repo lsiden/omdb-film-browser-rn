@@ -23,11 +23,18 @@ export const filmDetailsScreen = ({ filmDetails, navigation }) =>
     <LoadingIndicator />
   )
 
-filmDetailsScreen.navigationOptions = ({ navigation }) => ({
-  ...navOpts(navigation),
-  title: getTitle(navigation.getParam("filmSummary", {})),
-  headerRight: null
-})
+filmDetailsScreen.navigationOptions = ({ navigation }) => {
+  const baseOpts = navOpts(navigation)
+  return {
+    ...baseOpts,
+    title: getTitle(navigation.getParam("filmSummary", {})),
+    headerTitleStyle: {
+      ...baseOpts.headerTitleStyle,
+      marginRight: 40
+    },
+    headerRight: null
+  }
+}
 
 filmDetailsScreen.propTypes = {
   filmDetails: PropTypes.object,

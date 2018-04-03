@@ -1,23 +1,52 @@
 import React from "react"
+import PropTypes from "prop-types"
 
-import { TouchableHighlight } from "react-native"
+import { TouchableHighlight, Text, View } from "react-native"
 import { Icon } from "react-native-elements"
 
 import { primaryColor, Screens } from "./constants"
 
+const headerWrapperStyle = {
+  flex: 1,
+  flexDirection: "row",
+  justifyContent: "center"
+}
+const HeaderTitle = ({ style, children }) => (
+  <View style={headerWrapperStyle}>
+    <Text style={style} numberOfLines={3}>
+      {children}
+    </Text>
+  </View>
+)
+HeaderTitle.propTypes = {
+  style: PropTypes.oneOfType([
+    PropTypes.object,
+    PropTypes.arrayOf(PropTypes.object)
+  ]),
+  children: PropTypes.oneOfType([PropTypes.element, PropTypes.string])
+}
+
+const headerRightStyle = {
+  margin: 16
+}
+
 const navOptions = navigation => ({
   title: "Open Movie Database Browser",
-  headerRight: (
-    <TouchableHighlight onPress={() => navigation.navigate(Screens.About)}>
-      <Icon name={"info-outline"} color={"white"} />
-    </TouchableHighlight>
-  ),
+  headerTitle: HeaderTitle,
+  headerTitleStyle: {
+    fontSize: 18
+  },
   headerTintColor: "white",
   headerStyle: {
     backgroundColor: primaryColor
   },
-  headerTitleStyle: {
-    fontSize: 20
-  }
+  headerRight: (
+    <TouchableHighlight
+      style={headerRightStyle}
+      onPress={() => navigation.navigate(Screens.About)}
+    >
+      <Icon name={"info-outline"} color={"white"} />
+    </TouchableHighlight>
+  )
 })
 export default navOptions
