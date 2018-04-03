@@ -8,6 +8,13 @@ import { Platform } from "react-native"
 
 import { fetchNewQuery } from "actions/fetch"
 
+const inputStyle = { color: "black", paddingLeft: 44 }
+const iconStyle = {
+  fontSize: 30,
+  marginTop: -7,
+  marginRight: 5
+}
+
 export class searchBar extends React.Component {
   static propTypes = {
     dispatchQuery: PropTypes.func.isRequired
@@ -47,10 +54,17 @@ export class searchBar extends React.Component {
   render() {
     return (
       <SearchBar
+        lightTheme
         placeholder="Title..."
+        inputStyle={inputStyle}
         onChangeText={this.onChangeText}
         onCancel={this.onCancel}
-        clearIcon={{ color: "#86939e", name: "close" }}
+        icon={{
+          name: "search",
+          color: "black",
+          style: iconStyle
+        }}
+        clearIcon={{ name: "close", color: "black" }}
         platform={Platform.OS}
       />
     )
