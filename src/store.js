@@ -47,6 +47,7 @@ function appendFilms(state, data) {
 }
 
 export function reduce(state = {}, action) {
+  // eslint-disable-next-line no-console
   console.log("reduce(), action=", action.type)
   const { type, data } = action
   switch (type) {

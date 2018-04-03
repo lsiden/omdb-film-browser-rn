@@ -12,7 +12,7 @@ const PosterScreen = ({ navigation }) => {
       source={{ uri }}
       style={style.poster}
       resizeMode={"contain"}
-      loadingIndicatorSource={require("assets/spinningwheel-300x216.gif")}
+      loadingIndicatorSource={require("images/spinningwheel-300x216.gif")}
     />
   ) : null
 }

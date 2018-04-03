@@ -15,7 +15,6 @@ export class filmListItem extends React.PureComponent {
   }
 
   onPress() {
-    console.debug("onPress()")
     const {
       filmSummary,
       dispatchFetchFilmDetails,
@@ -26,7 +25,6 @@ export class filmListItem extends React.PureComponent {
   }
 
   onPressDebounced() {
-    console.debug("onPressDebounced()")
     if (this.timeoutId) {
       return
     }
