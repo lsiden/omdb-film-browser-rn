@@ -7,7 +7,7 @@ jest.mock("react-native")
 
 const newDetail = props => ({
   text: "a detail",
-  ...props,
+  ...props
 })
 
 const createWrapper = (detailProps = {}) =>
@@ -15,11 +15,6 @@ const createWrapper = (detailProps = {}) =>
 
 it("Renders", () => {
   const wrapper = createWrapper()
-  expect(wrapper.toJSON()).toMatchSnapshot()
-})
-
-it("Renders nothing if cond is false", () => {
-  const wrapper = createWrapper({ cond: false })
   expect(wrapper.toJSON()).toMatchSnapshot()
 })
 
