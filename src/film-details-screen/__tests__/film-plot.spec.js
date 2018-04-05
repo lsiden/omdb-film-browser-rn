@@ -3,7 +3,7 @@ import renderer from "react-native-test-utils"
 
 import { filmPlot as FilmPlot } from "../film-plot"
 
-const filmDetails = require("__test__/__fixture__/film-details.json")
+const filmDetails = require("__fixture__/film-details.json")
 
 const defaultProps = () => {
   return {

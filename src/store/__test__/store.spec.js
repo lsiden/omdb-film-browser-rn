@@ -1,5 +1,5 @@
-import ActionTypes from "../actions/types"
-import { reduce } from "../store"
+import ActionTypes from "actions/types"
+import { reduce } from "../"
 
 test("reduce() reduces all actions", () => {
   const data = { foo: "bar" }

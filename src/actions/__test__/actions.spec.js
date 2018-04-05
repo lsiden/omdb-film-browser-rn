@@ -1,7 +1,7 @@
 import ActionTypes from "../types"
 import { updateFilms, updateFilmDetails } from "../"
 
-const filmDetails = require("__test__/__fixture__/film-details.json")
+const filmDetails = require("__fixture__/film-details.json")
 
 test("updateFilms(list) returns an action with list", () => {
   const films = ["foo", "bar"]
