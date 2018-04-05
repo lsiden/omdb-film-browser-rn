@@ -70,7 +70,75 @@ exports[`Renders 1`] = `
 </View>
 `;
 
-exports[`Renders nothing if cond is false 1`] = `null`;
+exports[`Renders nothing if cond is false 1`] = `
+<View
+  disabled={false}
+  onLongPress={undefined}
+  onPress={undefined}
+  style={
+    Array [
+      Object {
+        "backgroundColor": "transparent",
+        "borderBottomColor": "#bbb",
+        "borderBottomWidth": 1,
+        "paddingBottom": 10,
+        "paddingRight": 10,
+        "paddingTop": 10,
+      },
+      undefined,
+      false,
+      false,
+    ]
+  }
+  underlayColor="white"
+>
+  <View
+    style={
+      Array [
+        Object {
+          "alignItems": "center",
+          "flexDirection": "row",
+          "marginLeft": 10,
+        },
+        undefined,
+      ]
+    }
+  >
+    <View
+      style={
+        Object {
+          "flex": 1,
+          "justifyContent": "center",
+        }
+      }
+    >
+      <View
+        style={undefined}
+      >
+        <View>
+          <Text
+            accessible={true}
+            allowFontScaling={true}
+            ellipsizeMode="tail"
+            style={
+              Object {
+                "color": "white",
+              }
+            }
+          >
+            a detail
+          </Text>
+        </View>
+      </View>
+      <View
+        style={undefined}
+      >
+        <View />
+      </View>
+    </View>
+  </View>
+</View>
+`;
 
 exports[`Renders with url 1`] = `
 <View

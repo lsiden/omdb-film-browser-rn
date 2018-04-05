@@ -2,10 +2,11 @@
 
 exports[`renders 1`] = `
 <RCTScrollView
-  style={
+  contentContainerStyle={
     Object {
       "backgroundColor": "#05347f",
       "padding": 10,
+      "paddingBottom": 10,
     }
   }
 >
@@ -18,21 +19,21 @@ exports[`renders 1`] = `
     <DetailItem
       detail={
         Object {
-          "text": "Year: 1966",
+          "text": "Title: The Battle of Algiers",
         }
       }
     />
     <DetailItem
       detail={
         Object {
-          "text": "Directed by Gillo Pontecorvo",
+          "text": "Director: Gillo Pontecorvo",
         }
       }
     />
     <DetailItem
       detail={
         Object {
-          "text": "Written by Franco Solinas, Franco Solinas (story), Gillo Pontecorvo (story)",
+          "text": "Writer: Franco Solinas, Franco Solinas (story), Gillo Pontecorvo (story)",
         }
       }
     />
@@ -46,7 +47,35 @@ exports[`renders 1`] = `
     <DetailItem
       detail={
         Object {
+          "text": "Production: Rialto Pictures",
+        }
+      }
+    />
+    <DetailItem
+      detail={
+        Object {
+          "text": "Country: Algeria, Italy",
+        }
+      }
+    />
+    <DetailItem
+      detail={
+        Object {
           "text": "Language: French, Arabic, English",
+        }
+      }
+    />
+    <DetailItem
+      detail={
+        Object {
+          "text": "Released: 20 Sep 1967",
+        }
+      }
+    />
+    <DetailItem
+      detail={
+        Object {
+          "text": "DVD Released: 21 Sep 2004",
         }
       }
     />
@@ -68,6 +97,17 @@ exports[`renders 1`] = `
       detail={
         Object {
           "text": "IMDB Rating: 8.1/10",
+        }
+      }
+    />
+    <DetailItem
+      detail={
+        Object {
+          "cond": Object {
+            "Source": "Rotten Tomatoes",
+            "Value": "99%",
+          },
+          "text": "Rotten Tomatoes Rating: 99%",
         }
       }
     />

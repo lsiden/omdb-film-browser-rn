@@ -2,11 +2,7 @@
 
 exports[`renders 1`] = `
 <Image
-  loadingIndicatorSource={
-    Object {
-      "testUri": "../../../src/assets/spinningwheel-300x216.gif",
-    }
-  }
+  loadingIndicatorSource={1}
   resizeMode="contain"
   source={
     Object {

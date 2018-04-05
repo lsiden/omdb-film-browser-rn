@@ -85,8 +85,10 @@ exports[`renders list of titles 1`] = `
   disableVirtualization={false}
   getItem={[Function]}
   getItemCount={[Function]}
+  getItemLayout={[Function]}
   horizontal={false}
   initialNumToRender={8}
+  invertStickyHeaders={undefined}
   keyExtractor={[Function]}
   maxToRenderPerBatch={10}
   numColumns={1}
@@ -115,7 +117,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={[Function]}
+      onLayout={undefined}
       style={null}
     >
       <FilmListItem
@@ -132,7 +134,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={[Function]}
+      onLayout={undefined}
       style={null}
     >
       <FilmListItem
@@ -149,7 +151,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={[Function]}
+      onLayout={undefined}
       style={null}
     >
       <FilmListItem
@@ -166,7 +168,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={[Function]}
+      onLayout={undefined}
       style={null}
     >
       <FilmListItem
@@ -183,7 +185,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={[Function]}
+      onLayout={undefined}
       style={null}
     >
       <FilmListItem
@@ -200,7 +202,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={[Function]}
+      onLayout={undefined}
       style={null}
     >
       <FilmListItem
@@ -217,7 +219,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={[Function]}
+      onLayout={undefined}
       style={null}
     >
       <FilmListItem
@@ -234,7 +236,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={[Function]}
+      onLayout={undefined}
       style={null}
     >
       <FilmListItem
@@ -253,7 +255,7 @@ exports[`renders list of titles 1`] = `
     <View
       style={
         Object {
-          "height": 0,
+          "height": 154.5999999999999,
         }
       }
     />

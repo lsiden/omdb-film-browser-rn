@@ -11,7 +11,11 @@ exports[`renders 1`] = `
         "borderTopColor": "#000",
         "borderTopWidth": 1,
       },
-      false,
+      Object {
+        "backgroundColor": "#e1e8ee",
+        "borderBottomColor": "#e1e1e1",
+        "borderTopColor": "#e1e1e1",
+      },
       undefined,
     ]
   }
@@ -36,10 +40,15 @@ exports[`renders 1`] = `
           "paddingLeft": 26,
           "paddingRight": 19,
         },
+        Object {
+          "backgroundColor": "#bdc6cf",
+        },
         false,
         false,
-        false,
-        undefined,
+        Object {
+          "color": "black",
+          "paddingLeft": 44,
+        },
         false,
         Object {
           "paddingRight": 30,
@@ -55,7 +64,7 @@ exports[`renders 1`] = `
     style={
       Array [
         Object {
-          "color": "#86939e",
+          "color": "black",
           "fontSize": 16,
         },
         Array [
@@ -67,7 +76,11 @@ exports[`renders 1`] = `
           Object {
             "left": 16,
           },
-          undefined,
+          Object {
+            "fontSize": 30,
+            "marginRight": 5,
+            "marginTop": -7,
+          },
         ],
         Object {
           "fontFamily": "Material Icons",
@@ -87,7 +100,7 @@ exports[`renders 1`] = `
     style={
       Array [
         Object {
-          "color": "#86939e",
+          "color": "black",
           "fontSize": 16,
         },
         Array [
