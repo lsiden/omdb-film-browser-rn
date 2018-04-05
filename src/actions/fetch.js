@@ -1,3 +1,5 @@
+/* eslint-disable no-console */
+
 import { ToastStyles } from "react-native-toaster"
 
 import { OMDB_API_URL, OMDB_API_KEY } from "constants"

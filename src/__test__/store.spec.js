@@ -15,6 +15,20 @@ const mkFilmItem = imdbID => ({
   imdbID
 })
 
+test("reduce({UPDATE_FILMS}) appends films with unique imdbID to new list", () => {
+  const state = {
+    films: [1, 2, 3].map(id => mkFilmItem(id)),
+    pageNum: 1
+  }
+  const newState = reduce(state, {
+    type: ActionTypes.UPDATE_FILMS,
+    data: {
+      films: [3, 4, 5, 3].map(id => mkFilmItem(id))
+    }
+  })
+  expect(newState.films.map(film => film.imdbID).sort()).toEqual([3, 4, 5])
+})
+
 test("reduce({APPEND_FILMS, pageNum > 1}) appends films with unique imdbID to existing list", () => {
   const state = {
     films: [1, 2, 3].map(id => mkFilmItem(id)),
@@ -26,7 +40,6 @@ test("reduce({APPEND_FILMS, pageNum > 1}) appends films with unique imdbID to ex
       films: [3, 4, 5].map(id => mkFilmItem(id))
     }
   })
-  console.log(newState.films)
   expect(newState.films.map(film => film.imdbID).sort()).toEqual([
     1,
     2,

@@ -8,41 +8,46 @@ import ActionTypes from "actions/types"
  * This will cause React to throw a warning when it discovers a duplicate key.
  * So we have to guard against duplicate items.
  */
-const addUniqueId = (res, film) => {
+
+const reduceUniqueFilms = (uniqueIds, res, film) => {
   const id = film.imdbID
-  res[id] = id
+
+  if (!uniqueIds[id]) {
+    res.push(film)
+    uniqueIds[id] = id
+  }
   return res
 }
 
-const filmIsUnique = (uniqueIds, film) => {
-  const id = film.imdbID
-  const result = !uniqueIds[id]
-  uniqueIds[id] = id
-  return result
-}
-
-function updateFilms(state, data) {
-  const dataFilms = data.films || []
+function updateNewFilms(state, data) {
   const uniqueIds = {}
-  const films = dataFilms.filter(film => filmIsUnique(uniqueIds, film))
+  const newFilms = data.films || []
   return {
     ...state,
     ...data,
-    films,
-    uniqueIds
+    uniqueIds,
+    films: newFilms.reduce(reduceUniqueFilms.bind(null, uniqueIds), [])
   }
 }
 
 function appendFilms(state, data) {
-  const stateFilms = state.films || []
-  const dataFilms = data.films || []
-  const uniqueIds = state.uniqueIds || stateFilms.reduce(addUniqueId, {})
-  const newFilms = dataFilms.filter(film => filmIsUnique(uniqueIds, film))
+  const prevFilms = state.films ? [...state.films] : []
+  const uniqueIds =
+    state.uniqueIds ||
+    prevFilms.reduce((res, film) => {
+      const id = film.imdbID
+
+      if (!res[id]) {
+        res[id] = id
+      }
+      return res
+    }, {})
+  const newFilms = data.films || []
   return {
     ...state,
     ...data,
-    films: [...stateFilms, ...newFilms],
-    uniqueIds: dataFilms.reduce(addUniqueId, { ...uniqueIds })
+    uniqueIds,
+    films: newFilms.reduce(reduceUniqueFilms.bind(null, uniqueIds), prevFilms)
   }
 }
 
@@ -57,7 +62,7 @@ export function reduce(state = {}, action) {
     case ActionTypes.UPDATE_TOAST:
       return { ...state, ...data }
     case ActionTypes.UPDATE_FILMS:
-      return updateFilms(state, data)
+      return updateNewFilms(state, data)
     case ActionTypes.APPEND_FILMS:
       return appendFilms(state, data)
     default:
