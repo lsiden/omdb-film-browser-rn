@@ -1,6 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import { ScrollView } from "react-native"
+import { ScrollView, View } from "react-native"
 
 import Poster from "./poster"
 import FilmPlot from "./film-plot"
@@ -12,13 +12,15 @@ let i = 1
 const genKey = () => `item-${i++}`
 
 const FilmDetails = ({ details, onPressPoster }) => (
-  <ScrollView contentContainerStyle={style.wrapper}>
-    <Poster uri={details.Poster} onPress={onPressPoster} />
-    <FilmPlot />
-    {detailItems(details)
-      .filter(({ cond = true }) => cond)
-      .map(detail => <DetailItem key={genKey()} detail={detail} />)}
-  </ScrollView>
+  <View style={style.outerWrapper}>
+    <ScrollView contentContainerStyle={style.wrapper}>
+      <Poster uri={details.Poster} onPress={onPressPoster} />
+      <FilmPlot />
+      {detailItems(details)
+        .filter(({ cond = true }) => cond)
+        .map(detail => <DetailItem key={genKey()} detail={detail} />)}
+    </ScrollView>
+  </View>
 )
 
 FilmDetails.propTypes = {

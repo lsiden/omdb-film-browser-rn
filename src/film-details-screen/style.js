@@ -2,6 +2,14 @@ import { StyleSheet } from "react-native"
 import { primaryColor } from "constants"
 
 export default StyleSheet.create({
+  outerWrapper: {
+    backgroundColor: primaryColor,
+    flex: 1
+  },
+  wrapper: {
+    padding: 10,
+    paddingBottom: 10
+  },
   titleWrapper: {
     flexWrap: "wrap",
     flexDirection: "row",
@@ -15,11 +23,6 @@ export default StyleSheet.create({
     fontWeight: "bold",
     marginLeft: 10,
     color: "white"
-  },
-  wrapper: {
-    backgroundColor: primaryColor,
-    padding: 10,
-    paddingBottom: 10
   },
   year: {
     fontSize: 16,
