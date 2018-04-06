@@ -15,7 +15,7 @@ const DetailItem = ({ detail }) => {
   }
 
   if (detailExists(url)) {
-    props.onPress = Linking.openURL.bind(null, url)
+    props.onPress = () => Linking.openURL(url)
     props.hideChevron = false
   }
   return <ListItem {...props} />
