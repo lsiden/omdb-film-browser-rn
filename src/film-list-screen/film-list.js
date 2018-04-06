@@ -45,7 +45,7 @@ export const renderFilmList = ({
       ListFooterComponent={<Footer />}
       onEndReached={() => dispatchFetchPage()}
       initialNumToRender={8}
-      onEndReachedThreshold={1}
+      onEndReachedThreshold={0.5}
       getItemLayout={getItemLayout}
     />
   )
