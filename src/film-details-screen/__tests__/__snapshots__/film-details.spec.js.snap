@@ -1,147 +1,155 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders 1`] = `
-<RCTScrollView
-  contentContainerStyle={
+<View
+  style={
     Object {
       "backgroundColor": "#05347f",
-      "padding": 10,
-      "paddingBottom": 10,
+      "flex": 1,
     }
   }
 >
-  <View>
-    <Poster
-      onPress={[Function]}
-      uri="https://images-na.ssl-images-amazon.com/images/M/MV5BYzliNzI5NzgtNDZmNy00NGU4LTg2OTQtMDEzZTRiNDU3ZTI1XkEyXkFqcGdeQXVyMDUyOTUyNQ@@._V1_SX300.jpg"
-    />
-    <FilmPlot />
-    <DetailItem
-      detail={
-        Object {
-          "text": "Title: The Battle of Algiers",
-        }
+  <RCTScrollView
+    contentContainerStyle={
+      Object {
+        "padding": 10,
+        "paddingBottom": 10,
       }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "text": "Director: Gillo Pontecorvo",
+    }
+  >
+    <View>
+      <Poster
+        onPress={[Function]}
+        uri="https://images-na.ssl-images-amazon.com/images/M/MV5BYzliNzI5NzgtNDZmNy00NGU4LTg2OTQtMDEzZTRiNDU3ZTI1XkEyXkFqcGdeQXVyMDUyOTUyNQ@@._V1_SX300.jpg"
+      />
+      <FilmPlot />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Title: The Battle of Algiers",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "text": "Writer: Franco Solinas, Franco Solinas (story), Gillo Pontecorvo (story)",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Director: Gillo Pontecorvo",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "text": "Cast: Jean Martin, Yacef Saadi, Brahim Hadjadj, Tommaso Neri",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Writer: Franco Solinas, Franco Solinas (story), Gillo Pontecorvo (story)",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "text": "Production: Rialto Pictures",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Cast: Jean Martin, Yacef Saadi, Brahim Hadjadj, Tommaso Neri",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "text": "Country: Algeria, Italy",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Production: Rialto Pictures",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "text": "Language: French, Arabic, English",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Country: Algeria, Italy",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "text": "Released: 20 Sep 1967",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Language: French, Arabic, English",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "text": "DVD Released: 21 Sep 2004",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Released: 20 Sep 1967",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "text": "Awards: Nominated for 3 Oscars. Another 9 wins & 5 nominations.",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "DVD Released: 21 Sep 2004",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "text": "Run Time: 121 min",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Awards: Nominated for 3 Oscars. Another 9 wins & 5 nominations.",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "text": "IMDB Rating: 8.1/10",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Run Time: 121 min",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "cond": Object {
-            "Source": "Rotten Tomatoes",
-            "Value": "99%",
-          },
-          "text": "Rotten Tomatoes Rating: 99%",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "IMDB Rating: 8.1/10",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "text": "Box Office: $55,908",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "cond": Object {
+              "Source": "Rotten Tomatoes",
+              "Value": "99%",
+            },
+            "text": "Rotten Tomatoes Rating: 99%",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "cond": true,
-          "text": "Official Website",
-          "url": "http://rialtopictures.com/battle.html",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "Box Office: $55,908",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "text": "IMDB page",
-          "url": "https://www.imdb.com/title/tt0058946",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "cond": true,
+            "text": "Official Website",
+            "url": "http://rialtopictures.com/battle.html",
+          }
         }
-      }
-    />
-    <DetailItem
-      detail={
-        Object {
-          "text": "IMDB ID: tt0058946",
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "IMDB page",
+            "url": "https://www.imdb.com/title/tt0058946",
+          }
         }
-      }
-    />
-  </View>
-</RCTScrollView>
+      />
+      <DetailItem
+        detail={
+          Object {
+            "text": "IMDB ID: tt0058946",
+          }
+        }
+      />
+    </View>
+  </RCTScrollView>
+</View>
 `;
