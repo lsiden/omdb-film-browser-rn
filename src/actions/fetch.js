@@ -126,11 +126,7 @@ export const fetchFilmDetails = id => dispatch => {
       dispatch(updateFilmDetails(res))
     })
     .catch(e => {
-      if (e) {
-        dispatch(updateToast(e.toString(), ToastStyles.warning))
-        console.warn(e.toString())
-      } else {
-        console.warn("no error")
-      }
+      dispatch(updateToast(e.toString(), ToastStyles.warning))
+      console.warn(e.toString())
     })
 }
