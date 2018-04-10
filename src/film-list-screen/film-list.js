@@ -58,7 +58,8 @@ renderFilmList.propTypes = {
   dispatchFetchPage: PropTypes.func.isRequired
 }
 renderFilmList.defaultProps = {
-  isFetching: false
+  isFetching: false,
+  films: []
 }
 
 export class filmList extends React.PureComponent {

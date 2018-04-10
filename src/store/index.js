@@ -31,7 +31,7 @@ function updateNewFilms(state, data) {
 }
 
 function appendFilms(state, data) {
-  const prevFilms = state.films ? [...state.films] : []
+  const prevFilms = state.films ? state.films : []
   const uniqueIds =
     state.uniqueIds ||
     prevFilms.reduce((res, film) => {
