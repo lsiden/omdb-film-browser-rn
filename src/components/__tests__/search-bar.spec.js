@@ -1,6 +1,8 @@
 import React from "react"
 import renderer from "react-native-test-utils"
 
+jest.mock("abort-controller")
+
 import { searchBar as SearchBar } from "../search-bar"
 
 let dispatchQuery

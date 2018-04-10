@@ -7,6 +7,7 @@ export const updateToast = (text, severity = "info") => ({
   data: {
     toast: {
       text,
+      duration: 5000,
       styles: ToastStyles[severity] || ToastStyles.info
     }
   }

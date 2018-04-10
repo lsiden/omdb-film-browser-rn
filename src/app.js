@@ -3,6 +3,7 @@ import PropTypes from "prop-types"
 import { connect } from "react-redux"
 import Toaster from "react-native-toaster"
 import { StackNavigator } from "react-navigation"
+import { StatusBar } from "react-native"
 
 import FilmListScreen from "film-list-screen"
 import FilmDetailsScreen from "film-details-screen"
@@ -27,8 +28,16 @@ const Navigator = StackNavigator(
 
 const omdbViewer = ({ toast }) => (
   <React.Fragment>
-    <Toaster message={toast} />
     <Navigator />
+    <Toaster
+      message={toast}
+      onShow={() => {
+        StatusBar.setHidden(true)
+      }}
+      onHide={() => {
+        StatusBar.setHidden(false)
+      }}
+    />
   </React.Fragment>
 )
 

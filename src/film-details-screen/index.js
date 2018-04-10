@@ -8,7 +8,7 @@ import getTitle from "util/get-title"
 import navOpts, { insertRightSpacer } from "navigation-options"
 import { Screens } from "constants"
 
-export const filmDetailsScreen = ({ filmDetails, navigation }) =>
+export const renderFilmDetailsScreen = ({ filmDetails, navigation }) =>
   filmDetails ? (
     <FilmDetails
       details={filmDetails}
@@ -23,16 +23,36 @@ export const filmDetailsScreen = ({ filmDetails, navigation }) =>
     <LoadingIndicator />
   )
 
-filmDetailsScreen.navigationOptions = ({ navigation }) =>
+renderFilmDetailsScreen.propTypes = {
+  filmDetails: PropTypes.object,
+  navigation: PropTypes.object.isRequired
+}
+
+class filmDetailsScreen extends React.Component {
+  static propTypes = {
+    filmDetails: PropTypes.object,
+    navigation: PropTypes.object.isRequired
+  }
+  constructor(props) {
+    super(props)
+    this.timeout = setTimeout(() => {
+      props.navigation.goBack()
+    }, 5000)
+  }
+
+  render() {
+    if (this.props.filmDetails) {
+      clearTimeout(this.timeout)
+    }
+    return renderFilmDetailsScreen(this.props)
+  }
+}
+
+renderFilmDetailsScreen.navigationOptions = ({ navigation }) =>
   insertRightSpacer({
     ...navOpts(navigation),
     title: getTitle(navigation.getParam("filmSummary", {}))
   })
-
-filmDetailsScreen.propTypes = {
-  filmDetails: PropTypes.object,
-  navigation: PropTypes.object.isRequired
-}
 
 export default connect(state => ({
   filmDetails: state.filmDetails

@@ -85,12 +85,11 @@ exports[`renders list of titles 1`] = `
   disableVirtualization={false}
   getItem={[Function]}
   getItemCount={[Function]}
-  getItemLayout={[Function]}
   horizontal={false}
   initialNumToRender={8}
   invertStickyHeaders={undefined}
   keyExtractor={[Function]}
-  maxToRenderPerBatch={10}
+  maxToRenderPerBatch={2}
   numColumns={1}
   onContentSizeChange={[Function]}
   onEndReached={[Function]}
@@ -117,7 +116,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={undefined}
+      onLayout={[Function]}
       style={null}
     >
       <FilmListItem
@@ -134,7 +133,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={undefined}
+      onLayout={[Function]}
       style={null}
     >
       <FilmListItem
@@ -151,7 +150,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={undefined}
+      onLayout={[Function]}
       style={null}
     >
       <FilmListItem
@@ -168,7 +167,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={undefined}
+      onLayout={[Function]}
       style={null}
     >
       <FilmListItem
@@ -185,7 +184,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={undefined}
+      onLayout={[Function]}
       style={null}
     >
       <FilmListItem
@@ -202,7 +201,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={undefined}
+      onLayout={[Function]}
       style={null}
     >
       <FilmListItem
@@ -219,7 +218,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={undefined}
+      onLayout={[Function]}
       style={null}
     >
       <FilmListItem
@@ -236,7 +235,7 @@ exports[`renders list of titles 1`] = `
       />
     </View>
     <View
-      onLayout={undefined}
+      onLayout={[Function]}
       style={null}
     >
       <FilmListItem
@@ -255,7 +254,7 @@ exports[`renders list of titles 1`] = `
     <View
       style={
         Object {
-          "height": 154.5999999999999,
+          "height": 0,
         }
       }
     />

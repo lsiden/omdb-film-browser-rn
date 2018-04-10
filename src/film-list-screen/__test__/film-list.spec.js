@@ -9,6 +9,10 @@ jest.mock("../film-list-item", () => "FilmListItem")
 jest.mock("../header", () => "Header")
 jest.mock("../footer", () => "Footer")
 
+// This does not help
+jest.mock("abort-controller")
+jest.mock("actions/fetch")
+
 const defaultProps = () => {
   return {
     films,

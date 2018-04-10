@@ -3,6 +3,8 @@ import { fetchNewQuery, fetchFilmDetails } from "../fetch"
 
 const filmDetails = require("__fixture__/film-details.json")
 
+jest.mock("abort-controller")
+
 test("fetchNewQuery()(dispatch) invokes dispatch() with ActionTypes.UPDATE_FILMS", () => {
   const dispatch = jest.fn()
   const response = {

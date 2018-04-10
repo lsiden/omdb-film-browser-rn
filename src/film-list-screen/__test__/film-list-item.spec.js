@@ -1,6 +1,8 @@
 import React from "react"
 import renderer from "react-native-test-utils"
 
+jest.mock("abort-controller")
+
 import { filmListItem as FilmListItem } from "../film-list-item"
 
 const films = require("__fixture__/films.json").Search
