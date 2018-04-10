@@ -28,14 +28,6 @@ export const renderFilmList = ({
       navigateToDetailsScreen={navigateToDetailsScreen}
     />
   )
-
-  const itemHeight = 77.3 // from inspection
-
-  const getItemLayout = (data, index) => ({
-    length: itemHeight,
-    offset: itemHeight * index,
-    index
-  })
   return (
     <FlatList
       data={films}
@@ -45,8 +37,8 @@ export const renderFilmList = ({
       ListFooterComponent={<Footer />}
       onEndReached={() => dispatchFetchPage()}
       initialNumToRender={8}
+      maxToRenderPerBatch={2}
       onEndReachedThreshold={0.5}
-      getItemLayout={getItemLayout}
     />
   )
 }
