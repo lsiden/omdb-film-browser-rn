@@ -48,7 +48,7 @@ class filmDetailsScreen extends React.Component {
   }
 }
 
-renderFilmDetailsScreen.navigationOptions = ({ navigation }) =>
+filmDetailsScreen.navigationOptions = ({ navigation }) =>
   insertRightSpacer({
     ...navOpts(navigation),
     title: getTitle(navigation.getParam("filmSummary", {}))
