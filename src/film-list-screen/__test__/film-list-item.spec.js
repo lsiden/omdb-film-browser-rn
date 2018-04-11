@@ -1,7 +1,9 @@
 import React from "react"
 import renderer from "react-native-test-utils"
 
-jest.mock("abort-controller")
+jest.mock("actions/fetch", () => ({
+  fetchFilmDetails: () => "fetchFilmDetails"
+}))
 
 import { filmListItem as FilmListItem } from "../film-list-item"
 

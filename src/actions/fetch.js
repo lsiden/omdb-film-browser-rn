@@ -1,4 +1,5 @@
 /* eslint-disable no-console */
+// console output is disabled in production by babel-plugin-transform-remove-console
 
 import AbortController from "abort-controller"
 import { ToastStyles } from "react-native-toaster"

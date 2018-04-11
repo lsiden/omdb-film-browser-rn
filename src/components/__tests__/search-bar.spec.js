@@ -7,6 +7,9 @@ import { searchBar as SearchBar } from "../search-bar"
 
 let dispatchQuery
 
+jest.mock("actions/fetch", () => ({
+  fetchFilmDetails: () => "fetchFilmDetails"
+}))
 jest.useFakeTimers()
 
 const defaultProps = () => {
