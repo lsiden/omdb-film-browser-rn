@@ -22,6 +22,11 @@ jest.mock(
       abort() {}
     }
 )
+
+// Prevents ReferenceError: XMLHttpRequest is not defined
+const mockFetch = response =>
+  jest.fn().mockImplementation(() => Promise.resolve(response))
+
 const filmDetails = require("__fixture__/film-details.json")
 
 test("fetchNewQuery()(dispatch) invokes dispatch() with ActionTypes.UPDATE_FILMS", () => {
@@ -33,7 +38,7 @@ test("fetchNewQuery()(dispatch) invokes dispatch() with ActionTypes.UPDATE_FILMS
     numPages: 99,
     json: () => Promise.resolve(response)
   }
-  fetch = jest.fn().mockImplementation(() => Promise.resolve(response))
+  fetch = mockFetch(response)
   fetchNewQuery("a query")(dispatch).then(() => {
     expect(dispatch).toHaveBeenCalledWith({
       type: ActionTypes.UPDATE_FILMS,
@@ -52,7 +57,7 @@ test("fetchFilmDetails()(dispatch) invokes dispatch() with ActionTypes.UPDATE_FI
     filmDetails,
     json: () => Promise.resolve(response)
   }
-  fetch = jest.fn().mockImplementation(() => Promise.resolve(response))
+  fetch = mockFetch(response)
   fetchFilmDetails("id")(dispatch).then(() => {
     expect(dispatch).toHaveBeenCalledWith({
       type: ActionTypes.UPDATE_FILM_DETAILS,
