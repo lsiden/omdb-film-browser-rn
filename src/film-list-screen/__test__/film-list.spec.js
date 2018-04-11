@@ -11,10 +11,7 @@ jest.mock("actions/fetch", () => ({
 jest.mock("../film-list-item", () => "FilmListItem")
 jest.mock("../header", () => "Header")
 jest.mock("../footer", () => "Footer")
-
-// This does not help
-jest.mock("abort-controller")
-jest.mock("actions/fetch")
+jest.mock("react-native-slowlog")
 
 const defaultProps = () => {
   return {

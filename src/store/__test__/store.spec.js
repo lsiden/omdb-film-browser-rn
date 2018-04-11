@@ -1,3 +1,14 @@
+// Silence the log messages during tests.
+// eslint-disable-next-line no-console
+console.log = () => {}
+
+jest.mock("redux", () => ({
+  getState: () => "getState",
+  applyMiddleware: () => "applyMiddleware",
+  compose: () => "compose",
+  createStore: () => "createStore"
+}))
+
 import ActionTypes from "actions/types"
 import { reduce } from "../"
 
