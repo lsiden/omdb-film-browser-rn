@@ -3,7 +3,7 @@
     "sdkVersion": "26.0.0",
     "name": "Open Movie Database Film Browser",
     "slug": "omdb-film-browser",
-    "version": "3.0.0",
+    "version": "4.0.0",
     "description": "Allows you to browse the Open Movie Database.",
     "privacy": "public",
     "githubUrl": "https://github.com/lsiden/omdb-film-browser-rnr",
@@ -21,7 +21,7 @@
     },
     "android": {
       "package": "com.westsideconsultingllc.omdbViewer",
-      "versionCode": 3,
+      "versionCode": 4,
       "playStoreUrl":
         "https://play.google.com/westsideconsultingllc/omdb-film-browser-rn",
       "permissions": []
