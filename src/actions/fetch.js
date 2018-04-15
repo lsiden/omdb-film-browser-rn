@@ -47,7 +47,11 @@ const fetchQueryResults = (dispatch, query, pageNum) => {
   dispatch(updateIsFetching(true))
 
   const timeout = setTimeout(
-    () => onFetchTimeout(dispatch, "Unable to fetch data. Try again."),
+    () =>
+      onFetchTimeout(
+        dispatch,
+        "Unable to fetch data. Try a different title or try again later."
+      ),
     FETCH_TIMEOUT
   )
 
