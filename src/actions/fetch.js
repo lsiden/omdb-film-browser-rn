@@ -26,12 +26,12 @@ const updateIsFetching = (isFetching = false) => ({
 
 const onFetchTimeout = (dispatch, msg) => {
   console.log("timeout, aborting.")
-  abortController.abort() // abort previous query if not yet resolved
+  abortController.abort()
   dispatch(updateIsFetching(false))
   dispatch(updateToast(msg, ToastStyles.warning))
 }
 
-const unPackResponse = res => {
+const toJson = res => {
   try {
     return res.json()
   } catch (e) {
@@ -42,7 +42,7 @@ const unPackResponse = res => {
 const fetchQueryResults = (dispatch, query, pageNum) => {
   console.log(`fetchQueryResults("${query}", ${pageNum})`)
 
-  abortController.abort() // abort previous query if not yet resolved
+  abortController.abort()
   dispatch(updateLastPageNumFetched(pageNum))
   dispatch(updateIsFetching(true))
 
@@ -60,7 +60,7 @@ const fetchQueryResults = (dispatch, query, pageNum) => {
   })
     .then(res => {
       clearTimeout(timeout)
-      return unPackResponse(res)
+      return toJson(res)
     })
     .then(res => {
       const totalResults = Number(res.totalResults)
@@ -125,7 +125,7 @@ export const fetchFilmDetails = id => dispatch => {
   return fetch(`${OMDB_URL_PREFIX}&i=${id}`)
     .then(res => {
       clearTimeout(timeout)
-      return unPackResponse(res)
+      return toJson(res)
     })
     .then(res => {
       dispatch(updateFilmDetails(res))
