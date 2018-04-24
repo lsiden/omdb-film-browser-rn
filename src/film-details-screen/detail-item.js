@@ -5,18 +5,18 @@ import { ListItem } from "react-native-elements"
 
 import style from "./style"
 import { detailExists } from "./detail-items"
+import { primaryColor } from "constants"
 
 const DetailItem = ({ detail }) => {
   const { text, url = null } = detail
 
   const props = {
     title: <Text style={style.listItem}>{text}</Text>,
-    hideChevron: true
+    containerStyle: { backgroundColor: primaryColor, padding: 8 }
   }
 
   if (detailExists(url)) {
     props.onPress = () => Linking.openURL(url)
-    props.hideChevron = false
   }
   return <ListItem {...props} />
 }

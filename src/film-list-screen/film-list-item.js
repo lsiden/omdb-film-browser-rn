@@ -5,6 +5,11 @@ import { TouchableOpacity } from "react-native"
 import { ListItem } from "react-native-elements"
 
 import { fetchFilmDetails } from "actions/fetch"
+import { primaryColor } from "constants"
+
+const containerStyle = {
+  padding: 8
+}
 
 export class filmListItem extends React.PureComponent {
   constructor(props) {
@@ -38,7 +43,13 @@ export class filmListItem extends React.PureComponent {
     const { filmSummary } = this.props
     return (
       <TouchableOpacity onPress={this.onPressDebounced}>
-        <ListItem title={filmSummary.Title} subtitle={filmSummary.Year} />
+        <ListItem
+          title={filmSummary.Title}
+          subtitle={filmSummary.Year}
+          chevron
+          chevronColor={primaryColor}
+          containerStyle={containerStyle}
+        />
       </TouchableOpacity>
     )
   }

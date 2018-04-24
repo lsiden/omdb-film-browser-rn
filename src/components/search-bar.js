@@ -8,7 +8,6 @@ import { Platform } from "react-native"
 
 import { fetchNewQuery } from "actions/fetch"
 
-const inputStyle = { color: "black", paddingLeft: 44 }
 const iconStyle = {
   fontSize: 30,
   marginTop: -7,
@@ -56,7 +55,6 @@ export class searchBar extends React.Component {
       <SearchBar
         lightTheme
         placeholder="Title..."
-        inputStyle={inputStyle}
         onChangeText={this.onChangeText}
         onCancel={this.onCancel}
         icon={{
@@ -64,7 +62,7 @@ export class searchBar extends React.Component {
           color: "black",
           style: iconStyle
         }}
-        clearIcon={{ name: "close", color: "black" }}
+        clearIcon={true}
         platform={Platform.OS}
       />
     )
