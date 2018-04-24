@@ -8,9 +8,9 @@
     "privacy": "public",
     "githubUrl": "https://github.com/lsiden/omdb-film-browser-rnr",
     "primaryColor": "#05347f",
-    "icon": "src/images/film-reel-1024-white-on-primary.png",
+    "icon": "./assets/film-reel-1024-white-on-primary.png",
     "notification": {
-      "icon": "src/images/film-reel-48-white-on-primary.png"
+      "icon": "./assets/film-reel-48-white-on-primary.png"
     },
     "splash": {
       "backgroundColor": "#05347f",
